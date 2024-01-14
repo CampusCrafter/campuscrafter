@@ -3,6 +3,7 @@ using System;
 using CampusCrafter.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CampusCrafter.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240114002551_UpdateMajorsAndStudyPlan")]
+    partial class UpdateMajorsAndStudyPlan
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.1");
@@ -151,6 +154,7 @@ namespace CampusCrafter.Data.Migrations
             modelBuilder.Entity("CampusCrafter.Models.Course", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Discriminator")
@@ -492,6 +496,11 @@ namespace CampusCrafter.Data.Migrations
                 {
                     b.HasBaseType("CampusCrafter.Models.Course");
 
+                    b.Property<int?>("MajorId1")
+                        .HasColumnType("INTEGER");
+
+                    b.HasIndex("MajorId1");
+
                     b.HasDiscriminator().HasValue("Specialization");
                 });
 
@@ -652,13 +661,9 @@ namespace CampusCrafter.Data.Migrations
 
             modelBuilder.Entity("CampusCrafter.Models.Specialization", b =>
                 {
-                    b.HasOne("CampusCrafter.Models.Major", "Major")
+                    b.HasOne("CampusCrafter.Models.Major", null)
                         .WithMany("Specializations")
-                        .HasForeignKey("Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Major");
+                        .HasForeignKey("MajorId1");
                 });
 
             modelBuilder.Entity("CampusCrafter.Models.AcceptanceCriteria", b =>

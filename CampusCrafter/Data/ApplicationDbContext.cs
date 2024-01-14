@@ -6,8 +6,34 @@ namespace CampusCrafter.Data;
 
 public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 {
+    public DbSet<Candidate> Candidates { get; set; }
+    public DbSet<Progress> Progresses { get; set; }
+    public DbSet<ScholarlyAchievement> ScholarlyAchievements { get; set; }
+    
+    public DbSet<Major> Majors { get; set; }
+    public DbSet<Specialization> Specializations { get; set; }
+    public DbSet<Semester> Semesters { get; set; }
+    public DbSet<Course> Courses { get; set; }
+    public DbSet<Department> Departments { get; set; }
+    
+    public DbSet<CandidateApplication> CandidateApplications { get; set; }
+    
+    public DbSet<StudyPlan> StudyPlans { get; set; }
+    public DbSet<AcceptanceCriteria> AcceptanceCriteria { get; set; }
+    
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)
     {
+    }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Specialization>()
+            .HasOne(s => s.Major)
+            .WithMany(m => m.Specializations)
+            .HasForeignKey(s => s.Id)
+            .HasPrincipalKey(m => m.Id);
+        
+        base.OnModelCreating(modelBuilder);
     }
 }
