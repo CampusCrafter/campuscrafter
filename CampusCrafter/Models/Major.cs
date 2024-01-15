@@ -15,7 +15,7 @@ public record Major
     public virtual required List<Major> AllowsStudying { get; set; }
     public virtual required List<Major> Prerequisites { get; set; }
     
-    public virtual required List<Specialization> Specializations { get; set; }
+    public virtual List<Specialization> Specializations { get; set; }
     
     public virtual required List<Course> Courses { get; set; }
     

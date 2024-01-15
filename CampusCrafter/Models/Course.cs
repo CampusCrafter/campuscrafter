@@ -1,11 +1,15 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace CampusCrafter.Models;
 
-public record Course
+public record Course(
+    [property: Key] int Id    
+)
 {
-    [Key] public int Id { get; set; }
     [MaxLength(64)] public required string Name { get; set; }
     
-    public required Semester Semester { get; set; }
+    [ForeignKey("Semester")] public int SemesterId { get; set; }
+    [ValidateNever] public required Semester Semester { get; set; }
 }

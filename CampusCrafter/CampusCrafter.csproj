@@ -30,8 +30,10 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="Areas\Data\Pages\Courses\" />
       <Folder Include="Areas\Data\Pages\Departments\" />
-      <Folder Include="Areas\Data\Pages\Study Plans\" />
+      <Folder Include="Areas\Data\Pages\Majors\" />
+      <Folder Include="Areas\Data\Pages\Semesters\" />
       <Folder Include="Helpers\" />
     </ItemGroup>
 

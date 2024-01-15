@@ -3,6 +3,7 @@ using System;
 using CampusCrafter.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CampusCrafter.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240115151923_SpecializationMajorForeignKey")]
+    partial class SpecializationMajorForeignKey
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.1");
@@ -217,11 +220,21 @@ namespace CampusCrafter.Data.Migrations
                         .HasMaxLength(64)
                         .HasColumnType("TEXT");
 
+                    b.Property<int?>("SpecializationId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("SpecializationId1")
+                        .HasColumnType("INTEGER");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CandidateUserId");
 
                     b.HasIndex("DepartmentId");
+
+                    b.HasIndex("SpecializationId");
+
+                    b.HasIndex("SpecializationId1");
 
                     b.ToTable("Majors");
 
@@ -350,21 +363,6 @@ namespace CampusCrafter.Data.Migrations
                     b.HasIndex("MajorId");
 
                     b.ToTable("StudyPlans");
-                });
-
-            modelBuilder.Entity("MajorMajor", b =>
-                {
-                    b.Property<int>("AllowsStudyingId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("PrerequisitesId")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("AllowsStudyingId", "PrerequisitesId");
-
-                    b.HasIndex("PrerequisitesId");
-
-                    b.ToTable("MajorMajor");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -502,8 +500,6 @@ namespace CampusCrafter.Data.Migrations
                     b.Property<int>("MajorId")
                         .HasColumnType("INTEGER");
 
-                    b.HasIndex("MajorId");
-
                     b.HasDiscriminator().HasValue("Specialization");
                 });
 
@@ -553,6 +549,14 @@ namespace CampusCrafter.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("CampusCrafter.Models.Specialization", null)
+                        .WithMany("AllowsStudying")
+                        .HasForeignKey("SpecializationId");
+
+                    b.HasOne("CampusCrafter.Models.Specialization", null)
+                        .WithMany("Prerequisites")
+                        .HasForeignKey("SpecializationId1");
+
                     b.Navigation("Department");
                 });
 
@@ -592,21 +596,6 @@ namespace CampusCrafter.Data.Migrations
                     b.Navigation("AcceptanceCriteria");
 
                     b.Navigation("Major");
-                });
-
-            modelBuilder.Entity("MajorMajor", b =>
-                {
-                    b.HasOne("CampusCrafter.Models.Major", null)
-                        .WithMany()
-                        .HasForeignKey("AllowsStudyingId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CampusCrafter.Models.Major", null)
-                        .WithMany()
-                        .HasForeignKey("PrerequisitesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -664,7 +653,7 @@ namespace CampusCrafter.Data.Migrations
                 {
                     b.HasOne("CampusCrafter.Models.Major", "Major")
                         .WithMany("Specializations")
-                        .HasForeignKey("MajorId")
+                        .HasForeignKey("Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -692,6 +681,13 @@ namespace CampusCrafter.Data.Migrations
                     b.Navigation("Specializations");
 
                     b.Navigation("StudyPlans");
+                });
+
+            modelBuilder.Entity("CampusCrafter.Models.Specialization", b =>
+                {
+                    b.Navigation("AllowsStudying");
+
+                    b.Navigation("Prerequisites");
                 });
 #pragma warning restore 612, 618
         }

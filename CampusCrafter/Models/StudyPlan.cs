@@ -18,6 +18,6 @@ public record StudyPlan
 
     [ValidateNever] public AcceptanceCriteria AcceptanceCriteria { get; set; } = null!;
 
-    [NotMapped]
-    public int SemesterCount => Major?.Courses.Select(course => course.Semester).Distinct().Count() ?? 0;
+    // [NotMapped]
+    // public int SemesterCount => Major?.Courses.Select(course => course.Semester).Distinct().Count() ?? 0;
 }

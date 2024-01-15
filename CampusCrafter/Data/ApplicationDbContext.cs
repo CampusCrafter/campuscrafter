@@ -29,11 +29,9 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Specialization>()
-            .HasOne(s => s.Major)
-            .WithMany(m => m.Specializations)
-            .HasForeignKey(s => s.Id)
-            .HasPrincipalKey(m => m.Id);
+        modelBuilder.Entity<Major>()
+            .HasMany(m => m.Specializations)
+            .WithOne(s => s.Major);
         
         base.OnModelCreating(modelBuilder);
     }

@@ -3,6 +3,7 @@ using System;
 using CampusCrafter.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CampusCrafter.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240115151453_TempDisableMajorCourses")]
+    partial class TempDisableMajorCourses
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.1");
@@ -154,11 +157,12 @@ namespace CampusCrafter.Data.Migrations
             modelBuilder.Entity("CampusCrafter.Models.Course", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("MajorId")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasMaxLength(21)
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -170,11 +174,13 @@ namespace CampusCrafter.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MajorId");
-
                     b.HasIndex("SemesterId");
 
                     b.ToTable("Courses");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("Course");
+
+                    b.UseTphMappingStrategy();
                 });
 
             modelBuilder.Entity("CampusCrafter.Models.Department", b =>
@@ -204,11 +210,6 @@ namespace CampusCrafter.Data.Migrations
                     b.Property<int>("DepartmentId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
-                        .HasMaxLength(21)
-                        .HasColumnType("TEXT");
-
                     b.Property<int>("GraduationDegree")
                         .HasColumnType("INTEGER");
 
@@ -224,10 +225,6 @@ namespace CampusCrafter.Data.Migrations
                     b.HasIndex("DepartmentId");
 
                     b.ToTable("Majors");
-
-                    b.HasDiscriminator<string>("Discriminator").HasValue("Major");
-
-                    b.UseTphMappingStrategy();
                 });
 
             modelBuilder.Entity("CampusCrafter.Models.Progress", b =>
@@ -497,12 +494,7 @@ namespace CampusCrafter.Data.Migrations
 
             modelBuilder.Entity("CampusCrafter.Models.Specialization", b =>
                 {
-                    b.HasBaseType("CampusCrafter.Models.Major");
-
-                    b.Property<int>("MajorId")
-                        .HasColumnType("INTEGER");
-
-                    b.HasIndex("MajorId");
+                    b.HasBaseType("CampusCrafter.Models.Course");
 
                     b.HasDiscriminator().HasValue("Specialization");
                 });
@@ -528,10 +520,6 @@ namespace CampusCrafter.Data.Migrations
 
             modelBuilder.Entity("CampusCrafter.Models.Course", b =>
                 {
-                    b.HasOne("CampusCrafter.Models.Major", null)
-                        .WithMany("Courses")
-                        .HasForeignKey("MajorId");
-
                     b.HasOne("CampusCrafter.Models.Semester", "Semester")
                         .WithMany()
                         .HasForeignKey("SemesterId")
@@ -664,7 +652,7 @@ namespace CampusCrafter.Data.Migrations
                 {
                     b.HasOne("CampusCrafter.Models.Major", "Major")
                         .WithMany("Specializations")
-                        .HasForeignKey("MajorId")
+                        .HasForeignKey("Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -687,8 +675,6 @@ namespace CampusCrafter.Data.Migrations
 
             modelBuilder.Entity("CampusCrafter.Models.Major", b =>
                 {
-                    b.Navigation("Courses");
-
                     b.Navigation("Specializations");
 
                     b.Navigation("StudyPlans");
