@@ -3,6 +3,7 @@ using System;
 using CampusCrafter.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CampusCrafter.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240115112031_DontMapSemesterCount")]
+    partial class DontMapSemesterCount
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.1");
@@ -293,7 +296,7 @@ namespace CampusCrafter.Data.Migrations
 
                     b.HasIndex("AcceptanceCriteriaId");
 
-                    b.ToTable("ScoreWeights");
+                    b.ToTable("ScoreWeight");
                 });
 
             modelBuilder.Entity("CampusCrafter.Models.Semester", b =>
@@ -329,7 +332,7 @@ namespace CampusCrafter.Data.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("MajorId")
+                    b.Property<int>("MajorId")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Name")
@@ -581,7 +584,9 @@ namespace CampusCrafter.Data.Migrations
 
                     b.HasOne("CampusCrafter.Models.Major", "Major")
                         .WithMany("StudyPlans")
-                        .HasForeignKey("MajorId");
+                        .HasForeignKey("MajorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("AcceptanceCriteria");
 

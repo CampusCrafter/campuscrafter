@@ -2,8 +2,9 @@
 
 namespace CampusCrafter.Models;
 
-public record ScoreWeight(
-    [property: Key] int Id,
-    ProgressType ProgressType,
-    [property: Range(0, 100)] decimal Weight
-);
+public record ScoreWeight 
+{
+    [Key] public int Id { get; set; }
+    public ProgressType ProgressType { get; set; }
+    [Range(0, 100)] public decimal Weight { get; set; }
+}

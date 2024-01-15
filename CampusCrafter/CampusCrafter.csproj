@@ -29,4 +29,10 @@
       </Content>
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Areas\Data\Pages\Departments\" />
+      <Folder Include="Areas\Data\Pages\Study Plans\" />
+      <Folder Include="Helpers\" />
+    </ItemGroup>
+
 </Project>

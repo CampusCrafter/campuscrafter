@@ -1,0 +1,76 @@
+@page
+@using CampusCrafter.Models
+@model CampusCrafter.Areas.Data.Pages.StudyPlans.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="d-none" id="score-weight-template">
+    <div class="hstack gap-2">
+        <select class="form-control" asp-items="@Html.GetEnumSelectList<ProgressType>()"></select>
+        <input class="form-control" type="number" />
+        <a class="btn btn-danger">Delete</a>
+    </div>
+</div>
+
+<h1>Create</h1>
+
+<h4>StudyPlan</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="StudyPlan.Name" class="control-label"></label>
+                <input asp-for="StudyPlan.Name" class="form-control" />
+                <span asp-validation-for="StudyPlan.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StudyPlan.StageOfStudy" class="control-label"></label>
+                <select asp-for="StudyPlan.StageOfStudy" class="form-control" asp-items="@Html.GetEnumSelectList<StageOfStudy>()"></select>
+                <span asp-validation-for="StudyPlan.StageOfStudy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StudyPlan.StudyType" class="control-label"></label>
+                <select asp-for="StudyPlan.StudyType" class="form-control" asp-items="@Html.GetEnumSelectList<StudyType>()"></select>
+                <span asp-validation-for="StudyPlan.StudyType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StudyPlan.EducationProfile" class="control-label"></label>
+                <select asp-for="StudyPlan.EducationProfile" class="form-control" asp-items="@Html.GetEnumSelectList<EducationProfile>()"></select>
+                <span asp-validation-for="StudyPlan.EducationProfile" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StudyPlan.Language" class="control-label"></label>
+                <input asp-for="StudyPlan.Language" class="form-control" />
+                <span asp-validation-for="StudyPlan.Language" class="text-danger"></span>
+            </div>
+                        
+            <div class="mt-3">
+                <h5>Acceptance Criteria</h5>
+                <div class="form-group">
+                    <label asp-for="AcceptanceCriteria.MaxStudents" class="control-label"></label>
+                    <input asp-for="AcceptanceCriteria.MaxStudents" class="form-control" />
+                    <span asp-validation-for="AcceptanceCriteria.MaxStudents" class="text-danger"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="ScoreWeightText" class="control-label"></label>
+                    <textarea asp-for="ScoreWeightText" class="form-control" ></textarea>
+                    <span asp-validation-for="ScoreWeightText" class="text-danger"></span>
+                </div>
+                
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>

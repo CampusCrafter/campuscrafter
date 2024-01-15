@@ -20,6 +20,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     
     public DbSet<StudyPlan> StudyPlans { get; set; }
     public DbSet<AcceptanceCriteria> AcceptanceCriteria { get; set; }
+    public DbSet<ScoreWeight> ScoreWeights { get; set; }
     
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)

@@ -1,19 +1,23 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace CampusCrafter.Models;
 
 public record StudyPlan
 {
     [Key] public int Id { get; set; }
+    public string Name { get; set; }
     
-    public StageOfStudy StageOfStudy { get; set; }
-    public StudyType StudyType { get; set; }
-    public EducationProfile EducationProfile { get; set; }
-    public required string Language { get; set; }
-    
-    public required Major Major { get; set; }
-    
-    public required AcceptanceCriteria AcceptanceCriteria { get; set; }
+    [Display(Name = "Stage of Study")] public StageOfStudy StageOfStudy { get; set; }
+    [Display(Name = "Study Type")]  public StudyType StudyType { get; set; }
+    [Display(Name = "Education Profile")] public EducationProfile EducationProfile { get; set; }
+    [Display(Name = "Language")] public required string Language { get; set; }
 
-    public int SemesterCount => Major.Courses.Select(course => course.Semester).Distinct().Count();
+    [ValidateNever] public Major? Major { get; set; } = null;
+
+    [ValidateNever] public AcceptanceCriteria AcceptanceCriteria { get; set; } = null!;
+
+    [NotMapped]
+    public int SemesterCount => Major?.Courses.Select(course => course.Semester).Distinct().Count() ?? 0;
 }
