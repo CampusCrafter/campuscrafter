@@ -20,6 +20,9 @@
                 @Html.DisplayNameFor(model => model.Major[0].GraduationDegree)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.Major[0].MajorType)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Major[0].Department)
             </th>
             <th></th>
@@ -35,7 +38,10 @@
                 @Html.DisplayFor(modelItem => item.GraduationDegree)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Department.Id)
+                @Html.DisplayFor(modelItem => item.MajorType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Department.Name)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |

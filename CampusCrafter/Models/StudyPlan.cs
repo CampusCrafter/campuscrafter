@@ -7,7 +7,7 @@ namespace CampusCrafter.Models;
 public record StudyPlan
 {
     [Key] public int Id { get; set; }
-    public string Name { get; set; }
+    [MaxLength(64)] public required string Name { get; set; }
     
     [Display(Name = "Stage of Study")] public StageOfStudy StageOfStudy { get; set; }
     [Display(Name = "Study Type")]  public StudyType StudyType { get; set; }

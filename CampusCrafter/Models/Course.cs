@@ -12,4 +12,6 @@ public record Course(
     
     [ForeignKey("Semester")] public int SemesterId { get; set; }
     [ValidateNever] public required Semester Semester { get; set; }
+
+    [ValidateNever] public Major? Major { get; set; } = null!;
 }

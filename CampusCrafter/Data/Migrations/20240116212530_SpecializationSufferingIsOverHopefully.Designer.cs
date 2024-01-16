@@ -3,6 +3,7 @@ using System;
 using CampusCrafter.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CampusCrafter.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240116212530_SpecializationSufferingIsOverHopefully")]
+    partial class SpecializationSufferingIsOverHopefully
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.1");
@@ -215,17 +218,11 @@ namespace CampusCrafter.Data.Migrations
                         .HasMaxLength(64)
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("ParentMajorId")
-                        .HasColumnType("INTEGER");
-
                     b.HasKey("Id");
 
                     b.HasIndex("CandidateUserId");
 
                     b.HasIndex("DepartmentId");
-
-                    b.HasIndex("ParentMajorId")
-                        .IsUnique();
 
                     b.ToTable("Majors");
                 });
@@ -517,7 +514,7 @@ namespace CampusCrafter.Data.Migrations
 
             modelBuilder.Entity("CampusCrafter.Models.Course", b =>
                 {
-                    b.HasOne("CampusCrafter.Models.Major", "Major")
+                    b.HasOne("CampusCrafter.Models.Major", null)
                         .WithMany("Courses")
                         .HasForeignKey("MajorId");
 
@@ -526,8 +523,6 @@ namespace CampusCrafter.Data.Migrations
                         .HasForeignKey("SemesterId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Major");
 
                     b.Navigation("Semester");
                 });
@@ -544,13 +539,7 @@ namespace CampusCrafter.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("CampusCrafter.Models.Major", "ParentMajor")
-                        .WithOne()
-                        .HasForeignKey("CampusCrafter.Models.Major", "ParentMajorId");
-
                     b.Navigation("Department");
-
-                    b.Navigation("ParentMajor");
                 });
 
             modelBuilder.Entity("CampusCrafter.Models.Progress", b =>

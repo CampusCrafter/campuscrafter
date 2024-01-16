@@ -11,7 +11,6 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<ScholarlyAchievement> ScholarlyAchievements { get; set; }
     
     public DbSet<Major> Majors { get; set; }
-    public DbSet<Specialization> Specializations { get; set; }
     public DbSet<Semester> Semesters { get; set; }
     public DbSet<Course> Courses { get; set; }
     public DbSet<Department> Departments { get; set; }
@@ -30,8 +29,8 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Major>()
-            .HasMany(m => m.Specializations)
-            .WithOne(s => s.Major);
+            .HasOne(m => m.ParentMajor)
+            .WithOne();
         
         base.OnModelCreating(modelBuilder);
     }

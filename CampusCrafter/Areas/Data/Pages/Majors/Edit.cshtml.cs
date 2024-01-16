@@ -36,18 +36,56 @@ namespace CampusCrafter.Areas.Data.Pages.Majors
                 return NotFound();
             }
             Major = major;
-           ViewData["DepartmentId"] = new SelectList(_context.Departments, "Id", "Id");
+            ViewData["DepartmentId"] = new SelectList(_context.Departments, "Id", "Name");
+            ViewData["OtherMajors"] = new SelectList(_context.Majors.Where(m => m.Id != Major.Id), "Id", "Name");
+            ViewData["Specializations"] = new SelectList(_context.Majors.Where(m => m.MajorType == MajorType.Specialization), "Id", "Name");
+            ViewData["StudyPlans"] = new SelectList(_context.StudyPlans, "Id", "Name");
+            ViewData["Courses"] = new SelectList(_context.Courses, "Id", "Name");
             return Page();
         }
 
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see https://aka.ms/RazorPagesCRUD.
-        public async Task<IActionResult> OnPostAsync()
+        public async Task<IActionResult> OnPostAsync(List<int> majorPrerequisites, List<int> majorSpecializations, List<int> majorStudyPlans, List<int> majorCourses)
         {
             if (!ModelState.IsValid)
             {
                 return Page();
             }
+
+            var oldMajor = await _context.Majors.AsNoTracking()
+                .Include(m => m.Specializations)                
+                .Include(m => m.StudyPlans)                
+                .Include(m => m.Courses)                
+                .FirstOrDefaultAsync(m => m.Id == Major.Id);
+            if (oldMajor is not null)
+            {
+                foreach (var specialization in oldMajor.Specializations) specialization.ParentMajor = null;
+                foreach (var plan in oldMajor.StudyPlans) plan.Major = null;
+                foreach (var course in oldMajor.Courses) course.Major = null;
+            }
+            
+            Major.Prerequisites = await _context.Majors
+                .Join(majorPrerequisites, major => major.Id, id => id, (major, i) => major)
+                .ToListAsync();
+            
+            var specializations = await _context.Majors
+                .Join(majorSpecializations, m => m.Id, id => id, (m, i) => m)
+                .ToListAsync();
+            foreach (var specialization in specializations) specialization.ParentMajor = Major;
+            Major.Specializations = specializations;
+
+            var studyPlans = await _context.StudyPlans
+                .Join(majorStudyPlans, s => s.Id, id => id, (plan, i) => plan)
+                .ToListAsync();
+            foreach (var plan in studyPlans) plan.Major = Major;
+            Major.StudyPlans = studyPlans;
+            
+            var courses = await _context.Courses
+                .Join(majorCourses, c => c.Id, id => id, (course, i) => course)
+                .ToListAsync();
+            foreach (var course in courses) course.Major = Major;
+            Major.Courses = courses;
 
             _context.Attach(Major).State = EntityState.Modified;
 

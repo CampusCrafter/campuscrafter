@@ -49,10 +49,22 @@ namespace CampusCrafter.Areas.Data.Pages.Majors
                 return NotFound();
             }
 
-            var major = await _context.Majors.FindAsync(id);
+            var major = await _context.Majors
+                .Include(m => m.StudyPlans)
+                .Include(m => m.Courses)
+                .Include(m => m.Specializations)
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (major != null)
             {
                 Major = major;
+
+                foreach (var plan in major.StudyPlans)
+                    plan.Major = null;
+                foreach (var course in major.Courses)
+                    course.Major = null;
+                foreach (var specialization in major.Specializations)
+                    specialization.ParentMajor = null;
+                
                 _context.Majors.Remove(Major);
                 await _context.SaveChangesAsync();
             }

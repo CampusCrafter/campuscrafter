@@ -25,11 +25,31 @@
                 <span asp-validation-for="Major.GraduationDegree" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Major.MajorType" class="control-label"></label>
+                <select asp-for="Major.MajorType" class="form-control" asp-items="@Html.GetEnumSelectList<MajorType>()"></select>
+                <span asp-validation-for="Major.MajorType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="Major.DepartmentId" class="control-label"></label>
                 <select asp-for="Major.DepartmentId" class="form-control" asp-items="ViewBag.DepartmentId"></select>
             </div>
             
-            @* TODO: List courses to assign to this major, other majors (prerequisites / successors), specializations *@ 
+            <div class="form-group">
+                <label asp-for="Major.Prerequisites" class="control-label"></label>
+                <select name="majorPrerequisites" multiple class="form-control" asp-items="ViewBag.OtherMajors"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Major.Specializations" class="control-label"></label>
+                <select name="majorSpecializations" multiple class="form-control" asp-items="ViewBag.Specializations"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Major.StudyPlans" class="control-label"></label>
+                <select name="majorStudyPlans" multiple class="form-control" asp-items="ViewBag.StudyPlans"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Major.Courses" class="control-label"></label>
+                <select name="majorCourses" multiple class="form-control" asp-items="ViewBag.Courses"></select>
+            </div>
             
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
