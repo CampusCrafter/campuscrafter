@@ -1,0 +1,103 @@
+@page
+@using CampusCrafter.Models
+@model CampusCrafter.Pages.Admission.ChooseMajorsModel
+
+@{
+    ViewData["Title"] = "ChooseMajors";
+}
+
+<h1>ChooseMajors</h1>
+
+<form id="myForm" method="post">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>
+
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Major[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Major[0].GraduationDegree)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Major[0].Department)
+            </th>
+            <th>
+                Details
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model.Major)
+        {
+            <tr>
+                <td>
+                    <input type="checkbox" name="selectedMajors" value="@item.Id"/>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GraduationDegree)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Department.Name)
+                </td>
+                <td>
+                    <button type="button" onclick="toggleTable(@item.Id+' table')">Toggle Table</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <table class="table" id="@item.Id table" style="display: none;">
+                        <thead>
+                        <tr>
+                            <th colspan="2">
+                                @if (Model.MajorType == MajorType.Major)
+                                {
+                                    <div>Possible specialization</div>
+                                }
+                                else
+                                {
+                                    <div>Majors enabling admission</div>
+                                }
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach (var i in item.Prerequisites.Concat(item.Specializations))
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => i.Name)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => i.Department.Name)
+                                </td>
+                            </tr>
+                        }
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary"/>
+    </div>
+</form>
+
+<script>
+    function toggleTable(tableName) {
+        const table = document.getElementById(tableName);
+        if (table.style.display === "none") {
+            table.style.display = "table"; // Show the table
+        } else {
+            table.style.display = "none"; // Hide the table
+        }
+    }
+</script>

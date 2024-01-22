@@ -1,0 +1,86 @@
+@page
+@using CampusCrafter.Models
+@model CampusCrafter.Areas.Admission.Pages.ConfirmApplicationModel
+
+@{
+    ViewData["Title"] = "ConfirmApplication";
+}
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/json2/20150503/json2.min.js"></script>
+<h1>ConfirmApplication</h1>
+<form>
+    <div>
+        <h4>Date @Model.DateTime.Day / @Model.DateTime.Month / @Model.DateTime.Year </h4>
+        <hr/>
+        <h4>Education Progress</h4>
+        <table class="table" id="progressTable">
+            <thead>
+            <tr>
+                <th>
+                    Progress type
+                </th>
+                <th>
+                    Score
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            
+            </tbody>
+        </table>
+        <asp:Button ID="btnAddRow" runat="server" Text="Add Row" OnClientClick="addRowProgress();" OnClick="btnAddRow_Click" />
+        <script type="text/javascript">
+            function addRowProgress() {
+                var table = document.getElementById("progressTable");
+                var row = table.insertRow(-1);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var enumSelectList =JSON.parse('<%= Newtonsoft.Json.JsonConvert.SerializeObject(Html.GetEnumSelectList<ProgressType>()) %>');
+                cell1.innerHTML = '<select name="scholarlyAchievementTypes">';
+                for (var i = 0; i < enumSelectList.length; i++) {
+                    cell1.innerHTML += '<option value="' + enumSelectList[i].Value + '">' + enumSelectList[i].Text + '</option>';
+                }
+                cell1.innerHTML += '</select>';
+                cell2.innerHTML = '<input name="descriptions"/>';
+            }
+        </script>
+        <hr/>
+        <h4>Scholarly Achievements</h4>
+        <table class="table" id="achievementTable">
+            <thead>
+            <tr>
+                <th>
+                    Achievement type
+                </th>
+                <th>
+                    Description
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            
+            </tbody>
+        </table>
+        <asp:Button ID="btnAddRow" runat="server" Text="Add Row" OnClientClick="addRowAchievement();" OnClick="btnAddRow_Click" />
+        <script type="text/javascript">
+            function addRowAchievement() {
+                var table = document.getElementById("achievementTable");
+                var row = table.insertRow(-1);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var enumSelectList =JSON.parse('<%= Newtonsoft.Json.JsonConvert.SerializeObject(Html.GetEnumSelectList<ScholarlyAchievementType>()) %>');
+                cell1.innerHTML = '<select name="scholarlyAchievementTypes">';
+                for (var i = 0; i < enumSelectList.length; i++) {
+                    cell1.innerHTML += '<option value="' + enumSelectList[i].Value + '">' + enumSelectList[i].Text + '</option>';
+                }
+                cell1.innerHTML += '</select>';
+                cell2.innerHTML = '<input name="descriptions"/>';
+            }
+        </script>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary"/>
+    </div>
+    
+</form>
+<a asp-area="Admission" asp-page="ChooseMajors" class="btn btn-primary">Back</a>

@@ -36,6 +36,7 @@
       <Folder Include="Areas\Data\Pages\Majors\" />
       <Folder Include="Areas\Data\Pages\Semesters\" />
       <Folder Include="Helpers\" />
+      <Folder Include="Pages\" />
     </ItemGroup>
 
 </Project>
