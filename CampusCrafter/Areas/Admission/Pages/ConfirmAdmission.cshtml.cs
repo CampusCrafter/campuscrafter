@@ -19,28 +19,15 @@ namespace CampusCrafter.Areas.Admission.Pages
             _context = context;
         }
 
-        public List<ProgressType> ProgressTypes;
-
-        public List<decimal> Score;
-
-        public List<ScholarlyAchievementType> ScholarlyAchievementTypes;
-
-        public List<string> Descriptions;
-
         public List<Major> SelectedMajors = [];
-        
-        public CandidateApplication CandidateApplication { get; set; }
-        
-        public Candidate Candidate { get; set; } = default!;
 
         public DateTime DateTime { get; set; }
         
-        public IActionResult OnGet(List<ProgressType> progressTypes, List<decimal> score, List<ScholarlyAchievementType> scholarlyAchievementTypes, List<string> descriptions, List<int> selectedMajors)
+        public CandidateApplication CandidateApplication { get; set; }
+        
+        public IActionResult OnGet(CandidateApplication candidateApplication, List<int> selectedMajors)
         {
-            ProgressTypes = progressTypes;
-            Score = score;
-            ScholarlyAchievementTypes = scholarlyAchievementTypes;
-            Descriptions = descriptions;
+            CandidateApplication = candidateApplication;
             foreach (var i in selectedMajors)
             {
                 SelectedMajors.Add(_context.Majors.Find(i)!);
@@ -56,27 +43,19 @@ namespace CampusCrafter.Areas.Admission.Pages
                 return Page();
             }
 
-            foreach (var iTuple in ProgressTypes.Zip(Score))
+            foreach (var progress in CandidateApplication.Applicant.Progresses)
             {
-                Progress progress = default!;
-                progress = progress with { Type = iTuple.First, Score = iTuple.Second};
-                
-                Candidate.Progresses.Add(progress);
                 _context.Progresses.Add(progress);
             }
             
-            foreach (var iTuple in ScholarlyAchievementTypes.Zip(Descriptions))
+            foreach (var achievement in CandidateApplication.Applicant.ScholarlyAchievements)
             {
-                ScholarlyAchievement scholarlyAchievement = default!;
-                scholarlyAchievement = scholarlyAchievement with { Type = iTuple.First, Description = iTuple.Second};
-                
-                Candidate.ScholarlyAchievements.Add(scholarlyAchievement);
-                _context.ScholarlyAchievements.Add(scholarlyAchievement);
+                _context.ScholarlyAchievements.Add(achievement);
             }
-
-            CandidateApplication.Applicant = Candidate;
             
-            _context.Candidates.Add(Candidate);
+            _context.Candidates.Add(CandidateApplication.Applicant);
+
+            CandidateApplication.Date = DateTime;
             
             foreach (var major in SelectedMajors)
             {

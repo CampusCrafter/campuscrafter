@@ -31,6 +31,10 @@ namespace CampusCrafter.Areas.Admission.Pages
         
         public MajorType MajorType { get; set; }
         
+        public Candidate Candidate { get; set; } = default!;
+        
+        public CandidateApplication CandidateApplication { get; set; }
+        
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public IActionResult OnPost(List<ProgressType> progressTypes, List<decimal> score, List<ScholarlyAchievementType> scholarlyAchievementTypes, List<string> descriptions)
         {
@@ -38,8 +42,26 @@ namespace CampusCrafter.Areas.Admission.Pages
             {
                 return Page();
             }
+            
+            foreach (var iTuple in progressTypes.Zip(score))
+            {
+                Progress progress = default!;
+                progress = progress with { Type = iTuple.First, Score = iTuple.Second};
+                
+                Candidate.Progresses.Add(progress);
+            }
+            
+            foreach (var iTuple in scholarlyAchievementTypes.Zip(descriptions))
+            {
+                ScholarlyAchievement scholarlyAchievement = default!;
+                scholarlyAchievement = scholarlyAchievement with { Type = iTuple.First, Description = iTuple.Second};
+                
+                Candidate.ScholarlyAchievements.Add(scholarlyAchievement);
+            }
 
-            return RedirectToPage("./ConfirmAdmission",(progressTypes,score,scholarlyAchievementTypes,descriptions,SelectedMajors));
+            CandidateApplication.Applicant = Candidate;
+
+            return RedirectToPage("./ConfirmAdmission",(CandidateApplication, SelectedMajors));
         }
     }
 }
