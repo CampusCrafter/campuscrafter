@@ -24,7 +24,7 @@
         </tr>
         </thead>
         <tbody>
-        @foreach (var progress in Model.CandidateApplication.Applicant.Progresses)
+        @foreach (var progress in Model.Candidate.Progresses)
         {
             <tr>
                 <td>
@@ -51,7 +51,7 @@
         </tr>
         </thead>
         <tbody>
-        @foreach (var achievement in Model.CandidateApplication.Applicant.ScholarlyAchievements)
+        @foreach (var achievement in Model.Candidate.ScholarlyAchievements)
         {
             <tr>
                 <td>
@@ -77,7 +77,7 @@
             </tr>
             </thead>
             <tbody>
-            @foreach (var major in Model.SelectedMajors)
+            @foreach (var major in Model.Majors)
             {
                 <tr>
                     <td>
@@ -92,10 +92,10 @@
         </table>
 </div>
 <div>
-    @foreach (var major in Model.SelectedMajors)
+    @foreach (var a in Model.CandidateApplications)
     {
         <h4>
-            points without achievements for @major.Name : @((Model.CandidateApplication with {Major = major}).Score)
+            points without achievements for @a.Major.Name : @(a.Score)
         </h4>
     }
 </div>
@@ -104,4 +104,4 @@
         <input type="submit" value="Create" class="btn btn-primary"/>
     </div>
 </form>
-<a asp-area="Admission" asp-page="Index" class="btn btn-primary">Cancel</a>
+<a asp-area="Admission" asp-page="Index" class="btn btn-danger">Cancel</a>

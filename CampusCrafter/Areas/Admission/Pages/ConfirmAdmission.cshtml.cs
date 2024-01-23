@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using CampusCrafter.Data;
 using CampusCrafter.Models;
+using Newtonsoft.Json;
 
 namespace CampusCrafter.Areas.Admission.Pages
 {
@@ -19,20 +20,43 @@ namespace CampusCrafter.Areas.Admission.Pages
             _context = context;
         }
 
-        public List<Major> SelectedMajors = [];
+        [TempData]
+        public string SelectedMajors { get; set; }
+        
+        public List<Major> Majors { get; set; }
 
         public DateTime DateTime { get; set; }
         
-        public CandidateApplication CandidateApplication { get; set; }
+        [TempData]
+        public string JsonCandidateApplication { get; set; }
+
+        public List<CandidateApplication> CandidateApplications { get; set; } = [];
         
-        public IActionResult OnGet(CandidateApplication candidateApplication, List<int> selectedMajors)
+        public Candidate Candidate { get; set; }
+        public IActionResult OnGet()
         {
-            CandidateApplication = candidateApplication;
+            DateTime = DateTime.Today;
+            Majors = [];
+            var candidateApplicationBuilder = JsonConvert.DeserializeObject<CandidateApplicationBuilder>(JsonCandidateApplication)!;
+            var selectedMajors = SelectedMajors.Split("I").Where(a => a!="").Select(Int32.Parse);
             foreach (var i in selectedMajors)
             {
-                SelectedMajors.Add(_context.Majors.Find(i)!);
+                Majors.Add(_context.Majors.Find(i)!);
             }
-            DateTime = DateTime.Today;
+            
+            
+            
+            Candidate = candidateApplicationBuilder.Applicant!;
+            
+            foreach (var major in Majors)
+            {
+                candidateApplicationBuilder.Major = major;
+                var application = candidateApplicationBuilder.Build();
+                CandidateApplications.Add(application);
+            }
+
+
+            Console.Out.WriteLine("wow");
             return Page();
         }
 
@@ -42,24 +66,25 @@ namespace CampusCrafter.Areas.Admission.Pages
             {
                 return Page();
             }
-
-            foreach (var progress in CandidateApplication.Applicant.Progresses)
+            
+            foreach (var progress in CandidateApplications[0].Applicant.Progresses)
             {
                 _context.Progresses.Add(progress);
             }
             
-            foreach (var achievement in CandidateApplication.Applicant.ScholarlyAchievements)
+            foreach (var achievement in CandidateApplications[0].Applicant.ScholarlyAchievements)
             {
                 _context.ScholarlyAchievements.Add(achievement);
             }
             
-            _context.Candidates.Add(CandidateApplication.Applicant);
+            _context.Candidates.Add(CandidateApplications[0].Applicant);
 
-            CandidateApplication.Date = DateTime;
+            var date = DateTime;
             
-            foreach (var major in SelectedMajors)
+            foreach (var application in CandidateApplications)
             {
-                _context.CandidateApplications.Add(CandidateApplication with {Major = major});
+                application.Date = date;
+                _context.CandidateApplications.Add(application);
             }
             
             await _context.SaveChangesAsync();

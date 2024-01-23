@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using CampusCrafter.Data;
 using CampusCrafter.Models;
+using Newtonsoft.Json;
 
 namespace CampusCrafter.Pages.Admission
 {
@@ -21,11 +22,15 @@ namespace CampusCrafter.Pages.Admission
         
         public IList<Major> Major { get;set; } = default!;
 
+        [TempData]
         public MajorType MajorType { get; set; }
+        
+        [TempData]
+        public string SelectedMajors { get; set; }
 
-        public async Task OnGetAsync(int value)
+        public async Task OnGetAsync(MajorType majorType)
         {
-            MajorType = value == 0 ? MajorType.Specialization : MajorType.Major;
+            MajorType = majorType;
             Major = await _context.Majors.Where(m => m.MajorType == MajorType)
                 .Include(m => m.Department)
                 .Include(m => m.Prerequisites)
@@ -35,7 +40,10 @@ namespace CampusCrafter.Pages.Admission
 
         public IActionResult OnPost(List<int> selectedMajors)
         {
-            return RedirectToPage("./FillAdmission", (selectedMajors, MajorType));
+            SelectedMajors = selectedMajors.Aggregate("", (a, b) => a + b + "I");
+            Console.Out.WriteLine(SelectedMajors);
+            Console.Out.WriteLine(0);
+            return RedirectToPage("./FillAdmission");
         }
     }
 }

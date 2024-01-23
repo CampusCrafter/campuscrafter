@@ -46,7 +46,20 @@
                     @Html.DisplayFor(modelItem => item.Department.Name)
                 </td>
                 <td>
-                    <button type="button" onclick="toggleTable(@item.Id+' table')">Toggle Table</button>
+                    <button type="button" onclick="toggleTable(@item.Id+' table')">
+                        @if (Model.MajorType == MajorType.Major)
+                        {
+                            <div>
+                                Specializations
+                            </div>
+                        }
+                        else
+                        {
+                            <div>
+                                Prerequisites
+                            </div>
+                        }
+                    </button>
                 </td>
             </tr>
             <tr>

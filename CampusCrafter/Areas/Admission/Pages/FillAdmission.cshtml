@@ -1,14 +1,14 @@
 @page
 @using CampusCrafter.Models
-@model CampusCrafter.Areas.Admission.Pages.ConfirmApplicationModel
+@model CampusCrafter.Areas.Admission.Pages.FillAdmissionModel
 
 @{
-    ViewData["Title"] = "ConfirmApplication";
+    ViewData["Title"] = "Fill Application";
 }
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/json2/20150503/json2.min.js"></script>
 <h1>ConfirmApplication</h1>
-<form>
+<form method="post">
     <div>
         <h4>Date @Model.DateTime.Day / @Model.DateTime.Month / @Model.DateTime.Year </h4>
         <hr/>
@@ -25,23 +25,29 @@
             </tr>
             </thead>
             <tbody>
-            
+            <tr>
+                <td>
+                    <select name="progressTypes" asp-items="@Html.GetEnumSelectList<ProgressType>()"></select>
+                </td>
+                <td>
+                    <input name="score"/>
+                </td>
+            </tr>
             </tbody>
         </table>
-        <asp:Button ID="btnAddRow" runat="server" Text="Add Row" OnClientClick="addRowProgress();" OnClick="btnAddRow_Click" />
+        <button type="button" onclick="addRowProgress();">Add</button>
         <script type="text/javascript">
+            var rowsProgress = 1;
             function addRowProgress() {
                 var table = document.getElementById("progressTable");
                 var row = table.insertRow(-1);
                 var cell1 = row.insertCell(0);
                 var cell2 = row.insertCell(1);
-                var enumSelectList =JSON.parse('<%= Newtonsoft.Json.JsonConvert.SerializeObject(Html.GetEnumSelectList<ProgressType>()) %>');
-                cell1.innerHTML = '<select name="scholarlyAchievementTypes">';
-                for (var i = 0; i < enumSelectList.length; i++) {
-                    cell1.innerHTML += '<option value="' + enumSelectList[i].Value + '">' + enumSelectList[i].Text + '</option>';
-                }
-                cell1.innerHTML += '</select>';
-                cell2.innerHTML = '<input name="descriptions"/>';
+                var row0 = table.rows[1];
+                var cells = row0.cells;
+                
+                cell1.innerHTML += cells[0].innerHTML;
+                cell2.innerHTML += cells[1].innerHTML;
             }
         </script>
         <hr/>
@@ -58,23 +64,26 @@
             </tr>
             </thead>
             <tbody>
-            
+                <td>
+                    <select name="progressTypes" asp-items="@Html.GetEnumSelectList<ScholarlyAchievementType>()"></select>
+                </td>
+                <td>
+                    <input name="score"/>
+                </td>
             </tbody>
         </table>
-        <asp:Button ID="btnAddRow" runat="server" Text="Add Row" OnClientClick="addRowAchievement();" OnClick="btnAddRow_Click" />
+        <button type="button" onclick="addRowAchievement();">Add</button>
         <script type="text/javascript">
             function addRowAchievement() {
                 var table = document.getElementById("achievementTable");
                 var row = table.insertRow(-1);
                 var cell1 = row.insertCell(0);
                 var cell2 = row.insertCell(1);
-                var enumSelectList =JSON.parse('<%= Newtonsoft.Json.JsonConvert.SerializeObject(Html.GetEnumSelectList<ScholarlyAchievementType>()) %>');
-                cell1.innerHTML = '<select name="scholarlyAchievementTypes">';
-                for (var i = 0; i < enumSelectList.length; i++) {
-                    cell1.innerHTML += '<option value="' + enumSelectList[i].Value + '">' + enumSelectList[i].Text + '</option>';
-                }
-                cell1.innerHTML += '</select>';
-                cell2.innerHTML = '<input name="descriptions"/>';
+                var row0 = table.rows[1];
+                var cells = row0.cells;
+                
+                cell1.innerHTML += cells[0].innerHTML;
+                cell2.innerHTML += cells[1].innerHTML;
             }
         </script>
     </div>
@@ -83,4 +92,4 @@
     </div>
     
 </form>
-<a asp-area="Admission" asp-page="ChooseMajors" class="btn btn-primary">Back</a>
+<a asp-area="Admission" asp-page="ChooseMajors" asp-route-value="@Model.MajorType" class="btn btn-secondary">Back</a>

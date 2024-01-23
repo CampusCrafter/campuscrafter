@@ -1,4 +1,5 @@
 ﻿@page
+@using CampusCrafter.Models
 @model CampusCrafter.Areas.Admission.Pages.IndexModel
 @{
     ViewData["Title"] = "Index";
@@ -7,5 +8,5 @@
 <h2>Home > Admission</h2>
 
 
-<a asp-area="Admission" asp-page="ChooseMajors" asp-route-value="1" class="btn btn-primary">Major</a>
-<a asp-area="Admission" asp-page="ChooseMajors" asp-route-value="0" class="btn btn-primary">Specialization</a>
+<a asp-area="Admission" asp-page="ChooseMajors" asp-route-value="@MajorType.Major" class="btn btn-primary">Major</a>
+<a asp-area="Admission" asp-page="ChooseMajors" asp-route-value="@MajorType.Specialization" class="btn btn-primary">Specialization</a>
