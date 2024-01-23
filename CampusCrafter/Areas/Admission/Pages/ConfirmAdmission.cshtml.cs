@@ -22,21 +22,24 @@ namespace CampusCrafter.Areas.Admission.Pages
 
         [TempData]
         public string SelectedMajors { get; set; }
-        
-        public List<Major> Majors { get; set; }
+
+        public List<Major> Majors { get; set; } = [];
 
         public DateTime DateTime { get; set; }
         
         [TempData]
         public string JsonCandidateApplication { get; set; }
-
+        
         public List<CandidateApplication> CandidateApplications { get; set; } = [];
         
+        public string JsonCandidateApplications { get; set; }
+        
         public Candidate Candidate { get; set; }
+        
+        public string JsonCandidate { get; set; }
         public IActionResult OnGet()
         {
             DateTime = DateTime.Today;
-            Majors = [];
             var candidateApplicationBuilder = JsonConvert.DeserializeObject<CandidateApplicationBuilder>(JsonCandidateApplication)!;
             var selectedMajors = SelectedMajors.Split("I").Where(a => a!="").Select(Int32.Parse);
             foreach (var i in selectedMajors)
@@ -44,9 +47,9 @@ namespace CampusCrafter.Areas.Admission.Pages
                 Majors.Add(_context.Majors.Find(i)!);
             }
             
-            
-            
             Candidate = candidateApplicationBuilder.Applicant!;
+            JsonCandidate = JsonConvert.SerializeObject(Candidate);
+            JsonCandidateApplications = JsonConvert.SerializeObject(CandidateApplications);
             
             foreach (var major in Majors)
             {
@@ -55,31 +58,36 @@ namespace CampusCrafter.Areas.Admission.Pages
                 CandidateApplications.Add(application);
             }
 
-
-            Console.Out.WriteLine("wow");
             return Page();
         }
 
-        public async Task<IActionResult> OnPostAsync()
+        public async Task<IActionResult> OnPostAsync(string candidate, string candidateApplications)
         {
             if (!ModelState.IsValid)
             {
                 return Page();
             }
+
+            Candidate = JsonConvert.DeserializeObject<Candidate>(candidate)!;
+            CandidateApplications = JsonConvert.DeserializeObject<List<CandidateApplication>>(candidateApplications)!;
             
-            foreach (var progress in CandidateApplications[0].Applicant.Progresses)
+            foreach (var progress in Candidate.Progresses)
             {
                 _context.Progresses.Add(progress);
             }
+
             
-            foreach (var achievement in CandidateApplications[0].Applicant.ScholarlyAchievements)
+            foreach (var achievement in Candidate.ScholarlyAchievements)
             {
                 _context.ScholarlyAchievements.Add(achievement);
             }
+
             
-            _context.Candidates.Add(CandidateApplications[0].Applicant);
+            _context.Candidates.Add(Candidate);
+
 
             var date = DateTime;
+
             
             foreach (var application in CandidateApplications)
             {
@@ -88,7 +96,7 @@ namespace CampusCrafter.Areas.Admission.Pages
             }
             
             await _context.SaveChangesAsync();
-
+            
             return RedirectToPage("./Index");
         }
     }

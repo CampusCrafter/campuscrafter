@@ -41,8 +41,6 @@ namespace CampusCrafter.Pages.Admission
         public IActionResult OnPost(List<int> selectedMajors)
         {
             SelectedMajors = selectedMajors.Aggregate("", (a, b) => a + b + "I");
-            Console.Out.WriteLine(SelectedMajors);
-            Console.Out.WriteLine(0);
             return RedirectToPage("./FillAdmission");
         }
     }

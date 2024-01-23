@@ -84,7 +84,7 @@
                         @Html.DisplayFor(modelItem => major.Name)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => 1 @*TODO change to value from major*@)
+                        1
                     </td>
                 </tr>
             }
@@ -94,14 +94,21 @@
 <div>
     @foreach (var a in Model.CandidateApplications)
     {
-        <h4>
-            points without achievements for @a.Major.Name : @(a.Score)
-        </h4>
+        @try
+        {
+            <h4>
+                points without achievements for @a.Major.Name : @(a.Score)
+            </h4>
+        }
+        catch (Exception)
+        {
+            // ignored
+        }
     }
 </div>
-<form>
-    <div class="form-group">
-        <input type="submit" value="Create" class="btn btn-primary"/>
-    </div>
+<form method="post" id="myForm">
+    <input hidden asp-for="JsonCandidate" class="form-control" name="candidate"/>
+    <input hidden asp-for="JsonCandidateApplications" class="form-control" name="candidateApplications"/>
+    <input type="submit" value="Create" class="btn btn-primary"/>
 </form>
 <a asp-area="Admission" asp-page="Index" class="btn btn-danger">Cancel</a>
