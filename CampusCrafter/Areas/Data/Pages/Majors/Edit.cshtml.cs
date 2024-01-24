@@ -86,7 +86,7 @@ namespace CampusCrafter.Areas.Data.Pages.Majors
                 .ToListAsync();
             foreach (var course in courses) course.Major = Major;
             Major.Courses = courses;
-
+            
             _context.Attach(Major).State = EntityState.Modified;
 
             try

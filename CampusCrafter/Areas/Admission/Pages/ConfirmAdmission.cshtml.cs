@@ -11,11 +11,11 @@ using Newtonsoft.Json;
 
 namespace CampusCrafter.Areas.Admission.Pages
 {
-    public class ConfirmApplicationModel : PageModel
+    public class ConfirmAdmissionModel : PageModel
     {
         private readonly CampusCrafter.Data.ApplicationDbContext _context;
 
-        public ConfirmApplicationModel(CampusCrafter.Data.ApplicationDbContext context)
+        public ConfirmAdmissionModel(CampusCrafter.Data.ApplicationDbContext context)
         {
             _context = context;
         }
@@ -37,19 +37,33 @@ namespace CampusCrafter.Areas.Admission.Pages
         public Candidate Candidate { get; set; }
         
         public string JsonCandidate { get; set; }
-        public IActionResult OnGet()
+        public async Task<IActionResult> OnGetAsync()
         {
             DateTime = DateTime.Today;
             var candidateApplicationBuilder = JsonConvert.DeserializeObject<CandidateApplicationBuilder>(JsonCandidateApplication)!;
             var selectedMajors = SelectedMajors.Split("I").Where(a => a!="").Select(Int32.Parse);
+            
+            Majors = [];
             foreach (var i in selectedMajors)
             {
-                Majors.Add(_context.Majors.Find(i)!);
+                var major = await _context.Majors
+                    .Include(m => m.StudyPlans)
+                        .ThenInclude(s => s.AcceptanceCriteria)
+                            .ThenInclude(s => s.ScoreWeights)
+                    .Include(m => m.Department)
+                    .Include(m => m.ParentMajor)
+                    .Include(m => m.Specializations)
+                    .Include(m => m.Courses)
+                    .Include(m => m.Prerequisites)
+                    .FirstOrDefaultAsync(m => m.Id == i);
+                if (major is null)
+                    return NotFound();
+                
+                Majors.Add(major);
             }
             
             Candidate = candidateApplicationBuilder.Applicant!;
             JsonCandidate = JsonConvert.SerializeObject(Candidate);
-            JsonCandidateApplications = JsonConvert.SerializeObject(CandidateApplications);
             
             foreach (var major in Majors)
             {
@@ -57,6 +71,7 @@ namespace CampusCrafter.Areas.Admission.Pages
                 var application = candidateApplicationBuilder.Build();
                 CandidateApplications.Add(application);
             }
+            JsonCandidateApplications = JsonConvert.SerializeObject(CandidateApplications);
 
             return Page();
         }
@@ -82,8 +97,8 @@ namespace CampusCrafter.Areas.Admission.Pages
                 _context.ScholarlyAchievements.Add(achievement);
             }
 
-            
-            _context.Candidates.Add(Candidate);
+            if (await _context.Candidates.AsNoTracking().FirstOrDefaultAsync(c => c.UserId == Candidate.UserId) is null)
+                _context.Candidates.Add(Candidate);
 
 
             var date = DateTime;

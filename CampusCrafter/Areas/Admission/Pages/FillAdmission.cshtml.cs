@@ -68,6 +68,8 @@ namespace CampusCrafter.Areas.Admission.Pages
                 Candidate.ScholarlyAchievements.Add(scholarlyAchievement);
             }
 
+            // TODO: Refactor this to a DTO or a few with foreign keys only
+            // (so instances of linked entities do not serialize to JSON)
             CandidateApplicationBuilder = new CandidateApplicationBuilder
             {
                 Applicant = Candidate

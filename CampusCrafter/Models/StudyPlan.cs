@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using Newtonsoft.Json;
 
 namespace CampusCrafter.Models;
 
@@ -14,7 +15,7 @@ public record StudyPlan
     [Display(Name = "Education Profile")] public EducationProfile EducationProfile { get; set; }
     [Display(Name = "Language")] public required string Language { get; set; }
 
-    [ValidateNever] public Major? Major { get; set; } = null;
+    [ValidateNever, JsonIgnore] public Major? Major { get; set; } = null;
 
     [ValidateNever] public AcceptanceCriteria AcceptanceCriteria { get; set; } = null!;
 
