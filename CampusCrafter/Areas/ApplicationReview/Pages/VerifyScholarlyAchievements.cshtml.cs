@@ -67,7 +67,6 @@ public class VerifyScholarlyAchievements(ApplicationDbContext context, UserManag
         if (application is null)
             return NotFound();
         
-        // FIXME: This adds new records for some reason
         application.Applicant.ScholarlyAchievements = ScholarlyAchievements;
         context.CandidateApplications.Update(application);
         await context.SaveChangesAsync();
