@@ -18,7 +18,7 @@
             @Html.DisplayNameFor(model => model.ApplicantUsers[0].LastName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Applications[0].Major.Name)
+            Major Name
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Applications[0].Date)
@@ -51,7 +51,7 @@
             <td>
                 @Html.DisplayFor(modelItem => application.Date)
             </td>
-            <td>
+            <td class="has-tooltip" data-toggle="tooltip" data-placement="top" title="@application.RejectReason">
                 @Html.DisplayFor(modelItem => application.Status)
             </td>
             <td>
@@ -65,3 +65,12 @@
     }
     </tbody>
 </table>
+
+@section Scripts 
+{
+    <script>
+        $(document).ready(() => {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>    
+}
