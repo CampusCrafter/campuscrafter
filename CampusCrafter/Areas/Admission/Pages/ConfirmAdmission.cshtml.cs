@@ -86,6 +86,7 @@ namespace CampusCrafter.Areas.Admission.Pages
             Candidate = JsonConvert.DeserializeObject<Candidate>(candidate)!;
             CandidateApplications = JsonConvert.DeserializeObject<List<CandidateApplication>>(candidateApplications)!;
             
+            // TODO: Ensure there are no duplicate progresses (for example, two scores of the same type - take the newer and delete the older)
             foreach (var progress in Candidate.Progresses)
             {
                 _context.Progresses.Add(progress);
@@ -99,6 +100,8 @@ namespace CampusCrafter.Areas.Admission.Pages
 
             if (await _context.Candidates.AsNoTracking().FirstOrDefaultAsync(c => c.UserId == Candidate.UserId) is null)
                 _context.Candidates.Add(Candidate);
+            else
+                _context.Candidates.Update(Candidate);
 
 
             var date = DateTime;

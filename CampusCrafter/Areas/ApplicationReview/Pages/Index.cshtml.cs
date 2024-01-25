@@ -5,14 +5,14 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
-namespace CampusCrafter.Areas.AdmissionReview.Pages;
+namespace CampusCrafter.Areas.ApplicationReview.Pages;
 
-public class Test : PageModel
+public class Index : PageModel
 {
     private ApplicationDbContext context;
     private UserManager<ApplicationUser> userManager;
 
-    public Test(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
+    public Index(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
     {
         this.context = context;
         this.userManager = userManager;
@@ -22,12 +22,13 @@ public class Test : PageModel
 
     [BindProperty] public List<ApplicationUser> ApplicantUsers { get; set; } = default!;
     
-    public async Task OnGet()
+    public async Task OnGetAsync()
     {
-        var a = await context.CandidateApplications.ToListAsync();
-        
         Applications = await context.CandidateApplications
             .Include(a => a.Applicant)
+            .ThenInclude(a => a.Progresses)
+            .Include(a => a.Applicant)
+            .ThenInclude(a => a.ScholarlyAchievements)
             .Include(a => a.Major)
             .ToListAsync();
 

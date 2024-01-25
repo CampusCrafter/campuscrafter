@@ -1,0 +1,127 @@
+@page
+@model CampusCrafter.Areas.ApplicationReview.Pages.ViewApplication
+
+@{
+    ViewData["Title"] = $"Review Application {Model.Application.Id}";
+}
+
+<div class="row">
+    <div class="col-md-2">
+        <img class="w-100" src="~/img/avatar-placeholder.webp" alt="Avatar">
+        <ul class="bulletless">
+            <li class="text-large text-bold">@Html.DisplayFor(m => m.ApplicantUser.LastName)</li>
+            <li class="text-large">@Html.DisplayFor(m => m.ApplicantUser.FirstName)</li>
+            <li class="text-large text-muted">@Html.DisplayFor(m => m.ApplicantUser.Email)</li>
+        </ul>
+        
+        <p class="text-bold">Other applications submitted by this candidate</p>
+        <ul class="bulletless">
+            @if (Model.OtherApplications.Count == 0)
+            {
+                <li>None</li>
+            }
+            @foreach (var application in Model.OtherApplications)
+            {
+                <li>
+                    <a asp-page="./ViewApplication" asp-route-applicationid="@application.Id">@($"{application.Major.Name} ({application.Date})")</a>
+                </li>
+            }
+        </ul>
+    </div>
+    <div class="col-md-8">
+        <dl class="row w-100">
+            <dt class="col-sm-3">Submission Date</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(m => m.Application.Date)</dd>
+            
+            <dt class="col-sm-3">Major</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(m => m.Application.Major.Name)</dd>
+        </dl>
+        
+        <dl class="w-100">
+            <dt>Progress</dt>
+            <dd>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(m => m.Application.Applicant.Progresses[0].Type)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(m => m.Application.Applicant.Progresses[0].Score)
+                        </th>
+                    </tr>
+                    </thead>
+        
+                    <tbody>
+                    @for (var i = 0; i < Model.Application.Applicant.Progresses.Count; i++)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(m => m.Application.Applicant.Progresses[i].Type)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(m => m.Application.Applicant.Progresses[i].Score)
+                            </td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </dd>
+            
+            <dt>Scholarly Achievements</dt>
+            <dd>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(m => m.Application.Applicant.ScholarlyAchievements[0].Type)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(m => m.Application.Applicant.ScholarlyAchievements[0].Description)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(m => m.Application.Applicant.ScholarlyAchievements[0].Score)
+                        </th>
+                    </tr>
+                    </thead>
+        
+                    <tbody>
+                    @for (var i = 0; i < Model.Application.Applicant.ScholarlyAchievements.Count; i++)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(m => m.Application.Applicant.ScholarlyAchievements[i].Type)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(m => m.Application.Applicant.ScholarlyAchievements[i].Description)
+                            </td>
+                            <td>
+                                @if (Model.Application.Applicant.ScholarlyAchievements[i].Score is null)
+                                {
+                                    <span>(unassigned)</span>
+                                }
+                                else
+                                {
+                                    @Html.DisplayFor(m => m.Application.Applicant.ScholarlyAchievements[i].Score)
+                                }
+                            </td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+                
+                <a class="btn btn-secondary" asp-page="./VerifyScholarlyAchievements" asp-route-applicationid="@Model.Application.Id">Verify Scholarly Achievements...</a>
+            </dd>
+        </dl>
+        
+        <dl class="row w-100">
+            <dt class="col-sm-3">Score</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(m => m.Application.Score)</dd>
+        </dl>
+    </div>
+    <div class="col-md-2 vstack gap-2 text-center">
+        <p class="text-large text-bold">@Html.DisplayFor(m => m.Application.Status)</p>
+        <a class="btn btn-success">Accept</a>
+        <a class="btn btn-danger">Reject</a>
+    </div>
+</div>

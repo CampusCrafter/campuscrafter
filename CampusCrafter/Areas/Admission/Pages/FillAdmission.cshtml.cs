@@ -64,7 +64,7 @@ namespace CampusCrafter.Areas.Admission.Pages
             
             foreach (var iTuple in scholarlyAchievementTypes.Zip(descriptions))
             {
-                var scholarlyAchievement = new ScholarlyAchievement(0, iTuple.First, iTuple.Second);
+                var scholarlyAchievement = new ScholarlyAchievement(0, iTuple.First, iTuple.Second, null);
                 Candidate.ScholarlyAchievements.Add(scholarlyAchievement);
             }
 
