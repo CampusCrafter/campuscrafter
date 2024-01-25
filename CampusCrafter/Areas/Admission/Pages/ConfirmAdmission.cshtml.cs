@@ -90,7 +90,7 @@ namespace CampusCrafter.Areas.Admission.Pages
             {
                 _context.Progresses.Add(progress);
             }
-
+            
             
             foreach (var achievement in Candidate.ScholarlyAchievements)
             {
@@ -102,11 +102,15 @@ namespace CampusCrafter.Areas.Admission.Pages
 
 
             var date = DateTime;
-
+            
             
             foreach (var application in CandidateApplications)
             {
                 application.Date = date;
+                application.Major = null;
+                application.ApplicantId = application.Applicant.UserId;
+                application.Applicant = null;
+                
                 _context.CandidateApplications.Add(application);
             }
             

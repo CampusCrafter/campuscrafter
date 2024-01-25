@@ -18,7 +18,9 @@ public class CandidateApplicationBuilder
         return new CandidateApplication
         {
             Applicant = Applicant,
+            ApplicantId = Applicant.UserId,
             Major = Major,
+            MajorId = Major?.Id,
             StudyType = StudyType,
             RejectReason = RejectReason,
             Date = Date,
