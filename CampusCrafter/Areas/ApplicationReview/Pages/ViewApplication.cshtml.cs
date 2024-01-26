@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using CampusCrafter.Data;
 using CampusCrafter.Models;
 using Microsoft.AspNetCore.Identity;
@@ -15,7 +16,7 @@ public class ViewApplication(ApplicationDbContext context, UserManager<Applicati
 
     public List<CandidateApplication> OtherApplications { get; set; } = default!;
 
-    [BindProperty] public string RejectReason { get; set; } = default!;
+    [BindProperty, Required] public string RejectReason { get; set; } = default!;
 
     private async Task<bool> PrepareDataAsync(int applicationId)
     {
@@ -57,16 +58,29 @@ public class ViewApplication(ApplicationDbContext context, UserManager<Applicati
     public async Task<IActionResult> OnPostAsync(int applicationId, string actionType)
     {
         // Skip validating RejectReason if we're accepting an application
-        if (!ModelState.IsValid && actionType == "reject" && ModelState["RejectReason"].ValidationState == ModelValidationState.Invalid)
+        if (!ModelState.IsValid && actionType == "reject" && ModelState["RejectReason"]?.ValidationState == ModelValidationState.Invalid)
         {
             if (!await PrepareDataAsync(applicationId))
                 return NotFound();
             return Page();
         }
 
-        var application = await context.CandidateApplications.FirstOrDefaultAsync(a => a.Id == applicationId);
+        var application = await context.CandidateApplications
+            .Include(candidateApplication => candidateApplication.Applicant)
+            .ThenInclude(candidate => candidate.ScholarlyAchievements).FirstOrDefaultAsync(a => a.Id == applicationId);
         if (application is null)
             return NotFound();
+
+        bool alreadyHandled =
+            application.Status is CandidateApplicationStatus.Accepted or CandidateApplicationStatus.Rejected;
+        bool notAllScholarlyAchievementsHandled =
+            application.Applicant.ScholarlyAchievements.Any(s => s.Score is null);
+        if (alreadyHandled || notAllScholarlyAchievementsHandled)
+        {
+            if (!await PrepareDataAsync(applicationId))
+                return NotFound();
+            return Page();
+        }
 
         switch (actionType.Trim().ToLowerInvariant())
         {

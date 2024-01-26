@@ -24,7 +24,8 @@ public class CandidateApplicationBuilder
             StudyType = StudyType,
             RejectReason = RejectReason,
             Date = Date,
-            Id = Id
+            Id = Id,
+            Status = CandidateApplicationStatus.Submitted
         };
     }
 }

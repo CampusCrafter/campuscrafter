@@ -71,7 +71,7 @@
 
             <dt>Scholarly Achievements</dt>
             <dd>
-                <table class="table">
+                <table class="table" id="scholarly-achievements-table">
                     <thead>
                     <tr>
                         <th>
@@ -99,7 +99,7 @@
                             <td>
                                 @if (Model.Application.Applicant.ScholarlyAchievements[i].Score is null)
                                 {
-                                    <span>(unassigned)</span>
+                                    <span data-unassigned>(unassigned)</span>
                                 }
                                 else
                                 {
@@ -132,8 +132,8 @@
             <div class="vstack gap-2 text-center">
                 <input hidden asp-for="Application.Id" name="applicationId"/>
                 <input hidden name="actionType" value="accept"/>
-                <a class="btn btn-success" id="btn-accept">Accept</a>
-                <a class="btn btn-danger" id="btn-reject">Reject</a>
+                <a class="btn btn-success @(Model.Application.Status is CandidateApplicationStatus.Accepted or CandidateApplicationStatus.Rejected ? "disabled" : "")" id="btn-accept">Accept</a>
+                <a class="btn btn-danger @(Model.Application.Status is CandidateApplicationStatus.Accepted or CandidateApplicationStatus.Rejected ? "disabled" : "")" id="btn-reject">Reject</a>
             </div>
         </form>
     </div>
@@ -150,19 +150,50 @@
                     <input hidden asp-for="Application.Id" name="applicationId"/>
                     <input hidden name="actionType" value="reject"/>
                     <textarea asp-for="RejectReason" class="form-control w-100" placeholder="Enter text..."></textarea>
+                    <span class="text-danger d-none" id="reject-reason-validation">Reason for rejection cannot be empty.</span>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary modal-close" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" id="reject-reason-modal-close" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-danger" id="btn-modal-reject">Reject</button>
             </div>
         </div>
     </div>
 </div>
 
+<div class="modal fade" id="accept-failed-modal" tabindex="-1" role="dialog" aria-labelledby="accept-failed-modal-label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="accept-failed-modal-label">Cannot accept application</h5>
+            </div>
+            <div class="modal-body">
+                All scholarly achievements must be scored before the application can be accepted.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="accept-failed-modal-close" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script>
-    document.querySelector("#btn-accept").addEventListener("click", e => document.querySelector("#accept-form").requestSubmit());
+    document.querySelector("#btn-accept").addEventListener("click", e => {
+        if (document.querySelectorAll("#scholarly-achievements-table span[data-unassigned]").length > 0)
+            $("#accept-failed-modal").modal("show");
+        else
+            document.querySelector("#accept-form").requestSubmit();
+    });
+    
     document.querySelector("#btn-reject").addEventListener("click", e => $("#reject-reason-modal").modal("show"));
-    document.querySelector("#btn-modal-reject").addEventListener("click", e => document.querySelector("#reject-reason-form").requestSubmit());
-    document.querySelectorAll(".modal-close").forEach(elem => elem.addEventListener("click", e => $("#reject-reason-modal").modal("hide")));
+    
+    document.querySelector("#btn-modal-reject").addEventListener("click", e => {
+        if (document.querySelector("#RejectReason").value === "") (
+            document.querySelector("#reject-reason-validation").classList.remove("d-none"));
+        else
+            document.querySelector("#reject-reason-form").requestSubmit()
+    });
+    
+    document.querySelector("#reject-reason-modal-close").addEventListener("click", e => $("#reject-reason-modal").modal("hide"));
+    document.querySelector("#accept-failed-modal-close").addEventListener("click", e => $("#accept-failed-modal").modal("hide"));
 </script>

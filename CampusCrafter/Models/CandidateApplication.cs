@@ -6,7 +6,7 @@ namespace CampusCrafter.Models;
 
 public record CandidateApplication
 {
-    [Key] public int Id { get; set; }
+    [Key, Display(Name = "Application ID")] public int Id { get; set; }
     
     [ForeignKey("Applicant")] public string? ApplicantId { get; set; }
     public required Candidate? Applicant { get; set; }
