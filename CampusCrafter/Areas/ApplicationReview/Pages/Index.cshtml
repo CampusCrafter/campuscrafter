@@ -1,11 +1,29 @@
 ﻿@page
+@using Index = CampusCrafter.Areas.ApplicationReview.Pages.Index
 @model CampusCrafter.Areas.ApplicationReview.Pages.Index
 
 @{
     ViewData["Title"] = "Review Applications";
 }
 
-<h1>Submitted Applications</h1>
+<h1>Review Applications</h1>
+
+<form method="post">
+    <div class="hstack gap-2">
+        <div class="col-md-3 hstack gap-2">
+            <label asp-for="SortingOpts" class="control-label"></label>
+            <select asp-for="SortingOpts" class="form-control" asp-items="@Html.GetEnumSelectList<Index.SortingOptions>()"></select>
+        </div>
+        
+        <div class="col-md-3 hstack gap-2">
+            <label asp-for="FilteringOpts" class="control-label"></label>
+            <select asp-for="FilteringOpts" class="form-control" asp-items="@Html.GetEnumSelectList<Index.FilteringOptions>()"></select>
+        </div>
+        
+        <input type="submit" class="btn btn-primary" value="Apply"/>
+    </div>
+</form>
+
 
 <table class="table">
     <thead>
