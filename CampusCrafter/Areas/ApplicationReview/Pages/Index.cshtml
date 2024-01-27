@@ -1,0 +1,96 @@
+﻿@page
+@using Index = CampusCrafter.Areas.ApplicationReview.Pages.Index
+@model CampusCrafter.Areas.ApplicationReview.Pages.Index
+
+@{
+    ViewData["Title"] = "Review Applications";
+}
+
+<h1>Review Applications</h1>
+
+<form method="post">
+    <div class="hstack gap-2">
+        <div class="col-md-3 hstack gap-2">
+            <label asp-for="SortingOpts" class="control-label"></label>
+            <select asp-for="SortingOpts" class="form-control" asp-items="@Html.GetEnumSelectList<Index.SortingOptions>()"></select>
+        </div>
+        
+        <div class="col-md-3 hstack gap-2">
+            <label asp-for="FilteringOpts" class="control-label"></label>
+            <select asp-for="FilteringOpts" class="form-control" asp-items="@Html.GetEnumSelectList<Index.FilteringOptions>()"></select>
+        </div>
+        
+        <input type="submit" class="btn btn-primary" value="Apply"/>
+    </div>
+</form>
+
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Applications[0].Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApplicantUsers[0].FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApplicantUsers[0].LastName)
+        </th>
+        <th>
+            Major Name
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Applications[0].Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Applications[0].Status)
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @for (var i = 0; i < Model.Applications.Count; i++)
+    {
+        var application = Model.Applications[i];
+        var user = Model.ApplicantUsers[i];
+        
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => application.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => user.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => user.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => application.Major.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => application.Date)
+            </td>
+            <td class="has-tooltip" data-toggle="tooltip" data-placement="top" title="@application.RejectReason">
+                @Html.DisplayFor(modelItem => application.Status)
+            </td>
+            <td>
+
+                @{
+                    var i1 = i;
+                }
+                <a class="btn btn-primary" asp-page="./ViewApplication" asp-route-applicationid="@Model.Applications[i1].Id">Review</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+@section Scripts 
+{
+    <script>
+        $(document).ready(() => {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>    
+}

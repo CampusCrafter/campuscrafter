@@ -4,7 +4,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CampusCrafter.Data;
 
-public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+    : IdentityDbContext<ApplicationUser>(options)
 {
     public DbSet<Candidate> Candidates { get; set; }
     public DbSet<Progress> Progresses { get; set; }
@@ -20,11 +21,6 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<StudyPlan> StudyPlans { get; set; }
     public DbSet<AcceptanceCriteria> AcceptanceCriteria { get; set; }
     public DbSet<ScoreWeight> ScoreWeights { get; set; }
-    
-    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-        : base(options)
-    {
-    }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

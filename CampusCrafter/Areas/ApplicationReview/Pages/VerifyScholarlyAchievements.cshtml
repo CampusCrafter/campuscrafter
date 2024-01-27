@@ -1,0 +1,66 @@
+@page
+@model CampusCrafter.Areas.ApplicationReview.Pages.VerifyScholarlyAchievements
+
+@{
+    ViewData["Title"] = $"Review Application {Model.Application.Id}";
+}
+
+<div class="row">
+    <div class="col-md-2">
+        <img class="w-100" src="~/img/avatar-placeholder.webp" alt="Avatar">
+        <ul class="bulletless">
+            <li class="text-large text-bold">@Html.DisplayFor(m => m.ApplicantUser.LastName)</li>
+            <li class="text-large">@Html.DisplayFor(m => m.ApplicantUser.FirstName)</li>
+            <li class="text-large text-muted">@Html.DisplayFor(m => m.ApplicantUser.Email)</li>
+        </ul>
+        
+        <p class="text-bold">Other applications submitted by this candidate</p>
+        <ul class="bulletless">
+            @if (Model.OtherApplications.Count == 0)
+            {
+                <li>None</li>
+            }
+            @foreach (var application in Model.OtherApplications)
+            {
+                <li>
+                    <a asp-page="./ViewApplication" asp-route-applicationid="@application.Id">@($"{application.Major.Name} ({application.Date})")</a>
+                </li>
+            }
+        </ul>
+    </div>
+    <div class="col-md-8">
+        <dl class="w-100">
+            <dt>Scholarly Achievements</dt>
+            <dd class="mt-3">
+                <form method="post" id="form-scholarly-achievements">
+                    <input hidden asp-for="Application.Id" name="applicationid"/>
+                    <div class="vstack gap-2">
+                        @for (var i = 0; i < Model.ScholarlyAchievements.Count; i++)
+                        {
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <h6 class="text-bold">@Model.ScholarlyAchievements[i].Type</h6>
+                                    @Html.DisplayFor(m => m.ScholarlyAchievements[i].Description)
+                                    <input hidden asp-for="ScholarlyAchievements[i].Description"/>
+                                </div>
+                                <div class="col-md-3">
+                                    <input asp-for="ScholarlyAchievements[i].Score" class="form-control w-100" placeholder="Enter a score"/>
+                                    <span asp-validation-for="ScholarlyAchievements[i].Score" class="text-danger w-100"></span>
+                                </div>
+                            </div>
+                            <hr/>
+                        }
+                    </div>
+                </form>
+            </dd>
+        </dl>
+    </div>
+    <div class="col-md-2 vstack gap-2 text-center">
+        <a class="btn btn-success" id="btn-confirm">Confirm</a>
+        <a class="btn btn-secondary" asp-page="./ViewApplication" asp-route-applicationid="@Model.Application.Id">Cancel</a>
+    </div>
+</div>
+
+<script>
+    document.querySelector("#btn-confirm").addEventListener("click", e => document.querySelector("#form-scholarly-achievements").requestSubmit());
+</script>

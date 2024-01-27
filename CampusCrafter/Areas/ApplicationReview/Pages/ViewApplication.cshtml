@@ -1,0 +1,199 @@
+@page
+@using CampusCrafter.Models
+@model CampusCrafter.Areas.ApplicationReview.Pages.ViewApplication
+
+@{
+    ViewData["Title"] = $"Review Application {Model.Application.Id}";
+}
+
+<div class="row">
+    <div class="col-md-2">
+        <img class="w-100" src="~/img/avatar-placeholder.webp" alt="Avatar">
+        <ul class="bulletless">
+            <li class="text-large text-bold">@Html.DisplayFor(m => m.ApplicantUser.LastName)</li>
+            <li class="text-large">@Html.DisplayFor(m => m.ApplicantUser.FirstName)</li>
+            <li class="text-large text-muted">@Html.DisplayFor(m => m.ApplicantUser.Email)</li>
+        </ul>
+
+        <p class="text-bold">Other applications submitted by this candidate</p>
+        <ul class="bulletless">
+            @if (Model.OtherApplications.Count == 0)
+            {
+                <li>None</li>
+            }
+            @foreach (var application in Model.OtherApplications)
+            {
+                <li>
+                    <a asp-page="./ViewApplication" asp-route-applicationid="@application.Id">@($"{application.Major.Name} ({application.Date})")</a>
+                </li>
+            }
+        </ul>
+    </div>
+    <div class="col-md-8">
+        <dl class="row w-100">
+            <dt class="col-sm-3">Submission Date</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(m => m.Application.Date)</dd>
+
+            <dt class="col-sm-3">Major</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(m => m.Application.Major.Name)</dd>
+        </dl>
+
+        <dl class="w-100">
+            <dt>Progress</dt>
+            <dd>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(m => m.Application.Applicant.Progresses[0].Type)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(m => m.Application.Applicant.Progresses[0].Score)
+                        </th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    @for (var i = 0; i < Model.Application.Applicant.Progresses.Count; i++)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(m => m.Application.Applicant.Progresses[i].Type)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(m => m.Application.Applicant.Progresses[i].Score)
+                            </td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </dd>
+
+            <dt>Scholarly Achievements</dt>
+            <dd>
+                <table class="table" id="scholarly-achievements-table">
+                    <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(m => m.Application.Applicant.ScholarlyAchievements[0].Type)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(m => m.Application.Applicant.ScholarlyAchievements[0].Description)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(m => m.Application.Applicant.ScholarlyAchievements[0].Score)
+                        </th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    @for (var i = 0; i < Model.Application.Applicant.ScholarlyAchievements.Count; i++)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(m => m.Application.Applicant.ScholarlyAchievements[i].Type)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(m => m.Application.Applicant.ScholarlyAchievements[i].Description)
+                            </td>
+                            <td>
+                                @if (Model.Application.Applicant.ScholarlyAchievements[i].Score is null)
+                                {
+                                    <span data-unassigned>(unassigned)</span>
+                                }
+                                else
+                                {
+                                    @Html.DisplayFor(m => m.Application.Applicant.ScholarlyAchievements[i].Score)
+                                }
+                            </td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+
+                <a class="btn btn-secondary" asp-page="./VerifyScholarlyAchievements" asp-route-applicationid="@Model.Application.Id">Verify Scholarly Achievements...</a>
+            </dd>
+        </dl>
+
+        <dl class="row w-100">
+            <dt class="col-sm-3">Score</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(m => m.Application.Score)</dd>
+        </dl>
+    </div>
+    <div class="col-md-2 vstack gap-2 text-center">
+        <p class="text-large text-bold">@Html.DisplayFor(m => m.Application.Status)</p>
+        
+        @if (Model.Application.Status == CandidateApplicationStatus.Rejected)
+        {
+            <p>Reason: @(Model.Application.RejectReason)</p>
+        }
+        
+        <form method="post" id="accept-form">
+            <div class="vstack gap-2 text-center">
+                <input hidden asp-for="Application.Id" name="applicationId"/>
+                <input hidden name="actionType" value="accept"/>
+                <a class="btn btn-success @(Model.Application.Status is CandidateApplicationStatus.Accepted or CandidateApplicationStatus.Rejected ? "disabled" : "")" id="btn-accept">Accept</a>
+                <a class="btn btn-danger @(Model.Application.Status is CandidateApplicationStatus.Accepted or CandidateApplicationStatus.Rejected ? "disabled" : "")" id="btn-reject">Reject</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal fade" id="reject-reason-modal" tabindex="-1" role="dialog" aria-labelledby="reject-reason-modal-label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="reject-reason-modal-label">Enter reason for rejection</h5>
+            </div>
+            <div class="modal-body">
+                <form method="post" id="reject-reason-form">
+                    <input hidden asp-for="Application.Id" name="applicationId"/>
+                    <input hidden name="actionType" value="reject"/>
+                    <textarea asp-for="RejectReason" class="form-control w-100" placeholder="Enter text..."></textarea>
+                    <span class="text-danger d-none" id="reject-reason-validation">Reason for rejection cannot be empty.</span>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" id="reject-reason-modal-close" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger" id="btn-modal-reject">Reject</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="accept-failed-modal" tabindex="-1" role="dialog" aria-labelledby="accept-failed-modal-label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="accept-failed-modal-label">Cannot accept application</h5>
+            </div>
+            <div class="modal-body">
+                All scholarly achievements must be scored before the application can be accepted.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="accept-failed-modal-close" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelector("#btn-accept").addEventListener("click", e => {
+        if (document.querySelectorAll("#scholarly-achievements-table span[data-unassigned]").length > 0)
+            $("#accept-failed-modal").modal("show");
+        else
+            document.querySelector("#accept-form").requestSubmit();
+    });
+    
+    document.querySelector("#btn-reject").addEventListener("click", e => $("#reject-reason-modal").modal("show"));
+    
+    document.querySelector("#btn-modal-reject").addEventListener("click", e => {
+        if (document.querySelector("#RejectReason").value === "") (
+            document.querySelector("#reject-reason-validation").classList.remove("d-none"));
+        else
+            document.querySelector("#reject-reason-form").requestSubmit()
+    });
+    
+    document.querySelector("#reject-reason-modal-close").addEventListener("click", e => $("#reject-reason-modal").modal("hide"));
+    document.querySelector("#accept-failed-modal-close").addEventListener("click", e => $("#accept-failed-modal").modal("hide"));
+</script>
