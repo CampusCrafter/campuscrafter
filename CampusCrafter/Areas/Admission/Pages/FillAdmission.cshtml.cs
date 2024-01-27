@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using CampusCrafter.Data;
 using CampusCrafter.Models;
 using Microsoft.AspNetCore.Identity;
-using Newtonsoft.Json;
+using Microsoft.EntityFrameworkCore;
 
 namespace CampusCrafter.Areas.Admission.Pages
 {
@@ -22,25 +22,51 @@ namespace CampusCrafter.Areas.Admission.Pages
             _context = context;
         }
 
-        public IActionResult OnGet()
+        public async Task<IActionResult> OnGetAsync()
         {
+            var selectedMajors = SelectedMajors.Split("I").Where(a => a!="").Select(Int32.Parse);
+            
+            foreach (var i in selectedMajors)
+            {
+                var major = await _context.Majors
+                    .Include(m => m.StudyPlans)
+                    .ThenInclude(s => s.AcceptanceCriteria)
+                    .ThenInclude(s => s.ScoreWeights)
+                    .Include(m => m.Department)
+                    .Include(m => m.ParentMajor)
+                    .Include(m => m.Specializations)
+                    .Include(m => m.Courses)
+                    .Include(m => m.Prerequisites)
+                    .FirstOrDefaultAsync(m => m.Id == i);
+                if (major is null)
+                    return NotFound();
+                
+                Majors.Add(major);
+            }
+            
             return Page();
         }
         
         [TempData]
+        public string SelectedMajors { get; set; }
+        
+        [TempData]
         public MajorType MajorType { get; set; }
+
+        public List<Major> Majors { get; set; } = [];
         
         public Candidate Candidate { get; set; }
 
         public DateTime DateTime { get; set; } = DateTime.Today;
         
-        [TempData]
-        public string JsonCandidateApplication { get; set; }
-        
         public CandidateApplicationBuilder CandidateApplicationBuilder { get; set; }
         
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
-        public IActionResult OnPost(List<ProgressType> progressTypes, List<decimal> score, List<ScholarlyAchievementType> scholarlyAchievementTypes, List<string> descriptions)
+        public async Task<IActionResult> OnPostAsync(List<ProgressType> progressTypes,
+                                    List<decimal> score,
+                                    List<ScholarlyAchievementType> scholarlyAchievementTypes,
+                                    List<string> descriptions,
+                                    string selectedMajors)
         {
             
             if (!ModelState.IsValid)
@@ -68,16 +94,25 @@ namespace CampusCrafter.Areas.Admission.Pages
                 Candidate.ScholarlyAchievements.Add(scholarlyAchievement);
             }
 
-            // TODO: Refactor this to a DTO or a few with foreign keys only
-            // (so instances of linked entities do not serialize to JSON)
+            _context.Candidates.Add(Candidate);
+
+            
             CandidateApplicationBuilder = new CandidateApplicationBuilder
             {
-                Applicant = Candidate
+                ApplicantId = Candidate.UserId,
+                Date = DateTime.Today
             };
 
-            JsonCandidateApplication = JsonConvert.SerializeObject(CandidateApplicationBuilder);
+            foreach (var majorId in selectedMajors.Split("I").Where(a => a != "").Select(Int32.Parse))
+            {
+                CandidateApplicationBuilder.MajorId = majorId;
+                _context.CandidateApplications.Add(CandidateApplicationBuilder.Build());
+            }
 
-            return RedirectToPage("./ConfirmAdmission");
+            await _context.SaveChangesAsync();
+            
+
+            return RedirectToPage("./Index");
         }
     }
 }

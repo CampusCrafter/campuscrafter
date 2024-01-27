@@ -6,11 +6,12 @@
     ViewData["Title"] = "Fill Application";
 }
 
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/json2/20150503/json2.min.js"></script>
 <h1>ConfirmApplication</h1>
-<form method="post">
+<form method="post" id="admission-form">
     <div>
-        <h4>Date @Model.DateTime.Day / @Model.DateTime.Month / @Model.DateTime.Year </h4>
+        <h4>Date @Model.DateTime.ToShortDateString() </h4>
         <hr/>
         <h4>Education Progress</h4>
         <table class="table" id="progressTable">
@@ -35,21 +36,7 @@
             </tr>
             </tbody>
         </table>
-        <button type="button" onclick="addRowProgress();">Add</button>
-        <script type="text/javascript">
-            var rowsProgress = 1;
-            function addRowProgress() {
-                var table = document.getElementById("progressTable");
-                var row = table.insertRow(-1);
-                var cell1 = row.insertCell(0);
-                var cell2 = row.insertCell(1);
-                var row0 = table.rows[1];
-                var cells = row0.cells;
-                
-                cell1.innerHTML += cells[0].innerHTML;
-                cell2.innerHTML += cells[1].innerHTML;
-            }
-        </script>
+        <button type="button" onclick="addRowProgress();" name="btn-add">Add</button>
         <hr/>
         <h4>Scholarly Achievements</h4>
         <table class="table" id="achievementTable">
@@ -64,32 +51,56 @@
             </tr>
             </thead>
             <tbody>
-                <td>
-                    <select name="scholarlyAchievementTypes" asp-items="@Html.GetEnumSelectList<ScholarlyAchievementType>()"></select>
-                </td>
-                <td>
-                    <input name="descriptions"/>
-                </td>
+            <td>
+                <select name="scholarlyAchievementTypes" asp-items="@Html.GetEnumSelectList<ScholarlyAchievementType>()"></select>
+            </td>
+            <td>
+                <input name="descriptions"/>
+            </td>
             </tbody>
         </table>
-        <button type="button" onclick="addRowAchievement();">Add</button>
-        <script type="text/javascript">
-            function addRowAchievement() {
-                var table = document.getElementById("achievementTable");
-                var row = table.insertRow(-1);
-                var cell1 = row.insertCell(0);
-                var cell2 = row.insertCell(1);
-                var row0 = table.rows[1];
-                var cells = row0.cells;
-                
-                cell1.innerHTML += cells[0].innerHTML;
-                cell2.innerHTML += cells[1].innerHTML;
+        <button type="button" onclick="addRowAchievement();" name="btn-add">Add</button>
+        <table class="table" id="majors_table" style="display: none;">
+            <thead>
+            <tr>
+                <th>
+                    Major
+                </th>
+                <th>
+                    Points needed in the last admission process
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var major in Model.Majors)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => major.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => major.MinScore)
+                    </td>
+                </tr>
             }
-        </script>
+            </tbody>
+        </table>
+        <input name="selectedMajors" value="@Model.SelectedMajors" hidden="hidden"/>
     </div>
-    <div class="form-group">
-        <input type="submit" value="Create" class="btn btn-primary"/>
+    <div id="cont-btn">
+        <input type="button" value="Create" onclick="toConfirm()" class="btn btn-primary"/>
+    </div>
+    <div class="form-group" id="post-btn" style="display: none">
+        <input type="button" value="Create" onclick="submission()" class="btn btn-primary"/>
+    </div>
+    <div style="display: none" id="fill-btn">
+        <input type="button" value="Change" onclick="toFill()" class="btn btn-secondary"/>
     </div>
     
 </form>
 <a asp-area="Admission" asp-page="ChooseMajors" asp-route-value="@Model.MajorType" class="btn btn-secondary">Back</a>
+
+@section Scripts
+{
+    <script src="~/js/admission-magic-box.js"></script>
+}

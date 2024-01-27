@@ -25,5 +25,5 @@ public record Major
     
     [ValidateNever, Display(Name = "Study Plans")] public required List<StudyPlan> StudyPlans { get; set; }
     
-    // TODO: How do we calculate the minimum score required for an application to be accepted?
+    [Display(Name = "minimum score last year")] public float? MinScore { get; set; }
 }
