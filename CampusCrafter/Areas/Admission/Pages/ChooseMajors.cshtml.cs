@@ -7,10 +7,13 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using CampusCrafter.Data;
 using CampusCrafter.Models;
+using CampusCrafter.Utils;
+using Microsoft.AspNetCore.Authorization;
 using Newtonsoft.Json;
 
 namespace CampusCrafter.Pages.Admission
 {
+    [Authorize(Roles = "Candidate")]
     public class ChooseMajorsModel : PageModel
     {
         private readonly CampusCrafter.Data.ApplicationDbContext _context;

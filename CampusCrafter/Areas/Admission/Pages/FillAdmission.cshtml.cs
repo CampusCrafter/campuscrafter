@@ -8,11 +8,13 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using CampusCrafter.Data;
 using CampusCrafter.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace CampusCrafter.Areas.Admission.Pages
 {
+    [Authorize(Roles = "Candidate")]
     public class FillAdmissionModel : PageModel
     {
         private readonly CampusCrafter.Data.ApplicationDbContext _context;

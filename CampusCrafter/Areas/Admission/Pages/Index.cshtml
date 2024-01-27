@@ -6,6 +6,12 @@
 
 <h2>Home > Admission</h2>
 
-
-<a asp-area="Admission" asp-page="ChooseMajors" asp-route-value="@MajorType.Major" class="btn btn-primary">Major</a>
-<a asp-area="Admission" asp-page="ChooseMajors" asp-route-value="@MajorType.Specialization" class="btn btn-primary">Specialization</a>
+@if (User.IsInRole("Candidate"))
+{
+    <a asp-area="Admission" asp-page="ChooseMajors" asp-route-value="@MajorType.Major" class="btn btn-primary">Major</a>
+    <a asp-area="Admission" asp-page="ChooseMajors" asp-route-value="@MajorType.Specialization" class="btn btn-primary">Specialization</a>
+}
+else
+{
+    <div>Login is needed for admission</div>
+}
