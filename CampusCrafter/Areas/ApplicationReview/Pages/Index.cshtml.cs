@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CampusCrafter.Areas.ApplicationReview.Pages;
 
-public class Index(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
+public class Index(ApplicationRepository repository, UserManager<ApplicationUser> userManager)
     : PageModel
 {
     [BindProperty] public List<CandidateApplication> Applications { get; set; } = default!;
@@ -47,35 +47,39 @@ public class Index(ApplicationDbContext context, UserManager<ApplicationUser> us
 
     private async Task GetApplications()
     {
-        var applications = context.CandidateApplications
-            .Include(a => a.Applicant)
-            .ThenInclude(a => a.Progresses)
-            .Include(a => a.Applicant)
-            .ThenInclude(a => a.ScholarlyAchievements)
-            .Include(a => a.Major);
-
-        var sortedApplications = SortingOpts switch
+        Applications = await repository.GetAllAsync<CandidateApplication>(q =>
         {
-            SortingOptions.IdAscending => applications.OrderBy(a => a.Id),
-            SortingOptions.IdDescending => applications.OrderByDescending(a => a.Id),
-            SortingOptions.DateAscending => applications.OrderBy(a => a.Date),
-            SortingOptions.DateDescending => applications.OrderByDescending(a => a.Date),
-            _ => throw new ArgumentOutOfRangeException()
-        };
+            var applications = q.Include(a => a.Applicant)
+                .ThenInclude(a => a.Progresses)
+                .Include(a => a.Applicant)
+                .ThenInclude(a => a.ScholarlyAchievements)
+                .Include(a => a.Major);
 
-        var filteredApplications = FilteringOpts switch
-        {
-            FilteringOptions.None => sortedApplications,
-            FilteringOptions.Unhandled => sortedApplications.Where(a =>
-                a.Status != CandidateApplicationStatus.Accepted && a.Status != CandidateApplicationStatus.Rejected),
-            FilteringOptions.Accepted => sortedApplications.Where(a => a.Status == CandidateApplicationStatus.Accepted),
-            FilteringOptions.Rejected => sortedApplications.Where(a => a.Status == CandidateApplicationStatus.Rejected),
-            FilteringOptions.AcceptedOrRejected => sortedApplications.Where(a =>
-                a.Status == CandidateApplicationStatus.Accepted || a.Status == CandidateApplicationStatus.Rejected),
-            _ => throw new ArgumentOutOfRangeException()
-        };
+            var sortedApplications = SortingOpts switch
+            {
+                SortingOptions.IdAscending => applications.OrderBy(a => a.Id),
+                SortingOptions.IdDescending => applications.OrderByDescending(a => a.Id),
+                SortingOptions.DateAscending => applications.OrderBy(a => a.Date),
+                SortingOptions.DateDescending => applications.OrderByDescending(a => a.Date),
+                _ => throw new ArgumentOutOfRangeException()
+            };
 
-        Applications = await filteredApplications.ToListAsync();
+            var filteredApplications = FilteringOpts switch
+            {
+                FilteringOptions.None => sortedApplications,
+                FilteringOptions.Unhandled => sortedApplications.Where(a =>
+                    a.Status != CandidateApplicationStatus.Accepted && a.Status != CandidateApplicationStatus.Rejected),
+                FilteringOptions.Accepted => sortedApplications.Where(a =>
+                    a.Status == CandidateApplicationStatus.Accepted),
+                FilteringOptions.Rejected => sortedApplications.Where(a =>
+                    a.Status == CandidateApplicationStatus.Rejected),
+                FilteringOptions.AcceptedOrRejected => sortedApplications.Where(a =>
+                    a.Status == CandidateApplicationStatus.Accepted || a.Status == CandidateApplicationStatus.Rejected),
+                _ => throw new ArgumentOutOfRangeException()
+            };
+
+            return filteredApplications;
+        });
 
         ApplicantUsers = [];
         foreach (var application in Applications)

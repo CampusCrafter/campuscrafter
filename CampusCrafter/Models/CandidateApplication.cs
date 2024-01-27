@@ -8,10 +8,10 @@ public record CandidateApplication
 {
     [Key, Display(Name = "Application ID")] public int Id { get; set; }
     
-    [ForeignKey("Applicant")] public string? ApplicantId { get; set; }
-    public required Candidate? Applicant { get; set; }
+    [ForeignKey("Applicant")] public string ApplicantId { get; set; }
+    public required Candidate Applicant { get; set; }
     
-    public DateTime Date { get; set; }
+    [DataType(DataType.DateTime)] public DateTime Date { get; set; }
     public CandidateApplicationStatus Status { get; set; }
     [MaxLength(1024)] public string? RejectReason { get; set; } = null!;
     

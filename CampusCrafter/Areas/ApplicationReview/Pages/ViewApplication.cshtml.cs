@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CampusCrafter.Areas.ApplicationReview.Pages;
 
-public class ViewApplication(ApplicationDbContext context, UserManager<ApplicationUser> userManager) : PageModel
+public class ViewApplication(ApplicationRepository repository, UserManager<ApplicationUser> userManager) : PageModel
 {
     public CandidateApplication Application { get; set; } = default!;
     public ApplicationUser ApplicantUser { get; set; } = default!;
@@ -20,7 +20,7 @@ public class ViewApplication(ApplicationDbContext context, UserManager<Applicati
 
     private async Task<bool> PrepareDataAsync(int applicationId)
     {
-        var application = await context.CandidateApplications
+        var application = await repository.GetAsync<CandidateApplication>(a => a.Id == applicationId, q => q
             .Include(a => a.Applicant)
             .ThenInclude(a => a.Progresses.OrderBy(p => p.Type))
             .Include(a => a.Applicant)
@@ -29,15 +29,15 @@ public class ViewApplication(ApplicationDbContext context, UserManager<Applicati
             .ThenInclude(m => m.StudyPlans)
             .ThenInclude(s => s.AcceptanceCriteria)
             .ThenInclude(s => s.ScoreWeights)
-            .FirstOrDefaultAsync(a => a.Id == applicationId);
+        );
         if (application is null)
             return false;
 
-        OtherApplications = await context.CandidateApplications
+        OtherApplications = await repository.GetAllAsync<CandidateApplication>(q => q
             .Include(a => a.Applicant)
             .Include(a => a.Major)
             .Where(a => a.Applicant.UserId == application.Applicant.UserId && a.Id != application.Id)
-            .ToListAsync();
+        );
 
         var user = await userManager.FindByNameAsync(application.Applicant.UserId);
         if (user is null)
@@ -65,36 +65,28 @@ public class ViewApplication(ApplicationDbContext context, UserManager<Applicati
             return Page();
         }
 
-        var application = await context.CandidateApplications
+        var application = await repository.GetAsync<CandidateApplication>(a => a.Id == applicationId, q => q
             .Include(candidateApplication => candidateApplication.Applicant)
-            .ThenInclude(candidate => candidate.ScholarlyAchievements).FirstOrDefaultAsync(a => a.Id == applicationId);
+            .ThenInclude(candidate => candidate.ScholarlyAchievements)
+        );
+            
         if (application is null)
             return NotFound();
 
-        bool alreadyHandled =
-            application.Status is CandidateApplicationStatus.Accepted or CandidateApplicationStatus.Rejected;
-        bool notAllScholarlyAchievementsHandled =
-            application.Applicant.ScholarlyAchievements.Any(s => s.Score is null);
-        if (alreadyHandled || notAllScholarlyAchievementsHandled)
+        var success = actionType.Trim().ToLowerInvariant() switch
+        {
+            "accept" => repository.AcceptApplication(application),
+            "reject" => repository.RejectApplication(application, RejectReason),
+            _ => throw new ArgumentOutOfRangeException()
+        };
+        if (!success)
         {
             if (!await PrepareDataAsync(applicationId))
                 return NotFound();
             return Page();
         }
 
-        switch (actionType.Trim().ToLowerInvariant())
-        {
-            case "reject":
-                application.RejectReason = RejectReason;
-                application.Status = CandidateApplicationStatus.Rejected;
-                break;
-            case "accept":
-                application.Status = CandidateApplicationStatus.Accepted;
-                break;
-        }
-
-        context.CandidateApplications.Update(application);
-        await context.SaveChangesAsync();
+        await repository.Context.SaveChangesAsync();
 
         return RedirectToPage("./Index");
     }

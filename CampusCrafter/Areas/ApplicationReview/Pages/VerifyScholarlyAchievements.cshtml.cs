@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CampusCrafter.Areas.ApplicationReview.Pages;
 
-public class VerifyScholarlyAchievements(ApplicationDbContext context, UserManager<ApplicationUser> userManager) : PageModel
+public class VerifyScholarlyAchievements(ApplicationRepository repository, UserManager<ApplicationUser> userManager) : PageModel
 {
     public CandidateApplication Application { get; set; } = default!;
     public ApplicationUser ApplicantUser { get; set; } = default!;
@@ -18,14 +18,13 @@ public class VerifyScholarlyAchievements(ApplicationDbContext context, UserManag
 
     private async Task<bool> PrepareDataAsync(int applicationId)
     {
-        var application = await context.CandidateApplications
+        var application = await repository.GetAsync<CandidateApplication>(a => a.Id == applicationId, q => q
             .Include(a => a.Applicant)
-            .ThenInclude(a => a.ScholarlyAchievements.OrderBy(s => s.Type))
-            .FirstOrDefaultAsync(a => a.Id == applicationId);
+            .ThenInclude(a => a.ScholarlyAchievements.OrderBy(s => s.Type)));
         if (application is null)
             return false;
 
-        OtherApplications = await context.CandidateApplications
+        OtherApplications = await repository.Context.CandidateApplications
             .Include(a => a.Applicant)
             .Include(a => a.Major)
             .Where(a => a.Applicant.UserId == application.Applicant.UserId && a.Id != application.Id)
@@ -60,16 +59,16 @@ public class VerifyScholarlyAchievements(ApplicationDbContext context, UserManag
             return Page();
         }
 
-        var application = await context.CandidateApplications
+        var application = await repository.GetAsync<CandidateApplication>(a => a.Id == applicationId, q => q
             .Include(candidateApplication => candidateApplication.Applicant)
             .ThenInclude(a => a.ScholarlyAchievements)
-            .FirstOrDefaultAsync(a => a.Id == applicationId);
+        );
         if (application is null)
             return NotFound();
         
         application.Applicant.ScholarlyAchievements = ScholarlyAchievements;
-        context.CandidateApplications.Update(application);
-        await context.SaveChangesAsync();
+        repository.Update(application);
+        await repository.Context.SaveChangesAsync();
         return RedirectToPage("./ViewApplication", new { applicationid = applicationId });
     }
 }

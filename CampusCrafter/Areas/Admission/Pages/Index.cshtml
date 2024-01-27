@@ -8,7 +8,7 @@
 
 @if (User.IsInRole("Candidate"))
 {
-    <a asp-area="Admission" asp-page="ChooseMajors" asp-route-value="@MajorType.Major" class="btn btn-primary">Major</a>
+    <a asp-area="Admission" asp-page="ChooseMajors" asp-route-value="@MajorType.Major" class="btn btn-primary">Stage 1</a>
     <a asp-area="Admission" asp-page="ChooseMajors" asp-route-value="@MajorType.Specialization" class="btn btn-primary">Specialization</a>
 }
 else

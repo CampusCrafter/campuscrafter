@@ -27,12 +27,12 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
     .AddDefaultTokenProviders();
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddAuthorization(options =>
-{
-    options.AddPolicy(Roles.GetRoleName(Role.Admin), policyBuilder => policyBuilder.RequireRole(Roles.GetRoleName(Role.Admin)));
-    options.AddPolicy(Roles.GetRoleName(Role.Department), policyBuilder => policyBuilder.RequireRole(Roles.GetRoleName(Role.Department)));
-    options.AddPolicy(Roles.GetRoleName(Role.Candidate), policyBuilder => policyBuilder.RequireRole(Roles.GetRoleName(Role.Candidate)));
-});
+builder.Services.AddAuthorizationBuilder()
+    .AddPolicy(Roles.GetRoleName(Role.Admin), policyBuilder => policyBuilder.RequireRole(Roles.GetRoleName(Role.Admin)))
+    .AddPolicy(Roles.GetRoleName(Role.Department), policyBuilder => policyBuilder.RequireRole(Roles.GetRoleName(Role.Department)))
+    .AddPolicy(Roles.GetRoleName(Role.Candidate), policyBuilder => policyBuilder.RequireRole(Roles.GetRoleName(Role.Candidate)));
+
+builder.Services.AddScoped<ApplicationRepository>();
 
 var app = builder.Build();
 
