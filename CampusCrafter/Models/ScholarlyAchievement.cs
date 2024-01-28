@@ -2,9 +2,12 @@
 
 namespace CampusCrafter.Models;
 
-public record ScholarlyAchievement(
-    [property: Key] int Id,
-    ScholarlyAchievementType Type,
-    string Description,
-    [Range(0, 1000)] decimal? Score
-);
+public class ScholarlyAchievement
+{
+    [Key] public int Id { get; set; }
+    public ScholarlyAchievementType Type { get; set; }
+    
+    [MaxLength(1024)]
+    public string Description { get; set; }
+    public decimal? Score { get; set; }
+}

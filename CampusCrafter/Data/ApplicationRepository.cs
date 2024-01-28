@@ -42,6 +42,12 @@ public class ApplicationRepository(ApplicationDbContext context) : IRepository
         await context.SaveChangesAsync();
     }
 
+    public void AssignScoreToScholarlyAchievement(ScholarlyAchievement achievement, decimal score)
+    {
+        achievement.Score = score;
+        Update(achievement);
+    }
+
     public bool UpdateApplicationStatus(CandidateApplication application, CandidateApplicationStatus status, string? rejectReason)
     {
         var alreadyHandled =

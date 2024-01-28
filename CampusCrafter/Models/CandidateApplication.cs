@@ -16,7 +16,7 @@ public record CandidateApplication
     [MaxLength(1024)] public string? RejectReason { get; set; } = null!;
     
     [ForeignKey("Major")] public int? MajorId { get; set; }
-    public Major? Major { get; set; }
+    public required Major? Major { get; set; }
     public required StudyType StudyType { get; set; }
 
     [ValidateNever] public decimal Score => Major?.StudyPlans.FirstOrDefault(plan => plan.StudyType == StudyType)?.AcceptanceCriteria

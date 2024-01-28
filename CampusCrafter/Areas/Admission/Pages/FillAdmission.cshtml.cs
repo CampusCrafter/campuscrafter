@@ -75,13 +75,13 @@ public class FillAdmissionModel(ApplicationRepository repository) : PageModel
             
         foreach (var iTuple in progressTypes.Zip(score))
         {
-            var progress = new Progress(Id: 0, Type: iTuple.First, Score: iTuple.Second);
+            var progress = new Progress(Type: iTuple.First, Score: iTuple.Second);
             Candidate.Progresses.Add(progress);
         }
             
         foreach (var iTuple in scholarlyAchievementTypes.Zip(descriptions))
         {
-            var scholarlyAchievement = new ScholarlyAchievement(0, iTuple.First, iTuple.Second, null);
+            var scholarlyAchievement = new ScholarlyAchievement { Type = iTuple.First, Description = iTuple.Second, Score = null};
             Candidate.ScholarlyAchievements.Add(scholarlyAchievement);
         }
 

@@ -3,7 +3,9 @@
 namespace CampusCrafter.Models;
 
 public record Progress(
-    [property: Key] int Id,
     ProgressType Type,
     decimal Score
-);
+)
+{
+    [Key] public int Id { get; set; }
+};
