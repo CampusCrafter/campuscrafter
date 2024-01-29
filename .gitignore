@@ -3,6 +3,8 @@ obj/
 /packages/
 riderModule.iml
 /_ReSharper.Caches/
+_site/
+/api/
 
 *.db-shm
 *.db-wal

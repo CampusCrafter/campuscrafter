@@ -8,7 +8,7 @@ public static class ScoreWeightUtil
     public static List<ScoreWeight> Deserialize(string str)
     {
         List<ScoreWeight> scoreWeights = [];
-        foreach (string scoreWeightStr in str.Split(";"))
+        foreach (var scoreWeightStr in str.Split(";", StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries))
         {
             var data = scoreWeightStr.Split("=");
 
@@ -23,7 +23,7 @@ public static class ScoreWeightUtil
         return scoreWeights;
     }
 
-    public static string Serialize(IList<ScoreWeight> scoreWeights)
+    public static string Serialize(IEnumerable<ScoreWeight> scoreWeights)
     {
         StringBuilder builder = new();
         builder.AppendJoin(";",

@@ -86,6 +86,7 @@ public class ReviewApplicationTests
     [Test]
     public async Task WhenAllScholarlyAchievementsAreScored_ThenApplicationCanBeAccepted()
     {
+        // Arrange
         await using var db = new ApplicationDbContext(options);
         var repo = new ApplicationRepository(db);
 
@@ -96,12 +97,13 @@ public class ReviewApplicationTests
         Assert.That(application, Is.Not.Null);
 
         var achievements = application.Applicant.ScholarlyAchievements;
-
         foreach (var achievement in achievements) repo.AssignScoreToScholarlyAchievement(achievement, 1);
         
+        // Act
         var success = repo.AcceptApplication(application);
         await repo.SaveChangesAsync();
         
+        // Assert
         Assert.That(success, Is.True);
         Assert.That(application.Status, Is.EqualTo(CandidateApplicationStatus.Accepted));
     }
@@ -109,6 +111,7 @@ public class ReviewApplicationTests
     [Test]
     public async Task WhenNotAllScholarlyAchievementsAreScored_ThenApplicationCannotBeAccepted()
     {
+        // Arrange
         await using var db = new ApplicationDbContext(options);
         var repo = new ApplicationRepository(db);
 
@@ -119,11 +122,13 @@ public class ReviewApplicationTests
         Assert.That(application, Is.Not.Null);
 
         var achievements = application.Applicant.ScholarlyAchievements;
-
         for (var i = 0; i < achievements.Count - 1; i++) repo.AssignScoreToScholarlyAchievement(achievements[i], 1);
 
+        // Act
         var success = repo.AcceptApplication(application);
         await repo.SaveChangesAsync();
+        
+        // Assert
         Assert.Multiple(() =>
         {
             Assert.That(success, Is.False);

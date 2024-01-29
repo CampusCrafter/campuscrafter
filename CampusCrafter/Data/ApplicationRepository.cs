@@ -48,7 +48,7 @@ public class ApplicationRepository(ApplicationDbContext context) : IRepository
         Update(achievement);
     }
 
-    public bool UpdateApplicationStatus(CandidateApplication application, CandidateApplicationStatus status, string? rejectReason)
+    private bool UpdateApplicationStatus(CandidateApplication application, CandidateApplicationStatus status, string? rejectReason = null)
     {
         var alreadyHandled =
             application.Status is CandidateApplicationStatus.Accepted or CandidateApplicationStatus.Rejected;
@@ -76,7 +76,7 @@ public class ApplicationRepository(ApplicationDbContext context) : IRepository
     }
 
     public bool AcceptApplication(CandidateApplication application) =>
-        UpdateApplicationStatus(application, CandidateApplicationStatus.Accepted, null);
+        UpdateApplicationStatus(application, CandidateApplicationStatus.Accepted);
 
     public bool RejectApplication(CandidateApplication application, string rejectReason) =>
         UpdateApplicationStatus(application, CandidateApplicationStatus.Rejected, rejectReason);
