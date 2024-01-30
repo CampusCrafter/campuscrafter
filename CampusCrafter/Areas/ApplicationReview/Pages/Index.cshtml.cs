@@ -37,15 +37,15 @@ public class Index(ApplicationRepository repository, UserManager<ApplicationUser
     
     public async Task OnGetAsync()
     {
-        await GetApplications();
+        await GetApplicationsAsync();
     }
 
     public async Task OnPostAsync()
     {
-        await GetApplications();
+        await GetApplicationsAsync();
     }
 
-    private async Task GetApplications()
+    private async Task GetApplicationsAsync()
     {
         Applications = await repository.GetAllAsync<CandidateApplication>(q =>
         {

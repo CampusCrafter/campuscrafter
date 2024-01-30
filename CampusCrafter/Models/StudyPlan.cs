@@ -11,7 +11,7 @@ public record StudyPlan
     [MaxLength(64)] public required string Name { get; set; }
     
     [Display(Name = "Stage of Study")] public StageOfStudy StageOfStudy { get; set; }
-    [Display(Name = "Study Type")]  public StudyType StudyType { get; set; }
+    [Display(Name = "Study Type")] public StudyType StudyType { get; set; }
     [Display(Name = "Education Profile")] public EducationProfile EducationProfile { get; set; }
     [Display(Name = "Language")] public required string Language { get; set; }
 

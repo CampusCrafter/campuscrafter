@@ -25,5 +25,5 @@ public record Major
     
     [ValidateNever, Display(Name = "Study Plans")] public required List<StudyPlan> StudyPlans { get; set; }
     
-    [Display(Name = "Minimum score last year")] public float? MinScore { get; set; }
+    [Display(Name = "Minimum score last year")] public decimal? MinScore { get; set; }
 }
