@@ -9,6 +9,7 @@ using CampusCrafter.Data;
 using CampusCrafter.Models;
 using CampusCrafter.Utils;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
 
 namespace CampusCrafter.Pages.Admission;
@@ -16,27 +17,41 @@ namespace CampusCrafter.Pages.Admission;
 [Authorize(Roles = "Candidate")]
 public class ChooseMajorsModel(ApplicationRepository repository) : PageModel
 {
-    public List<Major> Major { get; set; } = default!;
+    public List<Major> Majors { get; set; } = default!;
 
-    [TempData]
-    public MajorType MajorType { get; set; }
+    [TempData] public int MajorDegree { get; set; }
 
     [TempData] public string SelectedMajors { get; set; } = default!;
 
-    public async Task OnGetAsync(MajorType majorType)
+    public async Task OnGetAsync(int value)
     {
-        MajorType = majorType;
-        Major = await repository.GetAllAsync<Major>(q => q
-            .Where(m => m.MajorType == MajorType)
-            .Include(m => m.Department)
-            .Include(m => m.Prerequisites)
-            .Include(m => m.Specializations)
-        );
+        MajorDegree = value;
+        if (MajorDegree == 2)
+        {
+            Majors = await repository.GetAllAsync<Major>();
+        } 
+        else
+        {
+            Majors = await repository.MajorsPrerequisitesFiltered(MajorDegree == 0);
+        }
     }
 
-    public IActionResult OnPost(List<int> selectedMajors)
+    public IActionResult OnPost(List<string> selectedMajors)
     {
-        SelectedMajors = selectedMajors.Aggregate("", (a, b) => a + b + "I");
+        var selected = selectedMajors.Where(i => i is { Length: > 1 }).ToList();
+
+        var degree = TempData.Peek("MajorDegree");
+
+        if (!degree!.Equals(2) && selected.Count > 5)
+        {
+            var p = RedirectToPage("ChooseMajors");
+            p.RouteValues = new RouteValueDictionary
+            {
+                ["value"] = degree
+            };
+            return p;
+        }
+        SelectedMajors = selected.Aggregate("", (s, i) => s + i + "I");
         return RedirectToPage("./FillAdmission");
     }
 }

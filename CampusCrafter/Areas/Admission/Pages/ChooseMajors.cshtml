@@ -13,16 +13,16 @@
         <thead>
         <tr>
             <th>
-
+                Study Type
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Major[0].Name)
+                @Html.DisplayNameFor(model => model.Majors[0].Name)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Major[0].GraduationDegree)
+                @Html.DisplayNameFor(model => model.Majors[0].GraduationDegree)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Major[0].Department)
+                @Html.DisplayNameFor(model => model.Majors[0].Department)
             </th>
             <th>
                 Details
@@ -30,11 +30,22 @@
         </tr>
         </thead>
         <tbody>
-        @foreach (var item in Model.Major)
+        @foreach (var item in Model.Majors)
         {
             <tr>
                 <td>
-                    <input type="checkbox" name="selectedMajors" value="@item.Id"/>
+                    <select name="selectedMajors">
+                        <option value="">
+                            --Choose if you want to apply--
+                        </option>
+                        @foreach (var s in item.StudyPlans)
+                        {
+                            <option value="@(item.Id)s@(s.Id)">
+                                @(s.StudyType)
+                            </option>
+                        }
+                    </select>
+                    
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Name)
@@ -46,71 +57,78 @@
                     @Html.DisplayFor(modelItem => item.Department.Name)
                 </td>
                 <td>
-                    <button type="button" onclick="toggleTable(@item.Id+' table')">
-                        @if (Model.MajorType == MajorType.Major)
-                        {
-                            <div>
-                                Specializations
-                            </div>
-                        }
-                        else
-                        {
-                            <div>
-                                Prerequisites
-                            </div>
-                        }
-                    </button>
+                    @if (Model.MajorDegree != 2)
+                    {
+                        <button type="button" onclick="toggleTable(@item.Id+' table')">
+                            @if (Model.MajorDegree == 0)
+                            {
+                                <div>
+                                    Specializations
+                                </div>
+                            }
+                            else
+                            {
+                                <div>
+                                    Prerequisites
+                                </div>
+                            }
+                        </button>
+                    }
                 </td>
             </tr>
-            <tr>
-                <td colspan="3">
-                    <table class="table" id="@item.Id table" style="display: none;">
-                        <thead>
-                        <tr>
-                            <th colspan="2">
-                                @if (Model.MajorType == MajorType.Major)
-                                {
-                                    <div>Possible specialization</div>
-                                }
-                                else
-                                {
-                                    <div>Majors enabling admission</div>
-                                }
-                            </th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        @foreach (var i in item.Prerequisites.Concat(item.Specializations))
-                        {
+            @if (Model.MajorDegree != 2)
+            {
+                <tr>
+                    <td colspan="3">
+                        <table class="table" id="@item.Id table" style="display: none;">
+                            <thead>
                             <tr>
-                                <td>
-                                    @Html.DisplayFor(modelItem => i.Name)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => i.Department.Name)
-                                </td>
+                                <th colspan="2">
+                                    @if (Model.MajorDegree == 0)
+                                    {
+                                        <div>Possible specialization</div>
+                                    }
+                                    else
+                                    {
+                                        <div>Majors enabling admission</div>
+                                    }
+                                </th>
                             </tr>
-                        }
-                        </tbody>
-                    </table>
-                </td>
-            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach (var i in item.Prerequisites.Concat(item.Specializations))
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => i.Name)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => i.Department.Name)
+                                    </td>
+                                </tr>
+                            }
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            }
         }
         </tbody>
     </table>
 
     <div class="form-group">
-        <input type="submit" value="Create" class="btn btn-primary"/>
+        @if (Model.MajorDegree == 2)
+        {
+            <input type="submit" class="btn btn-primary" value="Next"/>
+        }
+        else
+        {
+            <input type="button" value="Create" onclick="check()" class="btn btn-primary"/>
+        }
     </div>
 </form>
 
-<script>
-    function toggleTable(tableName) {
-        const table = document.getElementById(tableName);
-        if (table.style.display === "none") {
-            table.style.display = "table"; // Show the table
-        } else {
-            table.style.display = "none"; // Hide the table
-        }
-    }
-</script>
+@section Scripts
+{
+    <script src="~/js/choose-majors.js"></script>
+}

@@ -24,8 +24,7 @@
     
     var cont_btn = document.getElementById("cont-btn");
     cont_btn.style.display = "none";
-
-    document.getElementById("majors_table").style.display = "table";
+    
 }
 
 function toFill() {
@@ -55,8 +54,6 @@ function toFill() {
         inputs[i].disabled = false;
     }
     
-    document.getElementById("majors_table").style.display = "none";
-    
 }
 
 function submission() {
@@ -82,7 +79,8 @@ function addRowAchievement() {
     var cell2 = row.insertCell(1);
     var row0 = table.rows[1];
     var cells = row0.cells;
-
+    row.hidden = false;
+    row.disabled = false;
     cell1.innerHTML += cells[0].innerHTML;
     cell2.innerHTML += cells[1].innerHTML;
 }
@@ -94,11 +92,36 @@ function addRowProgress() {
     var cell2 = row.insertCell(1);
     var row0 = table.rows[1];
     var cells = row0.cells;
-
+    row.setAttribute("name", row0.getAttribute("name"));
     cell1.innerHTML += cells[0].innerHTML;
     cell2.innerHTML += cells[1].innerHTML;
 }
 
-function countScore(i) {
+function countScore() {
+        
+    var inputtedRows = document.getElementsByName("progressRow");
+    var inputs = [];
+    for (let i = 0; i < inputtedRows.length; i++) {
+        var type = inputtedRows[i].getElementsByTagName("select")[0].value;
+        var input = inputtedRows[i].getElementsByTagName("input")[0].value;
+        inputs.push([type,input]);
+    }
     
+    var scoreSlots = document.getElementsByName("scoreSlot");
+    for (let i = 0; i < scoreSlots.length; i++) {
+        var score = 0;
+        var scoreSlot = scoreSlots[i];
+        var divs = scoreSlot.getElementsByTagName("div");
+        for (let j = 1; j < divs.length; j++) {
+            var scoreWeights = divs[j].innerText.split(":");
+            for (let k = 0; k < inputs.length; k++) {
+                if (parseInt(inputs[k][0]) === parseInt(scoreWeights[1])) {
+                    score += (inputs[k][1]*parseFloat(scoreWeights[0]));
+                }
+            }
+        }
+        divs[0].innerText = score;
+    }
 }
+
+setInterval(countScore, 100);

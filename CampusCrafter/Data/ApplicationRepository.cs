@@ -80,4 +80,57 @@ public class ApplicationRepository(ApplicationDbContext context) : IRepository
 
     public bool RejectApplication(CandidateApplication application, string rejectReason) =>
         UpdateApplicationStatus(application, CandidateApplicationStatus.Rejected, rejectReason);
+
+    public async Task<List<Major>> MajorsWithIdsAsync(IEnumerable<int> ids)
+    {
+        List<Major> result = [];
+        
+        foreach (var i in ids)
+        {
+            var major = await GetAsync<Major>(m => m.Id == i, q => q
+                .Include(m => m.StudyPlans)
+                .ThenInclude(s => s.AcceptanceCriteria)
+                .ThenInclude(a => a.ScoreWeights)
+                .Include(m => m.Department)
+                .Include(m => m.ParentMajor)
+                .Include(m => m.Specializations)
+                .Include(m => m.Courses)
+                .Include(m => m.Prerequisites)
+            );
+            if (major != null)
+            {
+                result.Add(major);
+            }
+        }
+        return result;
+    }
+
+    public async Task<List<Major>> MajorsPrerequisitesFiltered(bool hasAny)
+    {
+        var result = await GetAllAsync<Major>(q => q
+            .Where(m => m.Prerequisites.Count == 0 == hasAny) 
+            // for second degree number of prerequisites can't be 0
+            // for first degree number of prerequisites must be 0
+            .Include(m => m.Department)
+            .Include(m => m.Prerequisites)
+            .Include(m => m.Specializations)
+            .Include(m => m.StudyPlans)
+        );
+        return result;
+    }
+
+    public async Task<List<List<ScoreWeight>>> ScoreWeightsFromStudyPlansIds(IEnumerable<int> ids)
+    {
+        List<List<ScoreWeight>> result = [];
+        foreach (var id in ids)
+        {
+            var s = await GetAsync<StudyPlan>(q => q.Id == id, q => q
+                .Include(s => s.AcceptanceCriteria)
+                .ThenInclude(a => a.ScoreWeights)
+            );
+            result.Add(s!.AcceptanceCriteria.ScoreWeights);
+        }
+
+        return result;
+    }
 }

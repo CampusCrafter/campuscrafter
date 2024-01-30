@@ -17,38 +17,33 @@ namespace CampusCrafter.Areas.Admission.Pages;
 [Authorize(Roles = "Candidate")]
 public class FillAdmissionModel(ApplicationRepository repository) : PageModel
 {
-    [TempData] public string SelectedMajors { get; set; } = default!;
-        
-    [TempData]
-    public MajorType MajorType { get; set; }
 
+    public bool CountOnly { get; set; }
+    
     public List<Major> Majors { get; set; } = [];
+
+    public List<List<ScoreWeight>> ScoreWeights { get; set; } = [];
 
     public Candidate Candidate { get; set; } = default!;
 
     public DateTime DateTime { get; set; } = DateTime.Today;
+
+    private List<ProgressType> FirstDegreeNeededProgressTypes { get; } =
+    [
+        ProgressType.MaturaBasicMath,
+        ProgressType.MaturaBasicPolish,
+        ProgressType.MaturaBasicForeignLanguage
+    ];
     
     public async Task<IActionResult> OnGetAsync()
     {
-        var selectedMajors = SelectedMajors.Split("I").Where(a => a != "").Select(int.Parse);
-            
-        foreach (var i in selectedMajors)
-        {
-            var major = await repository.GetAsync<Major>(m => m.Id == i, q => q
-                .Include(m => m.StudyPlans)
-                .ThenInclude(s => s.AcceptanceCriteria)
-                .ThenInclude(s => s.ScoreWeights)
-                .Include(m => m.Department)
-                .Include(m => m.ParentMajor)
-                .Include(m => m.Specializations)
-                .Include(m => m.Courses)
-                .Include(m => m.Prerequisites)
-            );
-            if (major is null)
-                return NotFound();
-                
-            Majors.Add(major);
-        }
+        CountOnly = TempData.Peek("MajorDegree")!.Equals(2);
+        
+        var selectedMajors = GetSelectedMajors();
+        
+        Majors = await repository.MajorsWithIdsAsync(selectedMajors.Select(s => s[0]));
+
+        ScoreWeights = await repository.ScoreWeightsFromStudyPlansIds(selectedMajors.Select(s => s[1]));
             
         return Page();
     }
@@ -56,11 +51,25 @@ public class FillAdmissionModel(ApplicationRepository repository) : PageModel
     public async Task<IActionResult> OnPostAsync(List<ProgressType> progressTypes,
         List<decimal> score,
         List<ScholarlyAchievementType> scholarlyAchievementTypes,
-        List<string> descriptions,
-        string selectedMajors)
+        List<string> descriptions)
     {
             
         if (!ModelState.IsValid)
+        {
+            return Page();
+        }
+
+        if (TempData.Peek("MajorDegree")!.Equals(0))
+        {
+            foreach (var progressType in FirstDegreeNeededProgressTypes)
+            {
+                if (!progressTypes.Contains(progressType))
+                {
+                    return Page();
+                }
+            }
+        }
+        else if (!progressTypes.Contains(ProgressType.UniversityStage1))
         {
             return Page();
         }
@@ -79,12 +88,12 @@ public class FillAdmissionModel(ApplicationRepository repository) : PageModel
             Candidate.Progresses.Add(progress);
         }
             
-        foreach (var iTuple in scholarlyAchievementTypes.Zip(descriptions))
+        foreach (var iTuple in scholarlyAchievementTypes.Zip(descriptions).Skip(1))
         {
             var scholarlyAchievement = new ScholarlyAchievement { Type = iTuple.First, Description = iTuple.Second, Score = null};
             Candidate.ScholarlyAchievements.Add(scholarlyAchievement);
         }
-
+        
         repository.Add(Candidate);
             
         var builder = new CandidateApplicationBuilder
@@ -93,7 +102,8 @@ public class FillAdmissionModel(ApplicationRepository repository) : PageModel
             Date = DateTime.Today
         };
 
-        foreach (var majorId in selectedMajors.Split("I").Where(a => a != "").Select(int.Parse))
+        foreach (var majorId in GetSelectedMajors()
+                     .Select(i => i[0]))
         {
             builder.MajorId = majorId;
             repository.Add(builder.Build());
@@ -102,5 +112,16 @@ public class FillAdmissionModel(ApplicationRepository repository) : PageModel
         await repository.SaveChangesAsync();
 
         return RedirectToPage("./Index");
+    }
+
+    private List<List<int>> GetSelectedMajors()
+    {
+        return ((string)TempData.Peek("SelectedMajors")!)
+            .Split("I")
+            .Where(a => a != "")
+            .Select(s => s.Split("s")
+                .Select(int.Parse)
+                .ToList())
+            .ToList();
     }
 }
