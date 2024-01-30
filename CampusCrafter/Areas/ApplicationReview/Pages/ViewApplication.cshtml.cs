@@ -86,7 +86,7 @@ public class ViewApplication(ApplicationRepository repository, UserManager<Appli
             return Page();
         }
 
-        await repository.Context.SaveChangesAsync();
+        await repository.SaveChangesAsync();
 
         return RedirectToPage("./Index");
     }

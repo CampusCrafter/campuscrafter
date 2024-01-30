@@ -24,11 +24,11 @@ public class VerifyScholarlyAchievements(ApplicationRepository repository, UserM
         if (application is null)
             return false;
 
-        OtherApplications = await repository.Context.CandidateApplications
+        OtherApplications = await repository.GetAllAsync<CandidateApplication>(q => q
             .Include(a => a.Applicant)
             .Include(a => a.Major)
             .Where(a => a.Applicant.UserId == application.Applicant.UserId && a.Id != application.Id)
-            .ToListAsync();
+        );
 
         var user = await userManager.FindByNameAsync(application.Applicant.UserId);
         if (user is null)
@@ -68,7 +68,7 @@ public class VerifyScholarlyAchievements(ApplicationRepository repository, UserM
         
         application.Applicant.ScholarlyAchievements = ScholarlyAchievements;
         repository.Update(application);
-        await repository.Context.SaveChangesAsync();
+        await repository.SaveChangesAsync();
         return RedirectToPage("./ViewApplication", new { applicationid = applicationId });
     }
 }
