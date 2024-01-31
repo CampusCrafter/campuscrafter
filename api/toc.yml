@@ -3,10 +3,12 @@ items:
 - uid: CampusCrafter.Areas.Admission.Pages
   name: CampusCrafter.Areas.Admission.Pages
   items:
+  - uid: CampusCrafter.Areas.Admission.Pages.ChooseMajorsModel
+    name: ChooseMajorsModel
   - uid: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel
     name: FillAdmissionModel
-  - uid: CampusCrafter.Areas.Admission.Pages.IndexModel
-    name: IndexModel
+  - uid: CampusCrafter.Areas.Admission.Pages.Index
+    name: Index
 - uid: CampusCrafter.Areas.ApplicationReview.Pages
   name: CampusCrafter.Areas.ApplicationReview.Pages
   items:
@@ -264,6 +266,8 @@ items:
     name: UpdateMajorsAndStudyPlan2
   - uid: CampusCrafter.Data.Migrations.UpdateMajorsAndStudyPlan3
     name: UpdateMajorsAndStudyPlan3
+  - uid: CampusCrafter.Data.Migrations.major_min_score
+    name: major_min_score
 - uid: CampusCrafter.Models
   name: CampusCrafter.Models
   items:
@@ -311,11 +315,6 @@ items:
     name: StudyPlan
   - uid: CampusCrafter.Models.StudyType
     name: StudyType
-- uid: CampusCrafter.Pages.Admission
-  name: CampusCrafter.Pages.Admission
-  items:
-  - uid: CampusCrafter.Pages.Admission.ChooseMajorsModel
-    name: ChooseMajorsModel
 - uid: CampusCrafter.Utils
   name: CampusCrafter.Utils
   items:
@@ -328,12 +327,16 @@ items:
 - uid: CampusCrafterTests
   name: CampusCrafterTests
   items:
+  - uid: CampusCrafterTests.CandidateApplicationBuilderTests
+    name: CandidateApplicationBuilderTests
   - uid: CampusCrafterTests.Mocks
     name: Mocks
   - uid: CampusCrafterTests.ReviewApplicationTests
     name: ReviewApplicationTests
   - uid: CampusCrafterTests.SampleData
     name: SampleData
+  - uid: CampusCrafterTests.ScoreWeightUtilTests
+    name: ScoreWeightUtilTests
   - uid: CampusCrafterTests.Utils
     name: Utils
 memberLayout: SamePage

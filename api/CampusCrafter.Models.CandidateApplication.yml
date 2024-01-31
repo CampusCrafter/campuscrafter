@@ -34,12 +34,10 @@ items:
   - CampusCrafter
   namespace: CampusCrafter.Models
   syntax:
-    content: 'public record CandidateApplication : IEquatable<CandidateApplication>'
-    content.vb: Public Class CandidateApplication Implements IEquatable(Of CandidateApplication)
+    content: public class CandidateApplication
+    content.vb: Public Class CandidateApplication
   inheritance:
   - System.Object
-  implements:
-  - System.IEquatable{CampusCrafter.Models.CandidateApplication}
   inheritedMembers:
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -124,7 +122,7 @@ items:
     content: >-
       [ForeignKey("Applicant")]
 
-      public string ApplicantId { get; set; }
+      public string? ApplicantId { get; set; }
     parameters: []
     return:
       type: System.String
@@ -162,7 +160,7 @@ items:
   - CampusCrafter
   namespace: CampusCrafter.Models
   syntax:
-    content: public required Candidate Applicant { get; set; }
+    content: public Candidate? Applicant { get; set; }
     parameters: []
     return:
       type: CampusCrafter.Models.Candidate
@@ -343,7 +341,7 @@ items:
   - CampusCrafter
   namespace: CampusCrafter.Models
   syntax:
-    content: public required Major? Major { get; set; }
+    content: public Major? Major { get; set; }
     parameters: []
     return:
       type: CampusCrafter.Models.Major
@@ -372,7 +370,7 @@ items:
   - CampusCrafter
   namespace: CampusCrafter.Models
   syntax:
-    content: public required StudyType StudyType { get; set; }
+    content: public StudyType StudyType { get; set; }
     parameters: []
     return:
       type: CampusCrafter.Models.StudyType
@@ -451,39 +449,6 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
-- uid: System.IEquatable{CampusCrafter.Models.CandidateApplication}
-  commentId: T:System.IEquatable{CampusCrafter.Models.CandidateApplication}
-  parent: System
-  definition: System.IEquatable`1
-  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
-  name: IEquatable<CandidateApplication>
-  nameWithType: IEquatable<CandidateApplication>
-  fullName: System.IEquatable<CampusCrafter.Models.CandidateApplication>
-  nameWithType.vb: IEquatable(Of CandidateApplication)
-  fullName.vb: System.IEquatable(Of CampusCrafter.Models.CandidateApplication)
-  name.vb: IEquatable(Of CandidateApplication)
-  spec.csharp:
-  - uid: System.IEquatable`1
-    name: IEquatable
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
-  - name: <
-  - uid: CampusCrafter.Models.CandidateApplication
-    name: CandidateApplication
-    href: CampusCrafter.Models.CandidateApplication.html
-  - name: '>'
-  spec.vb:
-  - uid: System.IEquatable`1
-    name: IEquatable
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: CampusCrafter.Models.CandidateApplication
-    name: CandidateApplication
-    href: CampusCrafter.Models.CandidateApplication.html
-  - name: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -710,34 +675,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: System.IEquatable`1
-  commentId: T:System.IEquatable`1
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
-  name: IEquatable<T>
-  nameWithType: IEquatable<T>
-  fullName: System.IEquatable<T>
-  nameWithType.vb: IEquatable(Of T)
-  fullName.vb: System.IEquatable(Of T)
-  name.vb: IEquatable(Of T)
-  spec.csharp:
-  - uid: System.IEquatable`1
-    name: IEquatable
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: System.IEquatable`1
-    name: IEquatable
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
 - uid: CampusCrafter.Models.CandidateApplication.Id*
   commentId: Overload:CampusCrafter.Models.CandidateApplication.Id
   href: CampusCrafter.Models.CandidateApplication.html#CampusCrafter_Models_CandidateApplication_Id

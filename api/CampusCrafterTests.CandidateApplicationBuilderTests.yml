@@ -1,34 +1,33 @@
 ### YamlMime:ManagedReference
 items:
-- uid: CampusCrafterTests.ReviewApplicationTests
-  commentId: T:CampusCrafterTests.ReviewApplicationTests
-  id: ReviewApplicationTests
+- uid: CampusCrafterTests.CandidateApplicationBuilderTests
+  commentId: T:CampusCrafterTests.CandidateApplicationBuilderTests
+  id: CandidateApplicationBuilderTests
   parent: CampusCrafterTests
   children:
-  - CampusCrafterTests.ReviewApplicationTests.Setup
-  - CampusCrafterTests.ReviewApplicationTests.WhenAllScholarlyAchievementsAreScored_ThenApplicationCanBeAccepted
-  - CampusCrafterTests.ReviewApplicationTests.WhenNotAllScholarlyAchievementsAreScored_ThenApplicationCannotBeAccepted
+  - CampusCrafterTests.CandidateApplicationBuilderTests.BuildApplicationWithFewFields
+  - CampusCrafterTests.CandidateApplicationBuilderTests.BuildEmptyApplication
   langs:
   - csharp
   - vb
-  name: ReviewApplicationTests
-  nameWithType: ReviewApplicationTests
-  fullName: CampusCrafterTests.ReviewApplicationTests
+  name: CandidateApplicationBuilderTests
+  nameWithType: CandidateApplicationBuilderTests
+  fullName: CampusCrafterTests.CandidateApplicationBuilderTests
   type: Class
   source:
     remote:
-      path: CampusCrafterTests/ReviewApplicationTests.cs
+      path: CampusCrafterTests/CandidateApplicationBuilderTests.cs
       branch: monczak
       repo: https://github.com/CampusCrafter/campuscrafter
-    id: ReviewApplicationTests
-    path: CampusCrafterTests/ReviewApplicationTests.cs
-    startLine: 9
+    id: CandidateApplicationBuilderTests
+    path: CampusCrafterTests/CandidateApplicationBuilderTests.cs
+    startLine: 4
   assemblies:
   - CampusCrafterTests
   namespace: CampusCrafterTests
   syntax:
-    content: public class ReviewApplicationTests
-    content.vb: Public Class ReviewApplicationTests
+    content: public class CandidateApplicationBuilderTests
+    content.vb: Public Class CandidateApplicationBuilderTests
   inheritance:
   - System.Object
   inheritedMembers:
@@ -39,63 +38,25 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: CampusCrafterTests.ReviewApplicationTests.Setup
-  commentId: M:CampusCrafterTests.ReviewApplicationTests.Setup
-  id: Setup
-  parent: CampusCrafterTests.ReviewApplicationTests
+- uid: CampusCrafterTests.CandidateApplicationBuilderTests.BuildApplicationWithFewFields
+  commentId: M:CampusCrafterTests.CandidateApplicationBuilderTests.BuildApplicationWithFewFields
+  id: BuildApplicationWithFewFields
+  parent: CampusCrafterTests.CandidateApplicationBuilderTests
   langs:
   - csharp
   - vb
-  name: Setup()
-  nameWithType: ReviewApplicationTests.Setup()
-  fullName: CampusCrafterTests.ReviewApplicationTests.Setup()
+  name: BuildApplicationWithFewFields()
+  nameWithType: CandidateApplicationBuilderTests.BuildApplicationWithFewFields()
+  fullName: CampusCrafterTests.CandidateApplicationBuilderTests.BuildApplicationWithFewFields()
   type: Method
   source:
     remote:
-      path: CampusCrafterTests/ReviewApplicationTests.cs
+      path: CampusCrafterTests/CandidateApplicationBuilderTests.cs
       branch: monczak
       repo: https://github.com/CampusCrafter/campuscrafter
-    id: Setup
-    path: CampusCrafterTests/ReviewApplicationTests.cs
-    startLine: 75
-  assemblies:
-  - CampusCrafterTests
-  namespace: CampusCrafterTests
-  syntax:
-    content: >-
-      [SetUp]
-
-      public Task Setup()
-    return:
-      type: System.Threading.Tasks.Task
-    content.vb: >-
-      <SetUp>
-
-      Public Function Setup() As Task
-  overload: CampusCrafterTests.ReviewApplicationTests.Setup*
-  attributes:
-  - type: NUnit.Framework.SetUpAttribute
-    ctor: NUnit.Framework.SetUpAttribute.#ctor
-    arguments: []
-- uid: CampusCrafterTests.ReviewApplicationTests.WhenAllScholarlyAchievementsAreScored_ThenApplicationCanBeAccepted
-  commentId: M:CampusCrafterTests.ReviewApplicationTests.WhenAllScholarlyAchievementsAreScored_ThenApplicationCanBeAccepted
-  id: WhenAllScholarlyAchievementsAreScored_ThenApplicationCanBeAccepted
-  parent: CampusCrafterTests.ReviewApplicationTests
-  langs:
-  - csharp
-  - vb
-  name: WhenAllScholarlyAchievementsAreScored_ThenApplicationCanBeAccepted()
-  nameWithType: ReviewApplicationTests.WhenAllScholarlyAchievementsAreScored_ThenApplicationCanBeAccepted()
-  fullName: CampusCrafterTests.ReviewApplicationTests.WhenAllScholarlyAchievementsAreScored_ThenApplicationCanBeAccepted()
-  type: Method
-  source:
-    remote:
-      path: CampusCrafterTests/ReviewApplicationTests.cs
-      branch: monczak
-      repo: https://github.com/CampusCrafter/campuscrafter
-    id: WhenAllScholarlyAchievementsAreScored_ThenApplicationCanBeAccepted
-    path: CampusCrafterTests/ReviewApplicationTests.cs
-    startLine: 85
+    id: BuildApplicationWithFewFields
+    path: CampusCrafterTests/CandidateApplicationBuilderTests.cs
+    startLine: 6
   assemblies:
   - CampusCrafterTests
   namespace: CampusCrafterTests
@@ -103,37 +64,35 @@ items:
     content: >-
       [Test]
 
-      public Task WhenAllScholarlyAchievementsAreScored_ThenApplicationCanBeAccepted()
-    return:
-      type: System.Threading.Tasks.Task
+      public void BuildApplicationWithFewFields()
     content.vb: >-
       <Test>
 
-      Public Function WhenAllScholarlyAchievementsAreScored_ThenApplicationCanBeAccepted() As Task
-  overload: CampusCrafterTests.ReviewApplicationTests.WhenAllScholarlyAchievementsAreScored_ThenApplicationCanBeAccepted*
+      Public Sub BuildApplicationWithFewFields()
+  overload: CampusCrafterTests.CandidateApplicationBuilderTests.BuildApplicationWithFewFields*
   attributes:
   - type: NUnit.Framework.TestAttribute
     ctor: NUnit.Framework.TestAttribute.#ctor
     arguments: []
-- uid: CampusCrafterTests.ReviewApplicationTests.WhenNotAllScholarlyAchievementsAreScored_ThenApplicationCannotBeAccepted
-  commentId: M:CampusCrafterTests.ReviewApplicationTests.WhenNotAllScholarlyAchievementsAreScored_ThenApplicationCannotBeAccepted
-  id: WhenNotAllScholarlyAchievementsAreScored_ThenApplicationCannotBeAccepted
-  parent: CampusCrafterTests.ReviewApplicationTests
+- uid: CampusCrafterTests.CandidateApplicationBuilderTests.BuildEmptyApplication
+  commentId: M:CampusCrafterTests.CandidateApplicationBuilderTests.BuildEmptyApplication
+  id: BuildEmptyApplication
+  parent: CampusCrafterTests.CandidateApplicationBuilderTests
   langs:
   - csharp
   - vb
-  name: WhenNotAllScholarlyAchievementsAreScored_ThenApplicationCannotBeAccepted()
-  nameWithType: ReviewApplicationTests.WhenNotAllScholarlyAchievementsAreScored_ThenApplicationCannotBeAccepted()
-  fullName: CampusCrafterTests.ReviewApplicationTests.WhenNotAllScholarlyAchievementsAreScored_ThenApplicationCannotBeAccepted()
+  name: BuildEmptyApplication()
+  nameWithType: CandidateApplicationBuilderTests.BuildEmptyApplication()
+  fullName: CampusCrafterTests.CandidateApplicationBuilderTests.BuildEmptyApplication()
   type: Method
   source:
     remote:
-      path: CampusCrafterTests/ReviewApplicationTests.cs
+      path: CampusCrafterTests/CandidateApplicationBuilderTests.cs
       branch: monczak
       repo: https://github.com/CampusCrafter/campuscrafter
-    id: WhenNotAllScholarlyAchievementsAreScored_ThenApplicationCannotBeAccepted
-    path: CampusCrafterTests/ReviewApplicationTests.cs
-    startLine: 110
+    id: BuildEmptyApplication
+    path: CampusCrafterTests/CandidateApplicationBuilderTests.cs
+    startLine: 26
   assemblies:
   - CampusCrafterTests
   namespace: CampusCrafterTests
@@ -141,14 +100,12 @@ items:
     content: >-
       [Test]
 
-      public Task WhenNotAllScholarlyAchievementsAreScored_ThenApplicationCannotBeAccepted()
-    return:
-      type: System.Threading.Tasks.Task
+      public void BuildEmptyApplication()
     content.vb: >-
       <Test>
 
-      Public Function WhenNotAllScholarlyAchievementsAreScored_ThenApplicationCannotBeAccepted() As Task
-  overload: CampusCrafterTests.ReviewApplicationTests.WhenNotAllScholarlyAchievementsAreScored_ThenApplicationCannotBeAccepted*
+      Public Sub BuildEmptyApplication()
+  overload: CampusCrafterTests.CandidateApplicationBuilderTests.BuildEmptyApplication*
   attributes:
   - type: NUnit.Framework.TestAttribute
     ctor: NUnit.Framework.TestAttribute.#ctor
@@ -397,66 +354,15 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: CampusCrafterTests.ReviewApplicationTests.Setup*
-  commentId: Overload:CampusCrafterTests.ReviewApplicationTests.Setup
-  href: CampusCrafterTests.ReviewApplicationTests.html#CampusCrafterTests_ReviewApplicationTests_Setup
-  name: Setup
-  nameWithType: ReviewApplicationTests.Setup
-  fullName: CampusCrafterTests.ReviewApplicationTests.Setup
-- uid: System.Threading.Tasks.Task
-  commentId: T:System.Threading.Tasks.Task
-  parent: System.Threading.Tasks
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
-  name: Task
-  nameWithType: Task
-  fullName: System.Threading.Tasks.Task
-- uid: System.Threading.Tasks
-  commentId: N:System.Threading.Tasks
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System.Threading.Tasks
-  nameWithType: System.Threading.Tasks
-  fullName: System.Threading.Tasks
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Threading
-    name: Threading
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading
-  - name: .
-  - uid: System.Threading.Tasks
-    name: Tasks
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Threading
-    name: Threading
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading
-  - name: .
-  - uid: System.Threading.Tasks
-    name: Tasks
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
-- uid: CampusCrafterTests.ReviewApplicationTests.WhenAllScholarlyAchievementsAreScored_ThenApplicationCanBeAccepted*
-  commentId: Overload:CampusCrafterTests.ReviewApplicationTests.WhenAllScholarlyAchievementsAreScored_ThenApplicationCanBeAccepted
-  href: CampusCrafterTests.ReviewApplicationTests.html#CampusCrafterTests_ReviewApplicationTests_WhenAllScholarlyAchievementsAreScored_ThenApplicationCanBeAccepted
-  name: WhenAllScholarlyAchievementsAreScored_ThenApplicationCanBeAccepted
-  nameWithType: ReviewApplicationTests.WhenAllScholarlyAchievementsAreScored_ThenApplicationCanBeAccepted
-  fullName: CampusCrafterTests.ReviewApplicationTests.WhenAllScholarlyAchievementsAreScored_ThenApplicationCanBeAccepted
-- uid: CampusCrafterTests.ReviewApplicationTests.WhenNotAllScholarlyAchievementsAreScored_ThenApplicationCannotBeAccepted*
-  commentId: Overload:CampusCrafterTests.ReviewApplicationTests.WhenNotAllScholarlyAchievementsAreScored_ThenApplicationCannotBeAccepted
-  href: CampusCrafterTests.ReviewApplicationTests.html#CampusCrafterTests_ReviewApplicationTests_WhenNotAllScholarlyAchievementsAreScored_ThenApplicationCannotBeAccepted
-  name: WhenNotAllScholarlyAchievementsAreScored_ThenApplicationCannotBeAccepted
-  nameWithType: ReviewApplicationTests.WhenNotAllScholarlyAchievementsAreScored_ThenApplicationCannotBeAccepted
-  fullName: CampusCrafterTests.ReviewApplicationTests.WhenNotAllScholarlyAchievementsAreScored_ThenApplicationCannotBeAccepted
+- uid: CampusCrafterTests.CandidateApplicationBuilderTests.BuildApplicationWithFewFields*
+  commentId: Overload:CampusCrafterTests.CandidateApplicationBuilderTests.BuildApplicationWithFewFields
+  href: CampusCrafterTests.CandidateApplicationBuilderTests.html#CampusCrafterTests_CandidateApplicationBuilderTests_BuildApplicationWithFewFields
+  name: BuildApplicationWithFewFields
+  nameWithType: CandidateApplicationBuilderTests.BuildApplicationWithFewFields
+  fullName: CampusCrafterTests.CandidateApplicationBuilderTests.BuildApplicationWithFewFields
+- uid: CampusCrafterTests.CandidateApplicationBuilderTests.BuildEmptyApplication*
+  commentId: Overload:CampusCrafterTests.CandidateApplicationBuilderTests.BuildEmptyApplication
+  href: CampusCrafterTests.CandidateApplicationBuilderTests.html#CampusCrafterTests_CandidateApplicationBuilderTests_BuildEmptyApplication
+  name: BuildEmptyApplication
+  nameWithType: CandidateApplicationBuilderTests.BuildEmptyApplication
+  fullName: CampusCrafterTests.CandidateApplicationBuilderTests.BuildEmptyApplication

@@ -9,7 +9,6 @@ items:
   - CampusCrafter.Models.CandidateApplicationBuilder.ApplicantId
   - CampusCrafter.Models.CandidateApplicationBuilder.Build
   - CampusCrafter.Models.CandidateApplicationBuilder.Date
-  - CampusCrafter.Models.CandidateApplicationBuilder.Id
   - CampusCrafter.Models.CandidateApplicationBuilder.Major
   - CampusCrafter.Models.CandidateApplicationBuilder.MajorId
   - CampusCrafter.Models.CandidateApplicationBuilder.RejectReason
@@ -46,35 +45,6 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: CampusCrafter.Models.CandidateApplicationBuilder.Id
-  commentId: P:CampusCrafter.Models.CandidateApplicationBuilder.Id
-  id: Id
-  parent: CampusCrafter.Models.CandidateApplicationBuilder
-  langs:
-  - csharp
-  - vb
-  name: Id
-  nameWithType: CandidateApplicationBuilder.Id
-  fullName: CampusCrafter.Models.CandidateApplicationBuilder.Id
-  type: Property
-  source:
-    remote:
-      path: CampusCrafter/Models/CandidateApplicationBuilder.cs
-      branch: monczak
-      repo: https://github.com/CampusCrafter/campuscrafter
-    id: Id
-    path: CampusCrafter/Models/CandidateApplicationBuilder.cs
-    startLine: 4
-  assemblies:
-  - CampusCrafter
-  namespace: CampusCrafter.Models
-  syntax:
-    content: public int Id { get; set; }
-    parameters: []
-    return:
-      type: System.Int32
-    content.vb: Public Property Id As Integer
-  overload: CampusCrafter.Models.CandidateApplicationBuilder.Id*
 - uid: CampusCrafter.Models.CandidateApplicationBuilder.Applicant
   commentId: P:CampusCrafter.Models.CandidateApplicationBuilder.Applicant
   id: Applicant
@@ -93,7 +63,7 @@ items:
       repo: https://github.com/CampusCrafter/campuscrafter
     id: Applicant
     path: CampusCrafter/Models/CandidateApplicationBuilder.cs
-    startLine: 6
+    startLine: 4
   assemblies:
   - CampusCrafter
   namespace: CampusCrafter.Models
@@ -122,7 +92,7 @@ items:
       repo: https://github.com/CampusCrafter/campuscrafter
     id: Date
     path: CampusCrafter/Models/CandidateApplicationBuilder.cs
-    startLine: 7
+    startLine: 5
   assemblies:
   - CampusCrafter
   namespace: CampusCrafter.Models
@@ -151,7 +121,7 @@ items:
       repo: https://github.com/CampusCrafter/campuscrafter
     id: Status
     path: CampusCrafter/Models/CandidateApplicationBuilder.cs
-    startLine: 9
+    startLine: 7
   assemblies:
   - CampusCrafter
   namespace: CampusCrafter.Models
@@ -180,7 +150,7 @@ items:
       repo: https://github.com/CampusCrafter/campuscrafter
     id: RejectReason
     path: CampusCrafter/Models/CandidateApplicationBuilder.cs
-    startLine: 11
+    startLine: 9
   assemblies:
   - CampusCrafter
   namespace: CampusCrafter.Models
@@ -209,7 +179,7 @@ items:
       repo: https://github.com/CampusCrafter/campuscrafter
     id: Major
     path: CampusCrafter/Models/CandidateApplicationBuilder.cs
-    startLine: 13
+    startLine: 11
   assemblies:
   - CampusCrafter
   namespace: CampusCrafter.Models
@@ -238,7 +208,7 @@ items:
       repo: https://github.com/CampusCrafter/campuscrafter
     id: StudyType
     path: CampusCrafter/Models/CandidateApplicationBuilder.cs
-    startLine: 14
+    startLine: 12
   assemblies:
   - CampusCrafter
   namespace: CampusCrafter.Models
@@ -267,12 +237,12 @@ items:
       repo: https://github.com/CampusCrafter/campuscrafter
     id: ApplicantId
     path: CampusCrafter/Models/CandidateApplicationBuilder.cs
-    startLine: 16
+    startLine: 14
   assemblies:
   - CampusCrafter
   namespace: CampusCrafter.Models
   syntax:
-    content: public string ApplicantId { get; set; }
+    content: public string? ApplicantId { get; set; }
     parameters: []
     return:
       type: System.String
@@ -296,16 +266,16 @@ items:
       repo: https://github.com/CampusCrafter/campuscrafter
     id: MajorId
     path: CampusCrafter/Models/CandidateApplicationBuilder.cs
-    startLine: 18
+    startLine: 16
   assemblies:
   - CampusCrafter
   namespace: CampusCrafter.Models
   syntax:
-    content: public int MajorId { get; set; }
+    content: public int? MajorId { get; set; }
     parameters: []
     return:
-      type: System.Int32
-    content.vb: Public Property MajorId As Integer
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property MajorId As Integer?
   overload: CampusCrafter.Models.CandidateApplicationBuilder.MajorId*
 - uid: CampusCrafter.Models.CandidateApplicationBuilder.Build
   commentId: M:CampusCrafter.Models.CandidateApplicationBuilder.Build
@@ -325,7 +295,7 @@ items:
       repo: https://github.com/CampusCrafter/campuscrafter
     id: Build
     path: CampusCrafter/Models/CandidateApplicationBuilder.cs
-    startLine: 20
+    startLine: 18
   assemblies:
   - CampusCrafter
   namespace: CampusCrafter.Models
@@ -595,23 +565,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: CampusCrafter.Models.CandidateApplicationBuilder.Id*
-  commentId: Overload:CampusCrafter.Models.CandidateApplicationBuilder.Id
-  href: CampusCrafter.Models.CandidateApplicationBuilder.html#CampusCrafter_Models_CandidateApplicationBuilder_Id
-  name: Id
-  nameWithType: CandidateApplicationBuilder.Id
-  fullName: CampusCrafter.Models.CandidateApplicationBuilder.Id
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
 - uid: CampusCrafter.Models.CandidateApplicationBuilder.Applicant*
   commentId: Overload:CampusCrafter.Models.CandidateApplicationBuilder.Applicant
   href: CampusCrafter.Models.CandidateApplicationBuilder.html#CampusCrafter_Models_CandidateApplicationBuilder_Applicant
@@ -710,6 +663,57 @@ references:
   name: MajorId
   nameWithType: CandidateApplicationBuilder.MajorId
   fullName: CampusCrafter.Models.CandidateApplicationBuilder.MajorId
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
 - uid: CampusCrafter.Models.CandidateApplicationBuilder.Build*
   commentId: Overload:CampusCrafter.Models.CandidateApplicationBuilder.Build
   href: CampusCrafter.Models.CandidateApplicationBuilder.html#CampusCrafter_Models_CandidateApplicationBuilder_Build

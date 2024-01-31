@@ -581,14 +581,14 @@ items:
     content: >-
       [Display(Name = "Minimum score last year")]
 
-      public float? MinScore { get; set; }
+      public decimal? MinScore { get; set; }
     parameters: []
     return:
-      type: System.Nullable{System.Single}
+      type: System.Nullable{System.Decimal}
     content.vb: >-
       <Display(Name:="Minimum score last year")>
 
-      Public Property MinScore As Single?
+      Public Property MinScore As Decimal?
   overload: CampusCrafter.Models.Major.MinScore*
   attributes:
   - type: System.ComponentModel.DataAnnotations.DisplayAttribute
@@ -1262,26 +1262,26 @@ references:
   name: MinScore
   nameWithType: Major.MinScore
   fullName: CampusCrafter.Models.Major.MinScore
-- uid: System.Nullable{System.Single}
-  commentId: T:System.Nullable{System.Single}
+- uid: System.Nullable{System.Decimal}
+  commentId: T:System.Nullable{System.Decimal}
   parent: System
   definition: System.Nullable`1
-  href: https://learn.microsoft.com/dotnet/api/system.single
-  name: float?
-  nameWithType: float?
-  fullName: float?
-  nameWithType.vb: Single?
-  fullName.vb: Single?
-  name.vb: Single?
+  href: https://learn.microsoft.com/dotnet/api/system.decimal
+  name: decimal?
+  nameWithType: decimal?
+  fullName: decimal?
+  nameWithType.vb: Decimal?
+  fullName.vb: Decimal?
+  name.vb: Decimal?
   spec.csharp:
-  - uid: System.Single
-    name: float
+  - uid: System.Decimal
+    name: decimal
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.single
+    href: https://learn.microsoft.com/dotnet/api/system.decimal
   - name: '?'
   spec.vb:
-  - uid: System.Single
-    name: Single
+  - uid: System.Decimal
+    name: Decimal
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.single
+    href: https://learn.microsoft.com/dotnet/api/system.decimal
   - name: '?'

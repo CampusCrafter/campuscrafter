@@ -37,6 +37,7 @@ items:
   - CampusCrafter.Data.Migrations.UpdateMajorsAndStudyPlan
   - CampusCrafter.Data.Migrations.UpdateMajorsAndStudyPlan2
   - CampusCrafter.Data.Migrations.UpdateMajorsAndStudyPlan3
+  - CampusCrafter.Data.Migrations.major_min_score
   langs:
   - csharp
   - vb
@@ -245,3 +246,9 @@ references:
   name: AddedMinScoreToMajor
   nameWithType: AddedMinScoreToMajor
   fullName: CampusCrafter.Data.Migrations.AddedMinScoreToMajor
+- uid: CampusCrafter.Data.Migrations.major_min_score
+  commentId: T:CampusCrafter.Data.Migrations.major_min_score
+  href: CampusCrafter.Data.Migrations.major_min_score.html
+  name: major_min_score
+  nameWithType: major_min_score
+  fullName: CampusCrafter.Data.Migrations.major_min_score

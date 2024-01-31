@@ -4,9 +4,11 @@ items:
   commentId: N:CampusCrafterTests
   id: CampusCrafterTests
   children:
+  - CampusCrafterTests.CandidateApplicationBuilderTests
   - CampusCrafterTests.Mocks
   - CampusCrafterTests.ReviewApplicationTests
   - CampusCrafterTests.SampleData
+  - CampusCrafterTests.ScoreWeightUtilTests
   - CampusCrafterTests.Utils
   langs:
   - csharp
@@ -18,6 +20,12 @@ items:
   assemblies:
   - CampusCrafterTests
 references:
+- uid: CampusCrafterTests.CandidateApplicationBuilderTests
+  commentId: T:CampusCrafterTests.CandidateApplicationBuilderTests
+  href: CampusCrafterTests.CandidateApplicationBuilderTests.html
+  name: CandidateApplicationBuilderTests
+  nameWithType: CandidateApplicationBuilderTests
+  fullName: CampusCrafterTests.CandidateApplicationBuilderTests
 - uid: CampusCrafterTests.Mocks
   commentId: T:CampusCrafterTests.Mocks
   href: CampusCrafterTests.Mocks.html
@@ -36,6 +44,12 @@ references:
   name: SampleData
   nameWithType: SampleData
   fullName: CampusCrafterTests.SampleData
+- uid: CampusCrafterTests.ScoreWeightUtilTests
+  commentId: T:CampusCrafterTests.ScoreWeightUtilTests
+  href: CampusCrafterTests.ScoreWeightUtilTests.html
+  name: ScoreWeightUtilTests
+  nameWithType: ScoreWeightUtilTests
+  fullName: CampusCrafterTests.ScoreWeightUtilTests
 - uid: CampusCrafterTests.Utils
   commentId: T:CampusCrafterTests.Utils
   href: CampusCrafterTests.Utils.html

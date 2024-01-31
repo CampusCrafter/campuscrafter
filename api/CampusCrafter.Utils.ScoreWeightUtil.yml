@@ -6,7 +6,7 @@ items:
   parent: CampusCrafter.Utils
   children:
   - CampusCrafter.Utils.ScoreWeightUtil.Deserialize(System.String)
-  - CampusCrafter.Utils.ScoreWeightUtil.Serialize(System.Collections.Generic.IList{CampusCrafter.Models.ScoreWeight})
+  - CampusCrafter.Utils.ScoreWeightUtil.Serialize(System.Collections.Generic.IEnumerable{CampusCrafter.Models.ScoreWeight})
   langs:
   - csharp
   - vb
@@ -72,16 +72,16 @@ items:
   nameWithType.vb: ScoreWeightUtil.Deserialize(String)
   fullName.vb: CampusCrafter.Utils.ScoreWeightUtil.Deserialize(String)
   name.vb: Deserialize(String)
-- uid: CampusCrafter.Utils.ScoreWeightUtil.Serialize(System.Collections.Generic.IList{CampusCrafter.Models.ScoreWeight})
-  commentId: M:CampusCrafter.Utils.ScoreWeightUtil.Serialize(System.Collections.Generic.IList{CampusCrafter.Models.ScoreWeight})
-  id: Serialize(System.Collections.Generic.IList{CampusCrafter.Models.ScoreWeight})
+- uid: CampusCrafter.Utils.ScoreWeightUtil.Serialize(System.Collections.Generic.IEnumerable{CampusCrafter.Models.ScoreWeight})
+  commentId: M:CampusCrafter.Utils.ScoreWeightUtil.Serialize(System.Collections.Generic.IEnumerable{CampusCrafter.Models.ScoreWeight})
+  id: Serialize(System.Collections.Generic.IEnumerable{CampusCrafter.Models.ScoreWeight})
   parent: CampusCrafter.Utils.ScoreWeightUtil
   langs:
   - csharp
   - vb
-  name: Serialize(IList<ScoreWeight>)
-  nameWithType: ScoreWeightUtil.Serialize(IList<ScoreWeight>)
-  fullName: CampusCrafter.Utils.ScoreWeightUtil.Serialize(System.Collections.Generic.IList<CampusCrafter.Models.ScoreWeight>)
+  name: Serialize(IEnumerable<ScoreWeight>)
+  nameWithType: ScoreWeightUtil.Serialize(IEnumerable<ScoreWeight>)
+  fullName: CampusCrafter.Utils.ScoreWeightUtil.Serialize(System.Collections.Generic.IEnumerable<CampusCrafter.Models.ScoreWeight>)
   type: Method
   source:
     remote:
@@ -95,17 +95,17 @@ items:
   - CampusCrafter
   namespace: CampusCrafter.Utils
   syntax:
-    content: public static string Serialize(IList<ScoreWeight> scoreWeights)
+    content: public static string Serialize(IEnumerable<ScoreWeight> scoreWeights)
     parameters:
     - id: scoreWeights
-      type: System.Collections.Generic.IList{CampusCrafter.Models.ScoreWeight}
+      type: System.Collections.Generic.IEnumerable{CampusCrafter.Models.ScoreWeight}
     return:
       type: System.String
-    content.vb: Public Shared Function Serialize(scoreWeights As IList(Of ScoreWeight)) As String
+    content.vb: Public Shared Function Serialize(scoreWeights As IEnumerable(Of ScoreWeight)) As String
   overload: CampusCrafter.Utils.ScoreWeightUtil.Serialize*
-  nameWithType.vb: ScoreWeightUtil.Serialize(IList(Of ScoreWeight))
-  fullName.vb: CampusCrafter.Utils.ScoreWeightUtil.Serialize(System.Collections.Generic.IList(Of CampusCrafter.Models.ScoreWeight))
-  name.vb: Serialize(IList(Of ScoreWeight))
+  nameWithType.vb: ScoreWeightUtil.Serialize(IEnumerable(Of ScoreWeight))
+  fullName.vb: CampusCrafter.Utils.ScoreWeightUtil.Serialize(System.Collections.Generic.IEnumerable(Of CampusCrafter.Models.ScoreWeight))
+  name.vb: Serialize(IEnumerable(Of ScoreWeight))
 references:
 - uid: CampusCrafter.Utils
   commentId: N:CampusCrafter.Utils
@@ -483,36 +483,36 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
 - uid: CampusCrafter.Utils.ScoreWeightUtil.Serialize*
   commentId: Overload:CampusCrafter.Utils.ScoreWeightUtil.Serialize
-  href: CampusCrafter.Utils.ScoreWeightUtil.html#CampusCrafter_Utils_ScoreWeightUtil_Serialize_System_Collections_Generic_IList_CampusCrafter_Models_ScoreWeight__
+  href: CampusCrafter.Utils.ScoreWeightUtil.html#CampusCrafter_Utils_ScoreWeightUtil_Serialize_System_Collections_Generic_IEnumerable_CampusCrafter_Models_ScoreWeight__
   name: Serialize
   nameWithType: ScoreWeightUtil.Serialize
   fullName: CampusCrafter.Utils.ScoreWeightUtil.Serialize
-- uid: System.Collections.Generic.IList{CampusCrafter.Models.ScoreWeight}
-  commentId: T:System.Collections.Generic.IList{CampusCrafter.Models.ScoreWeight}
+- uid: System.Collections.Generic.IEnumerable{CampusCrafter.Models.ScoreWeight}
+  commentId: T:System.Collections.Generic.IEnumerable{CampusCrafter.Models.ScoreWeight}
   parent: System.Collections.Generic
-  definition: System.Collections.Generic.IList`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
-  name: IList<ScoreWeight>
-  nameWithType: IList<ScoreWeight>
-  fullName: System.Collections.Generic.IList<CampusCrafter.Models.ScoreWeight>
-  nameWithType.vb: IList(Of ScoreWeight)
-  fullName.vb: System.Collections.Generic.IList(Of CampusCrafter.Models.ScoreWeight)
-  name.vb: IList(Of ScoreWeight)
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<ScoreWeight>
+  nameWithType: IEnumerable<ScoreWeight>
+  fullName: System.Collections.Generic.IEnumerable<CampusCrafter.Models.ScoreWeight>
+  nameWithType.vb: IEnumerable(Of ScoreWeight)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of CampusCrafter.Models.ScoreWeight)
+  name.vb: IEnumerable(Of ScoreWeight)
   spec.csharp:
-  - uid: System.Collections.Generic.IList`1
-    name: IList
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   - name: <
   - uid: CampusCrafter.Models.ScoreWeight
     name: ScoreWeight
     href: CampusCrafter.Models.ScoreWeight.html
   - name: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IList`1
-    name: IList
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   - name: (
   - name: Of
   - name: " "
@@ -520,29 +520,29 @@ references:
     name: ScoreWeight
     href: CampusCrafter.Models.ScoreWeight.html
   - name: )
-- uid: System.Collections.Generic.IList`1
-  commentId: T:System.Collections.Generic.IList`1
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
-  name: IList<T>
-  nameWithType: IList<T>
-  fullName: System.Collections.Generic.IList<T>
-  nameWithType.vb: IList(Of T)
-  fullName.vb: System.Collections.Generic.IList(Of T)
-  name.vb: IList(Of T)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
   spec.csharp:
-  - uid: System.Collections.Generic.IList`1
-    name: IList
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   - name: <
   - name: T
   - name: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IList`1
-    name: IList
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
   - name: (
   - name: Of
   - name: " "

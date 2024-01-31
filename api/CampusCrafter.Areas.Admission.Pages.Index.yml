@@ -1,34 +1,28 @@
 ### YamlMime:ManagedReference
 items:
-- uid: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel
-  commentId: T:CampusCrafter.Areas.Admission.Pages.FillAdmissionModel
-  id: FillAdmissionModel
+- uid: CampusCrafter.Areas.Admission.Pages.Index
+  commentId: T:CampusCrafter.Areas.Admission.Pages.Index
+  id: Index
   parent: CampusCrafter.Areas.Admission.Pages
   children:
-  - CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.#ctor(CampusCrafter.Data.ApplicationRepository)
-  - CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.Candidate
-  - CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.DateTime
-  - CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.MajorDegree
-  - CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.Majors
-  - CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.OnGetAsync
-  - CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.OnPostAsync(System.Collections.Generic.List{CampusCrafter.Models.ProgressType},System.Collections.Generic.List{System.Decimal},System.Collections.Generic.List{CampusCrafter.Models.ScholarlyAchievementType},System.Collections.Generic.List{System.String})
-  - CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.ScoreWeights
-  - CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.SelectedMajors
+  - CampusCrafter.Areas.Admission.Pages.Index.#ctor(CampusCrafter.Data.ApplicationRepository)
+  - CampusCrafter.Areas.Admission.Pages.Index.MadeAdmission
+  - CampusCrafter.Areas.Admission.Pages.Index.OnGetAsync
   langs:
   - csharp
   - vb
-  name: FillAdmissionModel
-  nameWithType: FillAdmissionModel
-  fullName: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel
+  name: Index
+  nameWithType: Index
+  fullName: CampusCrafter.Areas.Admission.Pages.Index
   type: Class
   source:
     remote:
-      path: CampusCrafter/Areas/Admission/Pages/FillAdmission.cshtml.cs
+      path: CampusCrafter/Areas/Admission/Pages/Index.cshtml.cs
       branch: monczak
       repo: https://github.com/CampusCrafter/campuscrafter
-    id: FillAdmissionModel
-    path: CampusCrafter/Areas/Admission/Pages/FillAdmission.cshtml.cs
-    startLine: 16
+    id: Index
+    path: CampusCrafter/Areas/Admission/Pages/Index.cshtml.cs
+    startLine: 8
   assemblies:
   - CampusCrafter
   namespace: CampusCrafter.Areas.Admission.Pages
@@ -36,11 +30,11 @@ items:
     content: >-
       [Authorize(Roles = "Candidate")]
 
-      public class FillAdmissionModel : PageModel, IAsyncPageFilter, IPageFilter, IFilterMetadata
+      public class Index : PageModel, IAsyncPageFilter, IPageFilter, IFilterMetadata
     content.vb: >-
       <Authorize(Roles:="Candidate")>
 
-      Public Class FillAdmissionModel Inherits PageModel Implements IAsyncPageFilter, IPageFilter, IFilterMetadata
+      Public Class Index Inherits PageModel Implements IAsyncPageFilter, IPageFilter, IFilterMetadata
   inheritance:
   - System.Object
   - Microsoft.AspNetCore.Mvc.RazorPages.PageModel
@@ -181,300 +175,95 @@ items:
     - name: Roles
       type: System.String
       value: Candidate
-- uid: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.#ctor(CampusCrafter.Data.ApplicationRepository)
-  commentId: M:CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.#ctor(CampusCrafter.Data.ApplicationRepository)
+- uid: CampusCrafter.Areas.Admission.Pages.Index.#ctor(CampusCrafter.Data.ApplicationRepository)
+  commentId: M:CampusCrafter.Areas.Admission.Pages.Index.#ctor(CampusCrafter.Data.ApplicationRepository)
   id: '#ctor(CampusCrafter.Data.ApplicationRepository)'
-  parent: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel
+  parent: CampusCrafter.Areas.Admission.Pages.Index
   langs:
   - csharp
   - vb
-  name: FillAdmissionModel(ApplicationRepository)
-  nameWithType: FillAdmissionModel.FillAdmissionModel(ApplicationRepository)
-  fullName: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.FillAdmissionModel(CampusCrafter.Data.ApplicationRepository)
+  name: Index(ApplicationRepository)
+  nameWithType: Index.Index(ApplicationRepository)
+  fullName: CampusCrafter.Areas.Admission.Pages.Index.Index(CampusCrafter.Data.ApplicationRepository)
   type: Constructor
   source:
     remote:
-      path: CampusCrafter/Areas/Admission/Pages/FillAdmission.cshtml.cs
+      path: CampusCrafter/Areas/Admission/Pages/Index.cshtml.cs
       branch: monczak
       repo: https://github.com/CampusCrafter/campuscrafter
     id: .ctor
-    path: CampusCrafter/Areas/Admission/Pages/FillAdmission.cshtml.cs
-    startLine: 16
+    path: CampusCrafter/Areas/Admission/Pages/Index.cshtml.cs
+    startLine: 8
   assemblies:
   - CampusCrafter
   namespace: CampusCrafter.Areas.Admission.Pages
   syntax:
-    content: public FillAdmissionModel(ApplicationRepository repository)
+    content: public Index(ApplicationRepository repository)
     parameters:
     - id: repository
       type: CampusCrafter.Data.ApplicationRepository
     content.vb: Public Sub New(repository As ApplicationRepository)
-  overload: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.#ctor*
-  nameWithType.vb: FillAdmissionModel.New(ApplicationRepository)
-  fullName.vb: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.New(CampusCrafter.Data.ApplicationRepository)
+  overload: CampusCrafter.Areas.Admission.Pages.Index.#ctor*
+  nameWithType.vb: Index.New(ApplicationRepository)
+  fullName.vb: CampusCrafter.Areas.Admission.Pages.Index.New(CampusCrafter.Data.ApplicationRepository)
   name.vb: New(ApplicationRepository)
-- uid: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.MajorDegree
-  commentId: P:CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.MajorDegree
-  id: MajorDegree
-  parent: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel
-  langs:
-  - csharp
-  - vb
-  name: MajorDegree
-  nameWithType: FillAdmissionModel.MajorDegree
-  fullName: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.MajorDegree
-  type: Property
-  source:
-    remote:
-      path: CampusCrafter/Areas/Admission/Pages/FillAdmission.cshtml.cs
-      branch: monczak
-      repo: https://github.com/CampusCrafter/campuscrafter
-    id: MajorDegree
-    path: CampusCrafter/Areas/Admission/Pages/FillAdmission.cshtml.cs
-    startLine: 19
-  assemblies:
-  - CampusCrafter
-  namespace: CampusCrafter.Areas.Admission.Pages
-  syntax:
-    content: >-
-      [TempData]
-
-      public int MajorDegree { get; set; }
-    parameters: []
-    return:
-      type: System.Int32
-    content.vb: >-
-      <TempData>
-
-      Public Property MajorDegree As Integer
-  overload: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.MajorDegree*
-  attributes:
-  - type: Microsoft.AspNetCore.Mvc.TempDataAttribute
-    ctor: Microsoft.AspNetCore.Mvc.TempDataAttribute.#ctor
-    arguments: []
-- uid: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.SelectedMajors
-  commentId: P:CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.SelectedMajors
-  id: SelectedMajors
-  parent: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel
-  langs:
-  - csharp
-  - vb
-  name: SelectedMajors
-  nameWithType: FillAdmissionModel.SelectedMajors
-  fullName: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.SelectedMajors
-  type: Property
-  source:
-    remote:
-      path: CampusCrafter/Areas/Admission/Pages/FillAdmission.cshtml.cs
-      branch: monczak
-      repo: https://github.com/CampusCrafter/campuscrafter
-    id: SelectedMajors
-    path: CampusCrafter/Areas/Admission/Pages/FillAdmission.cshtml.cs
-    startLine: 21
-  assemblies:
-  - CampusCrafter
-  namespace: CampusCrafter.Areas.Admission.Pages
-  syntax:
-    content: >-
-      [TempData]
-
-      public string SelectedMajors { get; set; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: >-
-      <TempData>
-
-      Public Property SelectedMajors As String
-  overload: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.SelectedMajors*
-  attributes:
-  - type: Microsoft.AspNetCore.Mvc.TempDataAttribute
-    ctor: Microsoft.AspNetCore.Mvc.TempDataAttribute.#ctor
-    arguments: []
-- uid: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.Majors
-  commentId: P:CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.Majors
-  id: Majors
-  parent: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel
-  langs:
-  - csharp
-  - vb
-  name: Majors
-  nameWithType: FillAdmissionModel.Majors
-  fullName: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.Majors
-  type: Property
-  source:
-    remote:
-      path: CampusCrafter/Areas/Admission/Pages/FillAdmission.cshtml.cs
-      branch: monczak
-      repo: https://github.com/CampusCrafter/campuscrafter
-    id: Majors
-    path: CampusCrafter/Areas/Admission/Pages/FillAdmission.cshtml.cs
-    startLine: 23
-  assemblies:
-  - CampusCrafter
-  namespace: CampusCrafter.Areas.Admission.Pages
-  syntax:
-    content: public List<Major> Majors { get; set; }
-    parameters: []
-    return:
-      type: System.Collections.Generic.List{CampusCrafter.Models.Major}
-    content.vb: Public Property Majors As List(Of Major)
-  overload: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.Majors*
-- uid: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.ScoreWeights
-  commentId: P:CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.ScoreWeights
-  id: ScoreWeights
-  parent: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel
-  langs:
-  - csharp
-  - vb
-  name: ScoreWeights
-  nameWithType: FillAdmissionModel.ScoreWeights
-  fullName: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.ScoreWeights
-  type: Property
-  source:
-    remote:
-      path: CampusCrafter/Areas/Admission/Pages/FillAdmission.cshtml.cs
-      branch: monczak
-      repo: https://github.com/CampusCrafter/campuscrafter
-    id: ScoreWeights
-    path: CampusCrafter/Areas/Admission/Pages/FillAdmission.cshtml.cs
-    startLine: 25
-  assemblies:
-  - CampusCrafter
-  namespace: CampusCrafter.Areas.Admission.Pages
-  syntax:
-    content: public List<List<ScoreWeight>> ScoreWeights { get; set; }
-    parameters: []
-    return:
-      type: System.Collections.Generic.List{System.Collections.Generic.List{CampusCrafter.Models.ScoreWeight}}
-    content.vb: Public Property ScoreWeights As List(Of List(Of ScoreWeight))
-  overload: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.ScoreWeights*
-- uid: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.Candidate
-  commentId: P:CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.Candidate
-  id: Candidate
-  parent: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel
-  langs:
-  - csharp
-  - vb
-  name: Candidate
-  nameWithType: FillAdmissionModel.Candidate
-  fullName: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.Candidate
-  type: Property
-  source:
-    remote:
-      path: CampusCrafter/Areas/Admission/Pages/FillAdmission.cshtml.cs
-      branch: monczak
-      repo: https://github.com/CampusCrafter/campuscrafter
-    id: Candidate
-    path: CampusCrafter/Areas/Admission/Pages/FillAdmission.cshtml.cs
-    startLine: 27
-  assemblies:
-  - CampusCrafter
-  namespace: CampusCrafter.Areas.Admission.Pages
-  syntax:
-    content: public Candidate Candidate { get; set; }
-    parameters: []
-    return:
-      type: CampusCrafter.Models.Candidate
-    content.vb: Public Property Candidate As Candidate
-  overload: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.Candidate*
-- uid: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.DateTime
-  commentId: P:CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.DateTime
-  id: DateTime
-  parent: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel
-  langs:
-  - csharp
-  - vb
-  name: DateTime
-  nameWithType: FillAdmissionModel.DateTime
-  fullName: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.DateTime
-  type: Property
-  source:
-    remote:
-      path: CampusCrafter/Areas/Admission/Pages/FillAdmission.cshtml.cs
-      branch: monczak
-      repo: https://github.com/CampusCrafter/campuscrafter
-    id: DateTime
-    path: CampusCrafter/Areas/Admission/Pages/FillAdmission.cshtml.cs
-    startLine: 29
-  assemblies:
-  - CampusCrafter
-  namespace: CampusCrafter.Areas.Admission.Pages
-  syntax:
-    content: public DateTime DateTime { get; set; }
-    parameters: []
-    return:
-      type: System.DateTime
-    content.vb: Public Property DateTime As Date
-  overload: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.DateTime*
-- uid: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.OnGetAsync
-  commentId: M:CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.OnGetAsync
+- uid: CampusCrafter.Areas.Admission.Pages.Index.OnGetAsync
+  commentId: M:CampusCrafter.Areas.Admission.Pages.Index.OnGetAsync
   id: OnGetAsync
-  parent: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel
+  parent: CampusCrafter.Areas.Admission.Pages.Index
   langs:
   - csharp
   - vb
   name: OnGetAsync()
-  nameWithType: FillAdmissionModel.OnGetAsync()
-  fullName: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.OnGetAsync()
+  nameWithType: Index.OnGetAsync()
+  fullName: CampusCrafter.Areas.Admission.Pages.Index.OnGetAsync()
   type: Method
   source:
     remote:
-      path: CampusCrafter/Areas/Admission/Pages/FillAdmission.cshtml.cs
+      path: CampusCrafter/Areas/Admission/Pages/Index.cshtml.cs
       branch: monczak
       repo: https://github.com/CampusCrafter/campuscrafter
     id: OnGetAsync
-    path: CampusCrafter/Areas/Admission/Pages/FillAdmission.cshtml.cs
-    startLine: 38
+    path: CampusCrafter/Areas/Admission/Pages/Index.cshtml.cs
+    startLine: 11
   assemblies:
   - CampusCrafter
   namespace: CampusCrafter.Areas.Admission.Pages
   syntax:
-    content: public Task<IActionResult> OnGetAsync()
+    content: public Task OnGetAsync()
     return:
-      type: System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.IActionResult}
-    content.vb: Public Function OnGetAsync() As Task(Of IActionResult)
-  overload: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.OnGetAsync*
-- uid: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.OnPostAsync(System.Collections.Generic.List{CampusCrafter.Models.ProgressType},System.Collections.Generic.List{System.Decimal},System.Collections.Generic.List{CampusCrafter.Models.ScholarlyAchievementType},System.Collections.Generic.List{System.String})
-  commentId: M:CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.OnPostAsync(System.Collections.Generic.List{CampusCrafter.Models.ProgressType},System.Collections.Generic.List{System.Decimal},System.Collections.Generic.List{CampusCrafter.Models.ScholarlyAchievementType},System.Collections.Generic.List{System.String})
-  id: OnPostAsync(System.Collections.Generic.List{CampusCrafter.Models.ProgressType},System.Collections.Generic.List{System.Decimal},System.Collections.Generic.List{CampusCrafter.Models.ScholarlyAchievementType},System.Collections.Generic.List{System.String})
-  parent: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function OnGetAsync() As Task
+  overload: CampusCrafter.Areas.Admission.Pages.Index.OnGetAsync*
+- uid: CampusCrafter.Areas.Admission.Pages.Index.MadeAdmission
+  commentId: P:CampusCrafter.Areas.Admission.Pages.Index.MadeAdmission
+  id: MadeAdmission
+  parent: CampusCrafter.Areas.Admission.Pages.Index
   langs:
   - csharp
   - vb
-  name: OnPostAsync(List<ProgressType>, List<decimal>, List<ScholarlyAchievementType>, List<string>)
-  nameWithType: FillAdmissionModel.OnPostAsync(List<ProgressType>, List<decimal>, List<ScholarlyAchievementType>, List<string>)
-  fullName: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.OnPostAsync(System.Collections.Generic.List<CampusCrafter.Models.ProgressType>, System.Collections.Generic.List<decimal>, System.Collections.Generic.List<CampusCrafter.Models.ScholarlyAchievementType>, System.Collections.Generic.List<string>)
-  type: Method
+  name: MadeAdmission
+  nameWithType: Index.MadeAdmission
+  fullName: CampusCrafter.Areas.Admission.Pages.Index.MadeAdmission
+  type: Property
   source:
     remote:
-      path: CampusCrafter/Areas/Admission/Pages/FillAdmission.cshtml.cs
+      path: CampusCrafter/Areas/Admission/Pages/Index.cshtml.cs
       branch: monczak
       repo: https://github.com/CampusCrafter/campuscrafter
-    id: OnPostAsync
-    path: CampusCrafter/Areas/Admission/Pages/FillAdmission.cshtml.cs
-    startLine: 51
+    id: MadeAdmission
+    path: CampusCrafter/Areas/Admission/Pages/Index.cshtml.cs
+    startLine: 15
   assemblies:
   - CampusCrafter
   namespace: CampusCrafter.Areas.Admission.Pages
   syntax:
-    content: public Task<IActionResult> OnPostAsync(List<ProgressType> progressTypes, List<decimal> score, List<ScholarlyAchievementType> scholarlyAchievementTypes, List<string> descriptions)
-    parameters:
-    - id: progressTypes
-      type: System.Collections.Generic.List{CampusCrafter.Models.ProgressType}
-    - id: score
-      type: System.Collections.Generic.List{System.Decimal}
-    - id: scholarlyAchievementTypes
-      type: System.Collections.Generic.List{CampusCrafter.Models.ScholarlyAchievementType}
-    - id: descriptions
-      type: System.Collections.Generic.List{System.String}
+    content: public bool MadeAdmission { get; set; }
+    parameters: []
     return:
-      type: System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.IActionResult}
-    content.vb: Public Function OnPostAsync(progressTypes As List(Of ProgressType), score As List(Of Decimal), scholarlyAchievementTypes As List(Of ScholarlyAchievementType), descriptions As List(Of String)) As Task(Of IActionResult)
-  overload: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.OnPostAsync*
-  nameWithType.vb: FillAdmissionModel.OnPostAsync(List(Of ProgressType), List(Of Decimal), List(Of ScholarlyAchievementType), List(Of String))
-  fullName.vb: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.OnPostAsync(System.Collections.Generic.List(Of CampusCrafter.Models.ProgressType), System.Collections.Generic.List(Of Decimal), System.Collections.Generic.List(Of CampusCrafter.Models.ScholarlyAchievementType), System.Collections.Generic.List(Of String))
-  name.vb: OnPostAsync(List(Of ProgressType), List(Of Decimal), List(Of ScholarlyAchievementType), List(Of String))
+      type: System.Boolean
+    content.vb: Public Property MadeAdmission As Boolean
+  overload: CampusCrafter.Areas.Admission.Pages.Index.MadeAdmission*
 references:
 - uid: CampusCrafter.Areas.Admission.Pages
   commentId: N:CampusCrafter.Areas.Admission.Pages
@@ -6429,14 +6218,14 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.boolean
   - name: )
   - name: )
-- uid: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.#ctor*
-  commentId: Overload:CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.#ctor
-  href: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.html#CampusCrafter_Areas_Admission_Pages_FillAdmissionModel__ctor_CampusCrafter_Data_ApplicationRepository_
-  name: FillAdmissionModel
-  nameWithType: FillAdmissionModel.FillAdmissionModel
-  fullName: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.FillAdmissionModel
-  nameWithType.vb: FillAdmissionModel.New
-  fullName.vb: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.New
+- uid: CampusCrafter.Areas.Admission.Pages.Index.#ctor*
+  commentId: Overload:CampusCrafter.Areas.Admission.Pages.Index.#ctor
+  href: CampusCrafter.Areas.Admission.Pages.Index.html#CampusCrafter_Areas_Admission_Pages_Index__ctor_CampusCrafter_Data_ApplicationRepository_
+  name: Index
+  nameWithType: Index.Index
+  fullName: CampusCrafter.Areas.Admission.Pages.Index.Index
+  nameWithType.vb: Index.New
+  fullName.vb: CampusCrafter.Areas.Admission.Pages.Index.New
   name.vb: New
 - uid: CampusCrafter.Data.ApplicationRepository
   commentId: T:CampusCrafter.Data.ApplicationRepository
@@ -6467,318 +6256,20 @@ references:
   - uid: CampusCrafter.Data
     name: Data
     href: CampusCrafter.Data.html
-- uid: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.MajorDegree*
-  commentId: Overload:CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.MajorDegree
-  href: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.html#CampusCrafter_Areas_Admission_Pages_FillAdmissionModel_MajorDegree
-  name: MajorDegree
-  nameWithType: FillAdmissionModel.MajorDegree
-  fullName: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.MajorDegree
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
-- uid: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.SelectedMajors*
-  commentId: Overload:CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.SelectedMajors
-  href: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.html#CampusCrafter_Areas_Admission_Pages_FillAdmissionModel_SelectedMajors
-  name: SelectedMajors
-  nameWithType: FillAdmissionModel.SelectedMajors
-  fullName: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.SelectedMajors
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
-- uid: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.Majors*
-  commentId: Overload:CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.Majors
-  href: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.html#CampusCrafter_Areas_Admission_Pages_FillAdmissionModel_Majors
-  name: Majors
-  nameWithType: FillAdmissionModel.Majors
-  fullName: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.Majors
-- uid: System.Collections.Generic.List{CampusCrafter.Models.Major}
-  commentId: T:System.Collections.Generic.List{CampusCrafter.Models.Major}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.List`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  name: List<Major>
-  nameWithType: List<Major>
-  fullName: System.Collections.Generic.List<CampusCrafter.Models.Major>
-  nameWithType.vb: List(Of Major)
-  fullName.vb: System.Collections.Generic.List(Of CampusCrafter.Models.Major)
-  name.vb: List(Of Major)
-  spec.csharp:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: <
-  - uid: CampusCrafter.Models.Major
-    name: Major
-    href: CampusCrafter.Models.Major.html
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: CampusCrafter.Models.Major
-    name: Major
-    href: CampusCrafter.Models.Major.html
-  - name: )
-- uid: System.Collections.Generic.List`1
-  commentId: T:System.Collections.Generic.List`1
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  name: List<T>
-  nameWithType: List<T>
-  fullName: System.Collections.Generic.List<T>
-  nameWithType.vb: List(Of T)
-  fullName.vb: System.Collections.Generic.List(Of T)
-  name.vb: List(Of T)
-  spec.csharp:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-- uid: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.ScoreWeights*
-  commentId: Overload:CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.ScoreWeights
-  href: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.html#CampusCrafter_Areas_Admission_Pages_FillAdmissionModel_ScoreWeights
-  name: ScoreWeights
-  nameWithType: FillAdmissionModel.ScoreWeights
-  fullName: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.ScoreWeights
-- uid: System.Collections.Generic.List{System.Collections.Generic.List{CampusCrafter.Models.ScoreWeight}}
-  commentId: T:System.Collections.Generic.List{System.Collections.Generic.List{CampusCrafter.Models.ScoreWeight}}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.List`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  name: List<List<ScoreWeight>>
-  nameWithType: List<List<ScoreWeight>>
-  fullName: System.Collections.Generic.List<System.Collections.Generic.List<CampusCrafter.Models.ScoreWeight>>
-  nameWithType.vb: List(Of List(Of ScoreWeight))
-  fullName.vb: System.Collections.Generic.List(Of System.Collections.Generic.List(Of CampusCrafter.Models.ScoreWeight))
-  name.vb: List(Of List(Of ScoreWeight))
-  spec.csharp:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: <
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: <
-  - uid: CampusCrafter.Models.ScoreWeight
-    name: ScoreWeight
-    href: CampusCrafter.Models.ScoreWeight.html
-  - name: '>'
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: CampusCrafter.Models.ScoreWeight
-    name: ScoreWeight
-    href: CampusCrafter.Models.ScoreWeight.html
-  - name: )
-  - name: )
-- uid: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.Candidate*
-  commentId: Overload:CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.Candidate
-  href: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.html#CampusCrafter_Areas_Admission_Pages_FillAdmissionModel_Candidate
-  name: Candidate
-  nameWithType: FillAdmissionModel.Candidate
-  fullName: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.Candidate
-- uid: CampusCrafter.Models.Candidate
-  commentId: T:CampusCrafter.Models.Candidate
-  parent: CampusCrafter.Models
-  href: CampusCrafter.Models.Candidate.html
-  name: Candidate
-  nameWithType: Candidate
-  fullName: CampusCrafter.Models.Candidate
-- uid: CampusCrafter.Models
-  commentId: N:CampusCrafter.Models
-  href: CampusCrafter.html
-  name: CampusCrafter.Models
-  nameWithType: CampusCrafter.Models
-  fullName: CampusCrafter.Models
-  spec.csharp:
-  - uid: CampusCrafter
-    name: CampusCrafter
-    href: CampusCrafter.html
-  - name: .
-  - uid: CampusCrafter.Models
-    name: Models
-    href: CampusCrafter.Models.html
-  spec.vb:
-  - uid: CampusCrafter
-    name: CampusCrafter
-    href: CampusCrafter.html
-  - name: .
-  - uid: CampusCrafter.Models
-    name: Models
-    href: CampusCrafter.Models.html
-- uid: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.DateTime*
-  commentId: Overload:CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.DateTime
-  href: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.html#CampusCrafter_Areas_Admission_Pages_FillAdmissionModel_DateTime
-  name: DateTime
-  nameWithType: FillAdmissionModel.DateTime
-  fullName: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.DateTime
-- uid: System.DateTime
-  commentId: T:System.DateTime
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.datetime
-  name: DateTime
-  nameWithType: DateTime
-  fullName: System.DateTime
-  nameWithType.vb: Date
-  fullName.vb: Date
-  name.vb: Date
-- uid: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.OnGetAsync*
-  commentId: Overload:CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.OnGetAsync
-  href: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.html#CampusCrafter_Areas_Admission_Pages_FillAdmissionModel_OnGetAsync
+- uid: CampusCrafter.Areas.Admission.Pages.Index.OnGetAsync*
+  commentId: Overload:CampusCrafter.Areas.Admission.Pages.Index.OnGetAsync
+  href: CampusCrafter.Areas.Admission.Pages.Index.html#CampusCrafter_Areas_Admission_Pages_Index_OnGetAsync
   name: OnGetAsync
-  nameWithType: FillAdmissionModel.OnGetAsync
-  fullName: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.OnGetAsync
-- uid: System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.IActionResult}
-  commentId: T:System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.IActionResult}
+  nameWithType: Index.OnGetAsync
+  fullName: CampusCrafter.Areas.Admission.Pages.Index.OnGetAsync
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
   parent: System.Threading.Tasks
-  definition: System.Threading.Tasks.Task`1
-  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  name: Task<IActionResult>
-  nameWithType: Task<IActionResult>
-  fullName: System.Threading.Tasks.Task<Microsoft.AspNetCore.Mvc.IActionResult>
-  nameWithType.vb: Task(Of IActionResult)
-  fullName.vb: System.Threading.Tasks.Task(Of Microsoft.AspNetCore.Mvc.IActionResult)
-  name.vb: Task(Of IActionResult)
-  spec.csharp:
-  - uid: System.Threading.Tasks.Task`1
-    name: Task
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  - name: <
-  - uid: Microsoft.AspNetCore.Mvc.IActionResult
-    name: IActionResult
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.iactionresult
-  - name: '>'
-  spec.vb:
-  - uid: System.Threading.Tasks.Task`1
-    name: Task
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: Microsoft.AspNetCore.Mvc.IActionResult
-    name: IActionResult
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.iactionresult
-  - name: )
-- uid: System.Threading.Tasks.Task`1
-  commentId: T:System.Threading.Tasks.Task`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  name: Task<TResult>
-  nameWithType: Task<TResult>
-  fullName: System.Threading.Tasks.Task<TResult>
-  nameWithType.vb: Task(Of TResult)
-  fullName.vb: System.Threading.Tasks.Task(Of TResult)
-  name.vb: Task(Of TResult)
-  spec.csharp:
-  - uid: System.Threading.Tasks.Task`1
-    name: Task
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  - name: <
-  - name: TResult
-  - name: '>'
-  spec.vb:
-  - uid: System.Threading.Tasks.Task`1
-    name: Task
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  - name: (
-  - name: Of
-  - name: " "
-  - name: TResult
-  - name: )
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
 - uid: System.Threading.Tasks
   commentId: N:System.Threading.Tasks
   isExternal: true
@@ -6816,145 +6307,20 @@ references:
     name: Tasks
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
-- uid: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.OnPostAsync*
-  commentId: Overload:CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.OnPostAsync
-  href: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.html#CampusCrafter_Areas_Admission_Pages_FillAdmissionModel_OnPostAsync_System_Collections_Generic_List_CampusCrafter_Models_ProgressType__System_Collections_Generic_List_System_Decimal__System_Collections_Generic_List_CampusCrafter_Models_ScholarlyAchievementType__System_Collections_Generic_List_System_String__
-  name: OnPostAsync
-  nameWithType: FillAdmissionModel.OnPostAsync
-  fullName: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.OnPostAsync
-- uid: System.Collections.Generic.List{CampusCrafter.Models.ProgressType}
-  commentId: T:System.Collections.Generic.List{CampusCrafter.Models.ProgressType}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.List`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  name: List<ProgressType>
-  nameWithType: List<ProgressType>
-  fullName: System.Collections.Generic.List<CampusCrafter.Models.ProgressType>
-  nameWithType.vb: List(Of ProgressType)
-  fullName.vb: System.Collections.Generic.List(Of CampusCrafter.Models.ProgressType)
-  name.vb: List(Of ProgressType)
-  spec.csharp:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: <
-  - uid: CampusCrafter.Models.ProgressType
-    name: ProgressType
-    href: CampusCrafter.Models.ProgressType.html
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: CampusCrafter.Models.ProgressType
-    name: ProgressType
-    href: CampusCrafter.Models.ProgressType.html
-  - name: )
-- uid: System.Collections.Generic.List{System.Decimal}
-  commentId: T:System.Collections.Generic.List{System.Decimal}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.List`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  name: List<decimal>
-  nameWithType: List<decimal>
-  fullName: System.Collections.Generic.List<decimal>
-  nameWithType.vb: List(Of Decimal)
-  fullName.vb: System.Collections.Generic.List(Of Decimal)
-  name.vb: List(Of Decimal)
-  spec.csharp:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: <
-  - uid: System.Decimal
-    name: decimal
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.decimal
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: System.Decimal
-    name: Decimal
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.decimal
-  - name: )
-- uid: System.Collections.Generic.List{CampusCrafter.Models.ScholarlyAchievementType}
-  commentId: T:System.Collections.Generic.List{CampusCrafter.Models.ScholarlyAchievementType}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.List`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  name: List<ScholarlyAchievementType>
-  nameWithType: List<ScholarlyAchievementType>
-  fullName: System.Collections.Generic.List<CampusCrafter.Models.ScholarlyAchievementType>
-  nameWithType.vb: List(Of ScholarlyAchievementType)
-  fullName.vb: System.Collections.Generic.List(Of CampusCrafter.Models.ScholarlyAchievementType)
-  name.vb: List(Of ScholarlyAchievementType)
-  spec.csharp:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: <
-  - uid: CampusCrafter.Models.ScholarlyAchievementType
-    name: ScholarlyAchievementType
-    href: CampusCrafter.Models.ScholarlyAchievementType.html
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: CampusCrafter.Models.ScholarlyAchievementType
-    name: ScholarlyAchievementType
-    href: CampusCrafter.Models.ScholarlyAchievementType.html
-  - name: )
-- uid: System.Collections.Generic.List{System.String}
-  commentId: T:System.Collections.Generic.List{System.String}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.List`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  name: List<string>
-  nameWithType: List<string>
-  fullName: System.Collections.Generic.List<string>
-  nameWithType.vb: List(Of String)
-  fullName.vb: System.Collections.Generic.List(Of String)
-  name.vb: List(Of String)
-  spec.csharp:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: <
-  - uid: System.String
-    name: string
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: System.String
-    name: String
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: )
+- uid: CampusCrafter.Areas.Admission.Pages.Index.MadeAdmission*
+  commentId: Overload:CampusCrafter.Areas.Admission.Pages.Index.MadeAdmission
+  href: CampusCrafter.Areas.Admission.Pages.Index.html#CampusCrafter_Areas_Admission_Pages_Index_MadeAdmission
+  name: MadeAdmission
+  nameWithType: Index.MadeAdmission
+  fullName: CampusCrafter.Areas.Admission.Pages.Index.MadeAdmission
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
