@@ -1,17 +1,23 @@
 ﻿@page
 @using CampusCrafter.Models
+@model CampusCrafter.Areas.Admission.Pages.IndexModel
+
 @{
     ViewData["Title"] = "Index";
 }
 
 <h2>Home > Admission</h2>
 
-@if (User.IsInRole("Candidate"))
+@if (Model.MadeAdmission)
 {
-    <a asp-area="Admission" asp-page="ChooseMajors" asp-route-value="@MajorType.Major" class="btn btn-primary">Stage 1</a>
-    <a asp-area="Admission" asp-page="ChooseMajors" asp-route-value="@MajorType.Specialization" class="btn btn-primary">Specialization</a>
+    <div>
+        You already filled admission
+    </div>
 }
 else
 {
-    <div>Login is needed for admission</div>
+    <a asp-area="Admission" asp-page="ChooseMajors" asp-route-value=0 class="btn btn-primary">first-degree study</a>
+    <a asp-area="Admission" asp-page="ChooseMajors" asp-route-value=1 class="btn btn-primary">second-degree study</a>
 }
+
+<a asp-area="Admission" asp-page="ChooseMajors" asp-route-value=2 class="btn btn-secondary">score counter</a>

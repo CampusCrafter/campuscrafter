@@ -26,9 +26,10 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
+            <tr name="progressRow">
                 <td>
-                    <select name="progressTypes" asp-items="@Html.GetEnumSelectList<ProgressType>()"></select>
+                    <select name="progressTypes" 
+                            asp-items="@Html.GetEnumSelectList<ProgressType>()"></select>
                 </td>
                 <td>
                     <input name="score"/>
@@ -51,54 +52,74 @@
             </tr>
             </thead>
             <tbody>
-            <td>
-                <select name="scholarlyAchievementTypes" asp-items="@Html.GetEnumSelectList<ScholarlyAchievementType>()"></select>
-            </td>
-            <td>
-                <input name="descriptions"/>
-            </td>
+            <tr hidden="" disabled="">
+                <td>
+                    <select name="scholarlyAchievementTypes"
+                            asp-items="@Html.GetEnumSelectList<ScholarlyAchievementType>()"></select>
+                </td>
+                <td>
+                    <input name="descriptions"/>
+                </td>
+            </tr>
             </tbody>
         </table>
         <button type="button" onclick="addRowAchievement();" name="btn-add">Add</button>
-        <table class="table" id="majors_table" style="display: none;">
+        <table>
             <thead>
-            <tr>
                 <th>
                     Major
                 </th>
                 <th>
                     Points needed in the last admission process
                 </th>
-            </tr>
+                <th>
+                    Points from inserted progress
+                </th>
             </thead>
             <tbody>
-            @foreach (var major in Model.Majors)
+            @foreach (var pair in Model.Majors.Zip(Model.ScoreWeights))
             {
                 <tr>
                     <td>
-                        @Html.DisplayFor(modelItem => major.Name)
+                        @Html.DisplayFor(modelItem => pair.First.Name)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => major.MinScore)
+                        @Html.DisplayFor(modelItem => pair.First.MinScore)
+                    </td>
+                    <td name="scoreSlot">
+                        <div></div>
+                        @foreach (var weight in pair.Second)
+                        {
+                            <div hidden="" disabled="">
+                                @weight.Weight:@(Convert.ChangeType(weight.ProgressType,
+                                                                    weight.ProgressType.GetTypeCode()))
+                            </div>
+                        }
                     </td>
                 </tr>
             }
             </tbody>
         </table>
-        <input name="selectedMajors" value="@Model.SelectedMajors" hidden="hidden"/>
     </div>
-    <div id="cont-btn">
-        <input type="button" value="Create" onclick="toConfirm()" class="btn btn-primary"/>
-    </div>
-    <div class="form-group" id="post-btn" style="display: none">
-        <input type="button" value="Create" onclick="submission()" class="btn btn-primary"/>
-    </div>
-    <div style="display: none" id="fill-btn">
-        <input type="button" value="Change" onclick="toFill()" class="btn btn-secondary"/>
-    </div>
+    @if (!Model.CountOnly)
+    {
+        <div id="cont-btn">
+            <input type="button" value="Create" onclick="toConfirm()" class="btn btn-primary"/>
+        </div>
+        <div class="form-group" id="post-btn" style="display: none">
+            <input type="button" value="Create" onclick="submission()" class="btn btn-primary"/>
+        </div>
+        <div style="display: none" id="fill-btn">
+            <input type="button" value="Change" onclick="toFill()" class="btn btn-secondary"/>
+        </div>
+    }
     
 </form>
-<a asp-area="Admission" asp-page="ChooseMajors" asp-route-value="@Model.MajorType" class="btn btn-secondary">Back</a>
+<a asp-area="Admission" 
+   asp-page="ChooseMajors" 
+   asp-route-value="@Model.TempData.Peek("MajorDegree")" 
+   class="btn btn-secondary"
+   >Back</a>
 
 @section Scripts
 {
