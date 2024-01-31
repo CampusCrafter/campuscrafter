@@ -38,7 +38,6 @@ public class FillAdmissionModel(ApplicationRepository repository) : PageModel
     
     public async Task<IActionResult> OnGetAsync()
     {
-        
         var selectedMajors = GetSelectedMajors();
         
         Majors = await repository.MajorsWithIdsAsync(selectedMajors.Select(s => s[0]));
