@@ -2,8 +2,6 @@
 
 public class CandidateApplicationBuilder
 {
-    public int Id { get; set; }
-    
     public Candidate? Applicant { get; set; }
     public DateTime Date { get; set; }
     
@@ -14,12 +12,16 @@ public class CandidateApplicationBuilder
     public Major? Major { get; set; }
     public StudyType StudyType { get; set; }
 
-    public string ApplicantId { get; set; } = "";
+    public string? ApplicantId { get; set; }
     
-    public int MajorId { get; set; }
+    public int? MajorId { get; set; }
 
     public CandidateApplication Build()
     {
+        if ((Major == null && MajorId == null) || (Applicant == null && ApplicantId == null))
+        {
+            throw new ArgumentNullException();
+        }
         return new CandidateApplication
         {
             Applicant = Applicant,
@@ -29,8 +31,7 @@ public class CandidateApplicationBuilder
             StudyType = StudyType,
             RejectReason = RejectReason,
             Date = Date,
-            Id = Id,
-            Status = CandidateApplicationStatus.Submitted
+            Status = Status
         };
     }
 }

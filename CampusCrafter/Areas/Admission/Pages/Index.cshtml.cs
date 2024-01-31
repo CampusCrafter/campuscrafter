@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 namespace CampusCrafter.Areas.Admission.Pages;
 
 [Authorize(Roles = "Candidate")]
-public class IndexModel(ApplicationRepository repository) : PageModel
+public class Index(ApplicationRepository repository) : PageModel
 {
     public async Task OnGetAsync()
     {

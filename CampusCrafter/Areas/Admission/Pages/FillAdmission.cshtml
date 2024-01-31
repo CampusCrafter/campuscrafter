@@ -38,33 +38,37 @@
             </tbody>
         </table>
         <button type="button" onclick="addRowProgress();" name="btn-add">Add</button>
+        @if (Model.MajorDegree != 2)
+        {
+            <hr/>
+            <h4>Scholarly Achievements</h4>
+            <table class="table" id="achievementTable">
+                <thead>
+                <tr>
+                    <th>
+                        Achievement type
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr hidden="" disabled="">
+                    <td>
+                        <select name="scholarlyAchievementTypes"
+                                asp-items="@Html.GetEnumSelectList<ScholarlyAchievementType>()"></select>
+                    </td>
+                    <td>
+                        <input name="descriptions"/>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <button type="button" onclick="addRowAchievement();" name="btn-add">Add</button>
+        }
         <hr/>
-        <h4>Scholarly Achievements</h4>
-        <table class="table" id="achievementTable">
-            <thead>
-            <tr>
-                <th>
-                    Achievement type
-                </th>
-                <th>
-                    Description
-                </th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr hidden="" disabled="">
-                <td>
-                    <select name="scholarlyAchievementTypes"
-                            asp-items="@Html.GetEnumSelectList<ScholarlyAchievementType>()"></select>
-                </td>
-                <td>
-                    <input name="descriptions"/>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-        <button type="button" onclick="addRowAchievement();" name="btn-add">Add</button>
-        <table>
+        <table class="table">
             <thead>
                 <th>
                     Major
@@ -101,7 +105,7 @@
             </tbody>
         </table>
     </div>
-    @if (!Model.CountOnly)
+    @if (Model.MajorDegree != 2)
     {
         <div id="cont-btn">
             <input type="button" value="Create" onclick="toConfirm()" class="btn btn-primary"/>

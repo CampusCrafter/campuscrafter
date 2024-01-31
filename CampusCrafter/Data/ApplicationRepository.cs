@@ -83,31 +83,24 @@ public class ApplicationRepository(ApplicationDbContext context) : IRepository
 
     public async Task<List<Major>> MajorsWithIdsAsync(IEnumerable<int> ids)
     {
-        List<Major> result = [];
         
-        foreach (var i in ids)
-        {
-            var major = await GetAsync<Major>(m => m.Id == i, q => q
-                .Include(m => m.StudyPlans)
-                .ThenInclude(s => s.AcceptanceCriteria)
-                .ThenInclude(a => a.ScoreWeights)
-                .Include(m => m.Department)
-                .Include(m => m.ParentMajor)
-                .Include(m => m.Specializations)
-                .Include(m => m.Courses)
-                .Include(m => m.Prerequisites)
-            );
-            if (major != null)
-            {
-                result.Add(major);
-            }
-        }
-        return result;
+        return await GetAllAsync<Major>(q => q
+            .Where(m => ids.Contains(m.Id))
+            .Include(m => m.StudyPlans)
+            .ThenInclude(s => s.AcceptanceCriteria)
+            .ThenInclude(a => a.ScoreWeights)
+            .Include(m => m.Department)
+            .Include(m => m.ParentMajor)
+            .Include(m => m.Specializations)
+            .Include(m => m.Courses)
+            .Include(m => m.Prerequisites)
+        );
     }
 
     public async Task<List<Major>> MajorsPrerequisitesFiltered(bool hasAny)
     {
         var result = await GetAllAsync<Major>(q => q
+            .Where(s => s.StudyPlans.Count > 0)
             .Where(m => m.Prerequisites.Count == 0 == hasAny) 
             // for second degree number of prerequisites can't be 0
             // for first degree number of prerequisites must be 0
@@ -132,5 +125,14 @@ public class ApplicationRepository(ApplicationDbContext context) : IRepository
         }
 
         return result;
+    }
+
+    public async Task<List<Major>> GetMajorsWithScoreWeightsAsync()
+    {
+        return await GetAllAsync<Major>(q => q
+            .Where(s => s.StudyPlans.Count > 0)
+            .Include(s => s.StudyPlans)
+            .ThenInclude(s => s.AcceptanceCriteria)
+            .ThenInclude(s => s.ScoreWeights));
     }
 }

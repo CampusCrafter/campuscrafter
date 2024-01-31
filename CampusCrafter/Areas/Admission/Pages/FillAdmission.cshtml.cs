@@ -17,8 +17,9 @@ namespace CampusCrafter.Areas.Admission.Pages;
 [Authorize(Roles = "Candidate")]
 public class FillAdmissionModel(ApplicationRepository repository) : PageModel
 {
-
-    public bool CountOnly { get; set; }
+    [TempData] public int MajorDegree { get; set; }
+    
+    [TempData] public string SelectedMajors { get; set; } = default!;
     
     public List<Major> Majors { get; set; } = [];
 
@@ -37,7 +38,6 @@ public class FillAdmissionModel(ApplicationRepository repository) : PageModel
     
     public async Task<IActionResult> OnGetAsync()
     {
-        CountOnly = TempData.Peek("MajorDegree")!.Equals(2);
         
         var selectedMajors = GetSelectedMajors();
         
@@ -45,6 +45,8 @@ public class FillAdmissionModel(ApplicationRepository repository) : PageModel
 
         ScoreWeights = await repository.ScoreWeightsFromStudyPlansIds(selectedMajors.Select(s => s[1]));
             
+        TempData.Keep();
+        
         return Page();
     }
     
@@ -53,13 +55,13 @@ public class FillAdmissionModel(ApplicationRepository repository) : PageModel
         List<ScholarlyAchievementType> scholarlyAchievementTypes,
         List<string> descriptions)
     {
-            
+        
         if (!ModelState.IsValid)
         {
             return Page();
         }
 
-        if (TempData.Peek("MajorDegree")!.Equals(0))
+        if (MajorDegree == 0)
         {
             foreach (var progressType in FirstDegreeNeededProgressTypes)
             {
@@ -108,15 +110,17 @@ public class FillAdmissionModel(ApplicationRepository repository) : PageModel
             builder.MajorId = majorId;
             repository.Add(builder.Build());
         }
+        
+        TempData.Keep();
 
         await repository.SaveChangesAsync();
-
+        
         return RedirectToPage("./Index");
     }
 
     private List<List<int>> GetSelectedMajors()
     {
-        return ((string)TempData.Peek("SelectedMajors")!)
+        return SelectedMajors
             .Split("I")
             .Where(a => a != "")
             .Select(s => s.Split("s")

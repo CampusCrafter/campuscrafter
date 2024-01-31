@@ -26,31 +26,46 @@ public class ChooseMajorsModel(ApplicationRepository repository) : PageModel
     public async Task OnGetAsync(int value)
     {
         MajorDegree = value;
+        
         if (MajorDegree == 2)
         {
-            Majors = await repository.GetAllAsync<Major>();
+            Majors = await repository.GetMajorsWithScoreWeightsAsync();
         } 
         else
         {
             Majors = await repository.MajorsPrerequisitesFiltered(MajorDegree == 0);
         }
+        
+        TempData.Keep();
+        
     }
 
     public IActionResult OnPost(List<string> selectedMajors)
     {
         var selected = selectedMajors.Where(i => i is { Length: > 1 }).ToList();
 
-        var degree = TempData.Peek("MajorDegree");
-
-        if (!degree!.Equals(2) && selected.Count > 5)
+        if (selected.Count == 0)
         {
             var p = RedirectToPage("ChooseMajors");
             p.RouteValues = new RouteValueDictionary
             {
-                ["value"] = degree
+                ["value"] = MajorDegree
             };
             return p;
         }
+
+        if (!MajorDegree!.Equals(2) && selected.Count > 5)
+        {
+            var p = RedirectToPage("ChooseMajors");
+            p.RouteValues = new RouteValueDictionary
+            {
+                ["value"] = MajorDegree
+            };
+            return p;
+        }
+        
+        TempData.Keep();
+        
         SelectedMajors = selected.Aggregate("", (s, i) => s + i + "I");
         return RedirectToPage("./FillAdmission");
     }
