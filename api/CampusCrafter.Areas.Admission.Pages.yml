@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: CampusCrafter.Areas.Admission.Pages
+  commentId: N:CampusCrafter.Areas.Admission.Pages
+  id: CampusCrafter.Areas.Admission.Pages
+  children:
+  - CampusCrafter.Areas.Admission.Pages.FillAdmissionModel
+  - CampusCrafter.Areas.Admission.Pages.IndexModel
+  langs:
+  - csharp
+  - vb
+  name: CampusCrafter.Areas.Admission.Pages
+  nameWithType: CampusCrafter.Areas.Admission.Pages
+  fullName: CampusCrafter.Areas.Admission.Pages
+  type: Namespace
+  assemblies:
+  - CampusCrafter
+references:
+- uid: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel
+  commentId: T:CampusCrafter.Areas.Admission.Pages.FillAdmissionModel
+  href: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.html
+  name: FillAdmissionModel
+  nameWithType: FillAdmissionModel
+  fullName: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel
+- uid: CampusCrafter.Areas.Admission.Pages.IndexModel
+  commentId: T:CampusCrafter.Areas.Admission.Pages.IndexModel
+  href: CampusCrafter.Areas.Admission.Pages.IndexModel.html
+  name: IndexModel
+  nameWithType: IndexModel
+  fullName: CampusCrafter.Areas.Admission.Pages.IndexModel

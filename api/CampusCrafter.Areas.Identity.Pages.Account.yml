@@ -1,0 +1,366 @@
+### YamlMime:ManagedReference
+items:
+- uid: CampusCrafter.Areas.Identity.Pages.Account
+  commentId: N:CampusCrafter.Areas.Identity.Pages.Account
+  id: CampusCrafter.Areas.Identity.Pages.Account
+  children:
+  - CampusCrafter.Areas.Identity.Pages.Account.AccessDeniedModel
+  - CampusCrafter.Areas.Identity.Pages.Account.ConfirmEmailChangeModel
+  - CampusCrafter.Areas.Identity.Pages.Account.ConfirmEmailModel
+  - CampusCrafter.Areas.Identity.Pages.Account.ExternalLoginModel
+  - CampusCrafter.Areas.Identity.Pages.Account.ExternalLoginModel.InputModel
+  - CampusCrafter.Areas.Identity.Pages.Account.ForgotPasswordConfirmation
+  - CampusCrafter.Areas.Identity.Pages.Account.ForgotPasswordModel
+  - CampusCrafter.Areas.Identity.Pages.Account.ForgotPasswordModel.InputModel
+  - CampusCrafter.Areas.Identity.Pages.Account.LockoutModel
+  - CampusCrafter.Areas.Identity.Pages.Account.LoginModel
+  - CampusCrafter.Areas.Identity.Pages.Account.LoginModel.InputModel
+  - CampusCrafter.Areas.Identity.Pages.Account.LoginWith2faModel
+  - CampusCrafter.Areas.Identity.Pages.Account.LoginWith2faModel.InputModel
+  - CampusCrafter.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel
+  - CampusCrafter.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel.InputModel
+  - CampusCrafter.Areas.Identity.Pages.Account.LogoutModel
+  - CampusCrafter.Areas.Identity.Pages.Account.RegisterConfirmationModel
+  - CampusCrafter.Areas.Identity.Pages.Account.RegisterModel
+  - CampusCrafter.Areas.Identity.Pages.Account.RegisterModel.InputModel
+  - CampusCrafter.Areas.Identity.Pages.Account.ResendEmailConfirmationModel
+  - CampusCrafter.Areas.Identity.Pages.Account.ResendEmailConfirmationModel.InputModel
+  - CampusCrafter.Areas.Identity.Pages.Account.ResetPasswordConfirmationModel
+  - CampusCrafter.Areas.Identity.Pages.Account.ResetPasswordModel
+  - CampusCrafter.Areas.Identity.Pages.Account.ResetPasswordModel.InputModel
+  langs:
+  - csharp
+  - vb
+  name: CampusCrafter.Areas.Identity.Pages.Account
+  nameWithType: CampusCrafter.Areas.Identity.Pages.Account
+  fullName: CampusCrafter.Areas.Identity.Pages.Account
+  type: Namespace
+  assemblies:
+  - CampusCrafter
+references:
+- uid: CampusCrafter.Areas.Identity.Pages.Account.AccessDeniedModel
+  commentId: T:CampusCrafter.Areas.Identity.Pages.Account.AccessDeniedModel
+  href: CampusCrafter.Areas.Identity.Pages.Account.AccessDeniedModel.html
+  name: AccessDeniedModel
+  nameWithType: AccessDeniedModel
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.AccessDeniedModel
+- uid: CampusCrafter.Areas.Identity.Pages.Account.ConfirmEmailModel
+  commentId: T:CampusCrafter.Areas.Identity.Pages.Account.ConfirmEmailModel
+  href: CampusCrafter.Areas.Identity.Pages.Account.ConfirmEmailModel.html
+  name: ConfirmEmailModel
+  nameWithType: ConfirmEmailModel
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.ConfirmEmailModel
+- uid: CampusCrafter.Areas.Identity.Pages.Account.ConfirmEmailChangeModel
+  commentId: T:CampusCrafter.Areas.Identity.Pages.Account.ConfirmEmailChangeModel
+  href: CampusCrafter.Areas.Identity.Pages.Account.ConfirmEmailChangeModel.html
+  name: ConfirmEmailChangeModel
+  nameWithType: ConfirmEmailChangeModel
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.ConfirmEmailChangeModel
+- uid: CampusCrafter.Areas.Identity.Pages.Account.ExternalLoginModel
+  commentId: T:CampusCrafter.Areas.Identity.Pages.Account.ExternalLoginModel
+  href: CampusCrafter.Areas.Identity.Pages.Account.ExternalLoginModel.html
+  name: ExternalLoginModel
+  nameWithType: ExternalLoginModel
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.ExternalLoginModel
+- uid: CampusCrafter.Areas.Identity.Pages.Account.ExternalLoginModel.InputModel
+  commentId: T:CampusCrafter.Areas.Identity.Pages.Account.ExternalLoginModel.InputModel
+  parent: CampusCrafter.Areas.Identity.Pages.Account
+  href: CampusCrafter.Areas.Identity.Pages.Account.ExternalLoginModel.html
+  name: ExternalLoginModel.InputModel
+  nameWithType: ExternalLoginModel.InputModel
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.ExternalLoginModel.InputModel
+  spec.csharp:
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.ExternalLoginModel
+    name: ExternalLoginModel
+    href: CampusCrafter.Areas.Identity.Pages.Account.ExternalLoginModel.html
+  - name: .
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.ExternalLoginModel.InputModel
+    name: InputModel
+    href: CampusCrafter.Areas.Identity.Pages.Account.ExternalLoginModel.InputModel.html
+  spec.vb:
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.ExternalLoginModel
+    name: ExternalLoginModel
+    href: CampusCrafter.Areas.Identity.Pages.Account.ExternalLoginModel.html
+  - name: .
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.ExternalLoginModel.InputModel
+    name: InputModel
+    href: CampusCrafter.Areas.Identity.Pages.Account.ExternalLoginModel.InputModel.html
+- uid: CampusCrafter.Areas.Identity.Pages.Account.ForgotPasswordModel
+  commentId: T:CampusCrafter.Areas.Identity.Pages.Account.ForgotPasswordModel
+  href: CampusCrafter.Areas.Identity.Pages.Account.ForgotPasswordModel.html
+  name: ForgotPasswordModel
+  nameWithType: ForgotPasswordModel
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.ForgotPasswordModel
+- uid: CampusCrafter.Areas.Identity.Pages.Account.ForgotPasswordModel.InputModel
+  commentId: T:CampusCrafter.Areas.Identity.Pages.Account.ForgotPasswordModel.InputModel
+  parent: CampusCrafter.Areas.Identity.Pages.Account
+  href: CampusCrafter.Areas.Identity.Pages.Account.ForgotPasswordModel.html
+  name: ForgotPasswordModel.InputModel
+  nameWithType: ForgotPasswordModel.InputModel
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.ForgotPasswordModel.InputModel
+  spec.csharp:
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.ForgotPasswordModel
+    name: ForgotPasswordModel
+    href: CampusCrafter.Areas.Identity.Pages.Account.ForgotPasswordModel.html
+  - name: .
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.ForgotPasswordModel.InputModel
+    name: InputModel
+    href: CampusCrafter.Areas.Identity.Pages.Account.ForgotPasswordModel.InputModel.html
+  spec.vb:
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.ForgotPasswordModel
+    name: ForgotPasswordModel
+    href: CampusCrafter.Areas.Identity.Pages.Account.ForgotPasswordModel.html
+  - name: .
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.ForgotPasswordModel.InputModel
+    name: InputModel
+    href: CampusCrafter.Areas.Identity.Pages.Account.ForgotPasswordModel.InputModel.html
+- uid: CampusCrafter.Areas.Identity.Pages.Account.ForgotPasswordConfirmation
+  commentId: T:CampusCrafter.Areas.Identity.Pages.Account.ForgotPasswordConfirmation
+  href: CampusCrafter.Areas.Identity.Pages.Account.ForgotPasswordConfirmation.html
+  name: ForgotPasswordConfirmation
+  nameWithType: ForgotPasswordConfirmation
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.ForgotPasswordConfirmation
+- uid: CampusCrafter.Areas.Identity.Pages.Account.LockoutModel
+  commentId: T:CampusCrafter.Areas.Identity.Pages.Account.LockoutModel
+  href: CampusCrafter.Areas.Identity.Pages.Account.LockoutModel.html
+  name: LockoutModel
+  nameWithType: LockoutModel
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.LockoutModel
+- uid: CampusCrafter.Areas.Identity.Pages.Account.LoginModel
+  commentId: T:CampusCrafter.Areas.Identity.Pages.Account.LoginModel
+  href: CampusCrafter.Areas.Identity.Pages.Account.LoginModel.html
+  name: LoginModel
+  nameWithType: LoginModel
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.LoginModel
+- uid: CampusCrafter.Areas.Identity.Pages.Account.LoginModel.InputModel
+  commentId: T:CampusCrafter.Areas.Identity.Pages.Account.LoginModel.InputModel
+  parent: CampusCrafter.Areas.Identity.Pages.Account
+  href: CampusCrafter.Areas.Identity.Pages.Account.LoginModel.html
+  name: LoginModel.InputModel
+  nameWithType: LoginModel.InputModel
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.LoginModel.InputModel
+  spec.csharp:
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.LoginModel
+    name: LoginModel
+    href: CampusCrafter.Areas.Identity.Pages.Account.LoginModel.html
+  - name: .
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.LoginModel.InputModel
+    name: InputModel
+    href: CampusCrafter.Areas.Identity.Pages.Account.LoginModel.InputModel.html
+  spec.vb:
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.LoginModel
+    name: LoginModel
+    href: CampusCrafter.Areas.Identity.Pages.Account.LoginModel.html
+  - name: .
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.LoginModel.InputModel
+    name: InputModel
+    href: CampusCrafter.Areas.Identity.Pages.Account.LoginModel.InputModel.html
+- uid: CampusCrafter.Areas.Identity.Pages.Account.LoginWith2faModel
+  commentId: T:CampusCrafter.Areas.Identity.Pages.Account.LoginWith2faModel
+  href: CampusCrafter.Areas.Identity.Pages.Account.LoginWith2faModel.html
+  name: LoginWith2faModel
+  nameWithType: LoginWith2faModel
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.LoginWith2faModel
+- uid: CampusCrafter.Areas.Identity.Pages.Account.LoginWith2faModel.InputModel
+  commentId: T:CampusCrafter.Areas.Identity.Pages.Account.LoginWith2faModel.InputModel
+  parent: CampusCrafter.Areas.Identity.Pages.Account
+  href: CampusCrafter.Areas.Identity.Pages.Account.LoginWith2faModel.html
+  name: LoginWith2faModel.InputModel
+  nameWithType: LoginWith2faModel.InputModel
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.LoginWith2faModel.InputModel
+  spec.csharp:
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.LoginWith2faModel
+    name: LoginWith2faModel
+    href: CampusCrafter.Areas.Identity.Pages.Account.LoginWith2faModel.html
+  - name: .
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.LoginWith2faModel.InputModel
+    name: InputModel
+    href: CampusCrafter.Areas.Identity.Pages.Account.LoginWith2faModel.InputModel.html
+  spec.vb:
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.LoginWith2faModel
+    name: LoginWith2faModel
+    href: CampusCrafter.Areas.Identity.Pages.Account.LoginWith2faModel.html
+  - name: .
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.LoginWith2faModel.InputModel
+    name: InputModel
+    href: CampusCrafter.Areas.Identity.Pages.Account.LoginWith2faModel.InputModel.html
+- uid: CampusCrafter.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel
+  commentId: T:CampusCrafter.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel
+  href: CampusCrafter.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel.html
+  name: LoginWithRecoveryCodeModel
+  nameWithType: LoginWithRecoveryCodeModel
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel
+- uid: CampusCrafter.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel.InputModel
+  commentId: T:CampusCrafter.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel.InputModel
+  parent: CampusCrafter.Areas.Identity.Pages.Account
+  href: CampusCrafter.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel.html
+  name: LoginWithRecoveryCodeModel.InputModel
+  nameWithType: LoginWithRecoveryCodeModel.InputModel
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel.InputModel
+  spec.csharp:
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel
+    name: LoginWithRecoveryCodeModel
+    href: CampusCrafter.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel.html
+  - name: .
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel.InputModel
+    name: InputModel
+    href: CampusCrafter.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel.InputModel.html
+  spec.vb:
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel
+    name: LoginWithRecoveryCodeModel
+    href: CampusCrafter.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel.html
+  - name: .
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel.InputModel
+    name: InputModel
+    href: CampusCrafter.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel.InputModel.html
+- uid: CampusCrafter.Areas.Identity.Pages.Account.LogoutModel
+  commentId: T:CampusCrafter.Areas.Identity.Pages.Account.LogoutModel
+  href: CampusCrafter.Areas.Identity.Pages.Account.LogoutModel.html
+  name: LogoutModel
+  nameWithType: LogoutModel
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.LogoutModel
+- uid: CampusCrafter.Areas.Identity.Pages.Account.RegisterModel
+  commentId: T:CampusCrafter.Areas.Identity.Pages.Account.RegisterModel
+  href: CampusCrafter.Areas.Identity.Pages.Account.RegisterModel.html
+  name: RegisterModel
+  nameWithType: RegisterModel
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.RegisterModel
+- uid: CampusCrafter.Areas.Identity.Pages.Account.RegisterModel.InputModel
+  commentId: T:CampusCrafter.Areas.Identity.Pages.Account.RegisterModel.InputModel
+  parent: CampusCrafter.Areas.Identity.Pages.Account
+  href: CampusCrafter.Areas.Identity.Pages.Account.RegisterModel.html
+  name: RegisterModel.InputModel
+  nameWithType: RegisterModel.InputModel
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.RegisterModel.InputModel
+  spec.csharp:
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.RegisterModel
+    name: RegisterModel
+    href: CampusCrafter.Areas.Identity.Pages.Account.RegisterModel.html
+  - name: .
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.RegisterModel.InputModel
+    name: InputModel
+    href: CampusCrafter.Areas.Identity.Pages.Account.RegisterModel.InputModel.html
+  spec.vb:
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.RegisterModel
+    name: RegisterModel
+    href: CampusCrafter.Areas.Identity.Pages.Account.RegisterModel.html
+  - name: .
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.RegisterModel.InputModel
+    name: InputModel
+    href: CampusCrafter.Areas.Identity.Pages.Account.RegisterModel.InputModel.html
+- uid: CampusCrafter.Areas.Identity.Pages.Account.RegisterConfirmationModel
+  commentId: T:CampusCrafter.Areas.Identity.Pages.Account.RegisterConfirmationModel
+  href: CampusCrafter.Areas.Identity.Pages.Account.RegisterConfirmationModel.html
+  name: RegisterConfirmationModel
+  nameWithType: RegisterConfirmationModel
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.RegisterConfirmationModel
+- uid: CampusCrafter.Areas.Identity.Pages.Account.ResendEmailConfirmationModel
+  commentId: T:CampusCrafter.Areas.Identity.Pages.Account.ResendEmailConfirmationModel
+  href: CampusCrafter.Areas.Identity.Pages.Account.ResendEmailConfirmationModel.html
+  name: ResendEmailConfirmationModel
+  nameWithType: ResendEmailConfirmationModel
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.ResendEmailConfirmationModel
+- uid: CampusCrafter.Areas.Identity.Pages.Account.ResendEmailConfirmationModel.InputModel
+  commentId: T:CampusCrafter.Areas.Identity.Pages.Account.ResendEmailConfirmationModel.InputModel
+  parent: CampusCrafter.Areas.Identity.Pages.Account
+  href: CampusCrafter.Areas.Identity.Pages.Account.ResendEmailConfirmationModel.html
+  name: ResendEmailConfirmationModel.InputModel
+  nameWithType: ResendEmailConfirmationModel.InputModel
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.ResendEmailConfirmationModel.InputModel
+  spec.csharp:
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.ResendEmailConfirmationModel
+    name: ResendEmailConfirmationModel
+    href: CampusCrafter.Areas.Identity.Pages.Account.ResendEmailConfirmationModel.html
+  - name: .
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.ResendEmailConfirmationModel.InputModel
+    name: InputModel
+    href: CampusCrafter.Areas.Identity.Pages.Account.ResendEmailConfirmationModel.InputModel.html
+  spec.vb:
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.ResendEmailConfirmationModel
+    name: ResendEmailConfirmationModel
+    href: CampusCrafter.Areas.Identity.Pages.Account.ResendEmailConfirmationModel.html
+  - name: .
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.ResendEmailConfirmationModel.InputModel
+    name: InputModel
+    href: CampusCrafter.Areas.Identity.Pages.Account.ResendEmailConfirmationModel.InputModel.html
+- uid: CampusCrafter.Areas.Identity.Pages.Account.ResetPasswordModel
+  commentId: T:CampusCrafter.Areas.Identity.Pages.Account.ResetPasswordModel
+  href: CampusCrafter.Areas.Identity.Pages.Account.ResetPasswordModel.html
+  name: ResetPasswordModel
+  nameWithType: ResetPasswordModel
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.ResetPasswordModel
+- uid: CampusCrafter.Areas.Identity.Pages.Account.ResetPasswordModel.InputModel
+  commentId: T:CampusCrafter.Areas.Identity.Pages.Account.ResetPasswordModel.InputModel
+  parent: CampusCrafter.Areas.Identity.Pages.Account
+  href: CampusCrafter.Areas.Identity.Pages.Account.ResetPasswordModel.html
+  name: ResetPasswordModel.InputModel
+  nameWithType: ResetPasswordModel.InputModel
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.ResetPasswordModel.InputModel
+  spec.csharp:
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.ResetPasswordModel
+    name: ResetPasswordModel
+    href: CampusCrafter.Areas.Identity.Pages.Account.ResetPasswordModel.html
+  - name: .
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.ResetPasswordModel.InputModel
+    name: InputModel
+    href: CampusCrafter.Areas.Identity.Pages.Account.ResetPasswordModel.InputModel.html
+  spec.vb:
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.ResetPasswordModel
+    name: ResetPasswordModel
+    href: CampusCrafter.Areas.Identity.Pages.Account.ResetPasswordModel.html
+  - name: .
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.ResetPasswordModel.InputModel
+    name: InputModel
+    href: CampusCrafter.Areas.Identity.Pages.Account.ResetPasswordModel.InputModel.html
+- uid: CampusCrafter.Areas.Identity.Pages.Account.ResetPasswordConfirmationModel
+  commentId: T:CampusCrafter.Areas.Identity.Pages.Account.ResetPasswordConfirmationModel
+  href: CampusCrafter.Areas.Identity.Pages.Account.ResetPasswordConfirmationModel.html
+  name: ResetPasswordConfirmationModel
+  nameWithType: ResetPasswordConfirmationModel
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.ResetPasswordConfirmationModel
+- uid: CampusCrafter.Areas.Identity.Pages.Account
+  commentId: N:CampusCrafter.Areas.Identity.Pages.Account
+  href: CampusCrafter.html
+  name: CampusCrafter.Areas.Identity.Pages.Account
+  nameWithType: CampusCrafter.Areas.Identity.Pages.Account
+  fullName: CampusCrafter.Areas.Identity.Pages.Account
+  spec.csharp:
+  - uid: CampusCrafter
+    name: CampusCrafter
+    href: CampusCrafter.html
+  - name: .
+  - uid: CampusCrafter.Areas
+    name: Areas
+    href: CampusCrafter.Areas.html
+  - name: .
+  - uid: CampusCrafter.Areas.Identity
+    name: Identity
+    href: CampusCrafter.Areas.Identity.html
+  - name: .
+  - uid: CampusCrafter.Areas.Identity.Pages
+    name: Pages
+    href: CampusCrafter.Areas.Identity.Pages.html
+  - name: .
+  - uid: CampusCrafter.Areas.Identity.Pages.Account
+    name: Account
+    href: CampusCrafter.Areas.Identity.Pages.Account.html
+  spec.vb:
+  - uid: CampusCrafter
+    name: CampusCrafter
+    href: CampusCrafter.html
+  - name: .
+  - uid: CampusCrafter.Areas
+    name: Areas
+    href: CampusCrafter.Areas.html
+  - name: .
+  - uid: CampusCrafter.Areas.Identity
+    name: Identity
+    href: CampusCrafter.Areas.Identity.html
+  - name: .
+  - uid: CampusCrafter.Areas.Identity.Pages
+    name: Pages
+    href: CampusCrafter.Areas.Identity.Pages.html
+  - name: .
+  - uid: CampusCrafter.Areas.Identity.Pages.Account
+    name: Account
+    href: CampusCrafter.Areas.Identity.Pages.Account.html

@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: CampusCrafter.Controllers
+  commentId: N:CampusCrafter.Controllers
+  id: CampusCrafter.Controllers
+  children:
+  - CampusCrafter.Controllers.HomeController
+  langs:
+  - csharp
+  - vb
+  name: CampusCrafter.Controllers
+  nameWithType: CampusCrafter.Controllers
+  fullName: CampusCrafter.Controllers
+  type: Namespace
+  assemblies:
+  - CampusCrafter
+references:
+- uid: CampusCrafter.Controllers.HomeController
+  commentId: T:CampusCrafter.Controllers.HomeController
+  href: CampusCrafter.Controllers.HomeController.html
+  name: HomeController
+  nameWithType: HomeController
+  fullName: CampusCrafter.Controllers.HomeController

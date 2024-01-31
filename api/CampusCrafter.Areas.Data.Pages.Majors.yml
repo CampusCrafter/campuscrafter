@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: CampusCrafter.Areas.Data.Pages.Majors
+  commentId: N:CampusCrafter.Areas.Data.Pages.Majors
+  id: CampusCrafter.Areas.Data.Pages.Majors
+  children:
+  - CampusCrafter.Areas.Data.Pages.Majors.CreateModel
+  - CampusCrafter.Areas.Data.Pages.Majors.DeleteModel
+  - CampusCrafter.Areas.Data.Pages.Majors.DetailsModel
+  - CampusCrafter.Areas.Data.Pages.Majors.EditModel
+  - CampusCrafter.Areas.Data.Pages.Majors.IndexModel
+  langs:
+  - csharp
+  - vb
+  name: CampusCrafter.Areas.Data.Pages.Majors
+  nameWithType: CampusCrafter.Areas.Data.Pages.Majors
+  fullName: CampusCrafter.Areas.Data.Pages.Majors
+  type: Namespace
+  assemblies:
+  - CampusCrafter
+references:
+- uid: CampusCrafter.Areas.Data.Pages.Majors.CreateModel
+  commentId: T:CampusCrafter.Areas.Data.Pages.Majors.CreateModel
+  href: CampusCrafter.Areas.Data.Pages.Majors.CreateModel.html
+  name: CreateModel
+  nameWithType: CreateModel
+  fullName: CampusCrafter.Areas.Data.Pages.Majors.CreateModel
+- uid: CampusCrafter.Areas.Data.Pages.Majors.DeleteModel
+  commentId: T:CampusCrafter.Areas.Data.Pages.Majors.DeleteModel
+  href: CampusCrafter.Areas.Data.Pages.Majors.DeleteModel.html
+  name: DeleteModel
+  nameWithType: DeleteModel
+  fullName: CampusCrafter.Areas.Data.Pages.Majors.DeleteModel
+- uid: CampusCrafter.Areas.Data.Pages.Majors.DetailsModel
+  commentId: T:CampusCrafter.Areas.Data.Pages.Majors.DetailsModel
+  href: CampusCrafter.Areas.Data.Pages.Majors.DetailsModel.html
+  name: DetailsModel
+  nameWithType: DetailsModel
+  fullName: CampusCrafter.Areas.Data.Pages.Majors.DetailsModel
+- uid: CampusCrafter.Areas.Data.Pages.Majors.EditModel
+  commentId: T:CampusCrafter.Areas.Data.Pages.Majors.EditModel
+  href: CampusCrafter.Areas.Data.Pages.Majors.EditModel.html
+  name: EditModel
+  nameWithType: EditModel
+  fullName: CampusCrafter.Areas.Data.Pages.Majors.EditModel
+- uid: CampusCrafter.Areas.Data.Pages.Majors.IndexModel
+  commentId: T:CampusCrafter.Areas.Data.Pages.Majors.IndexModel
+  href: CampusCrafter.Areas.Data.Pages.Majors.IndexModel.html
+  name: IndexModel
+  nameWithType: IndexModel
+  fullName: CampusCrafter.Areas.Data.Pages.Majors.IndexModel

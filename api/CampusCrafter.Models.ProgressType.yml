@@ -1,0 +1,517 @@
+### YamlMime:ManagedReference
+items:
+- uid: CampusCrafter.Models.ProgressType
+  commentId: T:CampusCrafter.Models.ProgressType
+  id: ProgressType
+  parent: CampusCrafter.Models
+  children:
+  - CampusCrafter.Models.ProgressType.Diploma
+  - CampusCrafter.Models.ProgressType.Drawing
+  - CampusCrafter.Models.ProgressType.GradePointAverage
+  - CampusCrafter.Models.ProgressType.MaturaBasicForeignLanguage
+  - CampusCrafter.Models.ProgressType.MaturaBasicMath
+  - CampusCrafter.Models.ProgressType.MaturaBasicPolish
+  - CampusCrafter.Models.ProgressType.MaturaExtendedBiology
+  - CampusCrafter.Models.ProgressType.MaturaExtendedChemistry
+  - CampusCrafter.Models.ProgressType.MaturaExtendedCompSci
+  - CampusCrafter.Models.ProgressType.MaturaExtendedForeignLanguage
+  - CampusCrafter.Models.ProgressType.MaturaExtendedMath
+  - CampusCrafter.Models.ProgressType.MaturaExtendedPhysics
+  - CampusCrafter.Models.ProgressType.MaturaExtendedPolish
+  - CampusCrafter.Models.ProgressType.Portfolio
+  - CampusCrafter.Models.ProgressType.ScholarlyAchievement
+  - CampusCrafter.Models.ProgressType.TradeExam
+  - CampusCrafter.Models.ProgressType.UniversityStage1
+  langs:
+  - csharp
+  - vb
+  name: ProgressType
+  nameWithType: ProgressType
+  fullName: CampusCrafter.Models.ProgressType
+  type: Enum
+  source:
+    remote:
+      path: CampusCrafter/Models/ProgressType.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: ProgressType
+    path: CampusCrafter/Models/ProgressType.cs
+    startLine: 2
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: public enum ProgressType
+    content.vb: Public Enum ProgressType
+- uid: CampusCrafter.Models.ProgressType.MaturaBasicPolish
+  commentId: F:CampusCrafter.Models.ProgressType.MaturaBasicPolish
+  id: MaturaBasicPolish
+  parent: CampusCrafter.Models.ProgressType
+  langs:
+  - csharp
+  - vb
+  name: MaturaBasicPolish
+  nameWithType: ProgressType.MaturaBasicPolish
+  fullName: CampusCrafter.Models.ProgressType.MaturaBasicPolish
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/ProgressType.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: MaturaBasicPolish
+    path: CampusCrafter/Models/ProgressType.cs
+    startLine: 4
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: MaturaBasicPolish = 0
+    return:
+      type: CampusCrafter.Models.ProgressType
+- uid: CampusCrafter.Models.ProgressType.MaturaBasicForeignLanguage
+  commentId: F:CampusCrafter.Models.ProgressType.MaturaBasicForeignLanguage
+  id: MaturaBasicForeignLanguage
+  parent: CampusCrafter.Models.ProgressType
+  langs:
+  - csharp
+  - vb
+  name: MaturaBasicForeignLanguage
+  nameWithType: ProgressType.MaturaBasicForeignLanguage
+  fullName: CampusCrafter.Models.ProgressType.MaturaBasicForeignLanguage
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/ProgressType.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: MaturaBasicForeignLanguage
+    path: CampusCrafter/Models/ProgressType.cs
+    startLine: 5
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: MaturaBasicForeignLanguage = 1
+    return:
+      type: CampusCrafter.Models.ProgressType
+- uid: CampusCrafter.Models.ProgressType.MaturaBasicMath
+  commentId: F:CampusCrafter.Models.ProgressType.MaturaBasicMath
+  id: MaturaBasicMath
+  parent: CampusCrafter.Models.ProgressType
+  langs:
+  - csharp
+  - vb
+  name: MaturaBasicMath
+  nameWithType: ProgressType.MaturaBasicMath
+  fullName: CampusCrafter.Models.ProgressType.MaturaBasicMath
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/ProgressType.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: MaturaBasicMath
+    path: CampusCrafter/Models/ProgressType.cs
+    startLine: 6
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: MaturaBasicMath = 2
+    return:
+      type: CampusCrafter.Models.ProgressType
+- uid: CampusCrafter.Models.ProgressType.MaturaExtendedPolish
+  commentId: F:CampusCrafter.Models.ProgressType.MaturaExtendedPolish
+  id: MaturaExtendedPolish
+  parent: CampusCrafter.Models.ProgressType
+  langs:
+  - csharp
+  - vb
+  name: MaturaExtendedPolish
+  nameWithType: ProgressType.MaturaExtendedPolish
+  fullName: CampusCrafter.Models.ProgressType.MaturaExtendedPolish
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/ProgressType.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: MaturaExtendedPolish
+    path: CampusCrafter/Models/ProgressType.cs
+    startLine: 7
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: MaturaExtendedPolish = 3
+    return:
+      type: CampusCrafter.Models.ProgressType
+- uid: CampusCrafter.Models.ProgressType.MaturaExtendedForeignLanguage
+  commentId: F:CampusCrafter.Models.ProgressType.MaturaExtendedForeignLanguage
+  id: MaturaExtendedForeignLanguage
+  parent: CampusCrafter.Models.ProgressType
+  langs:
+  - csharp
+  - vb
+  name: MaturaExtendedForeignLanguage
+  nameWithType: ProgressType.MaturaExtendedForeignLanguage
+  fullName: CampusCrafter.Models.ProgressType.MaturaExtendedForeignLanguage
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/ProgressType.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: MaturaExtendedForeignLanguage
+    path: CampusCrafter/Models/ProgressType.cs
+    startLine: 8
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: MaturaExtendedForeignLanguage = 4
+    return:
+      type: CampusCrafter.Models.ProgressType
+- uid: CampusCrafter.Models.ProgressType.MaturaExtendedMath
+  commentId: F:CampusCrafter.Models.ProgressType.MaturaExtendedMath
+  id: MaturaExtendedMath
+  parent: CampusCrafter.Models.ProgressType
+  langs:
+  - csharp
+  - vb
+  name: MaturaExtendedMath
+  nameWithType: ProgressType.MaturaExtendedMath
+  fullName: CampusCrafter.Models.ProgressType.MaturaExtendedMath
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/ProgressType.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: MaturaExtendedMath
+    path: CampusCrafter/Models/ProgressType.cs
+    startLine: 9
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: MaturaExtendedMath = 5
+    return:
+      type: CampusCrafter.Models.ProgressType
+- uid: CampusCrafter.Models.ProgressType.MaturaExtendedBiology
+  commentId: F:CampusCrafter.Models.ProgressType.MaturaExtendedBiology
+  id: MaturaExtendedBiology
+  parent: CampusCrafter.Models.ProgressType
+  langs:
+  - csharp
+  - vb
+  name: MaturaExtendedBiology
+  nameWithType: ProgressType.MaturaExtendedBiology
+  fullName: CampusCrafter.Models.ProgressType.MaturaExtendedBiology
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/ProgressType.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: MaturaExtendedBiology
+    path: CampusCrafter/Models/ProgressType.cs
+    startLine: 10
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: MaturaExtendedBiology = 6
+    return:
+      type: CampusCrafter.Models.ProgressType
+- uid: CampusCrafter.Models.ProgressType.MaturaExtendedChemistry
+  commentId: F:CampusCrafter.Models.ProgressType.MaturaExtendedChemistry
+  id: MaturaExtendedChemistry
+  parent: CampusCrafter.Models.ProgressType
+  langs:
+  - csharp
+  - vb
+  name: MaturaExtendedChemistry
+  nameWithType: ProgressType.MaturaExtendedChemistry
+  fullName: CampusCrafter.Models.ProgressType.MaturaExtendedChemistry
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/ProgressType.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: MaturaExtendedChemistry
+    path: CampusCrafter/Models/ProgressType.cs
+    startLine: 11
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: MaturaExtendedChemistry = 7
+    return:
+      type: CampusCrafter.Models.ProgressType
+- uid: CampusCrafter.Models.ProgressType.MaturaExtendedPhysics
+  commentId: F:CampusCrafter.Models.ProgressType.MaturaExtendedPhysics
+  id: MaturaExtendedPhysics
+  parent: CampusCrafter.Models.ProgressType
+  langs:
+  - csharp
+  - vb
+  name: MaturaExtendedPhysics
+  nameWithType: ProgressType.MaturaExtendedPhysics
+  fullName: CampusCrafter.Models.ProgressType.MaturaExtendedPhysics
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/ProgressType.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: MaturaExtendedPhysics
+    path: CampusCrafter/Models/ProgressType.cs
+    startLine: 12
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: MaturaExtendedPhysics = 8
+    return:
+      type: CampusCrafter.Models.ProgressType
+- uid: CampusCrafter.Models.ProgressType.MaturaExtendedCompSci
+  commentId: F:CampusCrafter.Models.ProgressType.MaturaExtendedCompSci
+  id: MaturaExtendedCompSci
+  parent: CampusCrafter.Models.ProgressType
+  langs:
+  - csharp
+  - vb
+  name: MaturaExtendedCompSci
+  nameWithType: ProgressType.MaturaExtendedCompSci
+  fullName: CampusCrafter.Models.ProgressType.MaturaExtendedCompSci
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/ProgressType.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: MaturaExtendedCompSci
+    path: CampusCrafter/Models/ProgressType.cs
+    startLine: 13
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: MaturaExtendedCompSci = 9
+    return:
+      type: CampusCrafter.Models.ProgressType
+- uid: CampusCrafter.Models.ProgressType.TradeExam
+  commentId: F:CampusCrafter.Models.ProgressType.TradeExam
+  id: TradeExam
+  parent: CampusCrafter.Models.ProgressType
+  langs:
+  - csharp
+  - vb
+  name: TradeExam
+  nameWithType: ProgressType.TradeExam
+  fullName: CampusCrafter.Models.ProgressType.TradeExam
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/ProgressType.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: TradeExam
+    path: CampusCrafter/Models/ProgressType.cs
+    startLine: 14
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: TradeExam = 10
+    return:
+      type: CampusCrafter.Models.ProgressType
+- uid: CampusCrafter.Models.ProgressType.Drawing
+  commentId: F:CampusCrafter.Models.ProgressType.Drawing
+  id: Drawing
+  parent: CampusCrafter.Models.ProgressType
+  langs:
+  - csharp
+  - vb
+  name: Drawing
+  nameWithType: ProgressType.Drawing
+  fullName: CampusCrafter.Models.ProgressType.Drawing
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/ProgressType.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: Drawing
+    path: CampusCrafter/Models/ProgressType.cs
+    startLine: 15
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: Drawing = 11
+    return:
+      type: CampusCrafter.Models.ProgressType
+- uid: CampusCrafter.Models.ProgressType.ScholarlyAchievement
+  commentId: F:CampusCrafter.Models.ProgressType.ScholarlyAchievement
+  id: ScholarlyAchievement
+  parent: CampusCrafter.Models.ProgressType
+  langs:
+  - csharp
+  - vb
+  name: ScholarlyAchievement
+  nameWithType: ProgressType.ScholarlyAchievement
+  fullName: CampusCrafter.Models.ProgressType.ScholarlyAchievement
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/ProgressType.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: ScholarlyAchievement
+    path: CampusCrafter/Models/ProgressType.cs
+    startLine: 16
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: ScholarlyAchievement = 12
+    return:
+      type: CampusCrafter.Models.ProgressType
+- uid: CampusCrafter.Models.ProgressType.UniversityStage1
+  commentId: F:CampusCrafter.Models.ProgressType.UniversityStage1
+  id: UniversityStage1
+  parent: CampusCrafter.Models.ProgressType
+  langs:
+  - csharp
+  - vb
+  name: UniversityStage1
+  nameWithType: ProgressType.UniversityStage1
+  fullName: CampusCrafter.Models.ProgressType.UniversityStage1
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/ProgressType.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: UniversityStage1
+    path: CampusCrafter/Models/ProgressType.cs
+    startLine: 17
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: UniversityStage1 = 13
+    return:
+      type: CampusCrafter.Models.ProgressType
+- uid: CampusCrafter.Models.ProgressType.GradePointAverage
+  commentId: F:CampusCrafter.Models.ProgressType.GradePointAverage
+  id: GradePointAverage
+  parent: CampusCrafter.Models.ProgressType
+  langs:
+  - csharp
+  - vb
+  name: GradePointAverage
+  nameWithType: ProgressType.GradePointAverage
+  fullName: CampusCrafter.Models.ProgressType.GradePointAverage
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/ProgressType.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: GradePointAverage
+    path: CampusCrafter/Models/ProgressType.cs
+    startLine: 18
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: GradePointAverage = 14
+    return:
+      type: CampusCrafter.Models.ProgressType
+- uid: CampusCrafter.Models.ProgressType.Diploma
+  commentId: F:CampusCrafter.Models.ProgressType.Diploma
+  id: Diploma
+  parent: CampusCrafter.Models.ProgressType
+  langs:
+  - csharp
+  - vb
+  name: Diploma
+  nameWithType: ProgressType.Diploma
+  fullName: CampusCrafter.Models.ProgressType.Diploma
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/ProgressType.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: Diploma
+    path: CampusCrafter/Models/ProgressType.cs
+    startLine: 19
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: Diploma = 15
+    return:
+      type: CampusCrafter.Models.ProgressType
+- uid: CampusCrafter.Models.ProgressType.Portfolio
+  commentId: F:CampusCrafter.Models.ProgressType.Portfolio
+  id: Portfolio
+  parent: CampusCrafter.Models.ProgressType
+  langs:
+  - csharp
+  - vb
+  name: Portfolio
+  nameWithType: ProgressType.Portfolio
+  fullName: CampusCrafter.Models.ProgressType.Portfolio
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/ProgressType.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: Portfolio
+    path: CampusCrafter/Models/ProgressType.cs
+    startLine: 20
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: Portfolio = 16
+    return:
+      type: CampusCrafter.Models.ProgressType
+references:
+- uid: CampusCrafter.Models
+  commentId: N:CampusCrafter.Models
+  href: CampusCrafter.html
+  name: CampusCrafter.Models
+  nameWithType: CampusCrafter.Models
+  fullName: CampusCrafter.Models
+  spec.csharp:
+  - uid: CampusCrafter
+    name: CampusCrafter
+    href: CampusCrafter.html
+  - name: .
+  - uid: CampusCrafter.Models
+    name: Models
+    href: CampusCrafter.Models.html
+  spec.vb:
+  - uid: CampusCrafter
+    name: CampusCrafter
+    href: CampusCrafter.html
+  - name: .
+  - uid: CampusCrafter.Models
+    name: Models
+    href: CampusCrafter.Models.html
+- uid: CampusCrafter.Models.ProgressType
+  commentId: T:CampusCrafter.Models.ProgressType
+  parent: CampusCrafter.Models
+  href: CampusCrafter.Models.ProgressType.html
+  name: ProgressType
+  nameWithType: ProgressType
+  fullName: CampusCrafter.Models.ProgressType

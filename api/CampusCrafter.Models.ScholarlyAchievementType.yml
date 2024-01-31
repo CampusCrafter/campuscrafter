@@ -1,0 +1,166 @@
+### YamlMime:ManagedReference
+items:
+- uid: CampusCrafter.Models.ScholarlyAchievementType
+  commentId: T:CampusCrafter.Models.ScholarlyAchievementType
+  id: ScholarlyAchievementType
+  parent: CampusCrafter.Models
+  children:
+  - CampusCrafter.Models.ScholarlyAchievementType.Other
+  - CampusCrafter.Models.ScholarlyAchievementType.Patent
+  - CampusCrafter.Models.ScholarlyAchievementType.Research
+  - CampusCrafter.Models.ScholarlyAchievementType.ScientificArticle
+  langs:
+  - csharp
+  - vb
+  name: ScholarlyAchievementType
+  nameWithType: ScholarlyAchievementType
+  fullName: CampusCrafter.Models.ScholarlyAchievementType
+  type: Enum
+  source:
+    remote:
+      path: CampusCrafter/Models/ScholarlyAchievementType.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: ScholarlyAchievementType
+    path: CampusCrafter/Models/ScholarlyAchievementType.cs
+    startLine: 2
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: public enum ScholarlyAchievementType
+    content.vb: Public Enum ScholarlyAchievementType
+- uid: CampusCrafter.Models.ScholarlyAchievementType.Research
+  commentId: F:CampusCrafter.Models.ScholarlyAchievementType.Research
+  id: Research
+  parent: CampusCrafter.Models.ScholarlyAchievementType
+  langs:
+  - csharp
+  - vb
+  name: Research
+  nameWithType: ScholarlyAchievementType.Research
+  fullName: CampusCrafter.Models.ScholarlyAchievementType.Research
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/ScholarlyAchievementType.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: Research
+    path: CampusCrafter/Models/ScholarlyAchievementType.cs
+    startLine: 4
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: Research = 0
+    return:
+      type: CampusCrafter.Models.ScholarlyAchievementType
+- uid: CampusCrafter.Models.ScholarlyAchievementType.ScientificArticle
+  commentId: F:CampusCrafter.Models.ScholarlyAchievementType.ScientificArticle
+  id: ScientificArticle
+  parent: CampusCrafter.Models.ScholarlyAchievementType
+  langs:
+  - csharp
+  - vb
+  name: ScientificArticle
+  nameWithType: ScholarlyAchievementType.ScientificArticle
+  fullName: CampusCrafter.Models.ScholarlyAchievementType.ScientificArticle
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/ScholarlyAchievementType.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: ScientificArticle
+    path: CampusCrafter/Models/ScholarlyAchievementType.cs
+    startLine: 5
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: ScientificArticle = 1
+    return:
+      type: CampusCrafter.Models.ScholarlyAchievementType
+- uid: CampusCrafter.Models.ScholarlyAchievementType.Patent
+  commentId: F:CampusCrafter.Models.ScholarlyAchievementType.Patent
+  id: Patent
+  parent: CampusCrafter.Models.ScholarlyAchievementType
+  langs:
+  - csharp
+  - vb
+  name: Patent
+  nameWithType: ScholarlyAchievementType.Patent
+  fullName: CampusCrafter.Models.ScholarlyAchievementType.Patent
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/ScholarlyAchievementType.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: Patent
+    path: CampusCrafter/Models/ScholarlyAchievementType.cs
+    startLine: 6
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: Patent = 2
+    return:
+      type: CampusCrafter.Models.ScholarlyAchievementType
+- uid: CampusCrafter.Models.ScholarlyAchievementType.Other
+  commentId: F:CampusCrafter.Models.ScholarlyAchievementType.Other
+  id: Other
+  parent: CampusCrafter.Models.ScholarlyAchievementType
+  langs:
+  - csharp
+  - vb
+  name: Other
+  nameWithType: ScholarlyAchievementType.Other
+  fullName: CampusCrafter.Models.ScholarlyAchievementType.Other
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/ScholarlyAchievementType.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: Other
+    path: CampusCrafter/Models/ScholarlyAchievementType.cs
+    startLine: 7
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: Other = 3
+    return:
+      type: CampusCrafter.Models.ScholarlyAchievementType
+references:
+- uid: CampusCrafter.Models
+  commentId: N:CampusCrafter.Models
+  href: CampusCrafter.html
+  name: CampusCrafter.Models
+  nameWithType: CampusCrafter.Models
+  fullName: CampusCrafter.Models
+  spec.csharp:
+  - uid: CampusCrafter
+    name: CampusCrafter
+    href: CampusCrafter.html
+  - name: .
+  - uid: CampusCrafter.Models
+    name: Models
+    href: CampusCrafter.Models.html
+  spec.vb:
+  - uid: CampusCrafter
+    name: CampusCrafter
+    href: CampusCrafter.html
+  - name: .
+  - uid: CampusCrafter.Models
+    name: Models
+    href: CampusCrafter.Models.html
+- uid: CampusCrafter.Models.ScholarlyAchievementType
+  commentId: T:CampusCrafter.Models.ScholarlyAchievementType
+  parent: CampusCrafter.Models
+  href: CampusCrafter.Models.ScholarlyAchievementType.html
+  name: ScholarlyAchievementType
+  nameWithType: ScholarlyAchievementType
+  fullName: CampusCrafter.Models.ScholarlyAchievementType

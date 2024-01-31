@@ -1,0 +1,166 @@
+### YamlMime:ManagedReference
+items:
+- uid: CampusCrafter.Models.CandidateApplicationStatus
+  commentId: T:CampusCrafter.Models.CandidateApplicationStatus
+  id: CandidateApplicationStatus
+  parent: CampusCrafter.Models
+  children:
+  - CampusCrafter.Models.CandidateApplicationStatus.Accepted
+  - CampusCrafter.Models.CandidateApplicationStatus.ReadyForConsideration
+  - CampusCrafter.Models.CandidateApplicationStatus.Rejected
+  - CampusCrafter.Models.CandidateApplicationStatus.Submitted
+  langs:
+  - csharp
+  - vb
+  name: CandidateApplicationStatus
+  nameWithType: CandidateApplicationStatus
+  fullName: CampusCrafter.Models.CandidateApplicationStatus
+  type: Enum
+  source:
+    remote:
+      path: CampusCrafter/Models/CandidateApplicationStatus.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: CandidateApplicationStatus
+    path: CampusCrafter/Models/CandidateApplicationStatus.cs
+    startLine: 2
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: public enum CandidateApplicationStatus
+    content.vb: Public Enum CandidateApplicationStatus
+- uid: CampusCrafter.Models.CandidateApplicationStatus.Submitted
+  commentId: F:CampusCrafter.Models.CandidateApplicationStatus.Submitted
+  id: Submitted
+  parent: CampusCrafter.Models.CandidateApplicationStatus
+  langs:
+  - csharp
+  - vb
+  name: Submitted
+  nameWithType: CandidateApplicationStatus.Submitted
+  fullName: CampusCrafter.Models.CandidateApplicationStatus.Submitted
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/CandidateApplicationStatus.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: Submitted
+    path: CampusCrafter/Models/CandidateApplicationStatus.cs
+    startLine: 4
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: Submitted = 0
+    return:
+      type: CampusCrafter.Models.CandidateApplicationStatus
+- uid: CampusCrafter.Models.CandidateApplicationStatus.ReadyForConsideration
+  commentId: F:CampusCrafter.Models.CandidateApplicationStatus.ReadyForConsideration
+  id: ReadyForConsideration
+  parent: CampusCrafter.Models.CandidateApplicationStatus
+  langs:
+  - csharp
+  - vb
+  name: ReadyForConsideration
+  nameWithType: CandidateApplicationStatus.ReadyForConsideration
+  fullName: CampusCrafter.Models.CandidateApplicationStatus.ReadyForConsideration
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/CandidateApplicationStatus.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: ReadyForConsideration
+    path: CampusCrafter/Models/CandidateApplicationStatus.cs
+    startLine: 5
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: ReadyForConsideration = 1
+    return:
+      type: CampusCrafter.Models.CandidateApplicationStatus
+- uid: CampusCrafter.Models.CandidateApplicationStatus.Accepted
+  commentId: F:CampusCrafter.Models.CandidateApplicationStatus.Accepted
+  id: Accepted
+  parent: CampusCrafter.Models.CandidateApplicationStatus
+  langs:
+  - csharp
+  - vb
+  name: Accepted
+  nameWithType: CandidateApplicationStatus.Accepted
+  fullName: CampusCrafter.Models.CandidateApplicationStatus.Accepted
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/CandidateApplicationStatus.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: Accepted
+    path: CampusCrafter/Models/CandidateApplicationStatus.cs
+    startLine: 6
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: Accepted = 2
+    return:
+      type: CampusCrafter.Models.CandidateApplicationStatus
+- uid: CampusCrafter.Models.CandidateApplicationStatus.Rejected
+  commentId: F:CampusCrafter.Models.CandidateApplicationStatus.Rejected
+  id: Rejected
+  parent: CampusCrafter.Models.CandidateApplicationStatus
+  langs:
+  - csharp
+  - vb
+  name: Rejected
+  nameWithType: CandidateApplicationStatus.Rejected
+  fullName: CampusCrafter.Models.CandidateApplicationStatus.Rejected
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/CandidateApplicationStatus.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: Rejected
+    path: CampusCrafter/Models/CandidateApplicationStatus.cs
+    startLine: 7
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: Rejected = 3
+    return:
+      type: CampusCrafter.Models.CandidateApplicationStatus
+references:
+- uid: CampusCrafter.Models
+  commentId: N:CampusCrafter.Models
+  href: CampusCrafter.html
+  name: CampusCrafter.Models
+  nameWithType: CampusCrafter.Models
+  fullName: CampusCrafter.Models
+  spec.csharp:
+  - uid: CampusCrafter
+    name: CampusCrafter
+    href: CampusCrafter.html
+  - name: .
+  - uid: CampusCrafter.Models
+    name: Models
+    href: CampusCrafter.Models.html
+  spec.vb:
+  - uid: CampusCrafter
+    name: CampusCrafter
+    href: CampusCrafter.html
+  - name: .
+  - uid: CampusCrafter.Models
+    name: Models
+    href: CampusCrafter.Models.html
+- uid: CampusCrafter.Models.CandidateApplicationStatus
+  commentId: T:CampusCrafter.Models.CandidateApplicationStatus
+  parent: CampusCrafter.Models
+  href: CampusCrafter.Models.CandidateApplicationStatus.html
+  name: CandidateApplicationStatus
+  nameWithType: CandidateApplicationStatus
+  fullName: CampusCrafter.Models.CandidateApplicationStatus

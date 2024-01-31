@@ -1,0 +1,139 @@
+### YamlMime:ManagedReference
+items:
+- uid: CampusCrafter.Utils.Role
+  commentId: T:CampusCrafter.Utils.Role
+  id: Role
+  parent: CampusCrafter.Utils
+  children:
+  - CampusCrafter.Utils.Role.Admin
+  - CampusCrafter.Utils.Role.Candidate
+  - CampusCrafter.Utils.Role.Department
+  langs:
+  - csharp
+  - vb
+  name: Role
+  nameWithType: Role
+  fullName: CampusCrafter.Utils.Role
+  type: Enum
+  source:
+    remote:
+      path: CampusCrafter/Utils/Roles.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: Role
+    path: CampusCrafter/Utils/Roles.cs
+    startLine: 2
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Utils
+  syntax:
+    content: public enum Role
+    content.vb: Public Enum Role
+- uid: CampusCrafter.Utils.Role.Admin
+  commentId: F:CampusCrafter.Utils.Role.Admin
+  id: Admin
+  parent: CampusCrafter.Utils.Role
+  langs:
+  - csharp
+  - vb
+  name: Admin
+  nameWithType: Role.Admin
+  fullName: CampusCrafter.Utils.Role.Admin
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Utils/Roles.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: Admin
+    path: CampusCrafter/Utils/Roles.cs
+    startLine: 4
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Utils
+  syntax:
+    content: Admin = 0
+    return:
+      type: CampusCrafter.Utils.Role
+- uid: CampusCrafter.Utils.Role.Department
+  commentId: F:CampusCrafter.Utils.Role.Department
+  id: Department
+  parent: CampusCrafter.Utils.Role
+  langs:
+  - csharp
+  - vb
+  name: Department
+  nameWithType: Role.Department
+  fullName: CampusCrafter.Utils.Role.Department
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Utils/Roles.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: Department
+    path: CampusCrafter/Utils/Roles.cs
+    startLine: 5
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Utils
+  syntax:
+    content: Department = 1
+    return:
+      type: CampusCrafter.Utils.Role
+- uid: CampusCrafter.Utils.Role.Candidate
+  commentId: F:CampusCrafter.Utils.Role.Candidate
+  id: Candidate
+  parent: CampusCrafter.Utils.Role
+  langs:
+  - csharp
+  - vb
+  name: Candidate
+  nameWithType: Role.Candidate
+  fullName: CampusCrafter.Utils.Role.Candidate
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Utils/Roles.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: Candidate
+    path: CampusCrafter/Utils/Roles.cs
+    startLine: 6
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Utils
+  syntax:
+    content: Candidate = 2
+    return:
+      type: CampusCrafter.Utils.Role
+references:
+- uid: CampusCrafter.Utils
+  commentId: N:CampusCrafter.Utils
+  href: CampusCrafter.html
+  name: CampusCrafter.Utils
+  nameWithType: CampusCrafter.Utils
+  fullName: CampusCrafter.Utils
+  spec.csharp:
+  - uid: CampusCrafter
+    name: CampusCrafter
+    href: CampusCrafter.html
+  - name: .
+  - uid: CampusCrafter.Utils
+    name: Utils
+    href: CampusCrafter.Utils.html
+  spec.vb:
+  - uid: CampusCrafter
+    name: CampusCrafter
+    href: CampusCrafter.html
+  - name: .
+  - uid: CampusCrafter.Utils
+    name: Utils
+    href: CampusCrafter.Utils.html
+- uid: CampusCrafter.Utils.Role
+  commentId: T:CampusCrafter.Utils.Role
+  parent: CampusCrafter.Utils
+  href: CampusCrafter.Utils.Role.html
+  name: Role
+  nameWithType: Role
+  fullName: CampusCrafter.Utils.Role

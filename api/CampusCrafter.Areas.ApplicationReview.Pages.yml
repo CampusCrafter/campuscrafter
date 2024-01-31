@@ -1,0 +1,123 @@
+### YamlMime:ManagedReference
+items:
+- uid: CampusCrafter.Areas.ApplicationReview.Pages
+  commentId: N:CampusCrafter.Areas.ApplicationReview.Pages
+  id: CampusCrafter.Areas.ApplicationReview.Pages
+  children:
+  - CampusCrafter.Areas.ApplicationReview.Pages.Index
+  - CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions
+  - CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions
+  - CampusCrafter.Areas.ApplicationReview.Pages.VerifyScholarlyAchievements
+  - CampusCrafter.Areas.ApplicationReview.Pages.ViewApplication
+  langs:
+  - csharp
+  - vb
+  name: CampusCrafter.Areas.ApplicationReview.Pages
+  nameWithType: CampusCrafter.Areas.ApplicationReview.Pages
+  fullName: CampusCrafter.Areas.ApplicationReview.Pages
+  type: Namespace
+  assemblies:
+  - CampusCrafter
+references:
+- uid: CampusCrafter.Areas.ApplicationReview.Pages.Index
+  commentId: T:CampusCrafter.Areas.ApplicationReview.Pages.Index
+  href: CampusCrafter.Areas.ApplicationReview.Pages.Index.html
+  name: Index
+  nameWithType: Index
+  fullName: CampusCrafter.Areas.ApplicationReview.Pages.Index
+- uid: CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions
+  commentId: T:CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions
+  parent: CampusCrafter.Areas.ApplicationReview.Pages
+  href: CampusCrafter.Areas.ApplicationReview.Pages.Index.html
+  name: Index.SortingOptions
+  nameWithType: Index.SortingOptions
+  fullName: CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions
+  spec.csharp:
+  - uid: CampusCrafter.Areas.ApplicationReview.Pages.Index
+    name: Index
+    href: CampusCrafter.Areas.ApplicationReview.Pages.Index.html
+  - name: .
+  - uid: CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions
+    name: SortingOptions
+    href: CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions.html
+  spec.vb:
+  - uid: CampusCrafter.Areas.ApplicationReview.Pages.Index
+    name: Index
+    href: CampusCrafter.Areas.ApplicationReview.Pages.Index.html
+  - name: .
+  - uid: CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions
+    name: SortingOptions
+    href: CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions.html
+- uid: CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions
+  commentId: T:CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions
+  parent: CampusCrafter.Areas.ApplicationReview.Pages
+  href: CampusCrafter.Areas.ApplicationReview.Pages.Index.html
+  name: Index.FilteringOptions
+  nameWithType: Index.FilteringOptions
+  fullName: CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions
+  spec.csharp:
+  - uid: CampusCrafter.Areas.ApplicationReview.Pages.Index
+    name: Index
+    href: CampusCrafter.Areas.ApplicationReview.Pages.Index.html
+  - name: .
+  - uid: CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions
+    name: FilteringOptions
+    href: CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions.html
+  spec.vb:
+  - uid: CampusCrafter.Areas.ApplicationReview.Pages.Index
+    name: Index
+    href: CampusCrafter.Areas.ApplicationReview.Pages.Index.html
+  - name: .
+  - uid: CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions
+    name: FilteringOptions
+    href: CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions.html
+- uid: CampusCrafter.Areas.ApplicationReview.Pages.VerifyScholarlyAchievements
+  commentId: T:CampusCrafter.Areas.ApplicationReview.Pages.VerifyScholarlyAchievements
+  href: CampusCrafter.Areas.ApplicationReview.Pages.VerifyScholarlyAchievements.html
+  name: VerifyScholarlyAchievements
+  nameWithType: VerifyScholarlyAchievements
+  fullName: CampusCrafter.Areas.ApplicationReview.Pages.VerifyScholarlyAchievements
+- uid: CampusCrafter.Areas.ApplicationReview.Pages.ViewApplication
+  commentId: T:CampusCrafter.Areas.ApplicationReview.Pages.ViewApplication
+  href: CampusCrafter.Areas.ApplicationReview.Pages.ViewApplication.html
+  name: ViewApplication
+  nameWithType: ViewApplication
+  fullName: CampusCrafter.Areas.ApplicationReview.Pages.ViewApplication
+- uid: CampusCrafter.Areas.ApplicationReview.Pages
+  commentId: N:CampusCrafter.Areas.ApplicationReview.Pages
+  href: CampusCrafter.html
+  name: CampusCrafter.Areas.ApplicationReview.Pages
+  nameWithType: CampusCrafter.Areas.ApplicationReview.Pages
+  fullName: CampusCrafter.Areas.ApplicationReview.Pages
+  spec.csharp:
+  - uid: CampusCrafter
+    name: CampusCrafter
+    href: CampusCrafter.html
+  - name: .
+  - uid: CampusCrafter.Areas
+    name: Areas
+    href: CampusCrafter.Areas.html
+  - name: .
+  - uid: CampusCrafter.Areas.ApplicationReview
+    name: ApplicationReview
+    href: CampusCrafter.Areas.ApplicationReview.html
+  - name: .
+  - uid: CampusCrafter.Areas.ApplicationReview.Pages
+    name: Pages
+    href: CampusCrafter.Areas.ApplicationReview.Pages.html
+  spec.vb:
+  - uid: CampusCrafter
+    name: CampusCrafter
+    href: CampusCrafter.html
+  - name: .
+  - uid: CampusCrafter.Areas
+    name: Areas
+    href: CampusCrafter.Areas.html
+  - name: .
+  - uid: CampusCrafter.Areas.ApplicationReview
+    name: ApplicationReview
+    href: CampusCrafter.Areas.ApplicationReview.html
+  - name: .
+  - uid: CampusCrafter.Areas.ApplicationReview.Pages
+    name: Pages
+    href: CampusCrafter.Areas.ApplicationReview.Pages.html
