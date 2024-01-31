@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace CampusCrafter.Models;
 
-public class CandidateApplication
+public record CandidateApplication
 {
     [Key, Display(Name = "Application ID")] public int Id { get; set; }
     
@@ -13,7 +13,7 @@ public class CandidateApplication
     
     [DataType(DataType.DateTime)] public DateTime Date { get; set; }
     public CandidateApplicationStatus Status { get; set; }
-    [MaxLength(1024)] public string? RejectReason { get; set; } = null!;
+    [MaxLength(1024)] public string? RejectReason { get; set; }
     
     [ForeignKey("Major")] public int? MajorId { get; set; }
     public Major? Major { get; set; }
