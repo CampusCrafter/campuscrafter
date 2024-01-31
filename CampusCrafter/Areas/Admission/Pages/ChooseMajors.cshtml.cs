@@ -23,9 +23,13 @@ public class ChooseMajorsModel(ApplicationRepository repository) : PageModel
 
     [TempData] public string SelectedMajors { get; set; } = default!;
 
-    public async Task OnGetAsync(int value)
+    public async Task OnGetAsync(int majorDegree)
     {
-        MajorDegree = value;
+        //Major Degree:
+        //0 - first degree
+        //1 - second degree
+        //2 - count score mode
+        MajorDegree = majorDegree;
         
         if (MajorDegree == 2)
         {
