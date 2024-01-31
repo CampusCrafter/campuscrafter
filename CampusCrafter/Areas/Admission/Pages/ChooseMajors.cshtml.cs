@@ -46,22 +46,12 @@ public class ChooseMajorsModel(ApplicationRepository repository) : PageModel
 
         if (selected.Count == 0)
         {
-            var p = RedirectToPage("ChooseMajors");
-            p.RouteValues = new RouteValueDictionary
-            {
-                ["value"] = MajorDegree
-            };
-            return p;
+            return BadRequest("Choose any major");
         }
 
-        if (!MajorDegree!.Equals(2) && selected.Count > 5)
+        if (!MajorDegree.Equals(2) && selected.Count > 5)
         {
-            var p = RedirectToPage("ChooseMajors");
-            p.RouteValues = new RouteValueDictionary
-            {
-                ["value"] = MajorDegree
-            };
-            return p;
+            return BadRequest("You cant apply to more than 5 majors");
         }
         
         TempData.Keep();

@@ -67,14 +67,14 @@ public class FillAdmissionModel(ApplicationRepository repository) : PageModel
             {
                 if (!progressTypes.Contains(progressType))
                 {
-                    return Page();
+                    return BadRequest("you need to asses your score in "+progressType);
                 }
             }
         }
         else if (!progressTypes.Contains(ProgressType.UniversityStage1))
         {
-            return Page();
-        }
+            return BadRequest("you need to asses your score from university stage 1");
+        } 
             
         Candidate = new Candidate
         {

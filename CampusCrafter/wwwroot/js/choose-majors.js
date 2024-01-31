@@ -7,6 +7,10 @@
             i++;
         }
     }
+    if (i === 0) {
+        alert("choose at least one major")
+        return;
+    }
     if (i < 5) {
         form.submit();
         return;
