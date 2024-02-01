@@ -9,5 +9,5 @@ public class ScholarlyAchievement
     
     [MaxLength(1024)]
     public string Description { get; set; }
-    public decimal? Score { get; set; }
+    [Range(0, 10000)] public decimal? Score { get; set; }
 }
