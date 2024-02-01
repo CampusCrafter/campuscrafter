@@ -100,15 +100,16 @@ public class ApplicationRepository(ApplicationDbContext context) : IRepository
     public async Task<List<Major>> MajorsPrerequisitesFiltered(bool hasAny)
     {
         var result = await GetAllAsync<Major>(q => q
+            .Include(m => m.Prerequisites)
+            .Include(m => m.Department)
+            .Include(m => m.Specializations)
+            .Include(m => m.StudyPlans)
             .Where(s => s.StudyPlans.Count > 0)
             .Where(m => m.Prerequisites.Count == 0 == hasAny) 
             // for second degree number of prerequisites can't be 0
             // for first degree number of prerequisites must be 0
-            .Include(m => m.Department)
-            .Include(m => m.Prerequisites)
-            .Include(m => m.Specializations)
-            .Include(m => m.StudyPlans)
         );
+
         return result;
     }
 
