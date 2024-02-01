@@ -57,6 +57,7 @@ public class FillAdmissionModel(ApplicationRepository repository) : PageModel
         
         if (!ModelState.IsValid)
         {
+            TempData.Keep();
             return Page();
         }
 
@@ -66,12 +67,14 @@ public class FillAdmissionModel(ApplicationRepository repository) : PageModel
             {
                 if (!progressTypes.Contains(progressType))
                 {
+                    TempData.Keep();
                     return BadRequest("you need to asses your score in "+progressType);
                 }
             }
         }
         else if (!progressTypes.Contains(ProgressType.UniversityStage1))
         {
+            TempData.Keep();
             return BadRequest("you need to asses your score from university stage 1");
         } 
             
