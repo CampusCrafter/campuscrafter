@@ -1,0 +1,220 @@
+### YamlMime:ManagedReference
+items:
+- uid: CampusCrafter.Models.DegreeType
+  commentId: T:CampusCrafter.Models.DegreeType
+  id: DegreeType
+  parent: CampusCrafter.Models
+  children:
+  - CampusCrafter.Models.DegreeType.ArchitectEngineer
+  - CampusCrafter.Models.DegreeType.Engineer
+  - CampusCrafter.Models.DegreeType.Licenciate
+  - CampusCrafter.Models.DegreeType.Master
+  - CampusCrafter.Models.DegreeType.MasterArchitectEngineer
+  - CampusCrafter.Models.DegreeType.MasterEngineer
+  langs:
+  - csharp
+  - vb
+  name: DegreeType
+  nameWithType: DegreeType
+  fullName: CampusCrafter.Models.DegreeType
+  type: Enum
+  source:
+    remote:
+      path: CampusCrafter/Models/DegreeType.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: DegreeType
+    path: CampusCrafter/Models/DegreeType.cs
+    startLine: 2
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: public enum DegreeType
+    content.vb: Public Enum DegreeType
+- uid: CampusCrafter.Models.DegreeType.Licenciate
+  commentId: F:CampusCrafter.Models.DegreeType.Licenciate
+  id: Licenciate
+  parent: CampusCrafter.Models.DegreeType
+  langs:
+  - csharp
+  - vb
+  name: Licenciate
+  nameWithType: DegreeType.Licenciate
+  fullName: CampusCrafter.Models.DegreeType.Licenciate
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/DegreeType.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: Licenciate
+    path: CampusCrafter/Models/DegreeType.cs
+    startLine: 4
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: Licenciate = 0
+    return:
+      type: CampusCrafter.Models.DegreeType
+- uid: CampusCrafter.Models.DegreeType.Engineer
+  commentId: F:CampusCrafter.Models.DegreeType.Engineer
+  id: Engineer
+  parent: CampusCrafter.Models.DegreeType
+  langs:
+  - csharp
+  - vb
+  name: Engineer
+  nameWithType: DegreeType.Engineer
+  fullName: CampusCrafter.Models.DegreeType.Engineer
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/DegreeType.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: Engineer
+    path: CampusCrafter/Models/DegreeType.cs
+    startLine: 5
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: Engineer = 1
+    return:
+      type: CampusCrafter.Models.DegreeType
+- uid: CampusCrafter.Models.DegreeType.ArchitectEngineer
+  commentId: F:CampusCrafter.Models.DegreeType.ArchitectEngineer
+  id: ArchitectEngineer
+  parent: CampusCrafter.Models.DegreeType
+  langs:
+  - csharp
+  - vb
+  name: ArchitectEngineer
+  nameWithType: DegreeType.ArchitectEngineer
+  fullName: CampusCrafter.Models.DegreeType.ArchitectEngineer
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/DegreeType.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: ArchitectEngineer
+    path: CampusCrafter/Models/DegreeType.cs
+    startLine: 6
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: ArchitectEngineer = 2
+    return:
+      type: CampusCrafter.Models.DegreeType
+- uid: CampusCrafter.Models.DegreeType.Master
+  commentId: F:CampusCrafter.Models.DegreeType.Master
+  id: Master
+  parent: CampusCrafter.Models.DegreeType
+  langs:
+  - csharp
+  - vb
+  name: Master
+  nameWithType: DegreeType.Master
+  fullName: CampusCrafter.Models.DegreeType.Master
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/DegreeType.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: Master
+    path: CampusCrafter/Models/DegreeType.cs
+    startLine: 7
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: Master = 3
+    return:
+      type: CampusCrafter.Models.DegreeType
+- uid: CampusCrafter.Models.DegreeType.MasterEngineer
+  commentId: F:CampusCrafter.Models.DegreeType.MasterEngineer
+  id: MasterEngineer
+  parent: CampusCrafter.Models.DegreeType
+  langs:
+  - csharp
+  - vb
+  name: MasterEngineer
+  nameWithType: DegreeType.MasterEngineer
+  fullName: CampusCrafter.Models.DegreeType.MasterEngineer
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/DegreeType.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: MasterEngineer
+    path: CampusCrafter/Models/DegreeType.cs
+    startLine: 8
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: MasterEngineer = 4
+    return:
+      type: CampusCrafter.Models.DegreeType
+- uid: CampusCrafter.Models.DegreeType.MasterArchitectEngineer
+  commentId: F:CampusCrafter.Models.DegreeType.MasterArchitectEngineer
+  id: MasterArchitectEngineer
+  parent: CampusCrafter.Models.DegreeType
+  langs:
+  - csharp
+  - vb
+  name: MasterArchitectEngineer
+  nameWithType: DegreeType.MasterArchitectEngineer
+  fullName: CampusCrafter.Models.DegreeType.MasterArchitectEngineer
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/DegreeType.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: MasterArchitectEngineer
+    path: CampusCrafter/Models/DegreeType.cs
+    startLine: 9
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: MasterArchitectEngineer = 5
+    return:
+      type: CampusCrafter.Models.DegreeType
+references:
+- uid: CampusCrafter.Models
+  commentId: N:CampusCrafter.Models
+  href: CampusCrafter.html
+  name: CampusCrafter.Models
+  nameWithType: CampusCrafter.Models
+  fullName: CampusCrafter.Models
+  spec.csharp:
+  - uid: CampusCrafter
+    name: CampusCrafter
+    href: CampusCrafter.html
+  - name: .
+  - uid: CampusCrafter.Models
+    name: Models
+    href: CampusCrafter.Models.html
+  spec.vb:
+  - uid: CampusCrafter
+    name: CampusCrafter
+    href: CampusCrafter.html
+  - name: .
+  - uid: CampusCrafter.Models
+    name: Models
+    href: CampusCrafter.Models.html
+- uid: CampusCrafter.Models.DegreeType
+  commentId: T:CampusCrafter.Models.DegreeType
+  parent: CampusCrafter.Models
+  href: CampusCrafter.Models.DegreeType.html
+  name: DegreeType
+  nameWithType: DegreeType
+  fullName: CampusCrafter.Models.DegreeType

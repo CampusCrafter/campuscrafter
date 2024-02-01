@@ -1,0 +1,112 @@
+### YamlMime:ManagedReference
+items:
+- uid: CampusCrafter.Models.StudyType
+  commentId: T:CampusCrafter.Models.StudyType
+  id: StudyType
+  parent: CampusCrafter.Models
+  children:
+  - CampusCrafter.Models.StudyType.FullTime
+  - CampusCrafter.Models.StudyType.PartTime
+  langs:
+  - csharp
+  - vb
+  name: StudyType
+  nameWithType: StudyType
+  fullName: CampusCrafter.Models.StudyType
+  type: Enum
+  source:
+    remote:
+      path: CampusCrafter/Models/StudyType.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: StudyType
+    path: CampusCrafter/Models/StudyType.cs
+    startLine: 2
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: public enum StudyType
+    content.vb: Public Enum StudyType
+- uid: CampusCrafter.Models.StudyType.FullTime
+  commentId: F:CampusCrafter.Models.StudyType.FullTime
+  id: FullTime
+  parent: CampusCrafter.Models.StudyType
+  langs:
+  - csharp
+  - vb
+  name: FullTime
+  nameWithType: StudyType.FullTime
+  fullName: CampusCrafter.Models.StudyType.FullTime
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/StudyType.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: FullTime
+    path: CampusCrafter/Models/StudyType.cs
+    startLine: 4
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: FullTime = 0
+    return:
+      type: CampusCrafter.Models.StudyType
+- uid: CampusCrafter.Models.StudyType.PartTime
+  commentId: F:CampusCrafter.Models.StudyType.PartTime
+  id: PartTime
+  parent: CampusCrafter.Models.StudyType
+  langs:
+  - csharp
+  - vb
+  name: PartTime
+  nameWithType: StudyType.PartTime
+  fullName: CampusCrafter.Models.StudyType.PartTime
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/StudyType.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: PartTime
+    path: CampusCrafter/Models/StudyType.cs
+    startLine: 5
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: PartTime = 1
+    return:
+      type: CampusCrafter.Models.StudyType
+references:
+- uid: CampusCrafter.Models
+  commentId: N:CampusCrafter.Models
+  href: CampusCrafter.html
+  name: CampusCrafter.Models
+  nameWithType: CampusCrafter.Models
+  fullName: CampusCrafter.Models
+  spec.csharp:
+  - uid: CampusCrafter
+    name: CampusCrafter
+    href: CampusCrafter.html
+  - name: .
+  - uid: CampusCrafter.Models
+    name: Models
+    href: CampusCrafter.Models.html
+  spec.vb:
+  - uid: CampusCrafter
+    name: CampusCrafter
+    href: CampusCrafter.html
+  - name: .
+  - uid: CampusCrafter.Models
+    name: Models
+    href: CampusCrafter.Models.html
+- uid: CampusCrafter.Models.StudyType
+  commentId: T:CampusCrafter.Models.StudyType
+  parent: CampusCrafter.Models
+  href: CampusCrafter.Models.StudyType.html
+  name: StudyType
+  nameWithType: StudyType
+  fullName: CampusCrafter.Models.StudyType

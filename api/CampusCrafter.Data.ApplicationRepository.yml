@@ -1,0 +1,2210 @@
+### YamlMime:ManagedReference
+items:
+- uid: CampusCrafter.Data.ApplicationRepository
+  commentId: T:CampusCrafter.Data.ApplicationRepository
+  id: ApplicationRepository
+  parent: CampusCrafter.Data
+  children:
+  - CampusCrafter.Data.ApplicationRepository.#ctor(CampusCrafter.Data.ApplicationDbContext)
+  - CampusCrafter.Data.ApplicationRepository.AcceptApplication(CampusCrafter.Models.CandidateApplication)
+  - CampusCrafter.Data.ApplicationRepository.Add``1(``0)
+  - CampusCrafter.Data.ApplicationRepository.AssignScoreToScholarlyAchievement(CampusCrafter.Models.ScholarlyAchievement,System.Decimal)
+  - CampusCrafter.Data.ApplicationRepository.Context
+  - CampusCrafter.Data.ApplicationRepository.Delete``1(``0)
+  - CampusCrafter.Data.ApplicationRepository.GetAllAsync``1(System.Func{System.Linq.IQueryable{``0},System.Linq.IQueryable{``0}})
+  - CampusCrafter.Data.ApplicationRepository.GetAsync``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Func{System.Linq.IQueryable{``0},System.Linq.IQueryable{``0}})
+  - CampusCrafter.Data.ApplicationRepository.GetMajorsWithScoreWeightsAsync
+  - CampusCrafter.Data.ApplicationRepository.MajorsPrerequisitesFiltered(System.Boolean)
+  - CampusCrafter.Data.ApplicationRepository.MajorsWithIdsAsync(System.Collections.Generic.IEnumerable{System.Int32})
+  - CampusCrafter.Data.ApplicationRepository.RejectApplication(CampusCrafter.Models.CandidateApplication,System.String)
+  - CampusCrafter.Data.ApplicationRepository.SaveChangesAsync
+  - CampusCrafter.Data.ApplicationRepository.ScoreWeightsFromStudyPlansIds(System.Collections.Generic.IEnumerable{System.Int32})
+  - CampusCrafter.Data.ApplicationRepository.Update``1(``0)
+  langs:
+  - csharp
+  - vb
+  name: ApplicationRepository
+  nameWithType: ApplicationRepository
+  fullName: CampusCrafter.Data.ApplicationRepository
+  type: Class
+  source:
+    remote:
+      path: CampusCrafter/Data/ApplicationRepository.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: ApplicationRepository
+    path: CampusCrafter/Data/ApplicationRepository.cs
+    startLine: 6
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Data
+  syntax:
+    content: 'public class ApplicationRepository : IRepository'
+    content.vb: Public Class ApplicationRepository Implements IRepository
+  inheritance:
+  - System.Object
+  implements:
+  - CampusCrafter.Data.IRepository
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: CampusCrafter.Data.ApplicationRepository.#ctor(CampusCrafter.Data.ApplicationDbContext)
+  commentId: M:CampusCrafter.Data.ApplicationRepository.#ctor(CampusCrafter.Data.ApplicationDbContext)
+  id: '#ctor(CampusCrafter.Data.ApplicationDbContext)'
+  parent: CampusCrafter.Data.ApplicationRepository
+  langs:
+  - csharp
+  - vb
+  name: ApplicationRepository(ApplicationDbContext)
+  nameWithType: ApplicationRepository.ApplicationRepository(ApplicationDbContext)
+  fullName: CampusCrafter.Data.ApplicationRepository.ApplicationRepository(CampusCrafter.Data.ApplicationDbContext)
+  type: Constructor
+  source:
+    remote:
+      path: CampusCrafter/Data/ApplicationRepository.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: .ctor
+    path: CampusCrafter/Data/ApplicationRepository.cs
+    startLine: 6
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Data
+  syntax:
+    content: public ApplicationRepository(ApplicationDbContext context)
+    parameters:
+    - id: context
+      type: CampusCrafter.Data.ApplicationDbContext
+    content.vb: Public Sub New(context As ApplicationDbContext)
+  overload: CampusCrafter.Data.ApplicationRepository.#ctor*
+  nameWithType.vb: ApplicationRepository.New(ApplicationDbContext)
+  fullName.vb: CampusCrafter.Data.ApplicationRepository.New(CampusCrafter.Data.ApplicationDbContext)
+  name.vb: New(ApplicationDbContext)
+- uid: CampusCrafter.Data.ApplicationRepository.Context
+  commentId: P:CampusCrafter.Data.ApplicationRepository.Context
+  id: Context
+  parent: CampusCrafter.Data.ApplicationRepository
+  langs:
+  - csharp
+  - vb
+  name: Context
+  nameWithType: ApplicationRepository.Context
+  fullName: CampusCrafter.Data.ApplicationRepository.Context
+  type: Property
+  source:
+    remote:
+      path: CampusCrafter/Data/ApplicationRepository.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: Context
+    path: CampusCrafter/Data/ApplicationRepository.cs
+    startLine: 8
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Data
+  syntax:
+    content: public ApplicationDbContext Context { get; }
+    parameters: []
+    return:
+      type: CampusCrafter.Data.ApplicationDbContext
+    content.vb: Public ReadOnly Property Context As ApplicationDbContext
+  overload: CampusCrafter.Data.ApplicationRepository.Context*
+- uid: CampusCrafter.Data.ApplicationRepository.GetAllAsync``1(System.Func{System.Linq.IQueryable{``0},System.Linq.IQueryable{``0}})
+  commentId: M:CampusCrafter.Data.ApplicationRepository.GetAllAsync``1(System.Func{System.Linq.IQueryable{``0},System.Linq.IQueryable{``0}})
+  id: GetAllAsync``1(System.Func{System.Linq.IQueryable{``0},System.Linq.IQueryable{``0}})
+  parent: CampusCrafter.Data.ApplicationRepository
+  langs:
+  - csharp
+  - vb
+  name: GetAllAsync<T>(Func<IQueryable<T>, IQueryable<T>>?)
+  nameWithType: ApplicationRepository.GetAllAsync<T>(Func<IQueryable<T>, IQueryable<T>>?)
+  fullName: CampusCrafter.Data.ApplicationRepository.GetAllAsync<T>(System.Func<System.Linq.IQueryable<T>, System.Linq.IQueryable<T>>?)
+  type: Method
+  source:
+    remote:
+      path: CampusCrafter/Data/ApplicationRepository.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: GetAllAsync
+    path: CampusCrafter/Data/ApplicationRepository.cs
+    startLine: 10
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Data
+  example: []
+  syntax:
+    content: 'public Task<List<T>> GetAllAsync<T>(Func<IQueryable<T>, IQueryable<T>>? modifier = null) where T : class'
+    parameters:
+    - id: modifier
+      type: System.Func{System.Linq.IQueryable{{T}},System.Linq.IQueryable{{T}}}
+    typeParameters:
+    - id: T
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{{T}}}
+    content.vb: Public Function GetAllAsync(Of T As Class)(modifier As Func(Of IQueryable(Of T), IQueryable(Of T)) = Nothing) As Task(Of List(Of T))
+  overload: CampusCrafter.Data.ApplicationRepository.GetAllAsync*
+  implements:
+  - CampusCrafter.Data.IRepository.GetAllAsync``1(System.Func{System.Linq.IQueryable{{T}},System.Linq.IQueryable{{T}}})
+  nameWithType.vb: ApplicationRepository.GetAllAsync(Of T)(Func(Of IQueryable(Of T), IQueryable(Of T)))
+  fullName.vb: CampusCrafter.Data.ApplicationRepository.GetAllAsync(Of T)(System.Func(Of System.Linq.IQueryable(Of T), System.Linq.IQueryable(Of T)))
+  name.vb: GetAllAsync(Of T)(Func(Of IQueryable(Of T), IQueryable(Of T)))
+- uid: CampusCrafter.Data.ApplicationRepository.GetAsync``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Func{System.Linq.IQueryable{``0},System.Linq.IQueryable{``0}})
+  commentId: M:CampusCrafter.Data.ApplicationRepository.GetAsync``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Func{System.Linq.IQueryable{``0},System.Linq.IQueryable{``0}})
+  id: GetAsync``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Func{System.Linq.IQueryable{``0},System.Linq.IQueryable{``0}})
+  parent: CampusCrafter.Data.ApplicationRepository
+  langs:
+  - csharp
+  - vb
+  name: GetAsync<T>(Expression<Func<T, bool>>, Func<IQueryable<T>, IQueryable<T>>?)
+  nameWithType: ApplicationRepository.GetAsync<T>(Expression<Func<T, bool>>, Func<IQueryable<T>, IQueryable<T>>?)
+  fullName: CampusCrafter.Data.ApplicationRepository.GetAsync<T>(System.Linq.Expressions.Expression<System.Func<T, bool>>, System.Func<System.Linq.IQueryable<T>, System.Linq.IQueryable<T>>?)
+  type: Method
+  source:
+    remote:
+      path: CampusCrafter/Data/ApplicationRepository.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: GetAsync
+    path: CampusCrafter/Data/ApplicationRepository.cs
+    startLine: 17
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Data
+  example: []
+  syntax:
+    content: 'public Task<T?> GetAsync<T>(Expression<Func<T, bool>> filter, Func<IQueryable<T>, IQueryable<T>>? modifier = null) where T : class'
+    parameters:
+    - id: filter
+      type: System.Linq.Expressions.Expression{System.Func{{T},System.Boolean}}
+    - id: modifier
+      type: System.Func{System.Linq.IQueryable{{T}},System.Linq.IQueryable{{T}}}
+    typeParameters:
+    - id: T
+    return:
+      type: System.Threading.Tasks.Task{{T}}
+    content.vb: Public Function GetAsync(Of T As Class)(filter As Expression(Of Func(Of T, Boolean)), modifier As Func(Of IQueryable(Of T), IQueryable(Of T)) = Nothing) As Task(Of T)
+  overload: CampusCrafter.Data.ApplicationRepository.GetAsync*
+  implements:
+  - CampusCrafter.Data.IRepository.GetAsync``1(System.Linq.Expressions.Expression{System.Func{{T},System.Boolean}},System.Func{System.Linq.IQueryable{{T}},System.Linq.IQueryable{{T}}})
+  nameWithType.vb: ApplicationRepository.GetAsync(Of T)(Expression(Of Func(Of T, Boolean)), Func(Of IQueryable(Of T), IQueryable(Of T)))
+  fullName.vb: CampusCrafter.Data.ApplicationRepository.GetAsync(Of T)(System.Linq.Expressions.Expression(Of System.Func(Of T, Boolean)), System.Func(Of System.Linq.IQueryable(Of T), System.Linq.IQueryable(Of T)))
+  name.vb: GetAsync(Of T)(Expression(Of Func(Of T, Boolean)), Func(Of IQueryable(Of T), IQueryable(Of T)))
+- uid: CampusCrafter.Data.ApplicationRepository.Add``1(``0)
+  commentId: M:CampusCrafter.Data.ApplicationRepository.Add``1(``0)
+  id: Add``1(``0)
+  parent: CampusCrafter.Data.ApplicationRepository
+  langs:
+  - csharp
+  - vb
+  name: Add<T>(T)
+  nameWithType: ApplicationRepository.Add<T>(T)
+  fullName: CampusCrafter.Data.ApplicationRepository.Add<T>(T)
+  type: Method
+  source:
+    remote:
+      path: CampusCrafter/Data/ApplicationRepository.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: Add
+    path: CampusCrafter/Data/ApplicationRepository.cs
+    startLine: 24
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Data
+  example: []
+  syntax:
+    content: 'public void Add<T>(T value) where T : class'
+    parameters:
+    - id: value
+      type: '{T}'
+    typeParameters:
+    - id: T
+    content.vb: Public Sub Add(Of T As Class)(value As T)
+  overload: CampusCrafter.Data.ApplicationRepository.Add*
+  implements:
+  - CampusCrafter.Data.IRepository.Add``1({T})
+  nameWithType.vb: ApplicationRepository.Add(Of T)(T)
+  fullName.vb: CampusCrafter.Data.ApplicationRepository.Add(Of T)(T)
+  name.vb: Add(Of T)(T)
+- uid: CampusCrafter.Data.ApplicationRepository.Update``1(``0)
+  commentId: M:CampusCrafter.Data.ApplicationRepository.Update``1(``0)
+  id: Update``1(``0)
+  parent: CampusCrafter.Data.ApplicationRepository
+  langs:
+  - csharp
+  - vb
+  name: Update<T>(T)
+  nameWithType: ApplicationRepository.Update<T>(T)
+  fullName: CampusCrafter.Data.ApplicationRepository.Update<T>(T)
+  type: Method
+  source:
+    remote:
+      path: CampusCrafter/Data/ApplicationRepository.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: Update
+    path: CampusCrafter/Data/ApplicationRepository.cs
+    startLine: 29
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Data
+  example: []
+  syntax:
+    content: 'public void Update<T>(T value) where T : class'
+    parameters:
+    - id: value
+      type: '{T}'
+    typeParameters:
+    - id: T
+    content.vb: Public Sub Update(Of T As Class)(value As T)
+  overload: CampusCrafter.Data.ApplicationRepository.Update*
+  implements:
+  - CampusCrafter.Data.IRepository.Update``1({T})
+  nameWithType.vb: ApplicationRepository.Update(Of T)(T)
+  fullName.vb: CampusCrafter.Data.ApplicationRepository.Update(Of T)(T)
+  name.vb: Update(Of T)(T)
+- uid: CampusCrafter.Data.ApplicationRepository.Delete``1(``0)
+  commentId: M:CampusCrafter.Data.ApplicationRepository.Delete``1(``0)
+  id: Delete``1(``0)
+  parent: CampusCrafter.Data.ApplicationRepository
+  langs:
+  - csharp
+  - vb
+  name: Delete<T>(T)
+  nameWithType: ApplicationRepository.Delete<T>(T)
+  fullName: CampusCrafter.Data.ApplicationRepository.Delete<T>(T)
+  type: Method
+  source:
+    remote:
+      path: CampusCrafter/Data/ApplicationRepository.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: Delete
+    path: CampusCrafter/Data/ApplicationRepository.cs
+    startLine: 34
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Data
+  example: []
+  syntax:
+    content: 'public void Delete<T>(T value) where T : class'
+    parameters:
+    - id: value
+      type: '{T}'
+    typeParameters:
+    - id: T
+    content.vb: Public Sub Delete(Of T As Class)(value As T)
+  overload: CampusCrafter.Data.ApplicationRepository.Delete*
+  implements:
+  - CampusCrafter.Data.IRepository.Delete``1({T})
+  nameWithType.vb: ApplicationRepository.Delete(Of T)(T)
+  fullName.vb: CampusCrafter.Data.ApplicationRepository.Delete(Of T)(T)
+  name.vb: Delete(Of T)(T)
+- uid: CampusCrafter.Data.ApplicationRepository.SaveChangesAsync
+  commentId: M:CampusCrafter.Data.ApplicationRepository.SaveChangesAsync
+  id: SaveChangesAsync
+  parent: CampusCrafter.Data.ApplicationRepository
+  langs:
+  - csharp
+  - vb
+  name: SaveChangesAsync()
+  nameWithType: ApplicationRepository.SaveChangesAsync()
+  fullName: CampusCrafter.Data.ApplicationRepository.SaveChangesAsync()
+  type: Method
+  source:
+    remote:
+      path: CampusCrafter/Data/ApplicationRepository.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: SaveChangesAsync
+    path: CampusCrafter/Data/ApplicationRepository.cs
+    startLine: 39
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Data
+  example: []
+  syntax:
+    content: public Task SaveChangesAsync()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function SaveChangesAsync() As Task
+  overload: CampusCrafter.Data.ApplicationRepository.SaveChangesAsync*
+  implements:
+  - CampusCrafter.Data.IRepository.SaveChangesAsync
+- uid: CampusCrafter.Data.ApplicationRepository.AssignScoreToScholarlyAchievement(CampusCrafter.Models.ScholarlyAchievement,System.Decimal)
+  commentId: M:CampusCrafter.Data.ApplicationRepository.AssignScoreToScholarlyAchievement(CampusCrafter.Models.ScholarlyAchievement,System.Decimal)
+  id: AssignScoreToScholarlyAchievement(CampusCrafter.Models.ScholarlyAchievement,System.Decimal)
+  parent: CampusCrafter.Data.ApplicationRepository
+  langs:
+  - csharp
+  - vb
+  name: AssignScoreToScholarlyAchievement(ScholarlyAchievement, decimal)
+  nameWithType: ApplicationRepository.AssignScoreToScholarlyAchievement(ScholarlyAchievement, decimal)
+  fullName: CampusCrafter.Data.ApplicationRepository.AssignScoreToScholarlyAchievement(CampusCrafter.Models.ScholarlyAchievement, decimal)
+  type: Method
+  source:
+    remote:
+      path: CampusCrafter/Data/ApplicationRepository.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: AssignScoreToScholarlyAchievement
+    path: CampusCrafter/Data/ApplicationRepository.cs
+    startLine: 44
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Data
+  syntax:
+    content: public void AssignScoreToScholarlyAchievement(ScholarlyAchievement achievement, decimal score)
+    parameters:
+    - id: achievement
+      type: CampusCrafter.Models.ScholarlyAchievement
+    - id: score
+      type: System.Decimal
+    content.vb: Public Sub AssignScoreToScholarlyAchievement(achievement As ScholarlyAchievement, score As Decimal)
+  overload: CampusCrafter.Data.ApplicationRepository.AssignScoreToScholarlyAchievement*
+  nameWithType.vb: ApplicationRepository.AssignScoreToScholarlyAchievement(ScholarlyAchievement, Decimal)
+  fullName.vb: CampusCrafter.Data.ApplicationRepository.AssignScoreToScholarlyAchievement(CampusCrafter.Models.ScholarlyAchievement, Decimal)
+  name.vb: AssignScoreToScholarlyAchievement(ScholarlyAchievement, Decimal)
+- uid: CampusCrafter.Data.ApplicationRepository.AcceptApplication(CampusCrafter.Models.CandidateApplication)
+  commentId: M:CampusCrafter.Data.ApplicationRepository.AcceptApplication(CampusCrafter.Models.CandidateApplication)
+  id: AcceptApplication(CampusCrafter.Models.CandidateApplication)
+  parent: CampusCrafter.Data.ApplicationRepository
+  langs:
+  - csharp
+  - vb
+  name: AcceptApplication(CandidateApplication)
+  nameWithType: ApplicationRepository.AcceptApplication(CandidateApplication)
+  fullName: CampusCrafter.Data.ApplicationRepository.AcceptApplication(CampusCrafter.Models.CandidateApplication)
+  type: Method
+  source:
+    remote:
+      path: CampusCrafter/Data/ApplicationRepository.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: AcceptApplication
+    path: CampusCrafter/Data/ApplicationRepository.cs
+    startLine: 77
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Data
+  syntax:
+    content: public bool AcceptApplication(CandidateApplication application)
+    parameters:
+    - id: application
+      type: CampusCrafter.Models.CandidateApplication
+    return:
+      type: System.Boolean
+    content.vb: Public Function AcceptApplication(application As CandidateApplication) As Boolean
+  overload: CampusCrafter.Data.ApplicationRepository.AcceptApplication*
+- uid: CampusCrafter.Data.ApplicationRepository.RejectApplication(CampusCrafter.Models.CandidateApplication,System.String)
+  commentId: M:CampusCrafter.Data.ApplicationRepository.RejectApplication(CampusCrafter.Models.CandidateApplication,System.String)
+  id: RejectApplication(CampusCrafter.Models.CandidateApplication,System.String)
+  parent: CampusCrafter.Data.ApplicationRepository
+  langs:
+  - csharp
+  - vb
+  name: RejectApplication(CandidateApplication, string)
+  nameWithType: ApplicationRepository.RejectApplication(CandidateApplication, string)
+  fullName: CampusCrafter.Data.ApplicationRepository.RejectApplication(CampusCrafter.Models.CandidateApplication, string)
+  type: Method
+  source:
+    remote:
+      path: CampusCrafter/Data/ApplicationRepository.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: RejectApplication
+    path: CampusCrafter/Data/ApplicationRepository.cs
+    startLine: 80
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Data
+  syntax:
+    content: public bool RejectApplication(CandidateApplication application, string rejectReason)
+    parameters:
+    - id: application
+      type: CampusCrafter.Models.CandidateApplication
+    - id: rejectReason
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Function RejectApplication(application As CandidateApplication, rejectReason As String) As Boolean
+  overload: CampusCrafter.Data.ApplicationRepository.RejectApplication*
+  nameWithType.vb: ApplicationRepository.RejectApplication(CandidateApplication, String)
+  fullName.vb: CampusCrafter.Data.ApplicationRepository.RejectApplication(CampusCrafter.Models.CandidateApplication, String)
+  name.vb: RejectApplication(CandidateApplication, String)
+- uid: CampusCrafter.Data.ApplicationRepository.MajorsWithIdsAsync(System.Collections.Generic.IEnumerable{System.Int32})
+  commentId: M:CampusCrafter.Data.ApplicationRepository.MajorsWithIdsAsync(System.Collections.Generic.IEnumerable{System.Int32})
+  id: MajorsWithIdsAsync(System.Collections.Generic.IEnumerable{System.Int32})
+  parent: CampusCrafter.Data.ApplicationRepository
+  langs:
+  - csharp
+  - vb
+  name: MajorsWithIdsAsync(IEnumerable<int>)
+  nameWithType: ApplicationRepository.MajorsWithIdsAsync(IEnumerable<int>)
+  fullName: CampusCrafter.Data.ApplicationRepository.MajorsWithIdsAsync(System.Collections.Generic.IEnumerable<int>)
+  type: Method
+  source:
+    remote:
+      path: CampusCrafter/Data/ApplicationRepository.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: MajorsWithIdsAsync
+    path: CampusCrafter/Data/ApplicationRepository.cs
+    startLine: 83
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Data
+  syntax:
+    content: public Task<List<Major>> MajorsWithIdsAsync(IEnumerable<int> ids)
+    parameters:
+    - id: ids
+      type: System.Collections.Generic.IEnumerable{System.Int32}
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{CampusCrafter.Models.Major}}
+    content.vb: Public Function MajorsWithIdsAsync(ids As IEnumerable(Of Integer)) As Task(Of List(Of Major))
+  overload: CampusCrafter.Data.ApplicationRepository.MajorsWithIdsAsync*
+  nameWithType.vb: ApplicationRepository.MajorsWithIdsAsync(IEnumerable(Of Integer))
+  fullName.vb: CampusCrafter.Data.ApplicationRepository.MajorsWithIdsAsync(System.Collections.Generic.IEnumerable(Of Integer))
+  name.vb: MajorsWithIdsAsync(IEnumerable(Of Integer))
+- uid: CampusCrafter.Data.ApplicationRepository.MajorsPrerequisitesFiltered(System.Boolean)
+  commentId: M:CampusCrafter.Data.ApplicationRepository.MajorsPrerequisitesFiltered(System.Boolean)
+  id: MajorsPrerequisitesFiltered(System.Boolean)
+  parent: CampusCrafter.Data.ApplicationRepository
+  langs:
+  - csharp
+  - vb
+  name: MajorsPrerequisitesFiltered(bool)
+  nameWithType: ApplicationRepository.MajorsPrerequisitesFiltered(bool)
+  fullName: CampusCrafter.Data.ApplicationRepository.MajorsPrerequisitesFiltered(bool)
+  type: Method
+  source:
+    remote:
+      path: CampusCrafter/Data/ApplicationRepository.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: MajorsPrerequisitesFiltered
+    path: CampusCrafter/Data/ApplicationRepository.cs
+    startLine: 99
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Data
+  syntax:
+    content: public Task<List<Major>> MajorsPrerequisitesFiltered(bool hasAny)
+    parameters:
+    - id: hasAny
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{CampusCrafter.Models.Major}}
+    content.vb: Public Function MajorsPrerequisitesFiltered(hasAny As Boolean) As Task(Of List(Of Major))
+  overload: CampusCrafter.Data.ApplicationRepository.MajorsPrerequisitesFiltered*
+  nameWithType.vb: ApplicationRepository.MajorsPrerequisitesFiltered(Boolean)
+  fullName.vb: CampusCrafter.Data.ApplicationRepository.MajorsPrerequisitesFiltered(Boolean)
+  name.vb: MajorsPrerequisitesFiltered(Boolean)
+- uid: CampusCrafter.Data.ApplicationRepository.ScoreWeightsFromStudyPlansIds(System.Collections.Generic.IEnumerable{System.Int32})
+  commentId: M:CampusCrafter.Data.ApplicationRepository.ScoreWeightsFromStudyPlansIds(System.Collections.Generic.IEnumerable{System.Int32})
+  id: ScoreWeightsFromStudyPlansIds(System.Collections.Generic.IEnumerable{System.Int32})
+  parent: CampusCrafter.Data.ApplicationRepository
+  langs:
+  - csharp
+  - vb
+  name: ScoreWeightsFromStudyPlansIds(IEnumerable<int>)
+  nameWithType: ApplicationRepository.ScoreWeightsFromStudyPlansIds(IEnumerable<int>)
+  fullName: CampusCrafter.Data.ApplicationRepository.ScoreWeightsFromStudyPlansIds(System.Collections.Generic.IEnumerable<int>)
+  type: Method
+  source:
+    remote:
+      path: CampusCrafter/Data/ApplicationRepository.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: ScoreWeightsFromStudyPlansIds
+    path: CampusCrafter/Data/ApplicationRepository.cs
+    startLine: 114
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Data
+  syntax:
+    content: public Task<List<List<ScoreWeight>>> ScoreWeightsFromStudyPlansIds(IEnumerable<int> ids)
+    parameters:
+    - id: ids
+      type: System.Collections.Generic.IEnumerable{System.Int32}
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{System.Collections.Generic.List{CampusCrafter.Models.ScoreWeight}}}
+    content.vb: Public Function ScoreWeightsFromStudyPlansIds(ids As IEnumerable(Of Integer)) As Task(Of List(Of List(Of ScoreWeight)))
+  overload: CampusCrafter.Data.ApplicationRepository.ScoreWeightsFromStudyPlansIds*
+  nameWithType.vb: ApplicationRepository.ScoreWeightsFromStudyPlansIds(IEnumerable(Of Integer))
+  fullName.vb: CampusCrafter.Data.ApplicationRepository.ScoreWeightsFromStudyPlansIds(System.Collections.Generic.IEnumerable(Of Integer))
+  name.vb: ScoreWeightsFromStudyPlansIds(IEnumerable(Of Integer))
+- uid: CampusCrafter.Data.ApplicationRepository.GetMajorsWithScoreWeightsAsync
+  commentId: M:CampusCrafter.Data.ApplicationRepository.GetMajorsWithScoreWeightsAsync
+  id: GetMajorsWithScoreWeightsAsync
+  parent: CampusCrafter.Data.ApplicationRepository
+  langs:
+  - csharp
+  - vb
+  name: GetMajorsWithScoreWeightsAsync()
+  nameWithType: ApplicationRepository.GetMajorsWithScoreWeightsAsync()
+  fullName: CampusCrafter.Data.ApplicationRepository.GetMajorsWithScoreWeightsAsync()
+  type: Method
+  source:
+    remote:
+      path: CampusCrafter/Data/ApplicationRepository.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: GetMajorsWithScoreWeightsAsync
+    path: CampusCrafter/Data/ApplicationRepository.cs
+    startLine: 129
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Data
+  syntax:
+    content: public Task<List<Major>> GetMajorsWithScoreWeightsAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{CampusCrafter.Models.Major}}
+    content.vb: Public Function GetMajorsWithScoreWeightsAsync() As Task(Of List(Of Major))
+  overload: CampusCrafter.Data.ApplicationRepository.GetMajorsWithScoreWeightsAsync*
+references:
+- uid: CampusCrafter.Data
+  commentId: N:CampusCrafter.Data
+  href: CampusCrafter.html
+  name: CampusCrafter.Data
+  nameWithType: CampusCrafter.Data
+  fullName: CampusCrafter.Data
+  spec.csharp:
+  - uid: CampusCrafter
+    name: CampusCrafter
+    href: CampusCrafter.html
+  - name: .
+  - uid: CampusCrafter.Data
+    name: Data
+    href: CampusCrafter.Data.html
+  spec.vb:
+  - uid: CampusCrafter
+    name: CampusCrafter
+    href: CampusCrafter.html
+  - name: .
+  - uid: CampusCrafter.Data
+    name: Data
+    href: CampusCrafter.Data.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: CampusCrafter.Data.IRepository
+  commentId: T:CampusCrafter.Data.IRepository
+  parent: CampusCrafter.Data
+  href: CampusCrafter.Data.IRepository.html
+  name: IRepository
+  nameWithType: IRepository
+  fullName: CampusCrafter.Data.IRepository
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: CampusCrafter.Data.ApplicationRepository.#ctor*
+  commentId: Overload:CampusCrafter.Data.ApplicationRepository.#ctor
+  href: CampusCrafter.Data.ApplicationRepository.html#CampusCrafter_Data_ApplicationRepository__ctor_CampusCrafter_Data_ApplicationDbContext_
+  name: ApplicationRepository
+  nameWithType: ApplicationRepository.ApplicationRepository
+  fullName: CampusCrafter.Data.ApplicationRepository.ApplicationRepository
+  nameWithType.vb: ApplicationRepository.New
+  fullName.vb: CampusCrafter.Data.ApplicationRepository.New
+  name.vb: New
+- uid: CampusCrafter.Data.ApplicationDbContext
+  commentId: T:CampusCrafter.Data.ApplicationDbContext
+  parent: CampusCrafter.Data
+  href: CampusCrafter.Data.ApplicationDbContext.html
+  name: ApplicationDbContext
+  nameWithType: ApplicationDbContext
+  fullName: CampusCrafter.Data.ApplicationDbContext
+- uid: CampusCrafter.Data.ApplicationRepository.Context*
+  commentId: Overload:CampusCrafter.Data.ApplicationRepository.Context
+  href: CampusCrafter.Data.ApplicationRepository.html#CampusCrafter_Data_ApplicationRepository_Context
+  name: Context
+  nameWithType: ApplicationRepository.Context
+  fullName: CampusCrafter.Data.ApplicationRepository.Context
+- uid: CampusCrafter.Data.ApplicationRepository.GetAllAsync*
+  commentId: Overload:CampusCrafter.Data.ApplicationRepository.GetAllAsync
+  href: CampusCrafter.Data.ApplicationRepository.html#CampusCrafter_Data_ApplicationRepository_GetAllAsync__1_System_Func_System_Linq_IQueryable___0__System_Linq_IQueryable___0___
+  name: GetAllAsync
+  nameWithType: ApplicationRepository.GetAllAsync
+  fullName: CampusCrafter.Data.ApplicationRepository.GetAllAsync
+- uid: CampusCrafter.Data.IRepository.GetAllAsync``1(System.Func{System.Linq.IQueryable{{T}},System.Linq.IQueryable{{T}}})
+  commentId: M:CampusCrafter.Data.IRepository.GetAllAsync``1(System.Func{System.Linq.IQueryable{``0},System.Linq.IQueryable{``0}})
+  parent: CampusCrafter.Data.IRepository
+  definition: CampusCrafter.Data.IRepository.GetAllAsync``1(System.Func{System.Linq.IQueryable{``0},System.Linq.IQueryable{``0}})
+  href: CampusCrafter.Data.IRepository.html#CampusCrafter_Data_IRepository_GetAllAsync__1_System_Func_System_Linq_IQueryable___0__System_Linq_IQueryable___0___
+  name: GetAllAsync<T>(Func<IQueryable<T>, IQueryable<T>>)
+  nameWithType: IRepository.GetAllAsync<T>(Func<IQueryable<T>, IQueryable<T>>)
+  fullName: CampusCrafter.Data.IRepository.GetAllAsync<T>(System.Func<System.Linq.IQueryable<T>, System.Linq.IQueryable<T>>)
+  nameWithType.vb: IRepository.GetAllAsync(Of T)(Func(Of IQueryable(Of T), IQueryable(Of T)))
+  fullName.vb: CampusCrafter.Data.IRepository.GetAllAsync(Of T)(System.Func(Of System.Linq.IQueryable(Of T), System.Linq.IQueryable(Of T)))
+  name.vb: GetAllAsync(Of T)(Func(Of IQueryable(Of T), IQueryable(Of T)))
+  spec.csharp:
+  - uid: CampusCrafter.Data.IRepository.GetAllAsync``1(System.Func{System.Linq.IQueryable{``0},System.Linq.IQueryable{``0}})
+    name: GetAllAsync
+    href: CampusCrafter.Data.IRepository.html#CampusCrafter_Data_IRepository_GetAllAsync__1_System_Func_System_Linq_IQueryable___0__System_Linq_IQueryable___0___
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: CampusCrafter.Data.IRepository.GetAllAsync``1(System.Func{System.Linq.IQueryable{``0},System.Linq.IQueryable{``0}})
+    name: GetAllAsync
+    href: CampusCrafter.Data.IRepository.html#CampusCrafter_Data_IRepository_GetAllAsync__1_System_Func_System_Linq_IQueryable___0__System_Linq_IQueryable___0___
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: )
+- uid: System.Func{System.Linq.IQueryable{{T}},System.Linq.IQueryable{{T}}}
+  commentId: T:System.Func{System.Linq.IQueryable{``0},System.Linq.IQueryable{``0}}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<IQueryable<T>, IQueryable<T>>
+  nameWithType: Func<IQueryable<T>, IQueryable<T>>
+  fullName: System.Func<System.Linq.IQueryable<T>, System.Linq.IQueryable<T>>
+  nameWithType.vb: Func(Of IQueryable(Of T), IQueryable(Of T))
+  fullName.vb: System.Func(Of System.Linq.IQueryable(Of T), System.Linq.IQueryable(Of T))
+  name.vb: Func(Of IQueryable(Of T), IQueryable(Of T))
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.List{{T}}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.List{``0}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<List<T>>
+  nameWithType: Task<List<T>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.List<T>>
+  nameWithType.vb: Task(Of List(Of T))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of T))
+  name.vb: Task(Of List(Of T))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: CampusCrafter.Data.IRepository.GetAllAsync``1(System.Func{System.Linq.IQueryable{``0},System.Linq.IQueryable{``0}})
+  commentId: M:CampusCrafter.Data.IRepository.GetAllAsync``1(System.Func{System.Linq.IQueryable{``0},System.Linq.IQueryable{``0}})
+  isExternal: true
+  href: CampusCrafter.Data.IRepository.html#CampusCrafter_Data_IRepository_GetAllAsync__1_System_Func_System_Linq_IQueryable___0__System_Linq_IQueryable___0___
+  name: GetAllAsync<T>(Func<IQueryable<T>, IQueryable<T>>)
+  nameWithType: IRepository.GetAllAsync<T>(Func<IQueryable<T>, IQueryable<T>>)
+  fullName: CampusCrafter.Data.IRepository.GetAllAsync<T>(System.Func<System.Linq.IQueryable<T>, System.Linq.IQueryable<T>>)
+  nameWithType.vb: IRepository.GetAllAsync(Of T)(Func(Of IQueryable(Of T), IQueryable(Of T)))
+  fullName.vb: CampusCrafter.Data.IRepository.GetAllAsync(Of T)(System.Func(Of System.Linq.IQueryable(Of T), System.Linq.IQueryable(Of T)))
+  name.vb: GetAllAsync(Of T)(Func(Of IQueryable(Of T), IQueryable(Of T)))
+  spec.csharp:
+  - uid: CampusCrafter.Data.IRepository.GetAllAsync``1(System.Func{System.Linq.IQueryable{``0},System.Linq.IQueryable{``0}})
+    name: GetAllAsync
+    href: CampusCrafter.Data.IRepository.html#CampusCrafter_Data_IRepository_GetAllAsync__1_System_Func_System_Linq_IQueryable___0__System_Linq_IQueryable___0___
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: CampusCrafter.Data.IRepository.GetAllAsync``1(System.Func{System.Linq.IQueryable{``0},System.Linq.IQueryable{``0}})
+    name: GetAllAsync
+    href: CampusCrafter.Data.IRepository.html#CampusCrafter_Data_IRepository_GetAllAsync__1_System_Func_System_Linq_IQueryable___0__System_Linq_IQueryable___0___
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: CampusCrafter.Data.ApplicationRepository.GetAsync*
+  commentId: Overload:CampusCrafter.Data.ApplicationRepository.GetAsync
+  href: CampusCrafter.Data.ApplicationRepository.html#CampusCrafter_Data_ApplicationRepository_GetAsync__1_System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_Func_System_Linq_IQueryable___0__System_Linq_IQueryable___0___
+  name: GetAsync
+  nameWithType: ApplicationRepository.GetAsync
+  fullName: CampusCrafter.Data.ApplicationRepository.GetAsync
+- uid: CampusCrafter.Data.IRepository.GetAsync``1(System.Linq.Expressions.Expression{System.Func{{T},System.Boolean}},System.Func{System.Linq.IQueryable{{T}},System.Linq.IQueryable{{T}}})
+  commentId: M:CampusCrafter.Data.IRepository.GetAsync``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Func{System.Linq.IQueryable{``0},System.Linq.IQueryable{``0}})
+  parent: CampusCrafter.Data.IRepository
+  definition: CampusCrafter.Data.IRepository.GetAsync``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Func{System.Linq.IQueryable{``0},System.Linq.IQueryable{``0}})
+  href: CampusCrafter.Data.IRepository.html#CampusCrafter_Data_IRepository_GetAsync__1_System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_Func_System_Linq_IQueryable___0__System_Linq_IQueryable___0___
+  name: GetAsync<T>(Expression<Func<T, bool>>, Func<IQueryable<T>, IQueryable<T>>)
+  nameWithType: IRepository.GetAsync<T>(Expression<Func<T, bool>>, Func<IQueryable<T>, IQueryable<T>>)
+  fullName: CampusCrafter.Data.IRepository.GetAsync<T>(System.Linq.Expressions.Expression<System.Func<T, bool>>, System.Func<System.Linq.IQueryable<T>, System.Linq.IQueryable<T>>)
+  nameWithType.vb: IRepository.GetAsync(Of T)(Expression(Of Func(Of T, Boolean)), Func(Of IQueryable(Of T), IQueryable(Of T)))
+  fullName.vb: CampusCrafter.Data.IRepository.GetAsync(Of T)(System.Linq.Expressions.Expression(Of System.Func(Of T, Boolean)), System.Func(Of System.Linq.IQueryable(Of T), System.Linq.IQueryable(Of T)))
+  name.vb: GetAsync(Of T)(Expression(Of Func(Of T, Boolean)), Func(Of IQueryable(Of T), IQueryable(Of T)))
+  spec.csharp:
+  - uid: CampusCrafter.Data.IRepository.GetAsync``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Func{System.Linq.IQueryable{``0},System.Linq.IQueryable{``0}})
+    name: GetAsync
+    href: CampusCrafter.Data.IRepository.html#CampusCrafter_Data_IRepository_GetAsync__1_System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_Func_System_Linq_IQueryable___0__System_Linq_IQueryable___0___
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: CampusCrafter.Data.IRepository.GetAsync``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Func{System.Linq.IQueryable{``0},System.Linq.IQueryable{``0}})
+    name: GetAsync
+    href: CampusCrafter.Data.IRepository.html#CampusCrafter_Data_IRepository_GetAsync__1_System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_Func_System_Linq_IQueryable___0__System_Linq_IQueryable___0___
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: )
+- uid: System.Linq.Expressions.Expression{System.Func{{T},System.Boolean}}
+  commentId: T:System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}
+  parent: System.Linq.Expressions
+  definition: System.Linq.Expressions.Expression`1
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: Expression<Func<T, bool>>
+  nameWithType: Expression<Func<T, bool>>
+  fullName: System.Linq.Expressions.Expression<System.Func<T, bool>>
+  nameWithType.vb: Expression(Of Func(Of T, Boolean))
+  fullName.vb: System.Linq.Expressions.Expression(Of System.Func(Of T, Boolean))
+  name.vb: Expression(Of Func(Of T, Boolean))
+  spec.csharp:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: System.Threading.Tasks.Task{{T}}
+  commentId: T:System.Threading.Tasks.Task{``0}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<T>
+  nameWithType: Task<T>
+  fullName: System.Threading.Tasks.Task<T>
+  nameWithType.vb: Task(Of T)
+  fullName.vb: System.Threading.Tasks.Task(Of T)
+  name.vb: Task(Of T)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: CampusCrafter.Data.IRepository.GetAsync``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Func{System.Linq.IQueryable{``0},System.Linq.IQueryable{``0}})
+  commentId: M:CampusCrafter.Data.IRepository.GetAsync``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Func{System.Linq.IQueryable{``0},System.Linq.IQueryable{``0}})
+  isExternal: true
+  href: CampusCrafter.Data.IRepository.html#CampusCrafter_Data_IRepository_GetAsync__1_System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_Func_System_Linq_IQueryable___0__System_Linq_IQueryable___0___
+  name: GetAsync<T>(Expression<Func<T, bool>>, Func<IQueryable<T>, IQueryable<T>>)
+  nameWithType: IRepository.GetAsync<T>(Expression<Func<T, bool>>, Func<IQueryable<T>, IQueryable<T>>)
+  fullName: CampusCrafter.Data.IRepository.GetAsync<T>(System.Linq.Expressions.Expression<System.Func<T, bool>>, System.Func<System.Linq.IQueryable<T>, System.Linq.IQueryable<T>>)
+  nameWithType.vb: IRepository.GetAsync(Of T)(Expression(Of Func(Of T, Boolean)), Func(Of IQueryable(Of T), IQueryable(Of T)))
+  fullName.vb: CampusCrafter.Data.IRepository.GetAsync(Of T)(System.Linq.Expressions.Expression(Of System.Func(Of T, Boolean)), System.Func(Of System.Linq.IQueryable(Of T), System.Linq.IQueryable(Of T)))
+  name.vb: GetAsync(Of T)(Expression(Of Func(Of T, Boolean)), Func(Of IQueryable(Of T), IQueryable(Of T)))
+  spec.csharp:
+  - uid: CampusCrafter.Data.IRepository.GetAsync``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Func{System.Linq.IQueryable{``0},System.Linq.IQueryable{``0}})
+    name: GetAsync
+    href: CampusCrafter.Data.IRepository.html#CampusCrafter_Data_IRepository_GetAsync__1_System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_Func_System_Linq_IQueryable___0__System_Linq_IQueryable___0___
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: CampusCrafter.Data.IRepository.GetAsync``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Func{System.Linq.IQueryable{``0},System.Linq.IQueryable{``0}})
+    name: GetAsync
+    href: CampusCrafter.Data.IRepository.html#CampusCrafter_Data_IRepository_GetAsync__1_System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_Func_System_Linq_IQueryable___0__System_Linq_IQueryable___0___
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: )
+- uid: System.Linq.Expressions.Expression`1
+  commentId: T:System.Linq.Expressions.Expression`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: Expression<TDelegate>
+  nameWithType: Expression<TDelegate>
+  fullName: System.Linq.Expressions.Expression<TDelegate>
+  nameWithType.vb: Expression(Of TDelegate)
+  fullName.vb: System.Linq.Expressions.Expression(Of TDelegate)
+  name.vb: Expression(Of TDelegate)
+  spec.csharp:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - name: TDelegate
+  - name: '>'
+  spec.vb:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDelegate
+  - name: )
+- uid: System.Linq.Expressions
+  commentId: N:System.Linq.Expressions
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Linq.Expressions
+  nameWithType: System.Linq.Expressions
+  fullName: System.Linq.Expressions
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Linq
+    name: Linq
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq
+  - name: .
+  - uid: System.Linq.Expressions
+    name: Expressions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Linq
+    name: Linq
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq
+  - name: .
+  - uid: System.Linq.Expressions
+    name: Expressions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions
+- uid: CampusCrafter.Data.ApplicationRepository.Add*
+  commentId: Overload:CampusCrafter.Data.ApplicationRepository.Add
+  href: CampusCrafter.Data.ApplicationRepository.html#CampusCrafter_Data_ApplicationRepository_Add__1___0_
+  name: Add
+  nameWithType: ApplicationRepository.Add
+  fullName: CampusCrafter.Data.ApplicationRepository.Add
+- uid: CampusCrafter.Data.IRepository.Add``1({T})
+  commentId: M:CampusCrafter.Data.IRepository.Add``1(``0)
+  parent: CampusCrafter.Data.IRepository
+  definition: CampusCrafter.Data.IRepository.Add``1(``0)
+  href: CampusCrafter.Data.IRepository.html#CampusCrafter_Data_IRepository_Add__1___0_
+  name: Add<T>(T)
+  nameWithType: IRepository.Add<T>(T)
+  fullName: CampusCrafter.Data.IRepository.Add<T>(T)
+  nameWithType.vb: IRepository.Add(Of T)(T)
+  fullName.vb: CampusCrafter.Data.IRepository.Add(Of T)(T)
+  name.vb: Add(Of T)(T)
+  spec.csharp:
+  - uid: CampusCrafter.Data.IRepository.Add``1(``0)
+    name: Add
+    href: CampusCrafter.Data.IRepository.html#CampusCrafter_Data_IRepository_Add__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: CampusCrafter.Data.IRepository.Add``1(``0)
+    name: Add
+    href: CampusCrafter.Data.IRepository.html#CampusCrafter_Data_IRepository_Add__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: CampusCrafter.Data.IRepository.Add``1(``0)
+  commentId: M:CampusCrafter.Data.IRepository.Add``1(``0)
+  href: CampusCrafter.Data.IRepository.html#CampusCrafter_Data_IRepository_Add__1___0_
+  name: Add<T>(T)
+  nameWithType: IRepository.Add<T>(T)
+  fullName: CampusCrafter.Data.IRepository.Add<T>(T)
+  nameWithType.vb: IRepository.Add(Of T)(T)
+  fullName.vb: CampusCrafter.Data.IRepository.Add(Of T)(T)
+  name.vb: Add(Of T)(T)
+  spec.csharp:
+  - uid: CampusCrafter.Data.IRepository.Add``1(``0)
+    name: Add
+    href: CampusCrafter.Data.IRepository.html#CampusCrafter_Data_IRepository_Add__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: CampusCrafter.Data.IRepository.Add``1(``0)
+    name: Add
+    href: CampusCrafter.Data.IRepository.html#CampusCrafter_Data_IRepository_Add__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: CampusCrafter.Data.ApplicationRepository.Update*
+  commentId: Overload:CampusCrafter.Data.ApplicationRepository.Update
+  href: CampusCrafter.Data.ApplicationRepository.html#CampusCrafter_Data_ApplicationRepository_Update__1___0_
+  name: Update
+  nameWithType: ApplicationRepository.Update
+  fullName: CampusCrafter.Data.ApplicationRepository.Update
+- uid: CampusCrafter.Data.IRepository.Update``1({T})
+  commentId: M:CampusCrafter.Data.IRepository.Update``1(``0)
+  parent: CampusCrafter.Data.IRepository
+  definition: CampusCrafter.Data.IRepository.Update``1(``0)
+  href: CampusCrafter.Data.IRepository.html#CampusCrafter_Data_IRepository_Update__1___0_
+  name: Update<T>(T)
+  nameWithType: IRepository.Update<T>(T)
+  fullName: CampusCrafter.Data.IRepository.Update<T>(T)
+  nameWithType.vb: IRepository.Update(Of T)(T)
+  fullName.vb: CampusCrafter.Data.IRepository.Update(Of T)(T)
+  name.vb: Update(Of T)(T)
+  spec.csharp:
+  - uid: CampusCrafter.Data.IRepository.Update``1(``0)
+    name: Update
+    href: CampusCrafter.Data.IRepository.html#CampusCrafter_Data_IRepository_Update__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: CampusCrafter.Data.IRepository.Update``1(``0)
+    name: Update
+    href: CampusCrafter.Data.IRepository.html#CampusCrafter_Data_IRepository_Update__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: CampusCrafter.Data.IRepository.Update``1(``0)
+  commentId: M:CampusCrafter.Data.IRepository.Update``1(``0)
+  href: CampusCrafter.Data.IRepository.html#CampusCrafter_Data_IRepository_Update__1___0_
+  name: Update<T>(T)
+  nameWithType: IRepository.Update<T>(T)
+  fullName: CampusCrafter.Data.IRepository.Update<T>(T)
+  nameWithType.vb: IRepository.Update(Of T)(T)
+  fullName.vb: CampusCrafter.Data.IRepository.Update(Of T)(T)
+  name.vb: Update(Of T)(T)
+  spec.csharp:
+  - uid: CampusCrafter.Data.IRepository.Update``1(``0)
+    name: Update
+    href: CampusCrafter.Data.IRepository.html#CampusCrafter_Data_IRepository_Update__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: CampusCrafter.Data.IRepository.Update``1(``0)
+    name: Update
+    href: CampusCrafter.Data.IRepository.html#CampusCrafter_Data_IRepository_Update__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: CampusCrafter.Data.ApplicationRepository.Delete*
+  commentId: Overload:CampusCrafter.Data.ApplicationRepository.Delete
+  href: CampusCrafter.Data.ApplicationRepository.html#CampusCrafter_Data_ApplicationRepository_Delete__1___0_
+  name: Delete
+  nameWithType: ApplicationRepository.Delete
+  fullName: CampusCrafter.Data.ApplicationRepository.Delete
+- uid: CampusCrafter.Data.IRepository.Delete``1({T})
+  commentId: M:CampusCrafter.Data.IRepository.Delete``1(``0)
+  parent: CampusCrafter.Data.IRepository
+  definition: CampusCrafter.Data.IRepository.Delete``1(``0)
+  href: CampusCrafter.Data.IRepository.html#CampusCrafter_Data_IRepository_Delete__1___0_
+  name: Delete<T>(T)
+  nameWithType: IRepository.Delete<T>(T)
+  fullName: CampusCrafter.Data.IRepository.Delete<T>(T)
+  nameWithType.vb: IRepository.Delete(Of T)(T)
+  fullName.vb: CampusCrafter.Data.IRepository.Delete(Of T)(T)
+  name.vb: Delete(Of T)(T)
+  spec.csharp:
+  - uid: CampusCrafter.Data.IRepository.Delete``1(``0)
+    name: Delete
+    href: CampusCrafter.Data.IRepository.html#CampusCrafter_Data_IRepository_Delete__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: CampusCrafter.Data.IRepository.Delete``1(``0)
+    name: Delete
+    href: CampusCrafter.Data.IRepository.html#CampusCrafter_Data_IRepository_Delete__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: CampusCrafter.Data.IRepository.Delete``1(``0)
+  commentId: M:CampusCrafter.Data.IRepository.Delete``1(``0)
+  href: CampusCrafter.Data.IRepository.html#CampusCrafter_Data_IRepository_Delete__1___0_
+  name: Delete<T>(T)
+  nameWithType: IRepository.Delete<T>(T)
+  fullName: CampusCrafter.Data.IRepository.Delete<T>(T)
+  nameWithType.vb: IRepository.Delete(Of T)(T)
+  fullName.vb: CampusCrafter.Data.IRepository.Delete(Of T)(T)
+  name.vb: Delete(Of T)(T)
+  spec.csharp:
+  - uid: CampusCrafter.Data.IRepository.Delete``1(``0)
+    name: Delete
+    href: CampusCrafter.Data.IRepository.html#CampusCrafter_Data_IRepository_Delete__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: CampusCrafter.Data.IRepository.Delete``1(``0)
+    name: Delete
+    href: CampusCrafter.Data.IRepository.html#CampusCrafter_Data_IRepository_Delete__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: CampusCrafter.Data.ApplicationRepository.SaveChangesAsync*
+  commentId: Overload:CampusCrafter.Data.ApplicationRepository.SaveChangesAsync
+  href: CampusCrafter.Data.ApplicationRepository.html#CampusCrafter_Data_ApplicationRepository_SaveChangesAsync
+  name: SaveChangesAsync
+  nameWithType: ApplicationRepository.SaveChangesAsync
+  fullName: CampusCrafter.Data.ApplicationRepository.SaveChangesAsync
+- uid: CampusCrafter.Data.IRepository.SaveChangesAsync
+  commentId: M:CampusCrafter.Data.IRepository.SaveChangesAsync
+  parent: CampusCrafter.Data.IRepository
+  href: CampusCrafter.Data.IRepository.html#CampusCrafter_Data_IRepository_SaveChangesAsync
+  name: SaveChangesAsync()
+  nameWithType: IRepository.SaveChangesAsync()
+  fullName: CampusCrafter.Data.IRepository.SaveChangesAsync()
+  spec.csharp:
+  - uid: CampusCrafter.Data.IRepository.SaveChangesAsync
+    name: SaveChangesAsync
+    href: CampusCrafter.Data.IRepository.html#CampusCrafter_Data_IRepository_SaveChangesAsync
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: CampusCrafter.Data.IRepository.SaveChangesAsync
+    name: SaveChangesAsync
+    href: CampusCrafter.Data.IRepository.html#CampusCrafter_Data_IRepository_SaveChangesAsync
+  - name: (
+  - name: )
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: CampusCrafter.Data.ApplicationRepository.AssignScoreToScholarlyAchievement*
+  commentId: Overload:CampusCrafter.Data.ApplicationRepository.AssignScoreToScholarlyAchievement
+  href: CampusCrafter.Data.ApplicationRepository.html#CampusCrafter_Data_ApplicationRepository_AssignScoreToScholarlyAchievement_CampusCrafter_Models_ScholarlyAchievement_System_Decimal_
+  name: AssignScoreToScholarlyAchievement
+  nameWithType: ApplicationRepository.AssignScoreToScholarlyAchievement
+  fullName: CampusCrafter.Data.ApplicationRepository.AssignScoreToScholarlyAchievement
+- uid: CampusCrafter.Models.ScholarlyAchievement
+  commentId: T:CampusCrafter.Models.ScholarlyAchievement
+  parent: CampusCrafter.Models
+  href: CampusCrafter.Models.ScholarlyAchievement.html
+  name: ScholarlyAchievement
+  nameWithType: ScholarlyAchievement
+  fullName: CampusCrafter.Models.ScholarlyAchievement
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.decimal
+  name: decimal
+  nameWithType: decimal
+  fullName: decimal
+  nameWithType.vb: Decimal
+  fullName.vb: Decimal
+  name.vb: Decimal
+- uid: CampusCrafter.Models
+  commentId: N:CampusCrafter.Models
+  href: CampusCrafter.html
+  name: CampusCrafter.Models
+  nameWithType: CampusCrafter.Models
+  fullName: CampusCrafter.Models
+  spec.csharp:
+  - uid: CampusCrafter
+    name: CampusCrafter
+    href: CampusCrafter.html
+  - name: .
+  - uid: CampusCrafter.Models
+    name: Models
+    href: CampusCrafter.Models.html
+  spec.vb:
+  - uid: CampusCrafter
+    name: CampusCrafter
+    href: CampusCrafter.html
+  - name: .
+  - uid: CampusCrafter.Models
+    name: Models
+    href: CampusCrafter.Models.html
+- uid: CampusCrafter.Data.ApplicationRepository.AcceptApplication*
+  commentId: Overload:CampusCrafter.Data.ApplicationRepository.AcceptApplication
+  href: CampusCrafter.Data.ApplicationRepository.html#CampusCrafter_Data_ApplicationRepository_AcceptApplication_CampusCrafter_Models_CandidateApplication_
+  name: AcceptApplication
+  nameWithType: ApplicationRepository.AcceptApplication
+  fullName: CampusCrafter.Data.ApplicationRepository.AcceptApplication
+- uid: CampusCrafter.Models.CandidateApplication
+  commentId: T:CampusCrafter.Models.CandidateApplication
+  parent: CampusCrafter.Models
+  href: CampusCrafter.Models.CandidateApplication.html
+  name: CandidateApplication
+  nameWithType: CandidateApplication
+  fullName: CampusCrafter.Models.CandidateApplication
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: CampusCrafter.Data.ApplicationRepository.RejectApplication*
+  commentId: Overload:CampusCrafter.Data.ApplicationRepository.RejectApplication
+  href: CampusCrafter.Data.ApplicationRepository.html#CampusCrafter_Data_ApplicationRepository_RejectApplication_CampusCrafter_Models_CandidateApplication_System_String_
+  name: RejectApplication
+  nameWithType: ApplicationRepository.RejectApplication
+  fullName: CampusCrafter.Data.ApplicationRepository.RejectApplication
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: CampusCrafter.Data.ApplicationRepository.MajorsWithIdsAsync*
+  commentId: Overload:CampusCrafter.Data.ApplicationRepository.MajorsWithIdsAsync
+  href: CampusCrafter.Data.ApplicationRepository.html#CampusCrafter_Data_ApplicationRepository_MajorsWithIdsAsync_System_Collections_Generic_IEnumerable_System_Int32__
+  name: MajorsWithIdsAsync
+  nameWithType: ApplicationRepository.MajorsWithIdsAsync
+  fullName: CampusCrafter.Data.ApplicationRepository.MajorsWithIdsAsync
+- uid: System.Collections.Generic.IEnumerable{System.Int32}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<int>
+  nameWithType: IEnumerable<int>
+  fullName: System.Collections.Generic.IEnumerable<int>
+  nameWithType.vb: IEnumerable(Of Integer)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Integer)
+  name.vb: IEnumerable(Of Integer)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.List{CampusCrafter.Models.Major}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.List{CampusCrafter.Models.Major}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<List<Major>>
+  nameWithType: Task<List<Major>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.List<CampusCrafter.Models.Major>>
+  nameWithType.vb: Task(Of List(Of Major))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of CampusCrafter.Models.Major))
+  name.vb: Task(Of List(Of Major))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: CampusCrafter.Models.Major
+    name: Major
+    href: CampusCrafter.Models.Major.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: CampusCrafter.Models.Major
+    name: Major
+    href: CampusCrafter.Models.Major.html
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: CampusCrafter.Data.ApplicationRepository.MajorsPrerequisitesFiltered*
+  commentId: Overload:CampusCrafter.Data.ApplicationRepository.MajorsPrerequisitesFiltered
+  href: CampusCrafter.Data.ApplicationRepository.html#CampusCrafter_Data_ApplicationRepository_MajorsPrerequisitesFiltered_System_Boolean_
+  name: MajorsPrerequisitesFiltered
+  nameWithType: ApplicationRepository.MajorsPrerequisitesFiltered
+  fullName: CampusCrafter.Data.ApplicationRepository.MajorsPrerequisitesFiltered
+- uid: CampusCrafter.Data.ApplicationRepository.ScoreWeightsFromStudyPlansIds*
+  commentId: Overload:CampusCrafter.Data.ApplicationRepository.ScoreWeightsFromStudyPlansIds
+  href: CampusCrafter.Data.ApplicationRepository.html#CampusCrafter_Data_ApplicationRepository_ScoreWeightsFromStudyPlansIds_System_Collections_Generic_IEnumerable_System_Int32__
+  name: ScoreWeightsFromStudyPlansIds
+  nameWithType: ApplicationRepository.ScoreWeightsFromStudyPlansIds
+  fullName: CampusCrafter.Data.ApplicationRepository.ScoreWeightsFromStudyPlansIds
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.List{System.Collections.Generic.List{CampusCrafter.Models.ScoreWeight}}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.List{System.Collections.Generic.List{CampusCrafter.Models.ScoreWeight}}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<List<List<ScoreWeight>>>
+  nameWithType: Task<List<List<ScoreWeight>>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.List<System.Collections.Generic.List<CampusCrafter.Models.ScoreWeight>>>
+  nameWithType.vb: Task(Of List(Of List(Of ScoreWeight)))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of System.Collections.Generic.List(Of CampusCrafter.Models.ScoreWeight)))
+  name.vb: Task(Of List(Of List(Of ScoreWeight)))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: CampusCrafter.Models.ScoreWeight
+    name: ScoreWeight
+    href: CampusCrafter.Models.ScoreWeight.html
+  - name: '>'
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: CampusCrafter.Models.ScoreWeight
+    name: ScoreWeight
+    href: CampusCrafter.Models.ScoreWeight.html
+  - name: )
+  - name: )
+  - name: )
+- uid: CampusCrafter.Data.ApplicationRepository.GetMajorsWithScoreWeightsAsync*
+  commentId: Overload:CampusCrafter.Data.ApplicationRepository.GetMajorsWithScoreWeightsAsync
+  href: CampusCrafter.Data.ApplicationRepository.html#CampusCrafter_Data_ApplicationRepository_GetMajorsWithScoreWeightsAsync
+  name: GetMajorsWithScoreWeightsAsync
+  nameWithType: ApplicationRepository.GetMajorsWithScoreWeightsAsync
+  fullName: CampusCrafter.Data.ApplicationRepository.GetMajorsWithScoreWeightsAsync

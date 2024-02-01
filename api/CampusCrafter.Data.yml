@@ -1,0 +1,62 @@
+### YamlMime:ManagedReference
+items:
+- uid: CampusCrafter.Data
+  commentId: N:CampusCrafter.Data
+  id: CampusCrafter.Data
+  children:
+  - CampusCrafter.Data.ApplicationDbContext
+  - CampusCrafter.Data.ApplicationRepository
+  - CampusCrafter.Data.IRepository
+  langs:
+  - csharp
+  - vb
+  name: CampusCrafter.Data
+  nameWithType: CampusCrafter.Data
+  fullName: CampusCrafter.Data
+  type: Namespace
+  assemblies:
+  - CampusCrafter
+references:
+- uid: CampusCrafter.Data.ApplicationDbContext
+  commentId: T:CampusCrafter.Data.ApplicationDbContext
+  parent: CampusCrafter.Data
+  href: CampusCrafter.Data.ApplicationDbContext.html
+  name: ApplicationDbContext
+  nameWithType: ApplicationDbContext
+  fullName: CampusCrafter.Data.ApplicationDbContext
+- uid: CampusCrafter.Data.ApplicationRepository
+  commentId: T:CampusCrafter.Data.ApplicationRepository
+  parent: CampusCrafter.Data
+  href: CampusCrafter.Data.ApplicationRepository.html
+  name: ApplicationRepository
+  nameWithType: ApplicationRepository
+  fullName: CampusCrafter.Data.ApplicationRepository
+- uid: CampusCrafter.Data.IRepository
+  commentId: T:CampusCrafter.Data.IRepository
+  parent: CampusCrafter.Data
+  href: CampusCrafter.Data.IRepository.html
+  name: IRepository
+  nameWithType: IRepository
+  fullName: CampusCrafter.Data.IRepository
+- uid: CampusCrafter.Data
+  commentId: N:CampusCrafter.Data
+  href: CampusCrafter.html
+  name: CampusCrafter.Data
+  nameWithType: CampusCrafter.Data
+  fullName: CampusCrafter.Data
+  spec.csharp:
+  - uid: CampusCrafter
+    name: CampusCrafter
+    href: CampusCrafter.html
+  - name: .
+  - uid: CampusCrafter.Data
+    name: Data
+    href: CampusCrafter.Data.html
+  spec.vb:
+  - uid: CampusCrafter
+    name: CampusCrafter
+    href: CampusCrafter.html
+  - name: .
+  - uid: CampusCrafter.Data
+    name: Data
+    href: CampusCrafter.Data.html

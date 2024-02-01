@@ -1,0 +1,112 @@
+### YamlMime:ManagedReference
+items:
+- uid: CampusCrafter.Models.EducationProfile
+  commentId: T:CampusCrafter.Models.EducationProfile
+  id: EducationProfile
+  parent: CampusCrafter.Models
+  children:
+  - CampusCrafter.Models.EducationProfile.Academic
+  - CampusCrafter.Models.EducationProfile.Practical
+  langs:
+  - csharp
+  - vb
+  name: EducationProfile
+  nameWithType: EducationProfile
+  fullName: CampusCrafter.Models.EducationProfile
+  type: Enum
+  source:
+    remote:
+      path: CampusCrafter/Models/EducationProfile.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: EducationProfile
+    path: CampusCrafter/Models/EducationProfile.cs
+    startLine: 2
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: public enum EducationProfile
+    content.vb: Public Enum EducationProfile
+- uid: CampusCrafter.Models.EducationProfile.Academic
+  commentId: F:CampusCrafter.Models.EducationProfile.Academic
+  id: Academic
+  parent: CampusCrafter.Models.EducationProfile
+  langs:
+  - csharp
+  - vb
+  name: Academic
+  nameWithType: EducationProfile.Academic
+  fullName: CampusCrafter.Models.EducationProfile.Academic
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/EducationProfile.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: Academic
+    path: CampusCrafter/Models/EducationProfile.cs
+    startLine: 4
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: Academic = 0
+    return:
+      type: CampusCrafter.Models.EducationProfile
+- uid: CampusCrafter.Models.EducationProfile.Practical
+  commentId: F:CampusCrafter.Models.EducationProfile.Practical
+  id: Practical
+  parent: CampusCrafter.Models.EducationProfile
+  langs:
+  - csharp
+  - vb
+  name: Practical
+  nameWithType: EducationProfile.Practical
+  fullName: CampusCrafter.Models.EducationProfile.Practical
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/EducationProfile.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: Practical
+    path: CampusCrafter/Models/EducationProfile.cs
+    startLine: 5
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: Practical = 1
+    return:
+      type: CampusCrafter.Models.EducationProfile
+references:
+- uid: CampusCrafter.Models
+  commentId: N:CampusCrafter.Models
+  href: CampusCrafter.html
+  name: CampusCrafter.Models
+  nameWithType: CampusCrafter.Models
+  fullName: CampusCrafter.Models
+  spec.csharp:
+  - uid: CampusCrafter
+    name: CampusCrafter
+    href: CampusCrafter.html
+  - name: .
+  - uid: CampusCrafter.Models
+    name: Models
+    href: CampusCrafter.Models.html
+  spec.vb:
+  - uid: CampusCrafter
+    name: CampusCrafter
+    href: CampusCrafter.html
+  - name: .
+  - uid: CampusCrafter.Models
+    name: Models
+    href: CampusCrafter.Models.html
+- uid: CampusCrafter.Models.EducationProfile
+  commentId: T:CampusCrafter.Models.EducationProfile
+  parent: CampusCrafter.Models
+  href: CampusCrafter.Models.EducationProfile.html
+  name: EducationProfile
+  nameWithType: EducationProfile
+  fullName: CampusCrafter.Models.EducationProfile

@@ -1,0 +1,60 @@
+### YamlMime:ManagedReference
+items:
+- uid: CampusCrafter.Utils
+  commentId: N:CampusCrafter.Utils
+  id: CampusCrafter.Utils
+  children:
+  - CampusCrafter.Utils.Role
+  - CampusCrafter.Utils.Roles
+  - CampusCrafter.Utils.ScoreWeightUtil
+  langs:
+  - csharp
+  - vb
+  name: CampusCrafter.Utils
+  nameWithType: CampusCrafter.Utils
+  fullName: CampusCrafter.Utils
+  type: Namespace
+  assemblies:
+  - CampusCrafter
+references:
+- uid: CampusCrafter.Utils.Role
+  commentId: T:CampusCrafter.Utils.Role
+  parent: CampusCrafter.Utils
+  href: CampusCrafter.Utils.Role.html
+  name: Role
+  nameWithType: Role
+  fullName: CampusCrafter.Utils.Role
+- uid: CampusCrafter.Utils.Roles
+  commentId: T:CampusCrafter.Utils.Roles
+  href: CampusCrafter.Utils.Roles.html
+  name: Roles
+  nameWithType: Roles
+  fullName: CampusCrafter.Utils.Roles
+- uid: CampusCrafter.Utils.ScoreWeightUtil
+  commentId: T:CampusCrafter.Utils.ScoreWeightUtil
+  href: CampusCrafter.Utils.ScoreWeightUtil.html
+  name: ScoreWeightUtil
+  nameWithType: ScoreWeightUtil
+  fullName: CampusCrafter.Utils.ScoreWeightUtil
+- uid: CampusCrafter.Utils
+  commentId: N:CampusCrafter.Utils
+  href: CampusCrafter.html
+  name: CampusCrafter.Utils
+  nameWithType: CampusCrafter.Utils
+  fullName: CampusCrafter.Utils
+  spec.csharp:
+  - uid: CampusCrafter
+    name: CampusCrafter
+    href: CampusCrafter.html
+  - name: .
+  - uid: CampusCrafter.Utils
+    name: Utils
+    href: CampusCrafter.Utils.html
+  spec.vb:
+  - uid: CampusCrafter
+    name: CampusCrafter
+    href: CampusCrafter.html
+  - name: .
+  - uid: CampusCrafter.Utils
+    name: Utils
+    href: CampusCrafter.Utils.html

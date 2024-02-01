@@ -1,0 +1,139 @@
+### YamlMime:ManagedReference
+items:
+- uid: CampusCrafter.Models.StageOfStudy
+  commentId: T:CampusCrafter.Models.StageOfStudy
+  id: StageOfStudy
+  parent: CampusCrafter.Models
+  children:
+  - CampusCrafter.Models.StageOfStudy.BachelorDegree
+  - CampusCrafter.Models.StageOfStudy.Stage1
+  - CampusCrafter.Models.StageOfStudy.Stage2
+  langs:
+  - csharp
+  - vb
+  name: StageOfStudy
+  nameWithType: StageOfStudy
+  fullName: CampusCrafter.Models.StageOfStudy
+  type: Enum
+  source:
+    remote:
+      path: CampusCrafter/Models/EducationLevel.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: StageOfStudy
+    path: CampusCrafter/Models/EducationLevel.cs
+    startLine: 2
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: public enum StageOfStudy
+    content.vb: Public Enum StageOfStudy
+- uid: CampusCrafter.Models.StageOfStudy.Stage1
+  commentId: F:CampusCrafter.Models.StageOfStudy.Stage1
+  id: Stage1
+  parent: CampusCrafter.Models.StageOfStudy
+  langs:
+  - csharp
+  - vb
+  name: Stage1
+  nameWithType: StageOfStudy.Stage1
+  fullName: CampusCrafter.Models.StageOfStudy.Stage1
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/EducationLevel.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: Stage1
+    path: CampusCrafter/Models/EducationLevel.cs
+    startLine: 4
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: Stage1 = 0
+    return:
+      type: CampusCrafter.Models.StageOfStudy
+- uid: CampusCrafter.Models.StageOfStudy.Stage2
+  commentId: F:CampusCrafter.Models.StageOfStudy.Stage2
+  id: Stage2
+  parent: CampusCrafter.Models.StageOfStudy
+  langs:
+  - csharp
+  - vb
+  name: Stage2
+  nameWithType: StageOfStudy.Stage2
+  fullName: CampusCrafter.Models.StageOfStudy.Stage2
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/EducationLevel.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: Stage2
+    path: CampusCrafter/Models/EducationLevel.cs
+    startLine: 5
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: Stage2 = 1
+    return:
+      type: CampusCrafter.Models.StageOfStudy
+- uid: CampusCrafter.Models.StageOfStudy.BachelorDegree
+  commentId: F:CampusCrafter.Models.StageOfStudy.BachelorDegree
+  id: BachelorDegree
+  parent: CampusCrafter.Models.StageOfStudy
+  langs:
+  - csharp
+  - vb
+  name: BachelorDegree
+  nameWithType: StageOfStudy.BachelorDegree
+  fullName: CampusCrafter.Models.StageOfStudy.BachelorDegree
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/EducationLevel.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: BachelorDegree
+    path: CampusCrafter/Models/EducationLevel.cs
+    startLine: 6
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: BachelorDegree = 2
+    return:
+      type: CampusCrafter.Models.StageOfStudy
+references:
+- uid: CampusCrafter.Models
+  commentId: N:CampusCrafter.Models
+  href: CampusCrafter.html
+  name: CampusCrafter.Models
+  nameWithType: CampusCrafter.Models
+  fullName: CampusCrafter.Models
+  spec.csharp:
+  - uid: CampusCrafter
+    name: CampusCrafter
+    href: CampusCrafter.html
+  - name: .
+  - uid: CampusCrafter.Models
+    name: Models
+    href: CampusCrafter.Models.html
+  spec.vb:
+  - uid: CampusCrafter
+    name: CampusCrafter
+    href: CampusCrafter.html
+  - name: .
+  - uid: CampusCrafter.Models
+    name: Models
+    href: CampusCrafter.Models.html
+- uid: CampusCrafter.Models.StageOfStudy
+  commentId: T:CampusCrafter.Models.StageOfStudy
+  parent: CampusCrafter.Models
+  href: CampusCrafter.Models.StageOfStudy.html
+  name: StageOfStudy
+  nameWithType: StageOfStudy
+  fullName: CampusCrafter.Models.StageOfStudy

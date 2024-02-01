@@ -1,0 +1,342 @@
+### YamlMime:TableOfContent
+items:
+- uid: CampusCrafter.Areas.Admission.Pages
+  name: CampusCrafter.Areas.Admission.Pages
+  items:
+  - uid: CampusCrafter.Areas.Admission.Pages.ChooseMajorsModel
+    name: ChooseMajorsModel
+  - uid: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel
+    name: FillAdmissionModel
+  - uid: CampusCrafter.Areas.Admission.Pages.Index
+    name: Index
+- uid: CampusCrafter.Areas.ApplicationReview.Pages
+  name: CampusCrafter.Areas.ApplicationReview.Pages
+  items:
+  - uid: CampusCrafter.Areas.ApplicationReview.Pages.Index
+    name: Index
+  - uid: CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions
+    name: Index.FilteringOptions
+  - uid: CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions
+    name: Index.SortingOptions
+  - uid: CampusCrafter.Areas.ApplicationReview.Pages.VerifyScholarlyAchievements
+    name: VerifyScholarlyAchievements
+  - uid: CampusCrafter.Areas.ApplicationReview.Pages.ViewApplication
+    name: ViewApplication
+- uid: CampusCrafter.Areas.Data.Pages.Courses
+  name: CampusCrafter.Areas.Data.Pages.Courses
+  items:
+  - uid: CampusCrafter.Areas.Data.Pages.Courses.CreateModel
+    name: CreateModel
+  - uid: CampusCrafter.Areas.Data.Pages.Courses.DeleteModel
+    name: DeleteModel
+  - uid: CampusCrafter.Areas.Data.Pages.Courses.DetailsModel
+    name: DetailsModel
+  - uid: CampusCrafter.Areas.Data.Pages.Courses.EditModel
+    name: EditModel
+  - uid: CampusCrafter.Areas.Data.Pages.Courses.IndexModel
+    name: IndexModel
+- uid: CampusCrafter.Areas.Data.Pages.Departments
+  name: CampusCrafter.Areas.Data.Pages.Departments
+  items:
+  - uid: CampusCrafter.Areas.Data.Pages.Departments.CreateModel
+    name: CreateModel
+  - uid: CampusCrafter.Areas.Data.Pages.Departments.DeleteModel
+    name: DeleteModel
+  - uid: CampusCrafter.Areas.Data.Pages.Departments.DetailsModel
+    name: DetailsModel
+  - uid: CampusCrafter.Areas.Data.Pages.Departments.EditModel
+    name: EditModel
+  - uid: CampusCrafter.Areas.Data.Pages.Departments.IndexModel
+    name: IndexModel
+- uid: CampusCrafter.Areas.Data.Pages.Majors
+  name: CampusCrafter.Areas.Data.Pages.Majors
+  items:
+  - uid: CampusCrafter.Areas.Data.Pages.Majors.CreateModel
+    name: CreateModel
+  - uid: CampusCrafter.Areas.Data.Pages.Majors.DeleteModel
+    name: DeleteModel
+  - uid: CampusCrafter.Areas.Data.Pages.Majors.DetailsModel
+    name: DetailsModel
+  - uid: CampusCrafter.Areas.Data.Pages.Majors.EditModel
+    name: EditModel
+  - uid: CampusCrafter.Areas.Data.Pages.Majors.IndexModel
+    name: IndexModel
+- uid: CampusCrafter.Areas.Data.Pages.Semesters
+  name: CampusCrafter.Areas.Data.Pages.Semesters
+  items:
+  - uid: CampusCrafter.Areas.Data.Pages.Semesters.CreateModel
+    name: CreateModel
+  - uid: CampusCrafter.Areas.Data.Pages.Semesters.DeleteModel
+    name: DeleteModel
+  - uid: CampusCrafter.Areas.Data.Pages.Semesters.DetailsModel
+    name: DetailsModel
+  - uid: CampusCrafter.Areas.Data.Pages.Semesters.EditModel
+    name: EditModel
+  - uid: CampusCrafter.Areas.Data.Pages.Semesters.IndexModel
+    name: IndexModel
+- uid: CampusCrafter.Areas.Data.Pages.StudyPlans
+  name: CampusCrafter.Areas.Data.Pages.StudyPlans
+  items:
+  - uid: CampusCrafter.Areas.Data.Pages.StudyPlans.CreateModel
+    name: CreateModel
+  - uid: CampusCrafter.Areas.Data.Pages.StudyPlans.DeleteModel
+    name: DeleteModel
+  - uid: CampusCrafter.Areas.Data.Pages.StudyPlans.DetailsModel
+    name: DetailsModel
+  - uid: CampusCrafter.Areas.Data.Pages.StudyPlans.EditModel
+    name: EditModel
+  - uid: CampusCrafter.Areas.Data.Pages.StudyPlans.IndexModel
+    name: IndexModel
+- uid: CampusCrafter.Areas.Identity.Pages.Account
+  name: CampusCrafter.Areas.Identity.Pages.Account
+  items:
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.AccessDeniedModel
+    name: AccessDeniedModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.ConfirmEmailChangeModel
+    name: ConfirmEmailChangeModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.ConfirmEmailModel
+    name: ConfirmEmailModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.ExternalLoginModel
+    name: ExternalLoginModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.ExternalLoginModel.InputModel
+    name: ExternalLoginModel.InputModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.ForgotPasswordConfirmation
+    name: ForgotPasswordConfirmation
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.ForgotPasswordModel
+    name: ForgotPasswordModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.ForgotPasswordModel.InputModel
+    name: ForgotPasswordModel.InputModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.LockoutModel
+    name: LockoutModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.LoginModel
+    name: LoginModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.LoginModel.InputModel
+    name: LoginModel.InputModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.LoginWith2faModel
+    name: LoginWith2faModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.LoginWith2faModel.InputModel
+    name: LoginWith2faModel.InputModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel
+    name: LoginWithRecoveryCodeModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel.InputModel
+    name: LoginWithRecoveryCodeModel.InputModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.LogoutModel
+    name: LogoutModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.RegisterConfirmationModel
+    name: RegisterConfirmationModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.RegisterModel
+    name: RegisterModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.RegisterModel.InputModel
+    name: RegisterModel.InputModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.ResendEmailConfirmationModel
+    name: ResendEmailConfirmationModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.ResendEmailConfirmationModel.InputModel
+    name: ResendEmailConfirmationModel.InputModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.ResetPasswordConfirmationModel
+    name: ResetPasswordConfirmationModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.ResetPasswordModel
+    name: ResetPasswordModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.ResetPasswordModel.InputModel
+    name: ResetPasswordModel.InputModel
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage
+  name: CampusCrafter.Areas.Identity.Pages.Account.Manage
+  items:
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ChangePasswordModel
+    name: ChangePasswordModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ChangePasswordModel.InputModel
+    name: ChangePasswordModel.InputModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.DeletePersonalDataModel
+    name: DeletePersonalDataModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.DeletePersonalDataModel.InputModel
+    name: DeletePersonalDataModel.InputModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.Disable2faModel
+    name: Disable2faModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.DownloadPersonalDataModel
+    name: DownloadPersonalDataModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.EmailModel
+    name: EmailModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.EmailModel.InputModel
+    name: EmailModel.InputModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.EnableAuthenticatorModel
+    name: EnableAuthenticatorModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.EnableAuthenticatorModel.InputModel
+    name: EnableAuthenticatorModel.InputModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ExternalLoginsModel
+    name: ExternalLoginsModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.GenerateRecoveryCodesModel
+    name: GenerateRecoveryCodesModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.IndexModel
+    name: IndexModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.IndexModel.InputModel
+    name: IndexModel.InputModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages
+    name: ManageNavPages
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.PersonalDataModel
+    name: PersonalDataModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ResetAuthenticatorModel
+    name: ResetAuthenticatorModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.SetPasswordModel
+    name: SetPasswordModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.SetPasswordModel.InputModel
+    name: SetPasswordModel.InputModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ShowRecoveryCodesModel
+    name: ShowRecoveryCodesModel
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.TwoFactorAuthenticationModel
+    name: TwoFactorAuthenticationModel
+- uid: CampusCrafter.Controllers
+  name: CampusCrafter.Controllers
+  items:
+  - uid: CampusCrafter.Controllers.HomeController
+    name: HomeController
+- uid: CampusCrafter.Data
+  name: CampusCrafter.Data
+  items:
+  - uid: CampusCrafter.Data.ApplicationDbContext
+    name: ApplicationDbContext
+  - uid: CampusCrafter.Data.ApplicationRepository
+    name: ApplicationRepository
+  - uid: CampusCrafter.Data.IRepository
+    name: IRepository
+- uid: CampusCrafter.Data.Migrations
+  name: CampusCrafter.Data.Migrations
+  items:
+  - uid: CampusCrafter.Data.Migrations.AddCandidateData
+    name: AddCandidateData
+  - uid: CampusCrafter.Data.Migrations.AddMajorData
+    name: AddMajorData
+  - uid: CampusCrafter.Data.Migrations.AddParentMajor
+    name: AddParentMajor
+  - uid: CampusCrafter.Data.Migrations.AddScoreToScholarlyAchievement
+    name: AddScoreToScholarlyAchievement
+  - uid: CampusCrafter.Data.Migrations.AddScoreWeightTable
+    name: AddScoreWeightTable
+  - uid: CampusCrafter.Data.Migrations.AddStudyPlanData
+    name: AddStudyPlanData
+  - uid: CampusCrafter.Data.Migrations.AddStudyPlanName
+    name: AddStudyPlanName
+  - uid: CampusCrafter.Data.Migrations.Addcustomuser
+    name: Addcustomuser
+  - uid: CampusCrafter.Data.Migrations.AddedMinScoreToMajor
+    name: AddedMinScoreToMajor
+  - uid: CampusCrafter.Data.Migrations.CreateIdentitySchema
+    name: CreateIdentitySchema
+  - uid: CampusCrafter.Data.Migrations.DontMapSemesterCount
+    name: DontMapSemesterCount
+  - uid: CampusCrafter.Data.Migrations.EnforceDateOnlyInSemester
+    name: EnforceDateOnlyInSemester
+  - uid: CampusCrafter.Data.Migrations.ExplicitSpecializationKey
+    name: ExplicitSpecializationKey
+  - uid: CampusCrafter.Data.Migrations.IAmStupid
+    name: IAmStupid
+  - uid: CampusCrafter.Data.Migrations.MaybeThisWillWork
+    name: MaybeThisWillWork
+  - uid: CampusCrafter.Data.Migrations.MoreSpecializationSuffering2
+    name: MoreSpecializationSuffering2
+  - uid: CampusCrafter.Data.Migrations.NullableMajorInStudyPlan
+    name: NullableMajorInStudyPlan
+  - uid: CampusCrafter.Data.Migrations.RemoveAllowsStudying
+    name: RemoveAllowsStudying
+  - uid: CampusCrafter.Data.Migrations.RenameSemesterForeignKey
+    name: RenameSemesterForeignKey
+  - uid: CampusCrafter.Data.Migrations.ReworkStudyPlans
+    name: ReworkStudyPlans
+  - uid: CampusCrafter.Data.Migrations.Reworkidentity
+    name: Reworkidentity
+  - uid: CampusCrafter.Data.Migrations.Reworkidentity2
+    name: Reworkidentity2
+  - uid: CampusCrafter.Data.Migrations.Reworkidentity3
+    name: Reworkidentity3
+  - uid: CampusCrafter.Data.Migrations.SemesterProperties
+    name: SemesterProperties
+  - uid: CampusCrafter.Data.Migrations.SpecializationMajorForeignKey
+    name: SpecializationMajorForeignKey
+  - uid: CampusCrafter.Data.Migrations.SpecializationMajorForeignKey3
+    name: SpecializationMajorForeignKey3
+  - uid: CampusCrafter.Data.Migrations.SpecializationSufferingIsOverHopefully
+    name: SpecializationSufferingIsOverHopefully
+  - uid: CampusCrafter.Data.Migrations.TempDisableMajorCourses
+    name: TempDisableMajorCourses
+  - uid: CampusCrafter.Data.Migrations.UpdateCandidateApplication
+    name: UpdateCandidateApplication
+  - uid: CampusCrafter.Data.Migrations.UpdateMajorData
+    name: UpdateMajorData
+  - uid: CampusCrafter.Data.Migrations.UpdateMajorsAndStudyPlan
+    name: UpdateMajorsAndStudyPlan
+  - uid: CampusCrafter.Data.Migrations.UpdateMajorsAndStudyPlan2
+    name: UpdateMajorsAndStudyPlan2
+  - uid: CampusCrafter.Data.Migrations.UpdateMajorsAndStudyPlan3
+    name: UpdateMajorsAndStudyPlan3
+  - uid: CampusCrafter.Data.Migrations.major_min_score
+    name: major_min_score
+- uid: CampusCrafter.Models
+  name: CampusCrafter.Models
+  items:
+  - uid: CampusCrafter.Models.AcceptanceCriteria
+    name: AcceptanceCriteria
+  - uid: CampusCrafter.Models.ApplicationUser
+    name: ApplicationUser
+  - uid: CampusCrafter.Models.Candidate
+    name: Candidate
+  - uid: CampusCrafter.Models.CandidateApplication
+    name: CandidateApplication
+  - uid: CampusCrafter.Models.CandidateApplicationBuilder
+    name: CandidateApplicationBuilder
+  - uid: CampusCrafter.Models.CandidateApplicationStatus
+    name: CandidateApplicationStatus
+  - uid: CampusCrafter.Models.Course
+    name: Course
+  - uid: CampusCrafter.Models.DegreeType
+    name: DegreeType
+  - uid: CampusCrafter.Models.Department
+    name: Department
+  - uid: CampusCrafter.Models.EducationProfile
+    name: EducationProfile
+  - uid: CampusCrafter.Models.ErrorViewModel
+    name: ErrorViewModel
+  - uid: CampusCrafter.Models.Major
+    name: Major
+  - uid: CampusCrafter.Models.MajorType
+    name: MajorType
+  - uid: CampusCrafter.Models.Progress
+    name: Progress
+  - uid: CampusCrafter.Models.ProgressType
+    name: ProgressType
+  - uid: CampusCrafter.Models.ScholarlyAchievement
+    name: ScholarlyAchievement
+  - uid: CampusCrafter.Models.ScholarlyAchievementType
+    name: ScholarlyAchievementType
+  - uid: CampusCrafter.Models.ScoreWeight
+    name: ScoreWeight
+  - uid: CampusCrafter.Models.Semester
+    name: Semester
+  - uid: CampusCrafter.Models.StageOfStudy
+    name: StageOfStudy
+  - uid: CampusCrafter.Models.StudyPlan
+    name: StudyPlan
+  - uid: CampusCrafter.Models.StudyType
+    name: StudyType
+- uid: CampusCrafter.Utils
+  name: CampusCrafter.Utils
+  items:
+  - uid: CampusCrafter.Utils.Role
+    name: Role
+  - uid: CampusCrafter.Utils.Roles
+    name: Roles
+  - uid: CampusCrafter.Utils.ScoreWeightUtil
+    name: ScoreWeightUtil
+- uid: CampusCrafterTests
+  name: CampusCrafterTests
+  items:
+  - uid: CampusCrafterTests.CandidateApplicationBuilderTests
+    name: CandidateApplicationBuilderTests
+  - uid: CampusCrafterTests.Mocks
+    name: Mocks
+  - uid: CampusCrafterTests.ReviewApplicationTests
+    name: ReviewApplicationTests
+  - uid: CampusCrafterTests.SampleData
+    name: SampleData
+  - uid: CampusCrafterTests.ScoreWeightUtilTests
+    name: ScoreWeightUtilTests
+  - uid: CampusCrafterTests.Utils
+    name: Utils
+memberLayout: SamePage

@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: CampusCrafter.Areas.Admission.Pages
+  commentId: N:CampusCrafter.Areas.Admission.Pages
+  id: CampusCrafter.Areas.Admission.Pages
+  children:
+  - CampusCrafter.Areas.Admission.Pages.ChooseMajorsModel
+  - CampusCrafter.Areas.Admission.Pages.FillAdmissionModel
+  - CampusCrafter.Areas.Admission.Pages.Index
+  langs:
+  - csharp
+  - vb
+  name: CampusCrafter.Areas.Admission.Pages
+  nameWithType: CampusCrafter.Areas.Admission.Pages
+  fullName: CampusCrafter.Areas.Admission.Pages
+  type: Namespace
+  assemblies:
+  - CampusCrafter
+references:
+- uid: CampusCrafter.Areas.Admission.Pages.ChooseMajorsModel
+  commentId: T:CampusCrafter.Areas.Admission.Pages.ChooseMajorsModel
+  href: CampusCrafter.Areas.Admission.Pages.ChooseMajorsModel.html
+  name: ChooseMajorsModel
+  nameWithType: ChooseMajorsModel
+  fullName: CampusCrafter.Areas.Admission.Pages.ChooseMajorsModel
+- uid: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel
+  commentId: T:CampusCrafter.Areas.Admission.Pages.FillAdmissionModel
+  href: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel.html
+  name: FillAdmissionModel
+  nameWithType: FillAdmissionModel
+  fullName: CampusCrafter.Areas.Admission.Pages.FillAdmissionModel
+- uid: CampusCrafter.Areas.Admission.Pages.Index
+  commentId: T:CampusCrafter.Areas.Admission.Pages.Index
+  href: CampusCrafter.Areas.Admission.Pages.Index.html
+  name: Index
+  nameWithType: Index
+  fullName: CampusCrafter.Areas.Admission.Pages.Index

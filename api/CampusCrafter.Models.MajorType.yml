@@ -1,0 +1,112 @@
+### YamlMime:ManagedReference
+items:
+- uid: CampusCrafter.Models.MajorType
+  commentId: T:CampusCrafter.Models.MajorType
+  id: MajorType
+  parent: CampusCrafter.Models
+  children:
+  - CampusCrafter.Models.MajorType.Major
+  - CampusCrafter.Models.MajorType.Specialization
+  langs:
+  - csharp
+  - vb
+  name: MajorType
+  nameWithType: MajorType
+  fullName: CampusCrafter.Models.MajorType
+  type: Enum
+  source:
+    remote:
+      path: CampusCrafter/Models/MajorType.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: MajorType
+    path: CampusCrafter/Models/MajorType.cs
+    startLine: 2
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: public enum MajorType
+    content.vb: Public Enum MajorType
+- uid: CampusCrafter.Models.MajorType.Major
+  commentId: F:CampusCrafter.Models.MajorType.Major
+  id: Major
+  parent: CampusCrafter.Models.MajorType
+  langs:
+  - csharp
+  - vb
+  name: Major
+  nameWithType: MajorType.Major
+  fullName: CampusCrafter.Models.MajorType.Major
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/MajorType.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: Major
+    path: CampusCrafter/Models/MajorType.cs
+    startLine: 4
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: Major = 0
+    return:
+      type: CampusCrafter.Models.MajorType
+- uid: CampusCrafter.Models.MajorType.Specialization
+  commentId: F:CampusCrafter.Models.MajorType.Specialization
+  id: Specialization
+  parent: CampusCrafter.Models.MajorType
+  langs:
+  - csharp
+  - vb
+  name: Specialization
+  nameWithType: MajorType.Specialization
+  fullName: CampusCrafter.Models.MajorType.Specialization
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Models/MajorType.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: Specialization
+    path: CampusCrafter/Models/MajorType.cs
+    startLine: 5
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Models
+  syntax:
+    content: Specialization = 1
+    return:
+      type: CampusCrafter.Models.MajorType
+references:
+- uid: CampusCrafter.Models
+  commentId: N:CampusCrafter.Models
+  href: CampusCrafter.html
+  name: CampusCrafter.Models
+  nameWithType: CampusCrafter.Models
+  fullName: CampusCrafter.Models
+  spec.csharp:
+  - uid: CampusCrafter
+    name: CampusCrafter
+    href: CampusCrafter.html
+  - name: .
+  - uid: CampusCrafter.Models
+    name: Models
+    href: CampusCrafter.Models.html
+  spec.vb:
+  - uid: CampusCrafter
+    name: CampusCrafter
+    href: CampusCrafter.html
+  - name: .
+  - uid: CampusCrafter.Models
+    name: Models
+    href: CampusCrafter.Models.html
+- uid: CampusCrafter.Models.MajorType
+  commentId: T:CampusCrafter.Models.MajorType
+  parent: CampusCrafter.Models
+  href: CampusCrafter.Models.MajorType.html
+  name: MajorType
+  nameWithType: MajorType
+  fullName: CampusCrafter.Models.MajorType

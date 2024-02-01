@@ -1,0 +1,258 @@
+### YamlMime:ManagedReference
+items:
+- uid: CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions
+  commentId: T:CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions
+  id: Index.SortingOptions
+  parent: CampusCrafter.Areas.ApplicationReview.Pages
+  children:
+  - CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions.DateAscending
+  - CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions.DateDescending
+  - CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions.IdAscending
+  - CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions.IdDescending
+  langs:
+  - csharp
+  - vb
+  name: Index.SortingOptions
+  nameWithType: Index.SortingOptions
+  fullName: CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions
+  type: Enum
+  source:
+    remote:
+      path: CampusCrafter/Areas/ApplicationReview/Pages/Index.cshtml.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: SortingOptions
+    path: CampusCrafter/Areas/ApplicationReview/Pages/Index.cshtml.cs
+    startLine: 17
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Areas.ApplicationReview.Pages
+  syntax:
+    content: public enum Index.SortingOptions
+    content.vb: Public Enum Index.SortingOptions
+- uid: CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions.IdAscending
+  commentId: F:CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions.IdAscending
+  id: IdAscending
+  parent: CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions
+  langs:
+  - csharp
+  - vb
+  name: IdAscending
+  nameWithType: Index.SortingOptions.IdAscending
+  fullName: CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions.IdAscending
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Areas/ApplicationReview/Pages/Index.cshtml.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: IdAscending
+    path: CampusCrafter/Areas/ApplicationReview/Pages/Index.cshtml.cs
+    startLine: 19
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Areas.ApplicationReview.Pages
+  syntax:
+    content: >-
+      [Display(Name = "ID ▲")]
+
+      IdAscending = 0
+    return:
+      type: CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions
+    content.vb: >-
+      <Display(Name:="ID ▲")>
+
+      IdAscending = 0
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: ID ▲
+- uid: CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions.IdDescending
+  commentId: F:CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions.IdDescending
+  id: IdDescending
+  parent: CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions
+  langs:
+  - csharp
+  - vb
+  name: IdDescending
+  nameWithType: Index.SortingOptions.IdDescending
+  fullName: CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions.IdDescending
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Areas/ApplicationReview/Pages/Index.cshtml.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: IdDescending
+    path: CampusCrafter/Areas/ApplicationReview/Pages/Index.cshtml.cs
+    startLine: 20
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Areas.ApplicationReview.Pages
+  syntax:
+    content: >-
+      [Display(Name = "ID ▼")]
+
+      IdDescending = 1
+    return:
+      type: CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions
+    content.vb: >-
+      <Display(Name:="ID ▼")>
+
+      IdDescending = 1
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: ID ▼
+- uid: CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions.DateAscending
+  commentId: F:CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions.DateAscending
+  id: DateAscending
+  parent: CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions
+  langs:
+  - csharp
+  - vb
+  name: DateAscending
+  nameWithType: Index.SortingOptions.DateAscending
+  fullName: CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions.DateAscending
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Areas/ApplicationReview/Pages/Index.cshtml.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: DateAscending
+    path: CampusCrafter/Areas/ApplicationReview/Pages/Index.cshtml.cs
+    startLine: 21
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Areas.ApplicationReview.Pages
+  syntax:
+    content: >-
+      [Display(Name = "Date ▲")]
+
+      DateAscending = 2
+    return:
+      type: CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions
+    content.vb: >-
+      <Display(Name:="Date ▲")>
+
+      DateAscending = 2
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: Date ▲
+- uid: CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions.DateDescending
+  commentId: F:CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions.DateDescending
+  id: DateDescending
+  parent: CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions
+  langs:
+  - csharp
+  - vb
+  name: DateDescending
+  nameWithType: Index.SortingOptions.DateDescending
+  fullName: CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions.DateDescending
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Areas/ApplicationReview/Pages/Index.cshtml.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: DateDescending
+    path: CampusCrafter/Areas/ApplicationReview/Pages/Index.cshtml.cs
+    startLine: 22
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Areas.ApplicationReview.Pages
+  syntax:
+    content: >-
+      [Display(Name = "Date ▼")]
+
+      DateDescending = 3
+    return:
+      type: CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions
+    content.vb: >-
+      <Display(Name:="Date ▼")>
+
+      DateDescending = 3
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: Date ▼
+references:
+- uid: CampusCrafter.Areas.ApplicationReview.Pages
+  commentId: N:CampusCrafter.Areas.ApplicationReview.Pages
+  href: CampusCrafter.html
+  name: CampusCrafter.Areas.ApplicationReview.Pages
+  nameWithType: CampusCrafter.Areas.ApplicationReview.Pages
+  fullName: CampusCrafter.Areas.ApplicationReview.Pages
+  spec.csharp:
+  - uid: CampusCrafter
+    name: CampusCrafter
+    href: CampusCrafter.html
+  - name: .
+  - uid: CampusCrafter.Areas
+    name: Areas
+    href: CampusCrafter.Areas.html
+  - name: .
+  - uid: CampusCrafter.Areas.ApplicationReview
+    name: ApplicationReview
+    href: CampusCrafter.Areas.ApplicationReview.html
+  - name: .
+  - uid: CampusCrafter.Areas.ApplicationReview.Pages
+    name: Pages
+    href: CampusCrafter.Areas.ApplicationReview.Pages.html
+  spec.vb:
+  - uid: CampusCrafter
+    name: CampusCrafter
+    href: CampusCrafter.html
+  - name: .
+  - uid: CampusCrafter.Areas
+    name: Areas
+    href: CampusCrafter.Areas.html
+  - name: .
+  - uid: CampusCrafter.Areas.ApplicationReview
+    name: ApplicationReview
+    href: CampusCrafter.Areas.ApplicationReview.html
+  - name: .
+  - uid: CampusCrafter.Areas.ApplicationReview.Pages
+    name: Pages
+    href: CampusCrafter.Areas.ApplicationReview.Pages.html
+- uid: CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions
+  commentId: T:CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions
+  parent: CampusCrafter.Areas.ApplicationReview.Pages
+  href: CampusCrafter.Areas.ApplicationReview.Pages.Index.html
+  name: Index.SortingOptions
+  nameWithType: Index.SortingOptions
+  fullName: CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions
+  spec.csharp:
+  - uid: CampusCrafter.Areas.ApplicationReview.Pages.Index
+    name: Index
+    href: CampusCrafter.Areas.ApplicationReview.Pages.Index.html
+  - name: .
+  - uid: CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions
+    name: SortingOptions
+    href: CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions.html
+  spec.vb:
+  - uid: CampusCrafter.Areas.ApplicationReview.Pages.Index
+    name: Index
+    href: CampusCrafter.Areas.ApplicationReview.Pages.Index.html
+  - name: .
+  - uid: CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions
+    name: SortingOptions
+    href: CampusCrafter.Areas.ApplicationReview.Pages.Index.SortingOptions.html

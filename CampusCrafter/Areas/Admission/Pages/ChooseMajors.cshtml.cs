@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
 
-namespace CampusCrafter.Pages.Admission;
+namespace CampusCrafter.Areas.Admission.Pages;
 
 [Authorize(Roles = "Candidate")]
 public class ChooseMajorsModel(ApplicationRepository repository) : PageModel

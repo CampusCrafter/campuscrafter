@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: CampusCrafter.Pages.Admission
+  commentId: N:CampusCrafter.Pages.Admission
+  id: CampusCrafter.Pages.Admission
+  children:
+  - CampusCrafter.Pages.Admission.ChooseMajorsModel
+  langs:
+  - csharp
+  - vb
+  name: CampusCrafter.Pages.Admission
+  nameWithType: CampusCrafter.Pages.Admission
+  fullName: CampusCrafter.Pages.Admission
+  type: Namespace
+  assemblies:
+  - CampusCrafter
+references:
+- uid: CampusCrafter.Pages.Admission.ChooseMajorsModel
+  commentId: T:CampusCrafter.Pages.Admission.ChooseMajorsModel
+  href: CampusCrafter.Pages.Admission.ChooseMajorsModel.html
+  name: ChooseMajorsModel
+  nameWithType: ChooseMajorsModel
+  fullName: CampusCrafter.Pages.Admission.ChooseMajorsModel

@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: CampusCrafter.Areas.Data.Pages.Departments
+  commentId: N:CampusCrafter.Areas.Data.Pages.Departments
+  id: CampusCrafter.Areas.Data.Pages.Departments
+  children:
+  - CampusCrafter.Areas.Data.Pages.Departments.CreateModel
+  - CampusCrafter.Areas.Data.Pages.Departments.DeleteModel
+  - CampusCrafter.Areas.Data.Pages.Departments.DetailsModel
+  - CampusCrafter.Areas.Data.Pages.Departments.EditModel
+  - CampusCrafter.Areas.Data.Pages.Departments.IndexModel
+  langs:
+  - csharp
+  - vb
+  name: CampusCrafter.Areas.Data.Pages.Departments
+  nameWithType: CampusCrafter.Areas.Data.Pages.Departments
+  fullName: CampusCrafter.Areas.Data.Pages.Departments
+  type: Namespace
+  assemblies:
+  - CampusCrafter
+references:
+- uid: CampusCrafter.Areas.Data.Pages.Departments.CreateModel
+  commentId: T:CampusCrafter.Areas.Data.Pages.Departments.CreateModel
+  href: CampusCrafter.Areas.Data.Pages.Departments.CreateModel.html
+  name: CreateModel
+  nameWithType: CreateModel
+  fullName: CampusCrafter.Areas.Data.Pages.Departments.CreateModel
+- uid: CampusCrafter.Areas.Data.Pages.Departments.DeleteModel
+  commentId: T:CampusCrafter.Areas.Data.Pages.Departments.DeleteModel
+  href: CampusCrafter.Areas.Data.Pages.Departments.DeleteModel.html
+  name: DeleteModel
+  nameWithType: DeleteModel
+  fullName: CampusCrafter.Areas.Data.Pages.Departments.DeleteModel
+- uid: CampusCrafter.Areas.Data.Pages.Departments.DetailsModel
+  commentId: T:CampusCrafter.Areas.Data.Pages.Departments.DetailsModel
+  href: CampusCrafter.Areas.Data.Pages.Departments.DetailsModel.html
+  name: DetailsModel
+  nameWithType: DetailsModel
+  fullName: CampusCrafter.Areas.Data.Pages.Departments.DetailsModel
+- uid: CampusCrafter.Areas.Data.Pages.Departments.EditModel
+  commentId: T:CampusCrafter.Areas.Data.Pages.Departments.EditModel
+  href: CampusCrafter.Areas.Data.Pages.Departments.EditModel.html
+  name: EditModel
+  nameWithType: EditModel
+  fullName: CampusCrafter.Areas.Data.Pages.Departments.EditModel
+- uid: CampusCrafter.Areas.Data.Pages.Departments.IndexModel
+  commentId: T:CampusCrafter.Areas.Data.Pages.Departments.IndexModel
+  href: CampusCrafter.Areas.Data.Pages.Departments.IndexModel.html
+  name: IndexModel
+  nameWithType: IndexModel
+  fullName: CampusCrafter.Areas.Data.Pages.Departments.IndexModel

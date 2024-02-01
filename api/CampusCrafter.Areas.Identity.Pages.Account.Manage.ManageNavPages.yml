@@ -1,0 +1,1121 @@
+### YamlMime:ManagedReference
+items:
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages
+  commentId: T:CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages
+  id: ManageNavPages
+  parent: CampusCrafter.Areas.Identity.Pages.Account.Manage
+  children:
+  - CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.ChangePassword
+  - CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.ChangePasswordNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  - CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.DeletePersonalData
+  - CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.DeletePersonalDataNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  - CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.DownloadPersonalData
+  - CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.DownloadPersonalDataNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  - CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.Email
+  - CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.EmailNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  - CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.ExternalLogins
+  - CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.ExternalLoginsNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  - CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.Index
+  - CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.IndexNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  - CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.PageNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext,System.String)
+  - CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.PersonalData
+  - CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.PersonalDataNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  - CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.TwoFactorAuthentication
+  - CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.TwoFactorAuthenticationNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  langs:
+  - csharp
+  - vb
+  name: ManageNavPages
+  nameWithType: ManageNavPages
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages
+  type: Class
+  source:
+    remote:
+      path: CampusCrafter/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: ManageNavPages
+    path: CampusCrafter/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs
+    startLine: 13
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Areas.Identity.Pages.Account.Manage
+  summary: >-
+    This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+
+    directly from your code. This API may change or be removed in future releases.
+  example: []
+  syntax:
+    content: public static class ManageNavPages
+    content.vb: Public Module ManageNavPages
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.Index
+  commentId: P:CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.Index
+  id: Index
+  parent: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages
+  langs:
+  - csharp
+  - vb
+  name: Index
+  nameWithType: ManageNavPages.Index
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.Index
+  type: Property
+  source:
+    remote:
+      path: CampusCrafter/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: Index
+    path: CampusCrafter/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs
+    startLine: 19
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Areas.Identity.Pages.Account.Manage
+  summary: >-
+    This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+
+    directly from your code. This API may change or be removed in future releases.
+  example: []
+  syntax:
+    content: public static string Index { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property Index As String
+  overload: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.Index*
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.Email
+  commentId: P:CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.Email
+  id: Email
+  parent: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages
+  langs:
+  - csharp
+  - vb
+  name: Email
+  nameWithType: ManageNavPages.Email
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.Email
+  type: Property
+  source:
+    remote:
+      path: CampusCrafter/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: Email
+    path: CampusCrafter/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs
+    startLine: 25
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Areas.Identity.Pages.Account.Manage
+  summary: >-
+    This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+
+    directly from your code. This API may change or be removed in future releases.
+  example: []
+  syntax:
+    content: public static string Email { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property Email As String
+  overload: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.Email*
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.ChangePassword
+  commentId: P:CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.ChangePassword
+  id: ChangePassword
+  parent: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages
+  langs:
+  - csharp
+  - vb
+  name: ChangePassword
+  nameWithType: ManageNavPages.ChangePassword
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.ChangePassword
+  type: Property
+  source:
+    remote:
+      path: CampusCrafter/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: ChangePassword
+    path: CampusCrafter/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs
+    startLine: 31
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Areas.Identity.Pages.Account.Manage
+  summary: >-
+    This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+
+    directly from your code. This API may change or be removed in future releases.
+  example: []
+  syntax:
+    content: public static string ChangePassword { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property ChangePassword As String
+  overload: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.ChangePassword*
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.DownloadPersonalData
+  commentId: P:CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.DownloadPersonalData
+  id: DownloadPersonalData
+  parent: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages
+  langs:
+  - csharp
+  - vb
+  name: DownloadPersonalData
+  nameWithType: ManageNavPages.DownloadPersonalData
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.DownloadPersonalData
+  type: Property
+  source:
+    remote:
+      path: CampusCrafter/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: DownloadPersonalData
+    path: CampusCrafter/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs
+    startLine: 37
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Areas.Identity.Pages.Account.Manage
+  summary: >-
+    This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+
+    directly from your code. This API may change or be removed in future releases.
+  example: []
+  syntax:
+    content: public static string DownloadPersonalData { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property DownloadPersonalData As String
+  overload: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.DownloadPersonalData*
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.DeletePersonalData
+  commentId: P:CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.DeletePersonalData
+  id: DeletePersonalData
+  parent: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages
+  langs:
+  - csharp
+  - vb
+  name: DeletePersonalData
+  nameWithType: ManageNavPages.DeletePersonalData
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.DeletePersonalData
+  type: Property
+  source:
+    remote:
+      path: CampusCrafter/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: DeletePersonalData
+    path: CampusCrafter/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs
+    startLine: 43
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Areas.Identity.Pages.Account.Manage
+  summary: >-
+    This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+
+    directly from your code. This API may change or be removed in future releases.
+  example: []
+  syntax:
+    content: public static string DeletePersonalData { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property DeletePersonalData As String
+  overload: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.DeletePersonalData*
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.ExternalLogins
+  commentId: P:CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.ExternalLogins
+  id: ExternalLogins
+  parent: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages
+  langs:
+  - csharp
+  - vb
+  name: ExternalLogins
+  nameWithType: ManageNavPages.ExternalLogins
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.ExternalLogins
+  type: Property
+  source:
+    remote:
+      path: CampusCrafter/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: ExternalLogins
+    path: CampusCrafter/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs
+    startLine: 49
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Areas.Identity.Pages.Account.Manage
+  summary: >-
+    This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+
+    directly from your code. This API may change or be removed in future releases.
+  example: []
+  syntax:
+    content: public static string ExternalLogins { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property ExternalLogins As String
+  overload: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.ExternalLogins*
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.PersonalData
+  commentId: P:CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.PersonalData
+  id: PersonalData
+  parent: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages
+  langs:
+  - csharp
+  - vb
+  name: PersonalData
+  nameWithType: ManageNavPages.PersonalData
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.PersonalData
+  type: Property
+  source:
+    remote:
+      path: CampusCrafter/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: PersonalData
+    path: CampusCrafter/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs
+    startLine: 55
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Areas.Identity.Pages.Account.Manage
+  summary: >-
+    This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+
+    directly from your code. This API may change or be removed in future releases.
+  example: []
+  syntax:
+    content: public static string PersonalData { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property PersonalData As String
+  overload: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.PersonalData*
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.TwoFactorAuthentication
+  commentId: P:CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.TwoFactorAuthentication
+  id: TwoFactorAuthentication
+  parent: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages
+  langs:
+  - csharp
+  - vb
+  name: TwoFactorAuthentication
+  nameWithType: ManageNavPages.TwoFactorAuthentication
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.TwoFactorAuthentication
+  type: Property
+  source:
+    remote:
+      path: CampusCrafter/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: TwoFactorAuthentication
+    path: CampusCrafter/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs
+    startLine: 61
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Areas.Identity.Pages.Account.Manage
+  summary: >-
+    This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+
+    directly from your code. This API may change or be removed in future releases.
+  example: []
+  syntax:
+    content: public static string TwoFactorAuthentication { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property TwoFactorAuthentication As String
+  overload: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.TwoFactorAuthentication*
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.IndexNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  commentId: M:CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.IndexNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  id: IndexNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  parent: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages
+  langs:
+  - csharp
+  - vb
+  name: IndexNavClass(ViewContext)
+  nameWithType: ManageNavPages.IndexNavClass(ViewContext)
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.IndexNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  type: Method
+  source:
+    remote:
+      path: CampusCrafter/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: IndexNavClass
+    path: CampusCrafter/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs
+    startLine: 67
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Areas.Identity.Pages.Account.Manage
+  summary: >-
+    This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+
+    directly from your code. This API may change or be removed in future releases.
+  example: []
+  syntax:
+    content: public static string IndexNavClass(ViewContext viewContext)
+    parameters:
+    - id: viewContext
+      type: Microsoft.AspNetCore.Mvc.Rendering.ViewContext
+    return:
+      type: System.String
+    content.vb: Public Shared Function IndexNavClass(viewContext As ViewContext) As String
+  overload: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.IndexNavClass*
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.EmailNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  commentId: M:CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.EmailNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  id: EmailNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  parent: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages
+  langs:
+  - csharp
+  - vb
+  name: EmailNavClass(ViewContext)
+  nameWithType: ManageNavPages.EmailNavClass(ViewContext)
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.EmailNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  type: Method
+  source:
+    remote:
+      path: CampusCrafter/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: EmailNavClass
+    path: CampusCrafter/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs
+    startLine: 73
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Areas.Identity.Pages.Account.Manage
+  summary: >-
+    This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+
+    directly from your code. This API may change or be removed in future releases.
+  example: []
+  syntax:
+    content: public static string EmailNavClass(ViewContext viewContext)
+    parameters:
+    - id: viewContext
+      type: Microsoft.AspNetCore.Mvc.Rendering.ViewContext
+    return:
+      type: System.String
+    content.vb: Public Shared Function EmailNavClass(viewContext As ViewContext) As String
+  overload: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.EmailNavClass*
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.ChangePasswordNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  commentId: M:CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.ChangePasswordNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  id: ChangePasswordNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  parent: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages
+  langs:
+  - csharp
+  - vb
+  name: ChangePasswordNavClass(ViewContext)
+  nameWithType: ManageNavPages.ChangePasswordNavClass(ViewContext)
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.ChangePasswordNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  type: Method
+  source:
+    remote:
+      path: CampusCrafter/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: ChangePasswordNavClass
+    path: CampusCrafter/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs
+    startLine: 79
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Areas.Identity.Pages.Account.Manage
+  summary: >-
+    This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+
+    directly from your code. This API may change or be removed in future releases.
+  example: []
+  syntax:
+    content: public static string ChangePasswordNavClass(ViewContext viewContext)
+    parameters:
+    - id: viewContext
+      type: Microsoft.AspNetCore.Mvc.Rendering.ViewContext
+    return:
+      type: System.String
+    content.vb: Public Shared Function ChangePasswordNavClass(viewContext As ViewContext) As String
+  overload: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.ChangePasswordNavClass*
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.DownloadPersonalDataNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  commentId: M:CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.DownloadPersonalDataNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  id: DownloadPersonalDataNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  parent: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages
+  langs:
+  - csharp
+  - vb
+  name: DownloadPersonalDataNavClass(ViewContext)
+  nameWithType: ManageNavPages.DownloadPersonalDataNavClass(ViewContext)
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.DownloadPersonalDataNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  type: Method
+  source:
+    remote:
+      path: CampusCrafter/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: DownloadPersonalDataNavClass
+    path: CampusCrafter/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs
+    startLine: 85
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Areas.Identity.Pages.Account.Manage
+  summary: >-
+    This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+
+    directly from your code. This API may change or be removed in future releases.
+  example: []
+  syntax:
+    content: public static string DownloadPersonalDataNavClass(ViewContext viewContext)
+    parameters:
+    - id: viewContext
+      type: Microsoft.AspNetCore.Mvc.Rendering.ViewContext
+    return:
+      type: System.String
+    content.vb: Public Shared Function DownloadPersonalDataNavClass(viewContext As ViewContext) As String
+  overload: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.DownloadPersonalDataNavClass*
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.DeletePersonalDataNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  commentId: M:CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.DeletePersonalDataNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  id: DeletePersonalDataNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  parent: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages
+  langs:
+  - csharp
+  - vb
+  name: DeletePersonalDataNavClass(ViewContext)
+  nameWithType: ManageNavPages.DeletePersonalDataNavClass(ViewContext)
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.DeletePersonalDataNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  type: Method
+  source:
+    remote:
+      path: CampusCrafter/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: DeletePersonalDataNavClass
+    path: CampusCrafter/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs
+    startLine: 91
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Areas.Identity.Pages.Account.Manage
+  summary: >-
+    This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+
+    directly from your code. This API may change or be removed in future releases.
+  example: []
+  syntax:
+    content: public static string DeletePersonalDataNavClass(ViewContext viewContext)
+    parameters:
+    - id: viewContext
+      type: Microsoft.AspNetCore.Mvc.Rendering.ViewContext
+    return:
+      type: System.String
+    content.vb: Public Shared Function DeletePersonalDataNavClass(viewContext As ViewContext) As String
+  overload: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.DeletePersonalDataNavClass*
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.ExternalLoginsNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  commentId: M:CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.ExternalLoginsNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  id: ExternalLoginsNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  parent: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages
+  langs:
+  - csharp
+  - vb
+  name: ExternalLoginsNavClass(ViewContext)
+  nameWithType: ManageNavPages.ExternalLoginsNavClass(ViewContext)
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.ExternalLoginsNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  type: Method
+  source:
+    remote:
+      path: CampusCrafter/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: ExternalLoginsNavClass
+    path: CampusCrafter/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs
+    startLine: 97
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Areas.Identity.Pages.Account.Manage
+  summary: >-
+    This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+
+    directly from your code. This API may change or be removed in future releases.
+  example: []
+  syntax:
+    content: public static string ExternalLoginsNavClass(ViewContext viewContext)
+    parameters:
+    - id: viewContext
+      type: Microsoft.AspNetCore.Mvc.Rendering.ViewContext
+    return:
+      type: System.String
+    content.vb: Public Shared Function ExternalLoginsNavClass(viewContext As ViewContext) As String
+  overload: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.ExternalLoginsNavClass*
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.PersonalDataNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  commentId: M:CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.PersonalDataNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  id: PersonalDataNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  parent: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages
+  langs:
+  - csharp
+  - vb
+  name: PersonalDataNavClass(ViewContext)
+  nameWithType: ManageNavPages.PersonalDataNavClass(ViewContext)
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.PersonalDataNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  type: Method
+  source:
+    remote:
+      path: CampusCrafter/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: PersonalDataNavClass
+    path: CampusCrafter/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs
+    startLine: 103
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Areas.Identity.Pages.Account.Manage
+  summary: >-
+    This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+
+    directly from your code. This API may change or be removed in future releases.
+  example: []
+  syntax:
+    content: public static string PersonalDataNavClass(ViewContext viewContext)
+    parameters:
+    - id: viewContext
+      type: Microsoft.AspNetCore.Mvc.Rendering.ViewContext
+    return:
+      type: System.String
+    content.vb: Public Shared Function PersonalDataNavClass(viewContext As ViewContext) As String
+  overload: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.PersonalDataNavClass*
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.TwoFactorAuthenticationNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  commentId: M:CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.TwoFactorAuthenticationNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  id: TwoFactorAuthenticationNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  parent: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages
+  langs:
+  - csharp
+  - vb
+  name: TwoFactorAuthenticationNavClass(ViewContext)
+  nameWithType: ManageNavPages.TwoFactorAuthenticationNavClass(ViewContext)
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.TwoFactorAuthenticationNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  type: Method
+  source:
+    remote:
+      path: CampusCrafter/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: TwoFactorAuthenticationNavClass
+    path: CampusCrafter/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs
+    startLine: 109
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Areas.Identity.Pages.Account.Manage
+  summary: >-
+    This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+
+    directly from your code. This API may change or be removed in future releases.
+  example: []
+  syntax:
+    content: public static string TwoFactorAuthenticationNavClass(ViewContext viewContext)
+    parameters:
+    - id: viewContext
+      type: Microsoft.AspNetCore.Mvc.Rendering.ViewContext
+    return:
+      type: System.String
+    content.vb: Public Shared Function TwoFactorAuthenticationNavClass(viewContext As ViewContext) As String
+  overload: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.TwoFactorAuthenticationNavClass*
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.PageNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext,System.String)
+  commentId: M:CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.PageNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext,System.String)
+  id: PageNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext,System.String)
+  parent: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages
+  langs:
+  - csharp
+  - vb
+  name: PageNavClass(ViewContext, string)
+  nameWithType: ManageNavPages.PageNavClass(ViewContext, string)
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.PageNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext, string)
+  type: Method
+  source:
+    remote:
+      path: CampusCrafter/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: PageNavClass
+    path: CampusCrafter/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs
+    startLine: 115
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Areas.Identity.Pages.Account.Manage
+  summary: >-
+    This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+
+    directly from your code. This API may change or be removed in future releases.
+  example: []
+  syntax:
+    content: public static string PageNavClass(ViewContext viewContext, string page)
+    parameters:
+    - id: viewContext
+      type: Microsoft.AspNetCore.Mvc.Rendering.ViewContext
+    - id: page
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function PageNavClass(viewContext As ViewContext, page As String) As String
+  overload: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.PageNavClass*
+  nameWithType.vb: ManageNavPages.PageNavClass(ViewContext, String)
+  fullName.vb: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.PageNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext, String)
+  name.vb: PageNavClass(ViewContext, String)
+references:
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage
+  commentId: N:CampusCrafter.Areas.Identity.Pages.Account.Manage
+  href: CampusCrafter.html
+  name: CampusCrafter.Areas.Identity.Pages.Account.Manage
+  nameWithType: CampusCrafter.Areas.Identity.Pages.Account.Manage
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.Manage
+  spec.csharp:
+  - uid: CampusCrafter
+    name: CampusCrafter
+    href: CampusCrafter.html
+  - name: .
+  - uid: CampusCrafter.Areas
+    name: Areas
+    href: CampusCrafter.Areas.html
+  - name: .
+  - uid: CampusCrafter.Areas.Identity
+    name: Identity
+    href: CampusCrafter.Areas.Identity.html
+  - name: .
+  - uid: CampusCrafter.Areas.Identity.Pages
+    name: Pages
+    href: CampusCrafter.Areas.Identity.Pages.html
+  - name: .
+  - uid: CampusCrafter.Areas.Identity.Pages.Account
+    name: Account
+    href: CampusCrafter.Areas.Identity.Pages.Account.html
+  - name: .
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.Manage
+    name: Manage
+    href: CampusCrafter.Areas.Identity.Pages.Account.Manage.html
+  spec.vb:
+  - uid: CampusCrafter
+    name: CampusCrafter
+    href: CampusCrafter.html
+  - name: .
+  - uid: CampusCrafter.Areas
+    name: Areas
+    href: CampusCrafter.Areas.html
+  - name: .
+  - uid: CampusCrafter.Areas.Identity
+    name: Identity
+    href: CampusCrafter.Areas.Identity.html
+  - name: .
+  - uid: CampusCrafter.Areas.Identity.Pages
+    name: Pages
+    href: CampusCrafter.Areas.Identity.Pages.html
+  - name: .
+  - uid: CampusCrafter.Areas.Identity.Pages.Account
+    name: Account
+    href: CampusCrafter.Areas.Identity.Pages.Account.html
+  - name: .
+  - uid: CampusCrafter.Areas.Identity.Pages.Account.Manage
+    name: Manage
+    href: CampusCrafter.Areas.Identity.Pages.Account.Manage.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.Index*
+  commentId: Overload:CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.Index
+  href: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.html#CampusCrafter_Areas_Identity_Pages_Account_Manage_ManageNavPages_Index
+  name: Index
+  nameWithType: ManageNavPages.Index
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.Index
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.Email*
+  commentId: Overload:CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.Email
+  href: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.html#CampusCrafter_Areas_Identity_Pages_Account_Manage_ManageNavPages_Email
+  name: Email
+  nameWithType: ManageNavPages.Email
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.Email
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.ChangePassword*
+  commentId: Overload:CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.ChangePassword
+  href: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.html#CampusCrafter_Areas_Identity_Pages_Account_Manage_ManageNavPages_ChangePassword
+  name: ChangePassword
+  nameWithType: ManageNavPages.ChangePassword
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.ChangePassword
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.DownloadPersonalData*
+  commentId: Overload:CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.DownloadPersonalData
+  href: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.html#CampusCrafter_Areas_Identity_Pages_Account_Manage_ManageNavPages_DownloadPersonalData
+  name: DownloadPersonalData
+  nameWithType: ManageNavPages.DownloadPersonalData
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.DownloadPersonalData
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.DeletePersonalData*
+  commentId: Overload:CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.DeletePersonalData
+  href: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.html#CampusCrafter_Areas_Identity_Pages_Account_Manage_ManageNavPages_DeletePersonalData
+  name: DeletePersonalData
+  nameWithType: ManageNavPages.DeletePersonalData
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.DeletePersonalData
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.ExternalLogins*
+  commentId: Overload:CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.ExternalLogins
+  href: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.html#CampusCrafter_Areas_Identity_Pages_Account_Manage_ManageNavPages_ExternalLogins
+  name: ExternalLogins
+  nameWithType: ManageNavPages.ExternalLogins
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.ExternalLogins
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.PersonalData*
+  commentId: Overload:CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.PersonalData
+  href: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.html#CampusCrafter_Areas_Identity_Pages_Account_Manage_ManageNavPages_PersonalData
+  name: PersonalData
+  nameWithType: ManageNavPages.PersonalData
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.PersonalData
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.TwoFactorAuthentication*
+  commentId: Overload:CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.TwoFactorAuthentication
+  href: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.html#CampusCrafter_Areas_Identity_Pages_Account_Manage_ManageNavPages_TwoFactorAuthentication
+  name: TwoFactorAuthentication
+  nameWithType: ManageNavPages.TwoFactorAuthentication
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.TwoFactorAuthentication
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.IndexNavClass*
+  commentId: Overload:CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.IndexNavClass
+  href: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.html#CampusCrafter_Areas_Identity_Pages_Account_Manage_ManageNavPages_IndexNavClass_Microsoft_AspNetCore_Mvc_Rendering_ViewContext_
+  name: IndexNavClass
+  nameWithType: ManageNavPages.IndexNavClass
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.IndexNavClass
+- uid: Microsoft.AspNetCore.Mvc.Rendering.ViewContext
+  commentId: T:Microsoft.AspNetCore.Mvc.Rendering.ViewContext
+  parent: Microsoft.AspNetCore.Mvc.Rendering
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.rendering.viewcontext
+  name: ViewContext
+  nameWithType: ViewContext
+  fullName: Microsoft.AspNetCore.Mvc.Rendering.ViewContext
+- uid: Microsoft.AspNetCore.Mvc.Rendering
+  commentId: N:Microsoft.AspNetCore.Mvc.Rendering
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.AspNetCore.Mvc.Rendering
+  nameWithType: Microsoft.AspNetCore.Mvc.Rendering
+  fullName: Microsoft.AspNetCore.Mvc.Rendering
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Mvc
+    name: Mvc
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc
+  - name: .
+  - uid: Microsoft.AspNetCore.Mvc.Rendering
+    name: Rendering
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.rendering
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Mvc
+    name: Mvc
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc
+  - name: .
+  - uid: Microsoft.AspNetCore.Mvc.Rendering
+    name: Rendering
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.rendering
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.EmailNavClass*
+  commentId: Overload:CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.EmailNavClass
+  href: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.html#CampusCrafter_Areas_Identity_Pages_Account_Manage_ManageNavPages_EmailNavClass_Microsoft_AspNetCore_Mvc_Rendering_ViewContext_
+  name: EmailNavClass
+  nameWithType: ManageNavPages.EmailNavClass
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.EmailNavClass
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.ChangePasswordNavClass*
+  commentId: Overload:CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.ChangePasswordNavClass
+  href: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.html#CampusCrafter_Areas_Identity_Pages_Account_Manage_ManageNavPages_ChangePasswordNavClass_Microsoft_AspNetCore_Mvc_Rendering_ViewContext_
+  name: ChangePasswordNavClass
+  nameWithType: ManageNavPages.ChangePasswordNavClass
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.ChangePasswordNavClass
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.DownloadPersonalDataNavClass*
+  commentId: Overload:CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.DownloadPersonalDataNavClass
+  href: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.html#CampusCrafter_Areas_Identity_Pages_Account_Manage_ManageNavPages_DownloadPersonalDataNavClass_Microsoft_AspNetCore_Mvc_Rendering_ViewContext_
+  name: DownloadPersonalDataNavClass
+  nameWithType: ManageNavPages.DownloadPersonalDataNavClass
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.DownloadPersonalDataNavClass
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.DeletePersonalDataNavClass*
+  commentId: Overload:CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.DeletePersonalDataNavClass
+  href: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.html#CampusCrafter_Areas_Identity_Pages_Account_Manage_ManageNavPages_DeletePersonalDataNavClass_Microsoft_AspNetCore_Mvc_Rendering_ViewContext_
+  name: DeletePersonalDataNavClass
+  nameWithType: ManageNavPages.DeletePersonalDataNavClass
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.DeletePersonalDataNavClass
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.ExternalLoginsNavClass*
+  commentId: Overload:CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.ExternalLoginsNavClass
+  href: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.html#CampusCrafter_Areas_Identity_Pages_Account_Manage_ManageNavPages_ExternalLoginsNavClass_Microsoft_AspNetCore_Mvc_Rendering_ViewContext_
+  name: ExternalLoginsNavClass
+  nameWithType: ManageNavPages.ExternalLoginsNavClass
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.ExternalLoginsNavClass
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.PersonalDataNavClass*
+  commentId: Overload:CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.PersonalDataNavClass
+  href: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.html#CampusCrafter_Areas_Identity_Pages_Account_Manage_ManageNavPages_PersonalDataNavClass_Microsoft_AspNetCore_Mvc_Rendering_ViewContext_
+  name: PersonalDataNavClass
+  nameWithType: ManageNavPages.PersonalDataNavClass
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.PersonalDataNavClass
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.TwoFactorAuthenticationNavClass*
+  commentId: Overload:CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.TwoFactorAuthenticationNavClass
+  href: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.html#CampusCrafter_Areas_Identity_Pages_Account_Manage_ManageNavPages_TwoFactorAuthenticationNavClass_Microsoft_AspNetCore_Mvc_Rendering_ViewContext_
+  name: TwoFactorAuthenticationNavClass
+  nameWithType: ManageNavPages.TwoFactorAuthenticationNavClass
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.TwoFactorAuthenticationNavClass
+- uid: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.PageNavClass*
+  commentId: Overload:CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.PageNavClass
+  href: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.html#CampusCrafter_Areas_Identity_Pages_Account_Manage_ManageNavPages_PageNavClass_Microsoft_AspNetCore_Mvc_Rendering_ViewContext_System_String_
+  name: PageNavClass
+  nameWithType: ManageNavPages.PageNavClass
+  fullName: CampusCrafter.Areas.Identity.Pages.Account.Manage.ManageNavPages.PageNavClass

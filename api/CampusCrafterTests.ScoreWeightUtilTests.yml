@@ -1,0 +1,540 @@
+### YamlMime:ManagedReference
+items:
+- uid: CampusCrafterTests.ScoreWeightUtilTests
+  commentId: T:CampusCrafterTests.ScoreWeightUtilTests
+  id: ScoreWeightUtilTests
+  parent: CampusCrafterTests
+  children:
+  - CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightDeserialize_MultipleScoreWeights
+  - CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightDeserialize_NoScoreWeights
+  - CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightDeserialize_OneScoreWeight
+  - CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightSerialize_MultipleScoreWeights
+  - CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightSerialize_NoScoreWeights
+  - CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightSerialize_OneScoreWeight
+  langs:
+  - csharp
+  - vb
+  name: ScoreWeightUtilTests
+  nameWithType: ScoreWeightUtilTests
+  fullName: CampusCrafterTests.ScoreWeightUtilTests
+  type: Class
+  source:
+    remote:
+      path: CampusCrafterTests/ScoreWeightUtilTests.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: ScoreWeightUtilTests
+    path: CampusCrafterTests/ScoreWeightUtilTests.cs
+    startLine: 5
+  assemblies:
+  - CampusCrafterTests
+  namespace: CampusCrafterTests
+  syntax:
+    content: public class ScoreWeightUtilTests
+    content.vb: Public Class ScoreWeightUtilTests
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightDeserialize_OneScoreWeight
+  commentId: M:CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightDeserialize_OneScoreWeight
+  id: ScoreWeightDeserialize_OneScoreWeight
+  parent: CampusCrafterTests.ScoreWeightUtilTests
+  langs:
+  - csharp
+  - vb
+  name: ScoreWeightDeserialize_OneScoreWeight()
+  nameWithType: ScoreWeightUtilTests.ScoreWeightDeserialize_OneScoreWeight()
+  fullName: CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightDeserialize_OneScoreWeight()
+  type: Method
+  source:
+    remote:
+      path: CampusCrafterTests/ScoreWeightUtilTests.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: ScoreWeightDeserialize_OneScoreWeight
+    path: CampusCrafterTests/ScoreWeightUtilTests.cs
+    startLine: 7
+  assemblies:
+  - CampusCrafterTests
+  namespace: CampusCrafterTests
+  syntax:
+    content: >-
+      [Test]
+
+      public void ScoreWeightDeserialize_OneScoreWeight()
+    content.vb: >-
+      <Test>
+
+      Public Sub ScoreWeightDeserialize_OneScoreWeight()
+  overload: CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightDeserialize_OneScoreWeight*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightDeserialize_MultipleScoreWeights
+  commentId: M:CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightDeserialize_MultipleScoreWeights
+  id: ScoreWeightDeserialize_MultipleScoreWeights
+  parent: CampusCrafterTests.ScoreWeightUtilTests
+  langs:
+  - csharp
+  - vb
+  name: ScoreWeightDeserialize_MultipleScoreWeights()
+  nameWithType: ScoreWeightUtilTests.ScoreWeightDeserialize_MultipleScoreWeights()
+  fullName: CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightDeserialize_MultipleScoreWeights()
+  type: Method
+  source:
+    remote:
+      path: CampusCrafterTests/ScoreWeightUtilTests.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: ScoreWeightDeserialize_MultipleScoreWeights
+    path: CampusCrafterTests/ScoreWeightUtilTests.cs
+    startLine: 20
+  assemblies:
+  - CampusCrafterTests
+  namespace: CampusCrafterTests
+  syntax:
+    content: >-
+      [Test]
+
+      public void ScoreWeightDeserialize_MultipleScoreWeights()
+    content.vb: >-
+      <Test>
+
+      Public Sub ScoreWeightDeserialize_MultipleScoreWeights()
+  overload: CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightDeserialize_MultipleScoreWeights*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightDeserialize_NoScoreWeights
+  commentId: M:CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightDeserialize_NoScoreWeights
+  id: ScoreWeightDeserialize_NoScoreWeights
+  parent: CampusCrafterTests.ScoreWeightUtilTests
+  langs:
+  - csharp
+  - vb
+  name: ScoreWeightDeserialize_NoScoreWeights()
+  nameWithType: ScoreWeightUtilTests.ScoreWeightDeserialize_NoScoreWeights()
+  fullName: CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightDeserialize_NoScoreWeights()
+  type: Method
+  source:
+    remote:
+      path: CampusCrafterTests/ScoreWeightUtilTests.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: ScoreWeightDeserialize_NoScoreWeights
+    path: CampusCrafterTests/ScoreWeightUtilTests.cs
+    startLine: 37
+  assemblies:
+  - CampusCrafterTests
+  namespace: CampusCrafterTests
+  syntax:
+    content: >-
+      [Test]
+
+      public void ScoreWeightDeserialize_NoScoreWeights()
+    content.vb: >-
+      <Test>
+
+      Public Sub ScoreWeightDeserialize_NoScoreWeights()
+  overload: CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightDeserialize_NoScoreWeights*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightSerialize_OneScoreWeight
+  commentId: M:CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightSerialize_OneScoreWeight
+  id: ScoreWeightSerialize_OneScoreWeight
+  parent: CampusCrafterTests.ScoreWeightUtilTests
+  langs:
+  - csharp
+  - vb
+  name: ScoreWeightSerialize_OneScoreWeight()
+  nameWithType: ScoreWeightUtilTests.ScoreWeightSerialize_OneScoreWeight()
+  fullName: CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightSerialize_OneScoreWeight()
+  type: Method
+  source:
+    remote:
+      path: CampusCrafterTests/ScoreWeightUtilTests.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: ScoreWeightSerialize_OneScoreWeight
+    path: CampusCrafterTests/ScoreWeightUtilTests.cs
+    startLine: 50
+  assemblies:
+  - CampusCrafterTests
+  namespace: CampusCrafterTests
+  syntax:
+    content: >-
+      [Test]
+
+      public void ScoreWeightSerialize_OneScoreWeight()
+    content.vb: >-
+      <Test>
+
+      Public Sub ScoreWeightSerialize_OneScoreWeight()
+  overload: CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightSerialize_OneScoreWeight*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightSerialize_MultipleScoreWeights
+  commentId: M:CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightSerialize_MultipleScoreWeights
+  id: ScoreWeightSerialize_MultipleScoreWeights
+  parent: CampusCrafterTests.ScoreWeightUtilTests
+  langs:
+  - csharp
+  - vb
+  name: ScoreWeightSerialize_MultipleScoreWeights()
+  nameWithType: ScoreWeightUtilTests.ScoreWeightSerialize_MultipleScoreWeights()
+  fullName: CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightSerialize_MultipleScoreWeights()
+  type: Method
+  source:
+    remote:
+      path: CampusCrafterTests/ScoreWeightUtilTests.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: ScoreWeightSerialize_MultipleScoreWeights
+    path: CampusCrafterTests/ScoreWeightUtilTests.cs
+    startLine: 63
+  assemblies:
+  - CampusCrafterTests
+  namespace: CampusCrafterTests
+  syntax:
+    content: >-
+      [Test]
+
+      public void ScoreWeightSerialize_MultipleScoreWeights()
+    content.vb: >-
+      <Test>
+
+      Public Sub ScoreWeightSerialize_MultipleScoreWeights()
+  overload: CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightSerialize_MultipleScoreWeights*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightSerialize_NoScoreWeights
+  commentId: M:CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightSerialize_NoScoreWeights
+  id: ScoreWeightSerialize_NoScoreWeights
+  parent: CampusCrafterTests.ScoreWeightUtilTests
+  langs:
+  - csharp
+  - vb
+  name: ScoreWeightSerialize_NoScoreWeights()
+  nameWithType: ScoreWeightUtilTests.ScoreWeightSerialize_NoScoreWeights()
+  fullName: CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightSerialize_NoScoreWeights()
+  type: Method
+  source:
+    remote:
+      path: CampusCrafterTests/ScoreWeightUtilTests.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: ScoreWeightSerialize_NoScoreWeights
+    path: CampusCrafterTests/ScoreWeightUtilTests.cs
+    startLine: 80
+  assemblies:
+  - CampusCrafterTests
+  namespace: CampusCrafterTests
+  syntax:
+    content: >-
+      [Test]
+
+      public void ScoreWeightSerialize_NoScoreWeights()
+    content.vb: >-
+      <Test>
+
+      Public Sub ScoreWeightSerialize_NoScoreWeights()
+  overload: CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightSerialize_NoScoreWeights*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+references:
+- uid: CampusCrafterTests
+  commentId: N:CampusCrafterTests
+  href: CampusCrafterTests.html
+  name: CampusCrafterTests
+  nameWithType: CampusCrafterTests
+  fullName: CampusCrafterTests
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightDeserialize_OneScoreWeight*
+  commentId: Overload:CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightDeserialize_OneScoreWeight
+  href: CampusCrafterTests.ScoreWeightUtilTests.html#CampusCrafterTests_ScoreWeightUtilTests_ScoreWeightDeserialize_OneScoreWeight
+  name: ScoreWeightDeserialize_OneScoreWeight
+  nameWithType: ScoreWeightUtilTests.ScoreWeightDeserialize_OneScoreWeight
+  fullName: CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightDeserialize_OneScoreWeight
+- uid: CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightDeserialize_MultipleScoreWeights*
+  commentId: Overload:CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightDeserialize_MultipleScoreWeights
+  href: CampusCrafterTests.ScoreWeightUtilTests.html#CampusCrafterTests_ScoreWeightUtilTests_ScoreWeightDeserialize_MultipleScoreWeights
+  name: ScoreWeightDeserialize_MultipleScoreWeights
+  nameWithType: ScoreWeightUtilTests.ScoreWeightDeserialize_MultipleScoreWeights
+  fullName: CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightDeserialize_MultipleScoreWeights
+- uid: CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightDeserialize_NoScoreWeights*
+  commentId: Overload:CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightDeserialize_NoScoreWeights
+  href: CampusCrafterTests.ScoreWeightUtilTests.html#CampusCrafterTests_ScoreWeightUtilTests_ScoreWeightDeserialize_NoScoreWeights
+  name: ScoreWeightDeserialize_NoScoreWeights
+  nameWithType: ScoreWeightUtilTests.ScoreWeightDeserialize_NoScoreWeights
+  fullName: CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightDeserialize_NoScoreWeights
+- uid: CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightSerialize_OneScoreWeight*
+  commentId: Overload:CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightSerialize_OneScoreWeight
+  href: CampusCrafterTests.ScoreWeightUtilTests.html#CampusCrafterTests_ScoreWeightUtilTests_ScoreWeightSerialize_OneScoreWeight
+  name: ScoreWeightSerialize_OneScoreWeight
+  nameWithType: ScoreWeightUtilTests.ScoreWeightSerialize_OneScoreWeight
+  fullName: CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightSerialize_OneScoreWeight
+- uid: CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightSerialize_MultipleScoreWeights*
+  commentId: Overload:CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightSerialize_MultipleScoreWeights
+  href: CampusCrafterTests.ScoreWeightUtilTests.html#CampusCrafterTests_ScoreWeightUtilTests_ScoreWeightSerialize_MultipleScoreWeights
+  name: ScoreWeightSerialize_MultipleScoreWeights
+  nameWithType: ScoreWeightUtilTests.ScoreWeightSerialize_MultipleScoreWeights
+  fullName: CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightSerialize_MultipleScoreWeights
+- uid: CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightSerialize_NoScoreWeights*
+  commentId: Overload:CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightSerialize_NoScoreWeights
+  href: CampusCrafterTests.ScoreWeightUtilTests.html#CampusCrafterTests_ScoreWeightUtilTests_ScoreWeightSerialize_NoScoreWeights
+  name: ScoreWeightSerialize_NoScoreWeights
+  nameWithType: ScoreWeightUtilTests.ScoreWeightSerialize_NoScoreWeights
+  fullName: CampusCrafterTests.ScoreWeightUtilTests.ScoreWeightSerialize_NoScoreWeights

@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: CampusCrafter.Areas.Data.Pages.Semesters
+  commentId: N:CampusCrafter.Areas.Data.Pages.Semesters
+  id: CampusCrafter.Areas.Data.Pages.Semesters
+  children:
+  - CampusCrafter.Areas.Data.Pages.Semesters.CreateModel
+  - CampusCrafter.Areas.Data.Pages.Semesters.DeleteModel
+  - CampusCrafter.Areas.Data.Pages.Semesters.DetailsModel
+  - CampusCrafter.Areas.Data.Pages.Semesters.EditModel
+  - CampusCrafter.Areas.Data.Pages.Semesters.IndexModel
+  langs:
+  - csharp
+  - vb
+  name: CampusCrafter.Areas.Data.Pages.Semesters
+  nameWithType: CampusCrafter.Areas.Data.Pages.Semesters
+  fullName: CampusCrafter.Areas.Data.Pages.Semesters
+  type: Namespace
+  assemblies:
+  - CampusCrafter
+references:
+- uid: CampusCrafter.Areas.Data.Pages.Semesters.CreateModel
+  commentId: T:CampusCrafter.Areas.Data.Pages.Semesters.CreateModel
+  href: CampusCrafter.Areas.Data.Pages.Semesters.CreateModel.html
+  name: CreateModel
+  nameWithType: CreateModel
+  fullName: CampusCrafter.Areas.Data.Pages.Semesters.CreateModel
+- uid: CampusCrafter.Areas.Data.Pages.Semesters.DeleteModel
+  commentId: T:CampusCrafter.Areas.Data.Pages.Semesters.DeleteModel
+  href: CampusCrafter.Areas.Data.Pages.Semesters.DeleteModel.html
+  name: DeleteModel
+  nameWithType: DeleteModel
+  fullName: CampusCrafter.Areas.Data.Pages.Semesters.DeleteModel
+- uid: CampusCrafter.Areas.Data.Pages.Semesters.DetailsModel
+  commentId: T:CampusCrafter.Areas.Data.Pages.Semesters.DetailsModel
+  href: CampusCrafter.Areas.Data.Pages.Semesters.DetailsModel.html
+  name: DetailsModel
+  nameWithType: DetailsModel
+  fullName: CampusCrafter.Areas.Data.Pages.Semesters.DetailsModel
+- uid: CampusCrafter.Areas.Data.Pages.Semesters.EditModel
+  commentId: T:CampusCrafter.Areas.Data.Pages.Semesters.EditModel
+  href: CampusCrafter.Areas.Data.Pages.Semesters.EditModel.html
+  name: EditModel
+  nameWithType: EditModel
+  fullName: CampusCrafter.Areas.Data.Pages.Semesters.EditModel
+- uid: CampusCrafter.Areas.Data.Pages.Semesters.IndexModel
+  commentId: T:CampusCrafter.Areas.Data.Pages.Semesters.IndexModel
+  href: CampusCrafter.Areas.Data.Pages.Semesters.IndexModel.html
+  name: IndexModel
+  nameWithType: IndexModel
+  fullName: CampusCrafter.Areas.Data.Pages.Semesters.IndexModel

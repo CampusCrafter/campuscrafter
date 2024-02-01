@@ -1,0 +1,300 @@
+### YamlMime:ManagedReference
+items:
+- uid: CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions
+  commentId: T:CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions
+  id: Index.FilteringOptions
+  parent: CampusCrafter.Areas.ApplicationReview.Pages
+  children:
+  - CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions.Accepted
+  - CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions.AcceptedOrRejected
+  - CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions.None
+  - CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions.Rejected
+  - CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions.Unhandled
+  langs:
+  - csharp
+  - vb
+  name: Index.FilteringOptions
+  nameWithType: Index.FilteringOptions
+  fullName: CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions
+  type: Enum
+  source:
+    remote:
+      path: CampusCrafter/Areas/ApplicationReview/Pages/Index.cshtml.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: FilteringOptions
+    path: CampusCrafter/Areas/ApplicationReview/Pages/Index.cshtml.cs
+    startLine: 25
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Areas.ApplicationReview.Pages
+  syntax:
+    content: public enum Index.FilteringOptions
+    content.vb: Public Enum Index.FilteringOptions
+- uid: CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions.None
+  commentId: F:CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions.None
+  id: None
+  parent: CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: Index.FilteringOptions.None
+  fullName: CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions.None
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Areas/ApplicationReview/Pages/Index.cshtml.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: None
+    path: CampusCrafter/Areas/ApplicationReview/Pages/Index.cshtml.cs
+    startLine: 27
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Areas.ApplicationReview.Pages
+  syntax:
+    content: >-
+      [Display(Name = "None")]
+
+      None = 0
+    return:
+      type: CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions
+    content.vb: >-
+      <Display(Name:="None")>
+
+      None = 0
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: None
+- uid: CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions.Unhandled
+  commentId: F:CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions.Unhandled
+  id: Unhandled
+  parent: CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions
+  langs:
+  - csharp
+  - vb
+  name: Unhandled
+  nameWithType: Index.FilteringOptions.Unhandled
+  fullName: CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions.Unhandled
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Areas/ApplicationReview/Pages/Index.cshtml.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: Unhandled
+    path: CampusCrafter/Areas/ApplicationReview/Pages/Index.cshtml.cs
+    startLine: 28
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Areas.ApplicationReview.Pages
+  syntax:
+    content: >-
+      [Display(Name = "Unhandled")]
+
+      Unhandled = 1
+    return:
+      type: CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions
+    content.vb: >-
+      <Display(Name:="Unhandled")>
+
+      Unhandled = 1
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: Unhandled
+- uid: CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions.Accepted
+  commentId: F:CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions.Accepted
+  id: Accepted
+  parent: CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions
+  langs:
+  - csharp
+  - vb
+  name: Accepted
+  nameWithType: Index.FilteringOptions.Accepted
+  fullName: CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions.Accepted
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Areas/ApplicationReview/Pages/Index.cshtml.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: Accepted
+    path: CampusCrafter/Areas/ApplicationReview/Pages/Index.cshtml.cs
+    startLine: 29
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Areas.ApplicationReview.Pages
+  syntax:
+    content: >-
+      [Display(Name = "Accepted")]
+
+      Accepted = 2
+    return:
+      type: CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions
+    content.vb: >-
+      <Display(Name:="Accepted")>
+
+      Accepted = 2
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: Accepted
+- uid: CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions.Rejected
+  commentId: F:CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions.Rejected
+  id: Rejected
+  parent: CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions
+  langs:
+  - csharp
+  - vb
+  name: Rejected
+  nameWithType: Index.FilteringOptions.Rejected
+  fullName: CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions.Rejected
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Areas/ApplicationReview/Pages/Index.cshtml.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: Rejected
+    path: CampusCrafter/Areas/ApplicationReview/Pages/Index.cshtml.cs
+    startLine: 30
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Areas.ApplicationReview.Pages
+  syntax:
+    content: >-
+      [Display(Name = "Rejected")]
+
+      Rejected = 3
+    return:
+      type: CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions
+    content.vb: >-
+      <Display(Name:="Rejected")>
+
+      Rejected = 3
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: Rejected
+- uid: CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions.AcceptedOrRejected
+  commentId: F:CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions.AcceptedOrRejected
+  id: AcceptedOrRejected
+  parent: CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions
+  langs:
+  - csharp
+  - vb
+  name: AcceptedOrRejected
+  nameWithType: Index.FilteringOptions.AcceptedOrRejected
+  fullName: CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions.AcceptedOrRejected
+  type: Field
+  source:
+    remote:
+      path: CampusCrafter/Areas/ApplicationReview/Pages/Index.cshtml.cs
+      branch: monczak
+      repo: https://github.com/CampusCrafter/campuscrafter
+    id: AcceptedOrRejected
+    path: CampusCrafter/Areas/ApplicationReview/Pages/Index.cshtml.cs
+    startLine: 31
+  assemblies:
+  - CampusCrafter
+  namespace: CampusCrafter.Areas.ApplicationReview.Pages
+  syntax:
+    content: >-
+      [Display(Name = "Accepted or Rejected")]
+
+      AcceptedOrRejected = 4
+    return:
+      type: CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions
+    content.vb: >-
+      <Display(Name:="Accepted or Rejected")>
+
+      AcceptedOrRejected = 4
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: Accepted or Rejected
+references:
+- uid: CampusCrafter.Areas.ApplicationReview.Pages
+  commentId: N:CampusCrafter.Areas.ApplicationReview.Pages
+  href: CampusCrafter.html
+  name: CampusCrafter.Areas.ApplicationReview.Pages
+  nameWithType: CampusCrafter.Areas.ApplicationReview.Pages
+  fullName: CampusCrafter.Areas.ApplicationReview.Pages
+  spec.csharp:
+  - uid: CampusCrafter
+    name: CampusCrafter
+    href: CampusCrafter.html
+  - name: .
+  - uid: CampusCrafter.Areas
+    name: Areas
+    href: CampusCrafter.Areas.html
+  - name: .
+  - uid: CampusCrafter.Areas.ApplicationReview
+    name: ApplicationReview
+    href: CampusCrafter.Areas.ApplicationReview.html
+  - name: .
+  - uid: CampusCrafter.Areas.ApplicationReview.Pages
+    name: Pages
+    href: CampusCrafter.Areas.ApplicationReview.Pages.html
+  spec.vb:
+  - uid: CampusCrafter
+    name: CampusCrafter
+    href: CampusCrafter.html
+  - name: .
+  - uid: CampusCrafter.Areas
+    name: Areas
+    href: CampusCrafter.Areas.html
+  - name: .
+  - uid: CampusCrafter.Areas.ApplicationReview
+    name: ApplicationReview
+    href: CampusCrafter.Areas.ApplicationReview.html
+  - name: .
+  - uid: CampusCrafter.Areas.ApplicationReview.Pages
+    name: Pages
+    href: CampusCrafter.Areas.ApplicationReview.Pages.html
+- uid: CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions
+  commentId: T:CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions
+  parent: CampusCrafter.Areas.ApplicationReview.Pages
+  href: CampusCrafter.Areas.ApplicationReview.Pages.Index.html
+  name: Index.FilteringOptions
+  nameWithType: Index.FilteringOptions
+  fullName: CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions
+  spec.csharp:
+  - uid: CampusCrafter.Areas.ApplicationReview.Pages.Index
+    name: Index
+    href: CampusCrafter.Areas.ApplicationReview.Pages.Index.html
+  - name: .
+  - uid: CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions
+    name: FilteringOptions
+    href: CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions.html
+  spec.vb:
+  - uid: CampusCrafter.Areas.ApplicationReview.Pages.Index
+    name: Index
+    href: CampusCrafter.Areas.ApplicationReview.Pages.Index.html
+  - name: .
+  - uid: CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions
+    name: FilteringOptions
+    href: CampusCrafter.Areas.ApplicationReview.Pages.Index.FilteringOptions.html
