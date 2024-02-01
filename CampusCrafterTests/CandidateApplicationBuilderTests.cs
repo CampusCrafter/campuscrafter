@@ -13,7 +13,7 @@ public class CandidateApplicationBuilderTests
         const StudyType StudyType = StudyType.FullTime;
         
         // Act
-        var builder = new CandidateApplicationBuilder()
+        var builder = new CandidateApplicationBuilder
         {
             ApplicantId = ApplicantId,
             MajorId = MajorId,
@@ -21,7 +21,8 @@ public class CandidateApplicationBuilderTests
         };
         
         // Assert
-        Assert.That(builder.Build(), Is.EqualTo(new CandidateApplication() {ApplicantId = "test", MajorId = 1, StudyType = StudyType.FullTime}));
+        Assert.That(builder.Build(),
+            Is.EqualTo(new CandidateApplication { ApplicantId = "test", MajorId = 1, StudyType = StudyType.FullTime }));
     }
 
     [Test]
