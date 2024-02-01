@@ -17,6 +17,8 @@
     
     var post_btn = document.getElementById("post-btn");
     post_btn.style.display = "";
+    var post_btn = document.getElementById("fill-btn");
+    post_btn.style.display = "";
     inputs = post_btn.getElementsByTagName("input")
     for (let i = 0; i < inputs.length; i++) {
         inputs[i].disabled = false;
@@ -46,6 +48,8 @@ function toFill() {
 
     var post_btn = document.getElementById("post-btn");
     post_btn.style.display = "none";
+    var post_btn = document.getElementById("fill-btn");
+    post_btn.style.display = "none";
 
     var cont_btn = document.getElementById("cont-btn");
     cont_btn.style.display = "";
@@ -57,7 +61,6 @@ function toFill() {
 }
 
 function submission() {
-    
     var admission_form = document.getElementById("admission-form");
     var selects = admission_form.getElementsByTagName("select");
     for (let i = 0; i < selects.length; i++) {
@@ -69,7 +72,46 @@ function submission() {
         inputs[i].disabled = false;
     }
 
-    admission_form.submit();
+    // Serialize form data
+    const formData = new FormData(admission_form);
+
+    // Make a POST request using Fetch API
+    fetch('http://localhost:5151/Admission/FillAdmission', {
+        method: 'POST',
+        body: formData,
+    })
+        .then(response => {
+            if (response.ok) {
+                // If the response is OK (2xx), parse the response or perform further actions
+                const contentType = response.headers.get('Content-Type');
+
+                if (contentType && contentType.includes('application/json')) {
+                    return response.json();
+                } else {
+                    // Handle non-JSON response (e.g., text/plain)
+                    return response.text();
+                }
+            } else if (response.status === 400) {
+                // If the response status is BadRequest (400), handle the error
+                return response.text().then(error => {
+                    console.error('Error:', error);
+                    alert('Error: ' + error);
+                });
+            } else {
+                // Handle other non-OK responses
+                console.error('Unexpected response:', response);
+                alert('Error:'+ response)
+            }
+        })
+        .then(data => {
+            // Handle the successful response data
+            console.log('Success:', data);
+        })
+        .catch(error => {
+            // Handle any other errors that may occur during the fetch
+            console.error('Fetch error:', error);
+            alert('Fetch error: ' + error.message);
+        });
 }
 
 function addRowAchievement() {
@@ -96,6 +138,18 @@ function addRowProgress() {
     cell1.innerHTML += cells[0].innerHTML;
     cell2.innerHTML += cells[1].innerHTML;
 }
+
+function deleteRowProgress() {
+    var table = document.getElementById("progressTable");
+    if (table.rows.length > 2) {
+    table.deleteRow(table.rows.length-1);
+}}
+
+function deleteRowAchievement() {
+    var table = document.getElementById("achievementTable");
+    if (table.rows.length > 2) {
+        table.deleteRow(table.rows.length - 1);
+    }}
 
 function countScore() {
         

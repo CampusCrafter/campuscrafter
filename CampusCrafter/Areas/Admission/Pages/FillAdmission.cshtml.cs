@@ -54,11 +54,18 @@ public class FillAdmissionModel(ApplicationRepository repository) : PageModel
         List<ScholarlyAchievementType> scholarlyAchievementTypes,
         List<string> descriptions)
     {
-        
+        await Console.Out.WriteLineAsync("!!!!!!!!!!");
+
         if (!ModelState.IsValid)
         {
             TempData.Keep();
-            return Page();
+            return BadRequest("there are errors in form");
+        }
+
+        if (score.Any(a => a < 0))
+        {
+            TempData.Keep(); 
+            return BadRequest("asses positive values in progress section");
         }
 
         if (MajorDegree == 0)
@@ -76,7 +83,13 @@ public class FillAdmissionModel(ApplicationRepository repository) : PageModel
         {
             TempData.Keep();
             return BadRequest("you need to asses your score from university stage 1");
-        } 
+        }
+
+        if (progressTypes.Distinct().Count() != progressTypes.Count())
+        {
+            TempData.Keep();
+            return BadRequest("yuo can't asses points to same progress twice");
+        }
             
         Candidate = new Candidate
         {
